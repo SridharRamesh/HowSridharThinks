@@ -19,3 +19,6 @@ Considering the $$(n + 1)$$-sphere's volume in terms of its cross-sectional $$n$
 Now we are done. Ta-da!
 
 This is actually related to Wallis's original proof (which was done not in terms of spheres but in terms of some messy integrals; even messier perhaps by virtue of being worked out before the general integral calculus had been developed!), but that is as this seen through a glass very darkly. I would be very curious to see if anyone has written on seeing the Wallis product this way in terms of sphere volumes before.
+
+***
+Footnotes:
