@@ -4,15 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+You've come to the right place to see how Sridhar thinks about general math. Eventually, I'll figure out how to do stuff like post tagging and searching and so on in a reasonable way, if that can be done on GitHub Pages at all. For now, everything is just a scroll of posts. Indeed, for now, I've barely copied over my old posts from [my old wordpress blog](https://howsridharthinks.wordpress.com). But I will.
