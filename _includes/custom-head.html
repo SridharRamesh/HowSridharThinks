@@ -1,0 +1,14 @@
+{% comment %}
+  Placeholder to allow defining custom head, in principle, you can add anything here, e.g. favicons:
+
+  1. Head over to https://realfavicongenerator.net/ to add your own favicons.
+  2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
+
+  Taken from https://github.com/jekyll/minima/blob/master/_includes/custom-head.html and modified for MathJAX support using instructions at https://stackoverflow.com/questions/50998466/how-to-use-latex-in-new-jekyll-gem-based-theme-minima,
+  updated to version 2.7.7.
+
+  Turns out, see https://github.com/jekyll/minima/issues/472, this isn't supported yet. But I've manually modified _layouts/default.html to load 
+  it anyway.
+{% endcomment %}
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML' async></script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+  
+  {%- include custom-head.html -%}
+  {% comment %}
+  The above line added by Sridhar, though this will eventually 
+  be available in Minima itself (just not in 2.5.1), and then 
+  this whole file can be removed. The only point of my having 
+  a local copy of this file is to include the above line.
+  {% endcomment %}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
