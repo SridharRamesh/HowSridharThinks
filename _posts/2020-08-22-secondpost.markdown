@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2020-08-22 16:25:12 -0400
+title:  "Second post!"
+date:   2020-08-22 16:26:12 -0400
 ---
 Test second post.
 
