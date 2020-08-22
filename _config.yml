@@ -21,7 +21,7 @@
 title: How Sridhar Thinks
 description: >- # this means to ignore newlines until "baseurl:"
   A blog where Sridhar thinks about math.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/HowSridharThinks" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: radishharmers
 github_username:  SridharRamesh
