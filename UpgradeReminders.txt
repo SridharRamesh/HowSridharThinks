@@ -1,0 +1,3 @@
+Note that in Jekyll 4, the need to append baseurl in front of {link} links goes away. But GitHub Pages is stuck on Jekyll 3.
+
+In the unreleased latest version of minima, custom-head.html is loaded automatically, and I will not not a custom default.html to do so. But again, GitHub Pages is stuck not using this.
