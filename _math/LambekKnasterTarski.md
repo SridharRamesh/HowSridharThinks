@@ -3,8 +3,6 @@ layout: post
 title:  "Lambek's lemma, Knaster-Tarski, Adamek"
 date: 2019-11-28
 ---
-[TODO: LaTeXify the following]
-
 Let $$F$$ be an endofunctor and let $$A : FX \to X$$ be an algebra for that endofunctor. $$A$$ gives rise to another F-algebra $$FA : FFX \to FX$$, and this has a "tautological" F-algebra homomorphism back into $$A$$ with underlying map $$A$$ itself (the relevant commutative square is just $$A \circ FA = A \circ FA$$).
 
 Now suppose there is some F-algebra homomorphism $$: A \to FA$$ which is a section of the tautological homomorphism $$: FA \to A$$.
@@ -25,11 +23,11 @@ Note that F-algebras and F-coalgebras comprise a category together. For any diag
 
 We can consider the notion of an F-algebra-initial F-coalgebra: those F-coalgebras with unique homomorphisms into each F-algebra. This class is closed under the natural action of F and under colimits within the category of coalgebras together with algebras (insofar as the colimits exist).
 
-By Lambek's lemma above, an initial algebra is the same thing as a terminal algebra-initial coalgebra (since any terminal such coalgebra will have to be an isomorphism). A sufficient (though not necessary) condition for this to exist is for the forgetful functor from algebra-initial coalgebras into the underlying category to have a colimit (because then this colimit must itself comprise a colimit within the algebra-initial coalgebras, and thus be a total colimit, which is to say, terminal; see https://howsridharthinks.wordpress.com/2019/11/17/total-limits-are-empty-colimits/).
+By Lambek's lemma above, an initial algebra is the same thing as a terminal algebra-initial coalgebra (since any terminal such coalgebra will have to be an isomorphism). A sufficient (though not necessary) condition for this to exist is for the forgetful functor from algebra-initial coalgebras into the underlying category to have a colimit (because then this colimit must itself comprise a colimit within the algebra-initial coalgebras, and thus be a total colimit, which is to say, terminal; see ["Total Limits Are Empty Colimits"]({{site.baseurl}}{% link _math/TotalLimits.md %})).
 
 This is the bottoms up approach to the initial algebra given by Knaster-Tarski.
 
-The top down approach to the initial algebra given by Knaster-Tarski is more straightforward, but less computational: the initial object for the F-algebras is their total limit [again by https://howsridharthinks.wordpress.com/2019/11/17/total-limits-are-empty-colimits/ ]. And again, if the forgetful functor from the the F-algebras to the underlying category has a limit, then it creates a corresponding limit in the F-algebras (and indeed, in the category of algebras together with coalgebras), giving us the desired object.
+The top down approach to the initial algebra given by Knaster-Tarski is more straightforward, but less computational: the initial object for the F-algebras is their total limit [again by ["Total Limits Are Empty Colimits"]({{site.baseurl}}{% link _math/TotalLimits.md %})]. And again, if the forgetful functor from the the F-algebras to the underlying category has a limit, then it creates a corresponding limit in the F-algebras (and indeed, in the category of algebras together with coalgebras), giving us the desired object.
 
 The bottoms up approach doesn't actually require us to use the full subcategory of all algebra-initial coalgebras. In general, suppose we want to find a coalgebra which satisfies some specialness property preserved by applying F and by some special kind of colimits, and which also happens to be an isomorphism. It suffices to find some subcategory of special coalgebras which is closed under the tautological maps and which contains a total colimit. In particular, we can inductively build a subcategory of special coalgebras closed under the tautological maps, and closed under special colimits, and hope it happens to contain a total colimit (this will work just in case the object we wish to build is "well-founded" in some sense).
 
