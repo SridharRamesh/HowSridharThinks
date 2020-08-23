@@ -5,8 +5,7 @@ date: 2018-06-27
 ---
 In a past life, I worked for 3blue1brown, and I discovered and made a video for them on a simple new proof of the Wallis product and the sine product more generally. Alas, I no longer work for 3blue1brown. But I had a post on a number of supplements to that video, which I will keep archived for my own purposes here, as well transcribing the full argument from the video for this blog at some point as well:
 
-
-# Recap of the Argument from the Video:
+# Recap of the argument from the video:
 
 
 [The video](https://www.youtube.com/watch?v=8GPy_UMV-08)
@@ -14,7 +13,7 @@ In a past life, I worked for 3blue1brown, and I discovered and made a video for 
 
 Recap: \[TODO\]
 
-# Commuting limits Using Dominated Convergence:
+# Commuting limits using Dominated Convergence:
 
 This kind of interchanging of limits and infinitary arithmetic isn't actually always true, for arbitrary sequences. It often holds, but sometimes fails. Luckily, mathematicians have spent a lot of time thinking about these phenomena, and developing tools for quickly seeing certain conditions under which this interchanging of limits works. In this case, a particular standard result known as “Dominated Convergence” quickly assures us that we are indeed allowed to use this sleight-of-hand here. Let's see the details of how to use that for this argument:
 
@@ -46,13 +45,7 @@ This completes the proof that $$\frac{D(r x)}{D(x)}$$ is bounded by a constant f
 
 You may be wondering why our particular trick of bundling positive and negative index factors into a single factor was helpful and indeed necessary for us to get around the initial obstruction to using Dominated Convergence here. One way of looking at this is as so: The fact that we could not use Dominated Convergence with our pre-bundled product corresponds to how our pre-bundled product is only conditionally convergent, not absolutely convergent; re-ordering its factors wildly could give different limiting values. But the bundling we engaged in turned our product absolutely convergent, obviating these issues and in so doing also yielding a series to which we could apply our Dominated Convergence tool.
 
-
-
-
-The relationship to the Basel problem:
-
-
-
+# The relationship to the Basel problem:
 
 Not only is our sine product cool in its own right, but we can also use it to solve the Basel problem (and indeed, this was the way that the Basel problem was first solved by Euler, though he discovered the sine product in a different way than we've shown here):
 
@@ -72,22 +65,11 @@ By equating coefficients at higher powers of $$f$$ between these two series, we 
 
 (But for a much simpler way of calculating these results, which does not require our sine product, or much anything beyond Calc 101 integration, see this other post \[TODO: link to be inserted\]!)
 
+# Alternative proof of the Wallis product:
 
+Check out another beautifully simple geometric proof of the Wallis product directly in terms of circles and spheres (and higher-dimensional spheres...) in [this post](WallisProductGeometric.html)! No complex numbers or tricky polynomial algebra required!
 
-
-Alternative proof of the Wallis product:
-
-
-Check out another beautifully simple geometric proof of the Wallis product directly in terms of circles and spheres (and higher-dimensional spheres...) in this post \[TODO: link to be inserted\]! No complex numbers or tricky polynomial algebra required!
-
-
-
-
-
-
-
-Much more to come:
-
+# Much more to come:
 
 [There's much more material to come on Euler's original method of discovery of the sine product, other methods of establishing it as well, what happens when we re-order our Wallis product to interleave its two halves at different speeds, other nice series for trig functions which follow from the sine product, further connections between these and the Basel problem, and more! This post will be updated continuously over time. Stay tuned!]
 
