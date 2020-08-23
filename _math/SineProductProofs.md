@@ -9,7 +9,7 @@ Of course, these differentiations lose information about a constant, so to estab
 
 Ok, now on to the proofs:
 
-Calc 101 Proof. Aka, Fourier series proof. Aka, the best proof.
+# Calc 101 Proof. Aka, Fourier series proof. Aka, the best proof.
 
 This is the Calc 101 proof, proceeding along the exact same lines as [Solving the Basel Problem With Calc 101]({{ site.baseurl }}{% link _math/BaselProblemCalc101.md %}), but for now I will word it as though the reader is familiar with the theory of Fourier transforms. (The reader is always presumed to be me, at whatever stage of my previous self I prefer to be talking to)
 
@@ -21,17 +21,17 @@ This difference of two unidirectional Dirac combs must therefore be the Fourier 
 
 But also, this is clearly the Fourier series of $$(1 + R^x + R^{2x} + R^{3x} + \ldots) - (1 + R^{-x} + R^{-2x} + R^{-3x} + \ldots) = 1/(1 - R^x) - 1/(1 - R^{-x})$$, where $$R$$ is the base of exponentiation for rotation in the appropriate units. Which can be rewritten as something like $$(1 + R^x)/(1 - R^x) = \cot(x)$$.
 
-[Footnote: Note also that both terms here individually act like half of $$\cot(x)$$ as well, except they should be understood as having made a particular choice about its non-convergent average value, to be 1 or -1, as though the appropriate Dirac delta were added in to take care of this regardless of facts on the ground otherwise; adding these two terms together amounts to the symmetric choice of average value of 0, as though all our averaging is on regions centered at the origin. All the trickiness about having only conditional convergence of the ultimate cotangent series using appropriately balanced positive and negative terms presumably corresponds to this.]
+*[Note also that both terms here individually act like half of $$\cot(x)$$ as well, except they should be understood as having made a particular choice about its non-convergent average value, to be 1 or -1, as though the appropriate Dirac delta were added in to take care of this regardless of facts on the ground otherwise; adding these two terms together amounts to the symmetric choice of average value of 0, as though all our averaging is on regions centered at the origin. All the trickiness about having only conditional convergence of the ultimate cotangent series using appropriately balanced positive and negative terms presumably corresponds to this.]*
 
 And thus we get the cotangent series desired. As far as I am concerned, this is the Book proof/God's proof/Sridhar's proof [equivalent notions]. It is the most direct, in some sense; this is the direct generating function type way that I would go about summing $$1/(x + n)$$ over all integers $$n$$, it illustrates a power general technique for adding up all translation shifts of a given function (multiplying its Fourier transform by a Dirac comb; i.e., retaining just the appropriately periodic components; this is known as "Poisson summation"), and furthermore, this series is the simplest and most uniform of the three equivalent series we could here consider.
 
-Sridhar's 3blue1brown proof (the Sailor and the Keeper)
+# Sridhar's 3blue1brown proof (the Sailor and the Keeper)
 
 I am fond of this proof as well, because I discovered it and it is nice, even though I do not think this is as Book as the previous one. I will write this up in text form eventually, but here's the video:
 
-See further details at [3b1b: The Wallis Product and the Sine Product]({{ site.baseurl }}{% link _math/3b1bSineProduct.md %}).
+See further details at [3blue1brown: The Wallis Product and the Sine Product]({{ site.baseurl }}{% link _math/3b1bSineProduct.md %}).
 
-Euler's original proof
+# Euler's original proof
 
 Euler is often said to have glibly moved from "$$\sin(x)/x$$ has roots at nonzero integer multiples of $$\pi$$" to "$$\sin(x)/x$$ is the product of $$(1 - x/(k\pi))$$ over each nonzero integer $$k$$" in solving the Basel problem, simply ignoring the problem of the fact that many other functions have precisely the same zeros.
 
@@ -47,22 +47,26 @@ As $$N$$ approaches infinity, $$N \tan(k\pi/N)$$ approaches $$k\pi$$. Thus, we h
 
 [TODO: This is substantively distinct from, yet still reminiscent of, the 3blue1brown proof above; discuss the relation between these]
 
-Weierstrass-Hadamard Factorization Theorem
+# Weierstrass-Hadamard Factorization Theorem
 
 [TODO; note that people often cite the mere Weierstrass factorization theorem in this connection, but we really need the Hadamard one]
 
-We observe with analysis fiddling that the product $$\pi x \prod_{n \geq 1} \left(1 + \frac{x}{n}\right) \left(1 + \frac{x}{-n}\right)$$ establishes a function which is $$O(e^{|x| + \epsilon})$$ with zeros of multiplicity $$1$$ at each integer. As $$\sin(\pi x)$$ also has the same order and same zeros, their ratio is thus also of this order with no zeros. Thus, as every nonzero entire function has a well-defined logarithm (unique up to additive constant), their ratio is $$e^{g(x)}$$ for some $$g(x) = O(|x| + \epsilon)$$. But any entire function which is $$O(|x| + \epsilon)$$ is in fact of the form $$a_0 + a_1 x$$, by calculating its Taylor series coefficients using Cauchy's integral theorem (this is a strengthened form of Liouville's theorem). By the fact that sine is odd, we see that $$a_1 = 0$$, and by comparing values at $$x = 0$$, we see that $$e^{a_0} = 1$$, and thus we are done.
+We observe with analysis fiddling that the product $$\pi x \prod_{n \geq 1} \left(1 + \frac{x}{n}\right) \left(1 + \frac{x}{-n}\right)$$ establishes a function which is $$O(e^{\|x\| + \epsilon})$$ with zeros of multiplicity $$1$$ at each integer. As $$\sin(\pi x)$$ also has the same order and same zeros, their ratio is thus also of this order with no zeros. Thus, as every nonzero entire function has a well-defined logarithm (unique up to additive constant), their ratio is $$e^{g(x)}$$ for some $$g(x) = O(\|x\| + \epsilon)$$. But any entire function which is $$O(\|x\| + \epsilon)$$ is in fact of the form $$a_0 + a_1 x$$, by calculating its Taylor series coefficients using Cauchy's integral theorem (this is a strengthened form of Liouville's theorem). By the fact that sine is odd, we see that $$a_1 = 0$$, and by comparing values at $$x = 0$$, we see that $$e^{a_0} = 1$$, and thus we are done.
 
-The Herglotz trick
+# The Herglotz trick
 
 Let $$f(x) = \frac{1}{x} + \sum_{n \geq 1} \frac{1}{n + x} + \frac{1}{-n + x}$$. Morally, this is $$\sum \frac{1}{n + x}$$ over ALL integers $$n$$, and modulo appropriate fiddling, we can therefore see that this is a periodic function with period $$1$$. Also, with appropriate analysis fiddling which I shall take as granted for now, we see that this is continuous and finite, except for the poles at the integers.
 
 These properties match $$g(x) = \pi \cot(\pi x)$$, and the two have matching residues at their poles; thus, their difference is also a function of period $$1$$, and is in fact finite and continuous everywhere, with value zero at the integers.
 
-We now establish that $$f(x)$$ and $$g(x)$$ both have the property that their value at a given $$x$$ is the average of their values at all N choices of $$x/N$$ in mod 1 world (i.e., $$x/N, (x + 1)/N, (x + 2)/N \ldots, (x + N - 1)/N$$). [For f, this fact is basically immediate; for g, TODO; it corresponds to the mutatis mutandis fact about the product of $$\sin(x)$$ taken at an even number of regularly spaced intervals around its half-period, or just as well, to the corresponding fact about $$\mathrm{Chord}(x) = 2 \sin(x/2)$$, for which we have that the product of this chord function at n equally spaced angles around a full revolution is equal to its value at n times any of those individual angles (this is demonstrated in the 3blue1brown video above!)]. This property descends to their difference, and also means that, from the limit as N goes infinite, this function's value at $$x$$ is equal to its average over the entire continuous interval from $$x$$ to $$x + 1$$; by periodicity, this is unchanged by adding any real value to $$x$$. (This works for the difference but not for the original $$f$$ and $$g$$ because the difference is finite everywhere (in addition to being continuous), and thus has a well-defined such average (approachable in this way), which fails for $$f$$ and $$g$$). Since the difference was 0 at the integers, we see that it is in fact 0 at all reals, and thus $$f = g$$ for real inputs.
+We now establish that $$f(x)$$ and $$g(x)$$ both have the property that their value at a given $$x$$ is the average of their values at all N choices of $$x/N$$ in mod 1 world (i.e., $$x/N, (x + 1)/N, (x + 2)/N \ldots, (x + N - 1)/N$$).
+
+*[For f, this fact is basically immediate; for g, TODO; it corresponds to the mutatis mutandis fact about the product of $$\sin(x)$$ taken at an even number of regularly spaced intervals around its half-period, or just as well, to the corresponding fact about $$\mathrm{Chord}(x) = 2 \sin(x/2)$$, for which we have that the product of this chord function at n equally spaced angles around a full revolution is equal to its value at n times any of those individual angles (this is demonstrated in the 3blue1brown video above!)]*
+
+This property descends to their difference, and also means that, from the limit as N goes infinite, this function's value at $$x$$ is equal to its average over the entire continuous interval from $$x$$ to $$x + 1$$; by periodicity, this is unchanged by adding any real value to $$x$$. (This works for the difference but not for the original $$f$$ and $$g$$ because the difference is finite everywhere (in addition to being continuous), and thus has a well-defined such average (approachable in this way), which fails for $$f$$ and $$g$$). Since the difference was 0 at the integers, we see that it is in fact 0 at all reals, and thus $$f = g$$ for real inputs.
 
 More generally, our analysis fiddling that establishes g to be continuous apart from its poles should actually be carried out to establish that g is meromorphic; then the difference becomes meromorphic as well, and its being constantly 0 along reals then establishes it as constantly 0 for all complex numbers. [Maybe there's some generalized averaging property that gives this directly as well; averaging over n imaginary in some sense?]
 
-Eisenstein series
+# Eisenstein series
 
 [TODO: See http://www.math.ucla.edu/~vsv/fullnotes.pdf ]
