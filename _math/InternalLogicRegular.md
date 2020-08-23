@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Internal Logic of Effective Regular and Abelian Categories"
-date: 2018-1-16
+date: 2020-1-16
 ---
 [TODO: LaTeXify]
 
