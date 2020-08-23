@@ -23,6 +23,8 @@ General stuff on category theory and logic, for beginners
 Different ways of looking at and reasoning about monads (from adjunctions, in terms of algebras, in terms of Lawvere theories, etc.)
 The equivalence of various definitions of adjunctions, including the “backwards” one.
 
+Talk about the Legendre transform from a tropical Fourier-transform perspective (keeping in mind how the ordinary properties fail a little and one must use one sup- Legendre transform followed by one min- Legendre transform, to recover the original function, with this working just in case the original function is convex). Discuss duality in linear programming from this perspective.
+
 ***
 Supply chain phenomena to write about:
 
