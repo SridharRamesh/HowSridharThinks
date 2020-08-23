@@ -32,7 +32,7 @@ plugins:
   - jekyll-feed
 
 header_pages:
-  - about.markdown
+  - about.md
 
 permalink: /:categories/:title:output_ext
 
