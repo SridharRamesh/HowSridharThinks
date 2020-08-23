@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Adjunction Factorization"
+date: 2020-1-19
+---
+[There are a million things to write about adjunctions. For now, I’m just writing some motley scratch notes for myself and will shape this up into an introductory post later.]
+
+Much like every monad can be seen as coming from an adjunction in multiple ways, with Kleisli and Eilenberg-Moore as extremes, we also have that every adjunction can be seen as factoring through reflections and coreflections in multiple ways, with two extremes, I believe.
+
+I don’t mean in the sense of an idempotent adjunction, where the left adjoint factors as a reflection followed by an inclusion and the right adjoint as a coreflection followed by an inclusion. I mean in the opposite sense: factorizations where the left adjoint factors as an inclusion followed by a reflection, and the right adjoint as an inclusion followed by a coreflection. [I also mean throughout here for “reflective subcategory” to always mean a full subcategory, and similarly for coreflection; I should just adopt this convention in general]
+
+Specifically, as in the comma-cocomma discussions of commas and collages, I believe that when we have an adjunction thought of as a bifunctor, the corresponding collage is the minimal factorization in the sense of the previous paragraph (the left adjoint is an inclusion of the domain category into the collage followed by a reflection of the collage into the codomain category, and symmetrically for the right adjoint) and the corresponding comma category/two-sided fibration is the maximal factorization (the domain category is included as a coreflective subcategory of the comma category by sending each A to its unit A -> FA, and symmetrically for the codomain category’s inclusion as a reflective subcategory by sending each B to its counit GB -> B).
+
+The notion of morphism between such factorizations is as functors between the intermediary categories making everything commute, in the sense of making commutative triangles out of the inclusions of the domain category, out of the inclusions of the codomain category, out of the reflections into the codomain category, and out of the coreflections from the domain category. We will then find that the collage representation is indeed an initial factorization and the comma representation is indeed a terminal factorization (I believe this is even just a consequence of the universal properties of the collage representation as an initial object of a certain kind by virtue of its cocomma definition, and symmetrically for the comma as a terminal object). In particular, there is a unique functor from the collage to the comma making everything commute.
