@@ -67,7 +67,7 @@ By equating coefficients at higher powers of $$f$$ between these two series, we 
 
 # Alternative proof of the Wallis product:
 
-Check out another beautifully simple geometric proof of the Wallis product directly in terms of circles and spheres (and higher-dimensional spheres...) in [this post](WallisProductGeometric.html)! No complex numbers or tricky polynomial algebra required!
+Check out another beautifully simple geometric proof of the Wallis product directly in terms of circles and spheres (and higher-dimensional spheres...) in [this post]({{"/math/WallisProductGeometric.html" | prepend:site.baseurl}})! No complex numbers or tricky polynomial algebra required!
 
 # Much more to come:
 
