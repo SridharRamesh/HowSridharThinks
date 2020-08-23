@@ -5,15 +5,15 @@ date: 2019-11-28
 ---
 [TODO: LaTeXify the following]
 
-Let F be an endofunctor and let A : FX -> X be an algebra for that endofunctor. A gives rise to another F-algebra FA : FFX -> FX, and this has a "tautological" F-algebra homomorphism back into A with underlying map A itself (the relevant commutative square is just $$latex A \circ FA = A \circ FA$$).
+Let $$F$$ be an endofunctor and let $$A : FX \to X$$ be an algebra for that endofunctor. $$A$$ gives rise to another F-algebra $$FA : FFX \to FX$$, and this has a "tautological" F-algebra homomorphism back into $$A$$ with underlying map $$A$$ itself (the relevant commutative square is just $$A \circ FA = A \circ FA$$).
 
-Now suppose there is some F-algebra homomorphism : A -> FA which is a section of the tautological homomorphism : FA -> A.
+Now suppose there is some F-algebra homomorphism $$: A \to FA$$ which is a section of the tautological homomorphism $$: FA \to A$$.
 
 Lambek's lemma (although not usually phrased in such generality) tells us that this section is actually an isomorphism; that is, even in the other order of composition, the tautological homomorphism followed by its section comes out to identity.
 
-Why is this? Let $$$$m : X \to F X$$ be the underlying morphism of this section. Then we have $$m \circ A = F(A) \circ F(m) = F(A \circ m) = F(1) = 1$$, establishing the lemma.
+Why is this? Let $$m : X \to F X$$ be the underlying morphism of this section. Then we have $$m \circ A = F(A) \circ F(m) = F(A \circ m) = F(1) = 1$$, establishing the lemma.
 
-In particular, if $$latex A$$ is an initial object in some full subcategory of the F-algebras closed under $$latex F$$, then this category will contain the tautological morphism into $$latex A$$, and also a section for it (as an initial object readily provides a section of every map into it), allowing us to apply this lemma to conclude that $$latex A$$ is in fact an isomorphism.
+In particular, if $$A$$ is an initial object in some full subcategory of the F-algebras closed under $$F$$, then this category will contain the tautological morphism into $$A$$, and also a section for it (as an initial object readily provides a section of every map into it), allowing us to apply this lemma to conclude that $$A$$ is in fact an isomorphism.
 
 This is closer to the way Lambek's lemma is usually presented (while still general enough for our purposes below!).
 
