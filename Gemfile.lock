@@ -254,7 +254,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 207)
   jekyll-feed (~> 0.13.0)
-  minima (~> 2.5.1)
+  minima
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
