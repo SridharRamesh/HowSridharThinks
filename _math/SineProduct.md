@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Wallis Product and the Sine Product"
+title:  "The Wallis Product and the Sine Product"
 date: 2018-06-26 02
 ---
 In a past life, I worked for 3blue1brown, and I discovered and made a video for them on a simple new proof of the Wallis product and the sine product more generally. Alas, I no longer work for 3blue1brown. But I had a post on a number of supplements to that video, which I will keep archived for my own purposes here, as well transcribing the full argument from the video for this blog at some point as well:
