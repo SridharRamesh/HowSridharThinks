@@ -11,7 +11,7 @@ You've come to the right place to see how Sridhar thinks about math.
 The below is just taken from the `home` minima layout, but I've modified it so that it displays "pages" rather than "posts". I'd rather not have to put dates in everything's filename, and I think of these as non-ephemeral objects anyway. But having them display with their date taken from their header is nice.
 {% endcomment %}
 
-<h1> Posts </h1>
+<h1> All Posts, Unorganized</h1>
 
 <div class="home">
   {%- if page.title -%}
