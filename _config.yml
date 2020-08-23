@@ -40,6 +40,8 @@ permalink: /:categories/:title:output_ext
 collections:
   math:
     output: true
+  drafts:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
