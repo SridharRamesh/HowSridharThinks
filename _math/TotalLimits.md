@@ -72,7 +72,11 @@ Note that an instance of all this is a criterion for when a category has any par
 
 Conversely, our original result about total limits being empty colimits is a special case of this now-generalized Adjoint Functor Theorem, considering that a functor from C to C^0 = 1 always preserves all limits, so it will have a left adjoint (i.e., C will have an initial object) just to the extent that the necessary limit (of all of C) exists in C. [TODO: Pay more attention to deriving the absoluteness of the limit here as well]
 
-TODO:
+***
+
+Incidentally, a certain addendum which is sometimes useful is that we can obtain an initial object by taking any weakly initial object (one with existence, but not necessarily uniqueness, of morphsims into every other object; that is, any object which becomes initial in the preorder reflction of the category), and equalizing all its endomorphisms. [TODO: Why is this? I believe this is because the inclusion functor of the equalizer morphism $$E \to W$$, where $$W$$ is weakly initial and $$E$$ is the common equalizer of on a weakly initial object is automatically an [initial functor](https://ncatlab.org/nlab/show/final+functor), and thus has the same limit as the identity functor. But I need to work this out. I can then perhaps apply this to bottoms-up Knaster-Tarski, by doing such a coequalizer of all endomorphisms at every stage.]
+
+***
 
 [TODO: Note that all the results in this post are essentially equivalent; they each entail each other relatively quickly. The trickiest thing is showing that the Yoneda lemma implies the rest (actually, this might not be true; the Yoneda lemma might be the one result weaker than the others); TODO: write this up. Even though this is perhaps how we are trained to think as category theorists, with Yoneda as fundamental, I now think the most fundamental ideas here (whatever that amounts to) are the first two in this post: total limits are initial objects, and the "Representability Theorem". Note that the observation that total limits are initial objects is easy to make direct sense of for internal categories in various senses, including 0-cells internal to higher categories, as it makes no reference to Set as such, while the Yoneda lemma can be more difficult to directly interpret (though not impossible to indirectly interpret via slice nonsense) in such contexts because Set is generally not itself an internal category in Set.]
 
