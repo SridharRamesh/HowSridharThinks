@@ -3,8 +3,6 @@ layout: post
 title:  "Multiplicative Groups in Modular Arithmetic"
 date: 2019-11-28
 ---
-[TODO: LaTeXify the following]
-
 By the Chinese Remainder Theorem, the ring of integers modulo N is the product of the rings of integers modulo p^n, for each prime power p^n in the factorization of N. To study the integers modulo p^n, it is helpful to consider the p-adics.
 
 By Fermat's little theorem and Hensel's lemma, there is for every possible last digit in the p-adic integers, a unique value x with that last digit satisfying x^p = x. If that last digit is 0, then x = 0 of course. The rest of these form a cyclic group of order p - 1 [by the cyclicity of the multiplicative group of a finite field; see https://howsridharthinks.wordpress.com/2019/12/02/field-multiplication-cyclicity/ ].
@@ -24,3 +22,5 @@ These cylicity results state that there is an isomorphism between the multiplica
 This completes the description of the multiplicative group of invertible values in the p-adics and thus in the N-adics (and thus also the structure of the corresponding groups mod N for any finite N). The full multiplicative monoid of p-adics is this previous group times the additive monoid of natural numbers (the multiplicative monoid of powers of p), of course. And the full multiplicative group of p-adic rationals uses "integers" in place of the previous line's "natural numbers".
 
 [TODO: Rewrite stuff on values = 1 mod p in terms of the observation that they come with a valuation under multiplication which has the right properties to match a valuation under addition, and the construction of the logarithm automatically from this]
+
+[TODO: LaTeXify the above]

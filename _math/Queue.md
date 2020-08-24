@@ -3,8 +3,6 @@ layout: post
 title:  "Queues and the Erlang B-Theorem"
 date: 2020-8-12
 ---
-[Much of the following was drawn from https://math.stackexchange.com/questions/483160/hilberts-barber-shop, inspired by a Learned League question, and then also augmented after reading about the "insensitivity" of Erlang's B-theorem, allowing generalization to general distributions.]
-
 Suppose you have a queue with finite capacity C, such that the queue can be entered whenever it has less than C people in it already, but the queue permanently turns away anyone who shows up while it has C people in it.
 
 Suppose also that people show up to the queue as a Poisson process with rate $$\lambda$$, and once in the queue, remain in it for a random time independently drawn from a fixed distribution before leaving. In jargon (Kendall notation), this is an M/G/C/C queue, or "Erlang loss system".
@@ -40,3 +38,7 @@ Anyway, having derived these densities, we can then integrate them to find that 
 From this, we can quickly determine the mean number of people in the queue, either as an explicit sum over all $$n$$, or as the integral of $$\lambda$$ times the probability of not being full times $$(1 - F(t))$$, describing how many people tried to enter the queue in the past, arrived at a time when it wasn't full, and are still there. This simplifies to $$\lambda \mu$$ times the probability of not being full.
 
 And once we know the expected number of people in the queue, we can also use this to model a line of infinite parking spaces 0, 1, 2, 3, …, with each person showing up taking the lowest-numbered space available. What I mean by this is, the probability that spot X is occupied at any moment is precisely the mean number of people in the first (X + 1) spots minus the mean number of people in the first X spots. Our previous formula gives us those values readily, since these amount to the same as looking at queues of capacity (X + 1) and X. This is a nice application on which to end this post. Indeed, it is the application which, in the form of a trivia question, first brought me to thinking about this.
+
+***
+
+Much of the above was drawn from https://math.stackexchange.com/questions/483160/hilberts-barber-shop, inspired by a Learned League question, and then also augmented after reading about the "insensitivity" of Erlang's B-theorem, allowing generalization to general distributions.

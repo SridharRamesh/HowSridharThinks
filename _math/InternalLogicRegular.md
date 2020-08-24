@@ -3,8 +3,6 @@ layout: post
 title:  "The Internal Logic of Effective Regular and Abelian Categories"
 date: 2020-1-16
 ---
-[TODO: LaTeXify]
-
 The internal logic of effective regular categories (aka, "exact categories", though this term is overloaded, or "Barr-exact categories") can be given in many different ways, but is perhaps most easily spelt out in terms of thinking of relations, rather than functions as such. Any theory of the following form presents an effective regular category, and any effective regular category has such a presentation:
 
 We have various sorts and various finitary relations in our language (including an equality relation at each sort). In addition to the usual structural operations of substitution into a relation on A, B, C ... to get a relation on D, E, F, ..., using any sort-preserving relabelling mapping from {A, B, C, ...} to {D, E, F, ...}, we can also form new relations using conjunction and the existential quantifier (abstracting away one variable); substitution preserves these conjunction and existential quantification operations in the usual automatic syntactic way [this preservation can also be taken as a proof rule rather than a syntax rule, if one likes].
@@ -42,3 +40,7 @@ Expanding on this last point, note that in an Abelian category, we can actually 
 ***
 
 Incidentally, there is also terminology like "Ab-enriched", "preadditive", "additive", etc., categories for categories enriched over Abelian groups with some but not all the further structure of a full-on Abelian category. I actually hate all this terminology and can't keep it straight. I always want to use the term "Abelian category" to mean simply "category enriched over Abelian groups", and to have some other term for the full thing. Alas, though this is how Sridhar thinks, this isn't how the world talks.
+
+***
+
+[TODO: LaTeXify]
