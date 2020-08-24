@@ -32,6 +32,11 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Atom feed can be viewed at /feed/math.xml
+feed:
+  collections:
+    - math
+
 header_pages:
   - about.md
 
