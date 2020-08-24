@@ -12,7 +12,7 @@ You've come to the right place to see how Sridhar thinks about math.
 ([Atom feed](/feed/math.xml))
 
 {% comment %}
-The below is just taken from the `home` minima layout, but I've modified it so that it displays "pages" rather than "posts". I'd rather not have to put dates in everything's filename, and I think of these as non-ephemeral objects anyway. But having them display with their date taken from their header is nice.
+The below is taken from the `home` minima layout, but I've modified it, mostly just so that it displays "pages" rather than "posts". I'd rather not have to put dates in everything's filename, and I think of these as non-ephemeral objects anyway. But having them display with their date taken from their header is nice.
 {% endcomment %}
 
 <div class="home">
@@ -40,7 +40,6 @@ The below is just taken from the `home` minima layout, but I've modified it so t
       {%- endfor -%}
     </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
 </div>
