@@ -3,7 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Jack
 ---
 
 You've come to the right place to see how Sridhar thinks about math.
