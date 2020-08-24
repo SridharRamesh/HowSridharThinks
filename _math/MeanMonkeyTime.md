@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Mean Monkey Time"
 date: 2020-7-7
 ---

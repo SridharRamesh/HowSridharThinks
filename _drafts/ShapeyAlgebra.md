@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Shapey Algebra"
 date: 2020-4-22
 ---

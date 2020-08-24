@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Fundamental Theorems of Calculus"
 date: 2019-05-26
 ---

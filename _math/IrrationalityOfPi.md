@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Irrationality of π^2, and Therefore of π"
 date: 2018-06-27
 ---

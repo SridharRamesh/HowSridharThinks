@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Meta-Formula for 1^n + 2^n + 3^n + ... + x^n"
 date: 2018-06-27
 ---

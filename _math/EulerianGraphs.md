@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Eulerian Graphs"
 date: 2020-5-4
 ---

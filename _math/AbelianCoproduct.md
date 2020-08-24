@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Coproducts of Abelian Monoids"
 date: 2020-2-1
 ---

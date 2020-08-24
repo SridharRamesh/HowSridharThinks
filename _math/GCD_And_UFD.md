@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Greatest Common Divisors and Unique Prime Factorization"
 date: 2020-6-29
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Blind Bartender Problem"
 date: 2020-8-10
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Multiplicative Groups in Modular Arithmetic"
 date: 2019-11-28
 ---

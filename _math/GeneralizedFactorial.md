@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Generalized Factorial"
 date: 2018-06-27
 ---

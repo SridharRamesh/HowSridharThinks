@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Internal Logic of Effective Regular and Abelian Categories"
 date: 2020-1-16
 ---

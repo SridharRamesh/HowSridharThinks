@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Transfinite Stable Marriage"
 date: 2019-11-17
 ---

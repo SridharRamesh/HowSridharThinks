@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Birkhoff’s HSP Theorem and Beck’s Monadicity Theorem"
 date: 2020-1-18
 ---

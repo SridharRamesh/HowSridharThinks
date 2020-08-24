@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Heron's Formula"
 date: 2020-5-3
 ---

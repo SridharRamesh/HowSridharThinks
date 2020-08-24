@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Mac Lane \"Parameters\" Theorem"
 date: 2020-2-3
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Order of Operations"
 date: 2019-07-30
 ---

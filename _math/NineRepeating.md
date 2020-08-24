@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "0.999... = 1"
 date: 2020-2-17
 ---

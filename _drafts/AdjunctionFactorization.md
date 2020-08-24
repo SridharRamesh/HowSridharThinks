@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Adjunction Factorization"
 date: 2020-1-19
 ---

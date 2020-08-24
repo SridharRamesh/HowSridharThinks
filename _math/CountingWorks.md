@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Counting Works"
 date: 2020-5-5
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Galois Theory and the Fourier Transform"
 date: 2020-4-27
 ---

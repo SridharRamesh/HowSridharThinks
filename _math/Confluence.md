@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Confluence"
 date: 2019-11-18
 ---

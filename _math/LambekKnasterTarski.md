@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Lambek's lemma, Knaster-Tarski, Adamek"
 date: 2019-11-28
 ---

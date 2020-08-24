@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Convergence Entails Countable Support"
 date: 2020-4-22
 ---

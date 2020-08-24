@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Circular Proofs Aren't Useless"
 date: 2020-2-3
 ---

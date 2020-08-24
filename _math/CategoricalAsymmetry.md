@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Categorical Asymmetry"
 date: 2020-1-21
 ---

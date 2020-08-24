@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Crystallographic Restriction"
 date: 2019-11-18
 ---

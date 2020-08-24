@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Elementary Prime Counting"
 date: 2018-06-27
 ---

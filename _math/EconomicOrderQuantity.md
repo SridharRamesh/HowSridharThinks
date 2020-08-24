@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Supply Chain Theory: The Economic Order Quantity"
 date: 2018-12-19
 ---

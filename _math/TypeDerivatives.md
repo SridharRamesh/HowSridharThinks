@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Type Derivatives"
 date: 2019-1-3
 ---

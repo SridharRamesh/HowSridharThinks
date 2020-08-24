@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Commas and Collages"
 date: 2020-1-18
 ---

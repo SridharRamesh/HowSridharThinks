@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "A Simple Geometric Proof of the Wallis Product"
 date: 2018-06-26 01
 ---

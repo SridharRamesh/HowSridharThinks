@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "\"Sequent Calculi\" vs. \"Natural Deduction\""
 date: 2019-07-30
 ---

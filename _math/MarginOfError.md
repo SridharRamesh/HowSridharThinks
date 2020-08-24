@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Margin of Error"
 date: 2020-2-3
 ---

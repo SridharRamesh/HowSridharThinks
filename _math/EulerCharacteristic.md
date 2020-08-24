@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Euler Characteristic"
 date: 2020-3-19
 ---

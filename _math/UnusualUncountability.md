@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Unusual Uncountability Proofs"
 date: 2020-4-22
 ---

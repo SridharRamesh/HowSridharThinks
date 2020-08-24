@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "3blue1brown: The Wallis Product and the Sine Product"
 date: 2018-06-26 02
 ---

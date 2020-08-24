@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Total Limits Are Empty Colimits"
 date: 2019-11-17
 ---

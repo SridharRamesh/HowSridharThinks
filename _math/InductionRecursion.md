@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Induction and Recursion"
 date: 2020-4-26
 ---

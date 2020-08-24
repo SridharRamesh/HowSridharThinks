@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Partitions"
 date: 2020-7-20
 ---

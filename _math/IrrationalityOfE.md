@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Irrationality of e"
 date: 2020-1-21
 ---

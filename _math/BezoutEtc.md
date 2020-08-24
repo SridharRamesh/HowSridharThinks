@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Partial Fractions, Jordan, Bezout, Euclid, and the Chinese"
 date: 2020-5-1
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Queues and the Erlang B-Theorem"
 date: 2020-8-12
 ---

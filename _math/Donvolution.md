@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Donvolution"
 date: 2019-11-26
 ---

@@ -1,0 +1,27 @@
+{% comment %}
+The below is taken from the `home` minima layout, but I've modified it, mostly just so that it displays "pages" from arbitrary collections, rather than "posts" specifically. I'd rather not have to put dates in everything's filename, and I think of these as non-ephemeral objects anyway. But having them display with their date taken from their header is nice.
+{% endcomment %}
+
+<div class="collectionIndex">
+  {%- if include.collection.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in include.collection -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- else -%}
+    The collection to be displayed here is empty right now.
+  {%- endif -%}
+
+</div>

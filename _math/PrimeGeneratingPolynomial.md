@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Prime-Generating Polynomial"
 date: 2020-1-19
 ---

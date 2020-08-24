@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Borwein Integrals"
 date: 2019-12-19
 ---

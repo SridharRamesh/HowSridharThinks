@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Adjunctions"
 date: 2020-4-26
 ---

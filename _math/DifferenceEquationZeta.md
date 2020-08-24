@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Difference Equations, Infinite Sums, Generalized Factorial, Zeta Functions, Etc"
 date: 2019-11-19
 ---

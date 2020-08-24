@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Proofs of The Sine Product Formula"
 date: 2019-05-18
 ---

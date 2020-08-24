@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Gauss-Bonnet"
 date: 2020-8-8
 ---

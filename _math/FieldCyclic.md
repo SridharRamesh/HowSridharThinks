@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Field Multiplication Cyclicity"
 date: 2019-12-2
 ---
