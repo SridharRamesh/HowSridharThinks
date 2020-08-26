@@ -3,3 +3,5 @@ Note that in Jekyll 4, the need to append baseurl in front of {link} links goes 
 In the unreleased latest version of minima, custom-head.html is loaded automatically, and I will not not a custom default.html to do so. But again, GitHub Pages is stuck not using this.
 
 The unreleased latest version of minima supports pagination. Perhaps this can be cobbled together even without that?
+
+We can use GitHub Actions to use latest version of Jekyll, etc, even before GitHub Pages directly supports them.

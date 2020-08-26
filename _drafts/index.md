@@ -3,7 +3,6 @@
 
 layout: default
 title: Drafts
-date: 01-01-2001
 ---
 
 You've come to the right place to see how Sridhar thinks about drafts.
