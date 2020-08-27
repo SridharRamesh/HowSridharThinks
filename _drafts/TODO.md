@@ -25,6 +25,10 @@ The equivalence of various definitions of adjunctions, including the “backward
 
 Talk about the Legendre transform from a tropical Fourier-transform perspective (keeping in mind how the ordinary properties fail a little and one must use one sup- Legendre transform followed by one min- Legendre transform, to recover the original function, with this working just in case the original function is convex). Discuss duality in linear programming from this perspective.
 
+Partial derivative notation is awful because it doesn't make clear what's allowed to vary with what, but people lie about how the chain rule in terms of fractions "breaks" in this situation. Re-use the writing already done on MathOverflow/Quora for this situation.
+
+Find the monotonicity/least fixed point probability thing I'd once written about on SDMB.
+
 ***
 Supply chain phenomena to write about:
 
