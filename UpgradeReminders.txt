@@ -5,3 +5,5 @@ In the unreleased latest version of minima, custom-head.html is loaded automatic
 The unreleased latest version of minima supports pagination. Perhaps this can be cobbled together even without that?
 
 We can use GitHub Actions to use latest version of Jekyll, etc, even before GitHub Pages directly supports them.
+
+Consider using Haskell library `reanimate` (inspired by 3blue1brown's `manim`) to make videos of some of these.
