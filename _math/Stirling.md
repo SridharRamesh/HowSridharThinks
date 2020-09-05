@@ -8,7 +8,7 @@ Well, $$n! = \prod_{t = 1}^{n} t$$, a discrete product. One obvious way to try t
 
 How good is this approximation? Does it even satisfy the recurrence defining the factorial? Well, $$\frac{A(n + 1)}{A(n)} = \frac{\left(1 + \frac{1}{n}\right)^n (n + 1)}{e}$$. This isn't quite the same as $$(n + 1)$$, but it's close. Put another way, $$\frac{A(n + 1)/(n + 1)!}{A(n)/n!} = \frac{\left(1 + \frac{1}{n}\right)^n}{e}$$.
 
-For large $$n$$, this of course approaches $$1$$. But in general, this tells us that $$\frac{A(n)}{n!} = \prod_{t = 1}{n - 1} \frac{\left(1 + \frac{1}{t}\right)^t}{e}$$.
+For large $$n$$, this of course approaches $$1$$. But in general, this tells us that $$\frac{A(n)}{n!} = \prod_{t = 1}^{n - 1} \frac{\left(1 + \frac{1}{t}\right)^t}{e}$$.
 
 What is the asymptotic behavior of this series? Well, again, people like to talk about things summatively rather than multiplicatively, so let's apply a logarithm. This turns our series into $$\sum_{t = 1}^{n - 1} [t \log \left(1 + \frac{1}{t} \right) - 1] = \sum_{t = 1}^{n - 1} [-\frac{1}{2t} + \frac{1}{3t^2} - \frac{1}{4t^3} + \ldots]$$, using the Mercator series expansion of the logarithm.
 
