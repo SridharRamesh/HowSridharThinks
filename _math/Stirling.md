@@ -19,7 +19,7 @@ In other words, $$n! \sim F \sqrt{n} \left(\frac{n}{e}\right)^n$$, for some cons
 What is the value of that constant $$F$$? Well, this can be determined by using the duplication formula for the factorial.
 
 # Duplication Formula
-Note that $$f(n) = M^{n} \prod_{K = 0}^{M - 1} \frac{n - K}{M}!$$ clearly satisfies the same "pseudopolynomiality" and recurrence for $$f(n + M)$$ that $$n!$$ does. So the two are equal up to a constant of proportionality, which is readily determined. [TODO: Expand on this or simplify it]
+Note that $$f(n) = M^{n} \prod_{K = 0}^{M - 1} \frac{n - K}{M}!$$ clearly satisfies the same "pseudopolynomiality" and recurrence for $$f(n + 1)$$ that $$n!$$ does. So the two are equal up to a constant of proportionality, which is readily determined. [TODO: Expand on this or simplify it. Link to Generalized Factorial.]
 
 [This means $$n!/m! = M^{n - m} \prod_{K = 0}^{M - 1} \frac{\frac{n - K}{M}!}{\frac{m - K}{M}!}$$ more generally.]
 

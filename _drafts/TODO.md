@@ -30,6 +30,13 @@ Partial derivative notation is awful because it doesn't make clear what's allowe
 Find the monotonicity/least fixed point probability thing I'd once written about on SDMB.
 
 ***
+To think about:
+
+Sum of [2^(-2n) * zeta(2n)]/n from n = 1 to infinity is log(pi/2) [this is an expansion of the Wallis product using the Mercator series at the logarithmic level], but pi itself is closely related to zeta(2), zeta(4), etc. So there's some special fact here.
+
+Sum of [2^(-2n) * zeta(2n)]/(2n) is mean of log(1/2!) and log(-1/2!)? Well, this is just the Wallis product observation.
+
+***
 Supply chain phenomena to write about:
 
 – Economic order quantity
