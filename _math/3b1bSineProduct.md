@@ -68,6 +68,10 @@ By equating coefficients at higher powers of $$f$$ between these two series, we 
 
 Check out another beautifully simple geometric proof of the Wallis product directly in terms of circles and spheres (and higher-dimensional spheres...) in [this post]({{ site.baseurl }}{% link _math/WallisProductGeometric.md %})! No complex numbers or tricky polynomial algebra required!
 
+# Alternative proofs of the sine product:
+
+See [here]({{ site.baseurl }}{% link _math/SineProductProofs.md %}), for many other proofs, including the one that's actually my favorite.
+
 # Much more to come:
 
 [There's much more material to come on Euler's original method of discovery of the sine product, other methods of establishing it as well, what happens when we re-order our Wallis product to interleave its two halves at different speeds, other nice series for trig functions which follow from the sine product, further connections between these and the Basel problem, and more! This post will be updated continuously over time. Stay tuned!]
