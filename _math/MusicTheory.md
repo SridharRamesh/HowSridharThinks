@@ -1,12 +1,13 @@
 ---
 title:  "The Fundamental Theorem of Equal Temperament Arithmetic"
 date: 2020-9-29
-excerpt_separator: "\n\n\n"
+excerpt_separator: "***"
 ---
 The Fundamental Theorem of Equal Temperament Arithmetic is that log(2) : log(3) : log(5) is 12 : 19 : 28.
 
 What do I mean by this? This is a statement about music theory.
 
+***
 
 Consonant intervals are generally characterized by nice frequency ratios. In particular, n + 1 : n ratios are of note, as every other rational ratio can be built out of these short intervals. The smaller the n here, the more consonant the ratio, in some sense.
 
