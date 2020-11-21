@@ -25,7 +25,12 @@ Note that $$f(n) = M^{n} \prod_{K = 0}^{M - 1} \frac{n - K}{M}!$$ clearly satisf
 
 Put another way, $$f(Mn) = M^{Mn} \prod_{K = 0}^{M - 1} \frac{\left(n - \frac{K}{M}\right)!}{\frac{-K}{M}!}$$.
 
-But identifying the asymptotics on these using Stirling's approximation, and looking at the $$M = 2$$ case, we conclude that $$F = \left(-\frac{1}{2}\right)! \sqrt{2}$$.
+But identifying the asymptotics on these using Stirling's approximation, and looking at the $$M = 2$$ case, we conclude that $$F = \left(-\frac{1}{2}\right)! \sqrt{2}$$. But what is $$\left(-\frac{1}{2}\right)!$$? Well... [TODO: Link to Donvolution]
+
+# Another Way To Determine The Constant
+By applying the Stirling formula to $$\binom{2n}{n} = \frac{(2n)!}{n!^2}$$, we automatically get $$\binom{2n}{n} \sim \frac{4^n}{F \sqrt{n/2}}$$. Note that we can read the Wallis Product in these terms as well. $$ \frac{2}{1} \times \frac{4}{3} \times \frac{6}{5} \times \ldots \times \frac{2n}{2n - 1} = \frac{2^n n!}{\frac{(2n)!}{2^n n!}} = \frac{4^n}{\binom{2n}{n}} \sim F \sqrt{n/2}$$. And $$ \frac{2}{3} \times \frac{4}{5} \times \frac{6}{7} \times \ldots \times \frac{2n}{2n + 1}$$ in the same way comes out to $$\frac{4^n}{\binom{2n}{n}} \times \frac{1}{2n + 1} \sim F \sqrt{n/2} / (2n)$$. Multiplying these together gives us that the Wallis Product comes to $$\frac{F^2}{4}$$.
+
+If we happen to know that the Wallis Product comes $$\frac{\pi}{2}$$ (see [Wallis Product proved by higher-dimensional geometry]({{ site.baseurl }}{% link _math/WallisProductGeometric.md %}) and [Wallis Product as instance of sine product]({{ site.baseurl }}{% link _math/SineProductProofs.md %})), then we can conclude that $$F = \sqrt{2 \pi}$$.
 
 # TODO
 [TODO: Talk about the full Stirling series and how to derive it as a non-convergent asymptotic expansion]

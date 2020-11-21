@@ -8,6 +8,8 @@ The content of Arrow's Impossibility theorem is actually extremely closely relat
 
 Current requirements to understand this post: Basic knowledge of what filters and ultrafilters are [I shall probably come back and expand this post to actually kick off an introduction to the concepts for those who don’t already know]
 
+***
+
 Suppose you have a fixed set of voters and a set of ballot options (aka, candidates) for them to choose between. By a (deterministic) voting system on these voters and ballot options, we mean some function which takes as input any assignment from voters to their preferences (expressed as a linear ordering upon the ballot options) and produces as output some cumulative ranking of the ballot options (again, expressed as a linear ordering upon the ballot options). What Arrow’s Impossibility Theorem shows is that, if there are at least 3 ballot options, the voting systems satisfying some basic desirable criteria come only in one very particular (in some cases, rather undesirable) form.
 
 What criteria exactly? Well, the first is “Pareto efficiency”, aka “unanimity”: if all voters have the exact same preferences, then the cumulative ranking should be the same as this. Surely, this is the most natural, basic voting system property one could ask for.
