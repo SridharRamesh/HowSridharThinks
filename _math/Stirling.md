@@ -29,13 +29,13 @@ But what is $$\lambda(M)$$? Well, plugging in $$x = 0$$, it's clear that $$\lamb
 
 Observe that $$f_{MN}(x)$$ can be decomposed as $$\prod_{T = 0}^{N - 1} f_M \left(x - \frac{T}{MN} \right)$$. By our multiplication theorem, the left-hand side here is $$(MNx)! (MN)^{-MNx} \lambda(MN)$$. And the right-hand side is $$\prod_{T = 0}^{N - 1} [\left(Mx - \frac{T}{N} \right)! M^{-Mx + \frac{T}{N}} \lambda(M)] = M^{-MNx} M^{(N - 1)/2} \lambda(M)^N f_N(Mx)$$, which by applying the multiplication theorem again, is $$(MNx)! (MN)^{-MNx} M^{(N - 1)/2} \lambda(M)^N \lambda(N)$$.
 
-Identifying our two sides, we find $$\lambda(MN) = M^{(N - 1)/2} \lambda(M)^N \lambda(N)$$. If we now write $$g(M) = \lambda(M) M^{1/2}$$, we find that $$g(MN) = g(M)^N g(N)$$. Symmetrically, we also have $$g(MN) = g(N)^M g(M)$$ then. Identifying these two and setting $$N = 2$$, we have that $$g(M)^2 g(2) = g(2)^M g(M)$$, and by dividing by $$g(M)$$ [manifestly nonzero], we see $$g(M) = g(2)^{M - 1}$$. Thus, $$\lambda(M) = b^{M - 1} M^{-1/2}$$ for some base $$b$$.
+Identifying our two sides, we find $$\lambda(MN) = M^{(N - 1)/2} \lambda(M)^N \lambda(N)$$. If we now write $$g(M) = \lambda(M) M^{1/2}$$, we find that $$g(MN) = g(M)^N g(N)$$. Symmetrically, we also have $$g(MN) = g(N)^M g(M)$$ then. Identifying these two and setting $$N = 2$$, we have that $$g(M)^2 g(2) = g(2)^M g(M)$$, and by dividing by $$g(M)$$ [manifestly nonzero], we see $$g(M) = g(2)^{M - 1}$$. Thus, $$\lambda(M) = g(2)^{M - 1} M^{-1/2}$$.
 
-In particular, recall we have that $$(-1/2)! = \lambda(2) = b 2^{-1/2}$$, and thus $$b = (-1/2)! \sqrt{2}$$.
+In particular, recall we have that $$(-1/2)! = \lambda(2)$$, and thus we must have in general that $$\lambda(M) = \left((-1/2)! \sqrt{2}\right)^{M - 1} M^{-1/2}$$.
 
 Going back and plugging this into our multiplication theorem, we have that $$f_M(x) = (Mx)! M^{-Mx - 1/2} \left( (-1/2)! \sqrt{2} \right)^{M - 1}$$.
 
-[TODO: Observe how the M = infinity case viewed logarithmically is like an integral, as a Riemann sum]
+[TODO: Observe how the M = infinity case viewed logarithmically is like the integral of $$log(x!)$$ from $$-1$$ to $$0$$, as a Riemann sum]
 
 Now, looking at the Stirling asymptotics on any particular case (perhaps most easily the M = 2 or M = infinity cases) of the multiplication theorem as we replace $$x$$ by $$x + n$$ with $$n$$ large, we conclude that $$F = \left(-\frac{1}{2}\right)! \sqrt{2}$$. But what is $$\left(-\frac{1}{2}\right)!$$? Well... [TODO: Link to Donvolution, or to Wallis Product]
 
