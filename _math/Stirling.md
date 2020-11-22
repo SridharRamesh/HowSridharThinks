@@ -29,7 +29,7 @@ But what is $$\digamma(M)$$? Well, plugging in $$x = 0$$, it's clear that $$\dig
 
 Observe that $$f_{MN}(x)$$ can be decomposed as $$\prod_{T = 0}^{N - 1} f_M \left(x - \frac{T}{MN} \right)$$. By our multiplication theorem, the left-hand side here is $$(MNx)! (MN)^{-MNx} \digamma(MN)$$. And the right-hand side is $$\prod_{T = 0}^{N - 1} [\left(Mx - \frac{T}{N} \right)! M^{-Mx + \frac{T}{N}} \digamma(M)] = M^{-MNx} M^{(N - 1)/2} \digamma(M)^N f_N(Mx)$$, which by applying the multiplication theorem again, is $$(MNx)! (MN)^{-MNx} M^{(N - 1)/2} \digamma(M)^N \digamma(N)$$.
 
-Identifying our two sides, we find $$\digamma(MN) = M^{(N - 1)/2} \digamma(M)^N \digamma(N)$$. If we now write $$g(M) = \digamma(M) M^{1/2}$$, we find that $$g(MN) = g(M)^N g(N)$$. This suggests $$g(M) = b^{M - 1}$$ for some base $$b$$. [TODO: Expand on this]. Thus, $$\digamma(M) = b^{M - 1} M^{-1/2}$$.
+Identifying our two sides, we find $$\digamma(MN) = M^{(N - 1)/2} \digamma(M)^N \digamma(N)$$. If we now write $$g(M) = \digamma(M) M^{1/2}$$, we find that $$g(MN) = g(M)^N g(N)$$. Symmetrically, we also have $$g(MN) = g(N)^M g(M)$$ then. Identifying these two and setting $$N = 2$$, we have that $$g(M)^2 g(2) = g(2)^M g(M)$$, and by dividing by $$g(M)$$ [manifestly nonzero], we see $$g(M) = g(2)^(M - 1)$$. Thus, $$\digamma(M) = b^{M - 1} M^{-1/2}$$ for some base $$b$$.
 
 In particular, recall we have that $$(-1/2)! = \digamma(2) = b 2^{-1/2}$$, and thus $$b = (-1/2)! \sqrt{2}$$.
 
