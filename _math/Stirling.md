@@ -19,18 +19,32 @@ In other words, $$n! \sim F \sqrt{n} \left(\frac{n}{e}\right)^n$$, for some cons
 What is the value of that constant $$F$$? Well, this can be determined by using the duplication formula for the factorial.
 
 # Duplication Formula
-Note that $$f(n) = M^{n} \prod_{K = 0}^{M - 1} \frac{n - K}{M}!$$ clearly satisfies the same "pseudopolynomiality" and recurrence for $$f(n + 1)$$ that $$n!$$ does. So the two are equal up to a constant of proportionality, which is readily determined. [TODO: Expand on this or simplify it. Link to Generalized Factorial.]
+Let $$f_M(x) = \prod_{T = 0}^{M - 1} [\left(x - \frac{T}{M}\right)!]$$. Note that $$f_M(x/M) M^{x}$$ clearly satisfies the same "pseudopolynomiality" and recurrence as a function of $$x$$ that $$x!$$ does. So the two are equal up to a constant of proportionality, which is readily determined. [TODO: Link to Generalized Factorial.]
 
-[This means $$n!/m! = M^{n - m} \prod_{K = 0}^{M - 1} \frac{\frac{n - K}{M}!}{\frac{m - K}{M}!}$$ more generally.]
+That is, there is some $$\digamma(M)$$ such that $f_M(x/M) M^{x} = x! \digamma(M)$$. Put another way, $$f_M(x) = (Mx)! M^{-Mx} \digamma(M)$$.
 
-Put another way, $$f(Mn) = M^{Mn} \prod_{K = 0}^{M - 1} \frac{\left(n - \frac{K}{M}\right)!}{\frac{-K}{M}!}$$.
+This is the "multiplication theorem"; when $$M = 2$$, people call it the "duplication theorem".
 
-But identifying the asymptotics on these using Stirling's approximation, and looking at the $$M = 2$$ case, we conclude that $$F = \left(-\frac{1}{2}\right)! \sqrt{2}$$. But what is $$\left(-\frac{1}{2}\right)!$$? Well... [TODO: Link to Donvolution]
+But what is $$\digamma(M)$$? Well, plugging in $$x = 0$$, it's clear that $$\digamma(M)$$ is $$f_M(0)$$, the product of $$x!$$ over all rational $$x$$ in $$(-1, 0]$$ with denominator $$M$$. In particular, $$\digamma(2)$$ is $$(-1/2)!$$. But we can say more about the general behavior of this $$\digamma(M)$$ as a function of $$M$$.
+
+Observe that $$f_{MN}(x)$$ can be decomposed as $$\prod_{T = 0}^{N - 1} f_M \left(x - \frac{T}{MN} \right)$$. By our multiplication theorem, the left-hand side here is $$(MNx)! (MN)^{-MNx} \digamma(MN)$$. And the right-hand side is $$\prod_{T = 0}^{N - 1} [\left(Mx - \frac{T}{N} \right)! M^{-Mx + \frac{T}{N}} \digamma(M)] = M^{-MNx} M^{(N - 1)/2} \digamma(M)^N f_N(Mx)$$, which by applying the multiplication theorem again, is $$(MNx)! (MN)^{-MNx} M^{(N - 1)/2} \digamma(M)^N \digamma(N)$$.
+
+Identifying our two sides, we find $$\digamma(MN) = M^{(N - 1)/2} \digamma(M)^N \digamma(N)$$. If we now write $$g(M) = \digamma(M) M^{1/2}$$, we find that $$g(MN) = g(M)^N g(N)$$. This suggests $$g(M) = b^{M - 1}$$ for some base $$b$$. [TODO: Expand on this]. Thus, $$\digamma(M) = b^{M - 1} M^{-1/2}$$.
+
+In particular, recall we have that $$(-1/2)! = \digamma(2) = b 2^{-1/2}$$, and thus $$b = (-1/2)! \sqrt{2}$$.
+
+Going back and plugging this into our multiplication theorem, we have that $$f_M(x) = (Mx)! M^{-Mx - 1/2} \left( (-1/2)! \sqrt{2} \right)^{M - 1}$$.
+
+[TODO: Observe how the M = infinity case viewed logarithmically is like an integral, as a Riemann sum]
+
+Now, looking at the Stirling asymptotics on any particular case (perhaps most easily the M = 2 or M = infinity cases) of the multiplication theorem as we replace $$x$$ by $$x + n$$ with $$n$$ large, we conclude that $$F = \left(-\frac{1}{2}\right)! \sqrt{2}$$. But what is $$\left(-\frac{1}{2}\right)!$$? Well... [TODO: Link to Donvolution, or to Wallis Product]
 
 # Another Way To Determine The Constant
 By applying the Stirling formula to $$\binom{2n}{n} = \frac{(2n)!}{n!^2}$$, we automatically get $$\binom{2n}{n} \sim \frac{4^n}{F \sqrt{n/2}}$$. Note that we can read the Wallis Product in these terms as well. $$ \frac{2}{1} \times \frac{4}{3} \times \frac{6}{5} \times \ldots \times \frac{2n}{2n - 1} = \frac{2^n n!}{\frac{(2n)!}{2^n n!}} = \frac{4^n}{\binom{2n}{n}} \sim F \sqrt{n/2}$$. And $$ \frac{2}{3} \times \frac{4}{5} \times \frac{6}{7} \times \ldots \times \frac{2n}{2n + 1}$$ in the same way comes out to $$\frac{4^n}{\binom{2n}{n}} \times \frac{1}{2n + 1} \sim F \sqrt{n/2} / (2n)$$. Multiplying these together gives us that the Wallis Product comes to $$\frac{F^2}{4}$$.
 
 If we happen to know that the Wallis Product comes to $$\frac{\pi}{2}$$ (see [Wallis Product proved by higher-dimensional geometry]({{ site.baseurl }}{% link _math/WallisProductGeometric.md %}) and [Wallis Product as instance of sine product]({{ site.baseurl }}{% link _math/SineProductProofs.md %})), then we can conclude that $$F = \sqrt{2 \pi}$$.
+
+Actually, this just amounts to using the two-factor multiplication formula implicitly again to relate the Stirling constant to (-1/2)!, and then using the Wallis product to compute (-1/2)!. It's not actually different from the previous. But some may enjoy seeing it presented in this language, instead of in terms of the multiplication formula language.
 
 # TODO
 [TODO: Talk about the full Stirling series and how to derive it as a non-convergent asymptotic expansion]
