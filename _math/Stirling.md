@@ -48,3 +48,5 @@ Actually, this just amounts to using the two-factor multiplication formula impli
 
 # TODO
 [TODO: Talk about the full Stirling series and how to derive it as a non-convergent asymptotic expansion]
+
+[TODO: Note we can also derive the Stirling approximation from the infinite-factor multiplication formula, by considering (x + N)! as (N * (x/N + 1))!]
