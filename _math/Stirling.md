@@ -21,17 +21,17 @@ What is the value of that constant $$F$$? Well, this can be determined by using 
 # Duplication Formula
 Let $$f_M(x) = \prod_{T = 0}^{M - 1} [\left(x - \frac{T}{M}\right)!]$$. Note that $$f_M(x/M) M^{x}$$ clearly satisfies the same "pseudopolynomiality" and recurrence as a function of $$x$$ that $$x!$$ does. So the two are equal up to a constant of proportionality, which is readily determined. [TODO: Link to Generalized Factorial.]
 
-That is, there is some $$\digamma(M)$$ such that $f_M(x/M) M^{x} = x! \digamma(M)$$. Put another way, $$f_M(x) = (Mx)! M^{-Mx} \digamma(M)$$.
+That is, there is some $$\lambda(M)$$ such that $$f_M(x/M) M^{x} = x! \lambda(M)$$. Put another way, $$f_M(x) = (Mx)! M^{-Mx} \lambda(M)$$.
 
 This is the "multiplication theorem"; when $$M = 2$$, people call it the "duplication theorem".
 
-But what is $$\digamma(M)$$? Well, plugging in $$x = 0$$, it's clear that $$\digamma(M)$$ is $$f_M(0)$$, the product of $$x!$$ over all rational $$x$$ in $$(-1, 0]$$ with denominator $$M$$. In particular, $$\digamma(2)$$ is $$(-1/2)!$$. But we can say more about the general behavior of this $$\digamma(M)$$ as a function of $$M$$.
+But what is $$\lambda(M)$$? Well, plugging in $$x = 0$$, it's clear that $$\lambda(M)$$ is $$f_M(0)$$, the product of $$x!$$ over all rational $$x$$ in $$(-1, 0]$$ with denominator $$M$$. In particular, $$\lambda(2)$$ is $$(-1/2)!$$. But we can say more about the general behavior of this $$\lambda(M)$$ as a function of $$M$$.
 
-Observe that $$f_{MN}(x)$$ can be decomposed as $$\prod_{T = 0}^{N - 1} f_M \left(x - \frac{T}{MN} \right)$$. By our multiplication theorem, the left-hand side here is $$(MNx)! (MN)^{-MNx} \digamma(MN)$$. And the right-hand side is $$\prod_{T = 0}^{N - 1} [\left(Mx - \frac{T}{N} \right)! M^{-Mx + \frac{T}{N}} \digamma(M)] = M^{-MNx} M^{(N - 1)/2} \digamma(M)^N f_N(Mx)$$, which by applying the multiplication theorem again, is $$(MNx)! (MN)^{-MNx} M^{(N - 1)/2} \digamma(M)^N \digamma(N)$$.
+Observe that $$f_{MN}(x)$$ can be decomposed as $$\prod_{T = 0}^{N - 1} f_M \left(x - \frac{T}{MN} \right)$$. By our multiplication theorem, the left-hand side here is $$(MNx)! (MN)^{-MNx} \lambda(MN)$$. And the right-hand side is $$\prod_{T = 0}^{N - 1} [\left(Mx - \frac{T}{N} \right)! M^{-Mx + \frac{T}{N}} \lambda(M)] = M^{-MNx} M^{(N - 1)/2} \lambda(M)^N f_N(Mx)$$, which by applying the multiplication theorem again, is $$(MNx)! (MN)^{-MNx} M^{(N - 1)/2} \lambda(M)^N \lambda(N)$$.
 
-Identifying our two sides, we find $$\digamma(MN) = M^{(N - 1)/2} \digamma(M)^N \digamma(N)$$. If we now write $$g(M) = \digamma(M) M^{1/2}$$, we find that $$g(MN) = g(M)^N g(N)$$. Symmetrically, we also have $$g(MN) = g(N)^M g(M)$$ then. Identifying these two and setting $$N = 2$$, we have that $$g(M)^2 g(2) = g(2)^M g(M)$$, and by dividing by $$g(M)$$ [manifestly nonzero], we see $$g(M) = g(2)^(M - 1)$$. Thus, $$\digamma(M) = b^{M - 1} M^{-1/2}$$ for some base $$b$$.
+Identifying our two sides, we find $$\lambda(MN) = M^{(N - 1)/2} \lambda(M)^N \lambda(N)$$. If we now write $$g(M) = \lambda(M) M^{1/2}$$, we find that $$g(MN) = g(M)^N g(N)$$. Symmetrically, we also have $$g(MN) = g(N)^M g(M)$$ then. Identifying these two and setting $$N = 2$$, we have that $$g(M)^2 g(2) = g(2)^M g(M)$$, and by dividing by $$g(M)$$ [manifestly nonzero], we see $$g(M) = g(2)^(M - 1)$$. Thus, $$\lambda(M) = b^{M - 1} M^{-1/2}$$ for some base $$b$$.
 
-In particular, recall we have that $$(-1/2)! = \digamma(2) = b 2^{-1/2}$$, and thus $$b = (-1/2)! \sqrt{2}$$.
+In particular, recall we have that $$(-1/2)! = \lambda(2) = b 2^{-1/2}$$, and thus $$b = (-1/2)! \sqrt{2}$$.
 
 Going back and plugging this into our multiplication theorem, we have that $$f_M(x) = (Mx)! M^{-Mx - 1/2} \left( (-1/2)! \sqrt{2} \right)^{M - 1}$$.
 
