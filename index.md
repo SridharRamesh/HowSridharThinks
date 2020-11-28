@@ -11,4 +11,5 @@ You've come to the right place to see how Sridhar thinks about math.
 
 ([Atom feed](/feed/math.xml))
 
-{%- include collectionIndex.html collection=site.math -%}
+{%- assign mathposts = site.math | reverse -%}
+{%- include collectionIndex.html collection=mathposts -%}
