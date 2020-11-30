@@ -22,6 +22,8 @@ Our fixed point fact for probability things, from that SDMB post way back when
 General stuff on category theory and logic, for beginners
 Different ways of looking at and reasoning about monads (from adjunctions, in terms of algebras, in terms of Lawvere theories, etc.)
 The equivalence of various definitions of adjunctions, including the “backwards” one.
+A general post on things students are made to tackle by induction that are seen more clearly in other ways
+A general post on things people tackle by +1 reasoning instead of general monoid reasoning, that are seen more clearly in the full picture (including, e.g., the Mobius inversion chromatic polynomial thing)
 
 Talk about the Legendre transform from a tropical Fourier-transform perspective (keeping in mind how the ordinary properties fail a little and one must use one sup- Legendre transform followed by one min- Legendre transform, to recover the original function, with this working just in case the original function is convex). Discuss duality in linear programming from this perspective.
 

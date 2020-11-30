@@ -39,6 +39,8 @@ Now, looking at the Stirling asymptotics on any particular case (perhaps most ea
 
 Indeed, just as well, we could've concluded Stirling's theorem directly from the multiplication theorem like so: By the trapezoid rule, we know that $$\int_{0}^{1} \log(x!) dx$$ is equal to $$\log(f_N(1))/N$$ plus an error term which is $$O(N^{-2})$$. But $$\int_{0}^{1} \log(x!) dx = \int_{0}^{1} \log((x - 1)!) + log(x) dx = b - 1$$, and our multiplication theorem tells us that $$\log(f_N(1)) = \log(N!) - N\log(N) + (N - 1)b - \log(N)/2$$. Thus, $$N (b - 1) = \log(N!) - N\log(N) + (N - 1)b - \log(N)/2 + O(N^{-1})$$, which means $$\log(N!) = b + \log(N)/2 + N(\log(N) - 1) + O(N^{-1})$$, which is Stirling's approximation.
 
+[TODO: If you know the reflection formula $$z!(-z)! = 1/sinc(\pi z)$$, then the multiplication theorem for the factorial is equivalent to a multiplication theorem for sine, by pairing up each (k/M)! with (1 - k/M)! = (-k/M)!(1 - k/M). This multiplication theorem for sine should be the same as what I illustrated in my 3blue1brown video on the sine product. Is there a natural calculus way to turn the gamma function integral into the reflection formula? There's a clear way to get the reflection formula once one has both the infinite products for sine and factorial, of course.]
+
 # How does this relate to $$\pi$$?
 But what is $$\left(-\frac{1}{2}\right)!$$? Well... [TODO: Link to Donvolution, or to Wallis Product]
 
