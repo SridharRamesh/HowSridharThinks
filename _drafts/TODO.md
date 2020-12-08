@@ -31,6 +31,8 @@ Partial derivative notation is awful because it doesn't make clear what's allowe
 
 Find the monotonicity/least fixed point probability thing I'd once written about on SDMB.
 
+Discuss Karatsuba, Toom-n, and FFT based convolution/multiplication algorithms
+
 ***
 To think about:
 
