@@ -4,10 +4,14 @@ date: 2020-12-08
 ---
 TODO: Rewrite the following into the post I want it to be, about how diagonalization in the Cantor/Russell/Gödel/Lawvere/Yanofsky sense is the same as the Y combinator and also the Y combinator is obvious in retrospect. For now, this post is taken from an old Quora thing I once wrote, in response to the prompt "What is the Y combinator?" or some such thing.
 
+***
+
 Suppose you wanted to write a program that referred to its own source code at some point.
 
 You could try to write it in BASIC (or Java or Haskell or English or whatever your favorite programming language is [^FavoriteLanguage]). But, you might find that to be too tricky at first. So nevermind BASIC; you decide to instead simply invent a hypothetical new programming language BASIC++, which is just like BASIC, but augmented with built-in support for programs to be able to access their own source code: this language has a basic keyword "myOwnSourceCode" within it, which is to be interpreted as just what you'd think from the name.
 How does one actually run a BASIC++ program? Well, one thing you might do with a BASIC++ program (let's call it P) is compile it into an ordinary BASIC program, by going through its source code and replacing every instance of the keyword "myOwnSourceCode" with, of course, the expression of the actual source code for P.
+
+[^FavoriteLanguage]: In other words, there's nothing special about BASIC. All the times I say "BASIC", it's just a placeholder for any arbitrary language.
 
 Great. So we know how to compile BASIC++ programs into ordinary BASIC programs. (Indeed, this compilation process is so simple, we can presumably go ahead and write such a compiler in BASIC). And we also know how to write BASIC++ programs which refer to their own source code (it's trivial by the design of the BASIC++ language).
 
@@ -21,6 +25,8 @@ In summary, we've outlined here a general technique for writing BASIC programs w
 
 The structure of this whole technique can be mathematically formalized, and "the Y combinator" is the name given to that formalization in "the lambda calculus" (the abstract study of things like this [^YLambda]). But nevermind the formalization; the above is the idea.
 
-[^FavoriteLanguage]: In other words, there's nothing special about BASIC. All the times I say "BASIC", it's just a placeholder for any arbitrary language.
+[^YLambda]: For those who are familiar with the notation of the lambda calculus, the Y combinator is defined by Y f = compile ($$\lambda$$ myOwnSourceCode. f (compile myOwnSourceCode)), where compile p = p(p). This just expresses the same idea as was given in words above.
 
-[^YLambda]: For those who are familiar with the notation of the lambda calculus, the Y combinator is defined by Y f = compile ($\lambda$ myOwnSourceCode. f (compile myOwnSourceCode)), where compile p = p(p). This just expresses the same idea as was given in words above.
+***
+
+Footnotes:
