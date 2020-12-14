@@ -24,6 +24,8 @@ But also, this is clearly the Fourier series of $$(1 + R^x + R^{2x} + R^{3x} + \
 
 And thus we get the cotangent series desired. As far as I am concerned, this is the Book proof/God's proof/Sridhar's proof [equivalent notions]. It is the most direct, in some sense; this is the direct generating function type way that I would go about summing $$1/(x + n)$$ over all integers $$n$$, it illustrates a power general technique for adding up all translation shifts of a given function (multiplying its Fourier transform by a Dirac comb; i.e., retaining just the appropriately periodic components; this is known as "Poisson summation"), and furthermore, this series is the simplest and most uniform of the three equivalent series we could here consider.
 
+[TODO: Write out how the above can also essentially be done in the same way using the Fourier transform of $$\log(|x|)$$ as $$\frac{1}{|x|}$$ plus some multiple of the Dirac delta. Thus, $$\sum_{n \in \mathbb{Z}} \log(x + n)$$ is, up to a constant term, given by the sum of $$R^{nx}/|n|$$, which comes to $$-\log(1 - R^x) - \log(1 - R^{-x}) = -\log(2 - 2\cos(x))$$ which is some simple affine transform of $$\log(\sin(x/2))$$, thus directly establishing the sine product. Something like that, with more care about the actual scaling factors at various points.]
+
 # Sridhar's 3blue1brown proof (the Sailor and the Keeper)
 
 I am fond of this proof as well, because I discovered it and it is nice, even though I do not think this is as Book as the previous one. I will write this up in text form eventually, but here's the video:
