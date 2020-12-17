@@ -16,7 +16,7 @@ In particular, there exists at least one stable assignment.
 
 Note that in any stable assignment, $$m$$ is assigned $$w$$ if and only if $$w$$ is assigned $$m$$. Thus, a stable assignment is the same thing as a partial bijection between the men and the women, such that no man and woman each strictly prefer each other to their current assignment.
 
----------
+***
 
 Much more generally, this works if each person has some complete lattice of options [of whatever sort; what dinner to have, which relative to visit for Christmas, whatever], with the available options for any person becoming narrower as people of the opposite gender get more favorable assignments [including restrictions triggered not by any individual's assignment but by coalitions' assignments], but the available options always having a most favorable value.
 

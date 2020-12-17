@@ -20,11 +20,11 @@ What appears in the $$r$$-th row and the $$c$$-th column in the end? It is the s
 
 TODO
 
-----
+***
 
 Runtime analysis: The above implies that the total run time $$T(AB)$$ for the FFT of order $$AB$$ can be made into $$AT(B) + BT(A)$$. With suitable care about the base cases (either prime values in a discrete context or infinitesimal values in a continuous context), it follows that $$T(n)$$ is proportional to $$n \log(n)$$. Specifically, our rule for combining $$A$$ and $$B$$ amounts to this: If $$A + T(A)x$$ is multiplied by $$B + T(B)x$$ where $$x^2 = 0$$, then the result is $$AB + T'(AB)x$$, where $$T'(AB)$$ is one allowed runtime for $$T(AB)$$. If we start only with base cases of the form $$A + A \log(A)kx = A(1 + \log(A)kx) = A^{kx + 1}$$, then everything we build up inductively has this form as well. More generally, if different building blocks have different $$k$$ here, what we discover is that the run-time for some $$N$$ which decomposes as $$A$$ times $$B$$ times $$C$$, etc, will be $$N [k_A \log(A) + k_B \log(B) + \ldots]$$, which is between $$N k_{min} \log(N)$$ and $$N k_{max} \log(N)$$.
 
-----
+***
 
 In a discrete world, the above only lets us do fast Fourier transforms of highly composite order. It doesn't give us anything fast by default for large prime orders, say. Well, it turns out that we can also reduce the question of a fast Fourier transform of a given order to taking a suitable convolution quickly. And conversely, to do a convolution of a particular order, we can do a Fourier transform, then multiply component wise, then Fourier transform back. But once we're in the world of convolutions, there's no harm in zero-padding ourselves up to a higher order, so we can always just pad up to order some power of 2 (inflating our size by a factor less than 2), and then get away with the straightforward fast Fourier transform for that highly composite order.
 
