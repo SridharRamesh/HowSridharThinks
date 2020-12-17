@@ -1,5 +1,5 @@
 ---
-title:  "The Irrationality of e"
+title: "The Irrationality of e"
 date: 2020-1-21
 ---
 This is actually quite easy to show.

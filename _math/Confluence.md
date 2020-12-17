@@ -1,5 +1,5 @@
 ---
-title:  "Confluence"
+title: "Confluence"
 date: 2019-11-18
 ---
 A) Say relation → is "confluent against" ↓ if, given a→b and a↓c, ∃d with b↓d and c→d (ie, given the top and left of a square, you can fill out the rest).

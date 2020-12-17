@@ -1,5 +1,5 @@
 ---
-title:  "Borwein Integrals"
+title: "Borwein Integrals"
 date: 2019-12-19
 ---
 A result sometimes observed as surprising, shocking, etc, is that $$\int_{0}^{\infty} \mathrm{sinc}(x) dx = \pi/2$$, and indeed $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) dx = \pi/2$$ and $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) \mathrm{sinc}(x/5) dx = \pi/2$$ and $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) \mathrm{sinc}(x/5) \mathrm{sinc}(x/7) dx = \pi/2$$ and so on, but once we get up to $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) \ldots \mathrm{sinc}(x/15) dx$$, the result is $$q \pi$$ for a rational $$q$$ strictly less than $$1/2$$.

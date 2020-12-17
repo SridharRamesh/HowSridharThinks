@@ -1,5 +1,5 @@
 ---
-title:  "The Internal Logic of Effective Regular and Abelian Categories"
+title: "The Internal Logic of Effective Regular and Abelian Categories"
 date: 2020-1-16
 ---
 The internal logic of effective regular categories (aka, "exact categories", though this term is overloaded, or "Barr-exact categories") can be given in many different ways, but is perhaps most easily spelt out in terms of thinking of relations, rather than functions as such. Any theory of the following form presents an effective regular category, and any effective regular category has such a presentation:

@@ -1,5 +1,5 @@
 ---
-title:  "Stupid Digit Tricks"
+title: "Stupid Digit Tricks"
 date: 2020-08-25
 ---
 One thing people are often amused by is observations like that $$\frac{1}{998001}$$ comes out to .000 001 002 003 004…, with every three digit string appearing in order except for 998, and then repeating back from 999 to 000.

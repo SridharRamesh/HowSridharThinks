@@ -1,5 +1,5 @@
 ---
-title:  "Mean Monkey Time"
+title: "Mean Monkey Time"
 date: 2020-7-7
 ---
 Suppose you have a monkey banging away at a typewriter with N keys, each keystroke at independent uniform random. Suppose you're waiting for the first occurrence of a particular string S. On average (in the sense of probabilistic mean), how many keystrokes will it take?

@@ -1,5 +1,5 @@
 ---
-title:  "Circular Proofs Aren't Useless"
+title: "Circular Proofs Aren't Useless"
 date: 2020-2-3
 ---
 Suppose you prove B from A and later also prove A from B. Useless, right?

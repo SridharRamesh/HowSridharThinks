@@ -1,5 +1,5 @@
 ---
-title:  "Prime-Generating Polynomial"
+title: "Prime-Generating Polynomial"
 date: 2020-1-19
 ---
 Some numbers p have the property that multiplying two consecutive integers and then adding p generates only prime number outputs, so long as both consecutive integers are less than p in size. (By symmetry of multiplication under negation, it suffices to consider just consecutive natural numbers less than p)

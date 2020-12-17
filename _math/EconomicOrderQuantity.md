@@ -1,5 +1,5 @@
 ---
-title:  "Supply Chain Theory: The Economic Order Quantity"
+title: "Supply Chain Theory: The Economic Order Quantity"
 date: 2018-12-19
 ---
 

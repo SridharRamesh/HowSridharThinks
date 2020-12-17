@@ -1,5 +1,5 @@
 ---
-title:  "The Fundamental Theorems of Calculus"
+title: "The Fundamental Theorems of Calculus"
 date: 2019-05-26
 ---
 How I think about the so-called "Fundamental Theorems of Calculus" is a little different from how others think about them. I don't even think of these as having to do with derivatives and integrals, as such.

@@ -1,5 +1,5 @@
 ---
-title:  "Type Derivatives"
+title: "Type Derivatives"
 date: 2019-1-3
 ---
 

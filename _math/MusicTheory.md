@@ -1,5 +1,5 @@
 ---
-title:  "The Fundamental Theorem of Equal Temperament Arithmetic"
+title: "The Fundamental Theorem of Equal Temperament Arithmetic"
 date: 2020-9-29
 excerpt_separator: "***"
 ---

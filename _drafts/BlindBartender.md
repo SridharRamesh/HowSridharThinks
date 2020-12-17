@@ -1,5 +1,5 @@
 ---
-title:  "Blind Bartender Problem"
+title: "Blind Bartender Problem"
 date: 2020-8-10
 ---
 Suppose you play a game: You have a bidirectionally infinite sequence of coins, heads or tails. Your goal is to make this into some particular target sequence. At any moment, you announce some set of positions that you wish to flip. Your opponent, however, can respond by translating your set by some amount before it takes effect; e.g., if you wanted to flip positions -9, 8, and 20, your opponent can turn that into -4, 13, and 25. You keep going like this in turns. From what starting positions can you force a win, how do you do so, and how does your opponent stymie you otherwise?

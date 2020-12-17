@@ -1,5 +1,5 @@
 ---
-title:  "Difference Equations, Infinite Sums, Generalized Factorial, Zeta Functions, Etc"
+title: "Difference Equations, Infinite Sums, Generalized Factorial, Zeta Functions, Etc"
 date: 2019-11-19
 ---
 Suppose given a difference relation $$F(x + 1) - F(x) = f(x)$$, where $$f$$ is known but $$F$$ is not. What should $$F$$ be?

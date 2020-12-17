@@ -1,5 +1,5 @@
 ---
-title:  "Eulerian Graphs"
+title: "Eulerian Graphs"
 date: 2020-5-4
 ---
 Suppose given a directed multigraph, and suppose also that at each vertex, we are given a bijection between the edges into the vertex and the edges out of that vertex (think of this bijection as saying that the former edge is "followed by" the latter edge). Then every edge is in a line of edges (the edge after it, and the edge after that, and so on, as well as the edge before it, and the edge before that, and so on); either an infinite line of all distinct edges, or a periodically repeating line (i.e., a finite cycle).

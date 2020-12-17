@@ -1,5 +1,5 @@
 ---
-title:  "The Y Combinator (aka, diagonalization)"
+title: "The Y Combinator (aka, diagonalization)"
 date: 2020-12-08
 ---
 TODO: Rewrite the following into the post I want it to be, about how diagonalization in the Cantor/Russell/Gödel/Lawvere/Yanofsky sense is the same as the Y combinator and also the Y combinator is obvious in retrospect. For now, this post is taken from an old Quora thing I once wrote, in response to the prompt "What is the Y combinator?" or some such thing.

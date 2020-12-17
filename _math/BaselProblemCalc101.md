@@ -1,5 +1,5 @@
 ---
-title:  "Solving the Basel Problem with Calc 101"
+title: "Solving the Basel Problem with Calc 101"
 date: 2018-06-27
 ---
 The Basel problem can be solved by simple integration!

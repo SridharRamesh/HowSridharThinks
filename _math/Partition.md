@@ -1,5 +1,5 @@
 ---
-title:  "Partitions"
+title: "Partitions"
 date: 2020-7-20
 ---
 There’s lots to say about partitions. I’ll just write some things scattershot, most of which are due to Euler or from thinking about transposing Ferrers/Young diagrams:

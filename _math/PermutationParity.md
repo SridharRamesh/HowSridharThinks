@@ -1,5 +1,5 @@
 ---
-title:  "Permutation Parity"
+title: "Permutation Parity"
 date: 2020-5-2
 ---
 I am fond of saying that the two theorems that laypeople do not know because curricula arbitrarily do not bother to show them, yet which are about phenomena of ubiquitous generality in down-to-Earth grade school mathematics, are Bezout's theorem and the fact that permutations carry parity. I know of two traditional proofs for this fact, but perhaps they are the same in the end. Let's see.

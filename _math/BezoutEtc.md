@@ -1,5 +1,5 @@
 ---
-title:  "Partial Fractions, Jordan, Bezout, Euclid, and the Chinese"
+title: "Partial Fractions, Jordan, Bezout, Euclid, and the Chinese"
 date: 2020-5-1
 ---
 There are a number of results which are all essentially the same:

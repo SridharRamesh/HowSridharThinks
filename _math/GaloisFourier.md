@@ -1,5 +1,5 @@
 ---
-title:  "Galois Theory and the Fourier Transform"
+title: "Galois Theory and the Fourier Transform"
 date: 2020-4-27
 ---
 Consider a base field with a finite degree Galois extension with Galois group cyclic of order $$N$$ with generator $$\varphi$$. Suppose the base field also contains a primitive $$N$$th root of unity (thus, by the general theory of primitive roots of unity in a field, its $$N$$th roots of unity comprise a cyclic group of order $$N$$, and the field also allows division by $$N$$), so that we have the invertible discrete Fourier transform of order $$N$$ available to us.

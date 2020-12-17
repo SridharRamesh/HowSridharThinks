@@ -1,5 +1,5 @@
 ---
-title:  "Proofs of The Sine Product Formula"
+title: "Proofs of The Sine Product Formula"
 date: 2019-05-18
 ---
 In this post, I will accumulate (and perhaps relate) several different proofs of the sine product formula $$\sin(\pi x) = \pi x \prod_{n \geq 1} \left(1 + \frac{x}{n}\right) \left(1 + \frac{x}{-n}\right)$$, or the essentially equivalent (by logarithmic differentiation) cotangent sum formula $$\pi \cot(\pi x) = \frac{1}{x} + \sum_{n \geq 1} \frac{1}{n + x} + \frac{1}{-n + x}$$, or the essentially equivalent squared cosecant series obtained by differentiating once more (thus obtaining an absolutely convergent sum of $$(n + x)^{-2}$$ over ALL integers $$n$$, which can also be interpreted in terms of the Hurwitz zeta function at $$s = 2$$).

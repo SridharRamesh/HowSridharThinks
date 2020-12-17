@@ -1,5 +1,5 @@
 ---
-title:  "Arrow's Impossibility Theorem"
+title: "Arrow's Impossibility Theorem"
 date: 2020-10-16
 ---
 The content of Arrow's Impossibility theorem is actually extremely closely related to ultrafilters, and, in fact, the eponymous “impossibility” is essentially the same as a very basic fact about ultrafilters on finite sets. Yet, for some reason, I have rarely (if ever) seen the theorem presented in such a way as even mentions this connection (e.g., the word “filter” appears not once in the relevant Wikipedia article, nor in any of the references within it). A shame, which I shall rectify in this post.

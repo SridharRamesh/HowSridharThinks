@@ -1,5 +1,5 @@
 ---
-title:  "\"Sequent Calculi\" vs. \"Natural Deduction\""
+title: "\"Sequent Calculi\" vs. \"Natural Deduction\""
 date: 2019-07-30
 ---
 When asked what the difference between sequent calculus and natural deduction logical systems is, everyone (e.g., Wikipedia, but also everyone you meet in the world too) says a bunch of stuff that makes no sense. For example, as to whether sequents are involved, or whether sequents can have more than one disjunct on the right. None of this is relevant.

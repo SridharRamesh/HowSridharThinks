@@ -1,5 +1,5 @@
 ---
-title:  "Queues and the Erlang B-Theorem"
+title: "Queues and the Erlang B-Theorem"
 date: 2020-8-12
 ---
 Suppose you have a queue with finite capacity C, such that the queue can be entered whenever it has less than C people in it already, but the queue permanently turns away anyone who shows up while it has C people in it.

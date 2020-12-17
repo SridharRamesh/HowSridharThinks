@@ -1,5 +1,5 @@
 ---
-title:  "Convergence Entails Countable Support"
+title: "Convergence Entails Countable Support"
 date: 2020-4-22
 ---
 Consider a multiset of values, all $$\geq 0$$ ("semipositive", as I often say in my head). It is clear how any finite submultiset of these are to be summed, and we can define the sum of the multiset overall as the supremum of the sum of its finite submultisets.

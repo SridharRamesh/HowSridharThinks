@@ -1,5 +1,5 @@
 ---
-title:  "Margin of Error"
+title: "Margin of Error"
 date: 2020-2-3
 ---
 When polls report a “margin of error”, it doesn’t mean what almost everyone takes it to mean.

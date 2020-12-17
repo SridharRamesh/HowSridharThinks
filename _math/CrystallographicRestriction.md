@@ -1,5 +1,5 @@
 ---
-title:  "Crystallographic Restriction"
+title: "Crystallographic Restriction"
 date: 2019-11-18
 ---
 Under what circumstances can a regular n-gon be made such that all its points are lattice points, for some lattice?

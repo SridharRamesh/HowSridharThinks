@@ -1,5 +1,5 @@
 ---
-title:  "Mac Lane \"Parameters\" Theorem"
+title: "Mac Lane \"Parameters\" Theorem"
 date: 2020-2-3
 ---
 Suppose given an isomorphism square in Cat; that is, categories A, B, C, and D, functors e : A -> B, f: A -> C, g : B -> D, and h : C -> D, and a natural isomorphism between the two paths from A to D.

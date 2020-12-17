@@ -1,5 +1,5 @@
 ---
-title:  "Euler Characteristic"
+title: "Euler Characteristic"
 date: 2020-3-19
 ---
 Let's start with Euler's polyhedron formula. Vertices - Edges + Faces = 2 on a sphere.

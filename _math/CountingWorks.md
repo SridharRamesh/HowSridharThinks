@@ -1,5 +1,5 @@
 ---
-title:  "Counting Works"
+title: "Counting Works"
 date: 2020-5-5
 ---
 A basic fact, so perfectly figured out by ancient mathematicians and internalized by human society ever since that no one ever bothers to think about or question it anymore, is that any two orders in which to count the same finite set yield the same number. That is, each finite cardinal has a unique associated ordinal.

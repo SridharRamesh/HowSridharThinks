@@ -1,5 +1,5 @@
 ---
-title:  "Induction and Recursion"
+title: "Induction and Recursion"
 date: 2020-4-26
 ---
 It is often thought that induction only applies to well-founded orderings, not to structures like the reals. But actually, it is very common in mathematics to do induction arguments over the reals, only people do not recognize them as such when they do so.

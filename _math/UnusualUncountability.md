@@ -1,5 +1,5 @@
 ---
-title:  "Unusual Uncountability Proofs"
+title: "Unusual Uncountability Proofs"
 date: 2020-4-22
 ---
 Everyone knows the diagonalization proof of uncountability. Some are familiar with other uncountability proofs as well; e.g., Cantor's original proof of the uncountability of R [TODO: discuss this, relate it to the diagonalization proof] [TODO: Discuss all the famed antinomies and how they become uncountability proofs; e.g., Burali-Forti/Mirimanoff]. Here's one I came up with which I've never seen anyone else mention, though:

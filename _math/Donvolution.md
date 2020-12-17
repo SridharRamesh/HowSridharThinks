@@ -1,5 +1,5 @@
 ---
-title:  "Donvolution"
+title: "Donvolution"
 date: 2019-11-26
 ---
 Let's consider the general problem of determining the volume $$v(K)$$ of the region where $$\sum f_i(x_i) < K$$; that is, of determining $$\int_{\sum f_i(x_i) < K} \prod dx_i$$. Let us define new variables $$y_i = f_i(x_i)$$; the problem is now expressed as $$\int_{\sum y_i < K} \prod d g_i(y_i)$$, where $$g_i$$ is the inverse of $$f_i$$. In other words, the derivative of $$v$$ is the convolution of the derivatives of the $$g_i$$. Let us refer to this sort of relationship by saying $$v$$ is the "donvolution" of the $$g_i$$.

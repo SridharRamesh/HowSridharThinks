@@ -1,5 +1,5 @@
 ---
-title:  "Categorical Asymmetry"
+title: "Categorical Asymmetry"
 date: 2020-1-21
 ---
 All of the asymmetries[^Pedantry] of category theory arise from the fact that we generally talk and think in terms of Set(/Cat/etc.)-like categories and not Set^op-like ones, and in these, everything is a big colimit of simple pieces, but not a big limit.

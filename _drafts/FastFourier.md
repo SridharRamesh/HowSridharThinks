@@ -1,5 +1,5 @@
 ---
-title:  "The Fast Fourier Transform"
+title: "The Fast Fourier Transform"
 date: 2020-11-29
 ---
 Let $$B$$ be a value such that $$B^N = 1$$ and define the $$K$$-weighted base-$$B$$ transform of order $$N$$ of a function $$f$$ to be $$s \mapsto K \sum_{t = 0}^{N - 1} f(t) B^{st}$$. [The domains of these functions should be thought of as the integers modulo $$N$$, so that these function as bidirectionally infinite sequences]

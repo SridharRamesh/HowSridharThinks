@@ -1,5 +1,5 @@
 ---
-title:  "Commas and Collages"
+title: "Commas and Collages"
 date: 2020-1-18
 ---
 This is all TODO notes for a post not yet actually written, but scratch thoughts I want to keep archived for myself to write with.

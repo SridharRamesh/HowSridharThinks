@@ -1,5 +1,5 @@
 ---
-title:  "Order of Operations"
+title: "Order of Operations"
 date: 2019-07-30
 ---
 Laypeople seem to spend an inordinate amount of mental energy on something called "Order of Operations" that they imagine to be deeply important and fundamental in mathematics.

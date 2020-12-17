@@ -1,5 +1,5 @@
 ---
-title:  "Shapey Algebra"
+title: "Shapey Algebra"
 date: 2020-4-22
 ---
 Key concepts: Preorders, (higher-)groupoids. As their intersection, setoids. As their union, (higher-)categories.

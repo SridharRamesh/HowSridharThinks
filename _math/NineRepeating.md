@@ -1,5 +1,5 @@
 ---
-title:  "0.999... = 1"
+title: "0.999... = 1"
 date: 2020-2-17
 ---
 This comes up a lot in pop math discussion, so I’ll just post here the thing I’ve written about it in various other places previously.

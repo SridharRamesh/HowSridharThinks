@@ -1,5 +1,5 @@
 ---
-title:  "Greatest Common Divisors and Unique Prime Factorization"
+title: "Greatest Common Divisors and Unique Prime Factorization"
 date: 2020-6-29
 ---
 [TODO: Rewrite throughout for general audience, not just people who know math jargon]

@@ -1,5 +1,5 @@
 ---
-title:  "Total Limits Are Empty Colimits"
+title: "Total Limits Are Empty Colimits"
 date: 2019-11-17
 ---
 Here's a simple fact from order theory: Suppose $$X$$ is a least element of partial order $$C$$. Then $$X$$ is the meet of all of $$C$$. In fact, for any order-preserving function $$F$$, we have that $$F(X)$$ is the meet of all of $$F(C)$$.

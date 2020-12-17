@@ -1,5 +1,5 @@
 ---
-title:  "Möbius Inversion"
+title: "Möbius Inversion"
 date: 2019-11-25
 ---
 Let $$\leq$$ be an arbitrary binary relation (not necessarily transitive or reflexive, despite the notation). We will impose one condition: $$\{y \mid y \leq x\}$$ should be finite for every $$x$$ (this finiteness condition can maybe be relaxed in some form for what we're doing here, but for now we'll impose it).

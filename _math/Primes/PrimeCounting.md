@@ -1,5 +1,5 @@
 ---
-title:  "Elementary Prime Counting"
+title: "Elementary Prime Counting"
 date: 2018-06-27
 ---
 Consider the question of how many primes are $$\leq n$$; let us call this quantity $$\pi(n)$$, as is traditional.

@@ -1,5 +1,5 @@
 ---
-title:  "Adjunction Factorization"
+title: "Adjunction Factorization"
 date: 2020-1-19
 ---
 [There are a million things to write about adjunctions. For now, I’m just writing some motley scratch notes for myself and will shape this up into an introductory post later.]

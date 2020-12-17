@@ -1,5 +1,5 @@
 ---
-title:  "Field Multiplication Cyclicity"
+title: "Field Multiplication Cyclicity"
 date: 2019-12-2
 ---
 Let $$G$$ be a finite subgroup of the multiplicative group of a field. We shall show that it is cyclic.

@@ -1,5 +1,5 @@
 ---
-title:  "Gauss-Bonnet"
+title: "Gauss-Bonnet"
 date: 2020-8-8
 ---
 Euler characteristic is the sort of thing which adds up as you combine regions (combining them not in the union sense, but in the addition sense. So $$F(A \cup B) + F(A \cap B) = F(A) + F(B)$$).

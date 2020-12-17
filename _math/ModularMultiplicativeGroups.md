@@ -1,5 +1,5 @@
 ---
-title:  "Multiplicative Groups in Modular Arithmetic"
+title: "Multiplicative Groups in Modular Arithmetic"
 date: 2019-11-28
 ---
 By the Chinese Remainder Theorem, the ring of integers modulo N is the product of the rings of integers modulo p^n, for each prime power p^n in the factorization of N. To study the integers modulo p^n, it is helpful to consider the p-adics.

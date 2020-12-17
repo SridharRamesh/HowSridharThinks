@@ -1,5 +1,5 @@
 ---
-title:  "Heron's Formula"
+title: "Heron's Formula"
 date: 2020-5-3
 ---
 When I was young, in middle school, high school, and even college, Heron's formula was such a bother to me; the one formula in geometry I was aware of, which would be listed in each geometry textbook formula "cheat sheet", that I didn't know how to prove.
@@ -16,17 +16,13 @@ And then by multiplying this inradius by the semiperimeter, we get the area.
 
 [TODO: All of this is is much better understood with a diagram. The above is quite possibly unreadable without one.]
 
-[TODO: Connection to Brahmagupta's formulas for cyclic and non-cyclic quadrilaterals; for polygons in general? These are about cyclic polygons, not tangential polygons, but there's some kind of duality swapping these, and perhaps the effect of this duality on area is easy to see as well.]
-
-[TODO: Connection to Cayley-Menger determinants, though these aren't really as nice as a higher-dimensional generalization as one might hope for. The things that make Heron's formula fully nice don't actually generalize in full nicety to higher dimensions.]
-
-Another form of Heron's formula is like so: The squared area of a triangle with sides A, B, and C is 1/16 times $$(A^2 + B^2 + C^2)^2 - 2(A^4 + B^4 + C^4)$$. This is equal to $$S (S - A)(S - B)(S - C)$$, where $$S = \frac{A + B + C}{2}$$. We can see this to hold by thinking of area like so: The area of the triangle is half the area of the corresponding parallelogram, which in turn is given by $$ \vert A \times B \vert $$. But we have the higher-order Pythagorean theorem in the form of $$ \vert A \vert ^2  \vert B \vert ^2 = (A \cdot B)^2 +  \vert A \times B \vert ^2$$. Connecting that with $$ \vert C \vert ^2 =  \vert A \vert ^2 +  \vert B \vert ^2 + 2(A \cdot B)$$, we can express $$ \vert A \times B \vert ^2$$ in terms of $$ \vert A \vert ^2,  \vert B \vert ^2,  \vert C \vert ^2$$, and get our formula.
-
 ***
+
+This all generalizes to $$N$-gons, like so:
 
 Tangential polygons:
 
-[TODO: Illustrate all the following with diagrams]
+[TODO: Again, illustrate all the following with diagrams]
 
 Consider N distinct points around a circle of positive radius, arranged such that no closed semicircular arc contains all of them. This amounts to saying that the angular distances between them, measured as we go around the circle in some consistent direction, are all strictly between zero and half a revolution, while summing to one full revolution.
 
@@ -52,13 +48,21 @@ This operator is not invertible when $$N$$ is even, as the corresponding calcula
 
 Thus, we have an area formula for tangential polygons in terms of their tangent lengths and extracting roots of polynomial equations. The relevant equation has degree $$\lfloor (N - 1)/2 \rfloor$$, and when $$N$$ is odd, we can express this all in terms of edge lengths instead. Heron's formula (and our argument for it at the top of this post) is the special case of this for $$N = 3$$.
 
-What about cyclic polygons? That is, suppose we took our N points of tangency and directly made a polygon with them as the vertices (the polygon circumscribed by the circle, rather than the polygon the circle is inscribed in)? Do we get an area formula for those? [TODO]
+***
+
+What about cyclic polygons? That is, suppose we took our N points of tangency and directly made a polygon with them as the vertices (the polygon circumscribed by the circle, rather than the polygon the circle is inscribed in)? Do we get an area formula for those? There is Brahmagupta's formula for $$N = 4$$. How does that relate? [TODO]
 
 Clearly, there is a one-to-one correspondence between cyclic polygons and tangential polygons (in either case, we can find the center of the circle [intersection of angular bisectors from a tangential polygon or intersection of perpendicular bisectors from a cyclic polygon] and the points of tangency [directly given in a cyclic polygon, and the tangencies from the circle to the edges in a tangential polygon], and then the intersections of the tangent lines, and now have both the vertices of the cyclic polygon and the vertices of the tangential polygon).
 
 ***
 
-I'm not sure our second approach to Heron's formula, using the higher-order Pythagorean theorem, generalizes to $$N$$-gons so naturally, except in the sense that we can decompose any $$N$$-gon intro triangles using diagonal lines and then sum up Heron's formula over each of these triangles, giving a formula for its area in terms of edge lengths and diagonal lengths. [TODO: There is this formula area = 1/2 * sqrt((pq)^2 - (ac - bd)^2) for area of a tangential quadrilateral, with p and q as diagonal lengths and a, b, c, d as edge lengths. Think about that.]
+Another form of Heron's formula is like so: The squared area of a triangle with sides A, B, and C is 1/16 times $$(A^2 + B^2 + C^2)^2 - 2(A^4 + B^4 + C^4)$$. This is equal to $$S (S - A)(S - B)(S - C)$$, where $$S = \frac{A + B + C}{2}$$. We can see this to hold by thinking of area like so: The area of the triangle is half the area of the corresponding parallelogram, which in turn is given by $$ \vert A \times B \vert $$. But we have the higher-order Pythagorean theorem in the form of $$ \vert A \vert ^2  \vert B \vert ^2 = (A \cdot B)^2 +  \vert A \times B \vert ^2$$. Connecting that with $$ \vert C \vert ^2 =  \vert A \vert ^2 +  \vert B \vert ^2 + 2(A \cdot B)$$, we can express $$ \vert A \times B \vert ^2$$ in terms of $$ \vert A \vert ^2,  \vert B \vert ^2,  \vert C \vert ^2$$, and get our formula.
+
+I'm not sure this second approach to Heron's formula, using the higher-order Pythagorean theorem, generalizes to $$N$$-gons so naturally, except in the sense that we can decompose any $$N$$-gon intro triangles using diagonal lines and then sum up Heron's formula over each of these triangles, giving a formula for its area in terms of edge lengths and diagonal lengths. [TODO: There is this formula area = 1/2 * sqrt((pq)^2 - (ac - bd)^2) for area of a tangential quadrilateral, with p and q as diagonal lengths and a, b, c, d as edge lengths. Think about that.]
+
+***
+
+[TODO: Connection to Cayley-Menger determinants, though these aren't really as nice as a higher-dimensional generalization as one might hope for. The things that make Heron's formula fully nice don't actually generalize in full nicety to higher dimensions.]
 
 ***
 

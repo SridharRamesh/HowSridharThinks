@@ -1,5 +1,5 @@
 ---
-title:  "A Simple Geometric Proof of the Wallis Product"
+title: "A Simple Geometric Proof of the Wallis Product"
 date: 2018-06-26 01
 ---
 The $$n$$-dimensional unit sphere (in the indexing in which the Earth is a 3-dimensional sphere) has an inner volume which is its surface area divided by $$n$$ (by considering each tiny patch of its surface as the base of a figure tapering down to its center), and at the same time, by the argument that projecting two dimensions outwards to the enveloping "cylinder" is area-preserving (stretching latitudinally and longitudinally in precise cancellation, as in the Lambert map projection), we find that the unit $$n$$-sphere's surface area is $$\tau$$ times the unit $$(n - 2)$$-sphere's volume ($$\tau$$ here being the circumference of a unit circle).[^VolumeFootnote]

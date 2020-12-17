@@ -1,5 +1,5 @@
 ---
-title:  "The Meta-Formula for 1^n + 2^n + 3^n + ... + x^n"
+title: "The Meta-Formula for 1^n + 2^n + 3^n + ... + x^n"
 date: 2018-06-27
 ---
 [There's a better version of this post coming when I copy over https://howsridharthinks.wordpress.com/2019/11/19/difference-equations-infinite-sums-generalized-factorial-zeta-functions-etc/, but it's not fully ready yet. This is an archive of an old Quora answer, in the meanwhile. This is just for the sake of copying everything from the Wordpress site over to the Github site.]

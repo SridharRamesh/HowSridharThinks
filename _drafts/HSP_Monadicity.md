@@ -1,5 +1,5 @@
 ---
-title:  "Birkhoff’s HSP Theorem and Beck’s Monadicity Theorem"
+title: "Birkhoff’s HSP Theorem and Beck’s Monadicity Theorem"
 date: 2020-1-18
 ---
 This is all TODO notes for a post not yet actually written, but scratch thoughts I want to keep archived for myself to write with.

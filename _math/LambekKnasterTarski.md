@@ -1,5 +1,5 @@
 ---
-title:  "Lambek's lemma, Knaster-Tarski, Adamek"
+title: "Lambek's lemma, Knaster-Tarski, Adamek"
 date: 2019-11-28
 ---
 Let $$F$$ be an endofunctor and let $$A : FX \to X$$ be an algebra for that endofunctor. $$A$$ gives rise to another F-algebra $$FA : FFX \to FX$$, and this has a "tautological" F-algebra homomorphism back into $$A$$ with underlying map $$A$$ itself (the relevant commutative square is just $$A \circ FA = A \circ FA$$).

@@ -1,5 +1,5 @@
 ---
-title:  "Coproducts of Abelian Monoids"
+title: "Coproducts of Abelian Monoids"
 date: 2020-2-1
 ---
 Two classic facts are:

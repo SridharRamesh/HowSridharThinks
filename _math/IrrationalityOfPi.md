@@ -1,5 +1,5 @@
 ---
-title:  "The Irrationality of π^2, and Therefore of π"
+title: "The Irrationality of π^2, and Therefore of π"
 date: 2018-06-27
 ---
 There are many “different” proofs of the irrationality of $$\pi$$ which are all based on the same underlying idea. The proof I describe in this post is also based on the same underlying idea as all the other ones you'll find in the wild, but in a different presentation, one I personally find clearest for helping me understand what is going on and in what directions it generalizes. Incidentally, this simple proof shows not only the irrationality of $$\pi$$ but also the irrationality of $$\pi^2$$.

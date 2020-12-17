@@ -1,5 +1,5 @@
 ---
-title:  "Boolean Algebras"
+title: "Boolean Algebras"
 date: 2020-12-11
 ---
 TODO: To be written out into a full thing on how Boolean algebra is the finitary theory of finite sets, of 2, etc. Limit vs. product theory perspective on Boolean algebra, etc.

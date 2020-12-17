@@ -1,5 +1,5 @@
 ---
-title:  "Stirling's approximation"
+title: "Stirling's approximation"
 date: 2020-09-05
 ---
 Where does Stirling's approximation $$n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n$$ come from?

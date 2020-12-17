@@ -1,5 +1,5 @@
 ---
-title:  "The Generalized Factorial"
+title: "The Generalized Factorial"
 date: 2018-06-27
 ---
 Suppose you wanted to extend the factorial function to arbitrary arguments. How might you do it?

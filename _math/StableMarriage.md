@@ -1,5 +1,5 @@
 ---
-title:  "Transfinite Stable Marriage"
+title: "Transfinite Stable Marriage"
 date: 2019-11-17
 ---
 Suppose you have a set of men $$M$$ and women $$W$$, and every man comes with a well-order on the women (where we take the smallest woman in a set to be the man's favorite among that set; a well-order amounts to the same thing as a way of assigning to each inhabited set a favorite, such that the favorite is stable under constraining to any subset of options still containing the former favorite) and vice versa. Actually, we'll say each man $$m$$ comes with a well-order on some $$W_m = W' \cup \{Nobody\}$$, where $$W'$$ is some subset of $$W$$ and $$Nobody$$ is the maximal (i.e., least favored) element in this ordering. And symmetrically for the women having well-ordered preferences among the men. (This amounts to having favorites within any set that also includes a $$Nobody$$ option)
