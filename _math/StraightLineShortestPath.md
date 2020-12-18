@@ -10,7 +10,7 @@ So any path between two points can be constrained to lie on the line between tho
 
 The next thing to note is fairly obvious, but let us note it all the same: Even among paths in one-dimension, the shortest one is the one which simply marches forwards directly from start to finish, while longer ones dither around making backwards motions that later must be cancelled out by further forwards motions. The shortest path is the direct straight path, not one that goes sometimes forwards and sometimes backwards.
 
-All of this can be summarized by noting, $$\int \sqrt{dx^2 + dy^2} \geq \int \sqrt{dx^2} = \int |dx| \geq \int dx$$, and the last of these (the difference in x coordinates, so to speak) is the direct distance along the straight line.
+All of this can be summarized by noting, $$\int \sqrt{dx^2 + dy^2} \geq \int \sqrt{dx^2} = \int \vert dx \vert \geq \int dx$$, and the last of these (the difference in x coordinates, so to speak) is the direct distance along the straight line.
 
 Thus, the shortest path is the direct straight line path.
 
