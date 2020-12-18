@@ -1,5 +1,5 @@
 ---
-title: "Transfinite Stable Marriage"
+title: "A straight line is the shortest path"
 date: 2020-12-17
 ---
 A straight line is the shortest path between two points. Why is that?
