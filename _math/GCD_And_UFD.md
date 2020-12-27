@@ -11,7 +11,7 @@ One of the jewels of mathematics is that a commutative monoid is freely generate
 
 Proof: TODO
 
-Note that a cancellative commutative monoid embeds injectively into its free group (its group of fractions; sometimes called “the Grothendieck construction”, though this also refers to a different categorical construction), and we can define divisibility in this group via those ratios that come from the monoid. The group inversion operation is then an involution which acts contravariantly with respect to divisibility. Thus, a cancellative commutative monoid has GCDs iff it has LCMs.
+Note that a cancellative commutative monoid embeds injectively into its free group (its group of fractions; sometimes called “the Grothendieck construction”, though this also refers to a different categorical construction), and we can define divisibility in this group via those ratios that come from the monoid. The group inversion operation is then an involution which acts contravariantly with respect to divisibility. Thus, a cancellative commutative monoid has GCDs iff it has LCMs. [TODO: There's some tetchiness here about empty GCDs or LCMs; the statement may really be with respect to inhabited finite sets?]
 
 In the following, assume always we are working within the context of an integral domain (a ring in which the non-zero values are closed under multiplication; that is, the non-zero values under multiplication form a cancellative commutative monoid).
 
