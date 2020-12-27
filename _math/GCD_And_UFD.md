@@ -2,6 +2,9 @@
 title: "Greatest Common Divisors and Unique Prime Factorization"
 date: 2020-6-29
 ---
+Initial date: 2020-6-29
+Latest significant revision: 2020-12-26
+
 [TODO: Rewrite throughout for general audience, not just people who know math jargon]
 
 One of the jewels of mathematics is that a commutative monoid is freely generated on a set (thus, has unique prime factorization, so to speak) just in case it is cancellative, and the divisibility preorder has meets and no infinite descending chain.
@@ -37,4 +40,4 @@ D entails A by taking the size function to be the number of prime factors.
 
 ----
 
-There are some other facts about GCDs that we might as well record somewhere. For example, a GCD domain is integrally closed: any rational root of a monic polynomial can be expressed with denominator $$1$$. Why is this? Suppose $$p/q$$ is a root of monic polynomial $$x^n + ax^(n - 1) + bx^(n - 2) + \ldots + z$$, with $$p$$ and $$q$$ coprime (as can be arranged by dividing through by their GCD). Then by plugging in $$p/q$$ and multiplying through by q^n, we get $$p^n + ap^(n - 1)q + bp^(n - 2)q^2 + \ldots + zq^n = 0$$. All the terms other than the initial $$p^n$$ term are divisible by $$q$$, so $$p^n$$ is divisible by $$q$$. But if $$p$$ and $$q$$ are coprime, so are $$p^n$$ and $$q$$. Since $$p^n$$ is divisible by $$q$$ but also coprime to $$q$$, it follows that $$q$$ is a unit, and thus $$p/q$$ can be expressed with denominator $$1$$.
+There are some other facts about GCDs that we might as well record somewhere. For example, a GCD domain is integrally closed: any rational root of a monic polynomial can be expressed with denominator $$1$$. Why is this? Suppose $$p/q$$ is a root of monic polynomial $$x^n + ax^{n - 1} + bx^{n - 2} + \ldots + z$$, with $$p$$ and $$q$$ coprime (as can be arranged by dividing through by their GCD). Then by plugging in $$p/q$$ and multiplying through by q^n, we get $$p^n + ap^{n - 1}q + bp^{n - 2}q^2 + \ldots + zq^n = 0$$. All the terms other than the initial $$p^n$$ term are divisible by $$q$$, so $$p^n$$ is divisible by $$q$$. But if $$p$$ and $$q$$ are coprime, so are $$p^n$$ and $$q$$. Since $$p^n$$ is divisible by $$q$$ but also coprime to $$q$$, it follows that $$q$$ is a unit, and thus $$p/q$$ can be expressed with denominator $$1$$.
