@@ -34,3 +34,7 @@ C entails D by the previous jewel.
 D entails A by taking the size function to be the number of prime factors.
 
 [It’s also easy enough to see directly, rather than in this roundabout fashion, that D entails C which entails B]
+
+----
+
+There are some other facts about GCDs that we might as well record somewhere. For example, a GCD domain is integrally closed: any rational root of a monic polynomial can be expressed with denominator $$1$$. Why is this? Suppose $$p/q$$ is a root of monic polynomial $$x^n + ax^(n - 1) + bx^(n - 2) + \ldots + z$$, with $$p$$ and $$q$$ coprime (as can be arranged by dividing through by their GCD). Then by plugging in $$p/q$$ and multiplying through by q^n, we get $$p^n + ap^(n - 1)q + bp^(n - 2)q^2 + \ldots + zq^n = 0$$. All the terms other than the initial $$p^n$$ term are divisible by $$q$$, so $$p^n$$ is divisible by $$q$$. But if $$p$$ and $$q$$ are coprime, so are $$p^n$$ and $$q$$. Since $$p^n$$ is divisible by $$q$$ but also coprime to $$q$$, it follows that $$q$$ is a unit, and thus $$p/q$$ can be expressed with denominator $$1$$.
