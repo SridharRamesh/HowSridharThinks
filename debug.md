@@ -5,4 +5,8 @@ permalink: /debug/
 ---
 Test!
 
-$$\sum_{i = 0}^{10} \abs{x^2}$$
+$$\newcommand{\tall}{\frac{a + b + c}{4}}$$
+
+$$\nabla \qty(\Psi+\tall)$$
+
+$$\grad(\Psi+\tall)$$

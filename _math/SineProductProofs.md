@@ -82,3 +82,6 @@ Essentially, if f and F are Fourier transforms of each other, then f being frequ
 It may be easier to show that the NON-alternating sum of sincs is constantly 1, and then deriving the alternating sum result from this in suitable fashion. Things are a little complicated by the cosine being right on the cusp of the critical frequency. But the non-alternating sum of sincs being 1 tells us that $$\ldots + 1/x - 1/(x + 1) + 1/(x + 2) - \ldots = \pi/\sin(\pi x)$$. 
 
 Perhaps we should really just cite the Poisson summation formula here and be done with it.
+
+# Odds and ends
+Note that we can think of our fundamental formula as $$\sin(\pi x) \propto x(x + 1)(x - 1)(x + 2)(x - 2) \ldots$$. A note of caution is that this would seem to be periodic with period 1, but actually, a limit calculation concerning this conditionally convergent product shows that it negates whenever $$x$$ is increased by 1, so it is actually periodic with period 2.
