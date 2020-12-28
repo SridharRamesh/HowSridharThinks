@@ -2,8 +2,6 @@
 title: "Commas and Collages"
 date: 2020-1-18
 ---
-This is all TODO notes for a post not yet actually written, but scratch thoughts I want to keep archived for myself to write with.
-
 Subjects: Commas and Cocommas/Collages, Bifibrations (by which I mean two-sided fibrations, which apparently is not what people usually mean by this, oh well...), the Grothendieck construction, (bi)-indexed categories, perhaps profunctors, etc.
 
 ***
@@ -40,6 +38,8 @@ When represented as a cocomma span, what we get is what's called a collage [for 
 
 Note that the cocomma span requires us to create an n-category with n one level higher than the comma span requires, and without presumption of inverses; the latter prevents us from doing this construction in Set, and the former means that even doing this construction in Poset, we can only represent Poset-indexed truth values as cospans of Posets; we can not represent Poset-indexed Posets as cospans of Posets (but rather, must use a cospan whose codomain is an ordered category).
 
+***
+
 [TODO: Talk about how the Grothendieck construction is also some kind of colimit of (infinity-)Cat-valued diagrams. Is there any analogue of this for the collage construction?]
 
 [TODO: Relate this comma/cocomma correspondence somehow to the correspondence in abelian categories between subobjects of A and quotient objects of A, or more generally, to relations on A, B, C, D, ..., represented either as subobjects or quotient objects of the biproduct (thus, either as limit cones or colimit cocones, or something)]
@@ -54,6 +54,8 @@ E.g., if we are working with sets or just as well inside an ordinary 1-category,
 
 If we then demand that every such constrained bifibration has a cocomma and is the comma of that cocomma (which is a generalization of the condition defining an effective regular category), we have a context where the span-cospan adjunction is indeed idempotent via simultaneous comma-cocomma diagrams, all as above.
 
+***
+
 (This is where the connection to abelian categories comes up, since an abelian category is just an effective regular category enriched over abelian groups. This is the cleanest way to think about the cokernel/kernel condition in abelian groups: the comma/cocomma adjunction exists with jointly monic maps or jointly epic maps being in correspondence. Because everything is invertible when we deal with groups, we can just as well talk about k-tuples of maps and not just pairs, since the co vs. contravariance makes no difference.)
 
 Note that there's an asymmetry in the notion just given, though (as in the fact that the dual of an effective regular category, or even of a pretopos, needn't be effective regular). We had these constrained bifibration conditions on spans through which everything was mediated. Alternatively, instead of mediating this through the straightforward conditions on spans, it could be mediated through the dual conditions on cospans (the constrained cofibration conditions).
@@ -62,16 +64,18 @@ Note that there's an asymmetry in the notion just given, though (as in the fact 
 
 This also has some relation to the idea that every internal category of the appropriate sort is actually represented by a quotient object. That is, given an object of objects and an object of morphisms, we can quotient the object of objects to get the appropriate object representing the internal category.
 
+***
+
 [TODO: Something to understand better about the (constrained as need be) two-sided fibration conditions. By virtue of being a comma category [or comma n-category for whatever n] in ANY ambient context, certain algebraic properties automatically are satisfied (call this being a two-sided fibration); conversely, in Cat specifically, any span satisfying these algebraic properties is the comma of its cocomma. This so far is fairly understandable; the comma of its cocomma in Cat is like the free completion into having the properties of a Hom-category of some concrete Cat, and the properties required to be a Hom-category of some concrete Cat are precisely the properties guaranteed by being a comma object in any ambient context, by how (n + 1)-categories are modeled on the properties of the particular concrete (n + 1)-category n-Cat.
 
-It's also the case that cocomma categories in ANY ambient context have the dual algebraic properties [they are cofibrations], since the Hom(-, X) functor will take cocommas to commas, and thus Hom(-, X) applied to any cocomma is always a fibration, and to be a cofibration is basically tautologically for Hom(-, X) applied to one to always a fibration [since abstract limits/colimits are defined by how representable functors take them to concrete limits].
+It's also the case that cocomma categories in ANY ambient context have the dual algebraic properties [they are cofibrations], since a cocomma internal to context $$K$$ is just a comma internal to context $$K^{\operatorname{op}}$$.
 
-However, what's left unexplained is this: In Cat, any cospan which is a cofibration is the cocomma of its comma. Why is this?! This property is dual to how any span which is a fibration is the comma of its cocomma, but the duality is surprising.
+However, what's left unexplained is this: In Cat, any cospan which is a cofibration is the cocomma of its comma. Why is this?! This property is dual to how any span which is a fibration is the comma of its cocomma, but the duality is surprising. [Added later: Is this really what I meant? Or did I only mean that discrete fibrations and codiscrete cofibrations are the (co)commas of their (co)commas? Because that's the true statement in Cat; the commas are the discrete fibrations and the cocommas are the codiscrete cofibrations. This must be what I meant above by "constrained as need be"; that I am talking about fibrations and cofibrations as automatically implicitly constrained by certain dimensionality presumptions.]
 
 Perhaps what it is is that, in Cat, every square where the span is a fibration and the cospan is a cofibration is automatically a comma/cocomma square?
 
 Also, I'm not sure if it's actually true in n-Cat in general that every cofibration is the cocomma of its comma; I just know this is the case for codiscrete cofibrations in Cat. If this isn't true in general, then the mystery lessens. In fact, I think this is the entire answer: a cospan is a cofibration just in case it is a gamut (a category with a functor into \* -> \* -> \*), while it is codiscrete just in case it is a collage (the preimage of the middle * is empty). Discreteness of a span is a red herring that only seems to mirror the relevant codiscreteness condition on cofibrations when we are concerned about low Set-valued bifunctors rather than Cat-valued bifunctors more generally (i.e., a low n coincidence).
 
-In fact, even codiscreteness is a convoluted way of looking at things. The appropriate condition telling us which cospans are collages/cocommas is that we have a functor into the arrow category, whose primages at the objects are the corners of the cospan.]
+In fact, even codiscreteness is a convoluted way of looking at things. The appropriate condition telling us which cospans are collages/cocommas is that we have a functor into the arrow category, whose preimages at the objects are the corners of the cospan.]
 
 [TODO: Actually, for n-categories, I'm not sure the comma construction is the right way to extract Hom-categories from the collage, and similarly therefore the cocomma may not be right. Consider that a natural transformation between two functors from \*->\* into C does not give a non-invertible 2-cell in C. See https://nforum.ncatlab.org/discussion/3533/extracting-homcategories-as-limits/]
