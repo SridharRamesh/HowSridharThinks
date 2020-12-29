@@ -28,7 +28,7 @@ See more on this below, in the discussion of fibrations vs codiscrete cofibratio
 
 Thus, we have this kind of data which can equivalently be represented as a comma span or a cocomma cospan. This data amounts also to the same thing as an bifunctor A^{op} x B -> Set (where A and B are the intermediate corners of these squares, with A on the domain and B on the codomain side of the transformation); that is, a bi-indexed set.
 
-[TODO: In fact, we can readily define what maps from spans to bi-indexed categories, and maps from bi-indexed categories to cospans, are supposed to be, without the bother of commas and cocommas; that is, we have a "gamut" from spans to bi-indexed categories to cospans. The rest is then observing that we get adjunctions out of all this.]
+[TODO: In fact, we can readily define what maps from spans to bi-indexed categories, and maps from bi-indexed categories to cospans, are supposed to be, without the bother of commas and cocommas; that is, we have a "gamut" from spans to bi-indexed categories to cospans. The rest is then observing that we get adjunctions out of all this. (And idempotency in Cat, and the algebraic conditions defining the fixed values of the adjunction in Cat.)]
 
 When represented as a comma span, what we get is what's called a discrete bifibration. The particular case where A or B is trivially the terminal category 1 comes up often, in which case it's just called a discrete fibration or opfibration. This is also called the category of elements, and is a special case of the general "Grothendieck construction" for bifunctors A^{op} x B -> (infinity-)Cat.
 
