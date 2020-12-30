@@ -6,6 +6,8 @@ Here's a simple fact from order theory: Suppose $$X$$ is a least element of part
 
 In this post, we will strengthen this fact to the most natural corresponding theorem on categories (requiring us to now pay attention to the equalities between morphisms). Furthermore, we'll see how many of the celebrated big-name theorems of category theory (the Adjoint Functor Theorem, the Yoneda lemma) are equivalent to or follow from it.
 
+***
+
 Let $$C$$ be a category, let $$X$$ be an object in $$C$$, and let $$X_C$$ be a cone from $$X$$ to all of $$C$$ (that is, a collection of projections $$X_Y : X \to Y$$ from $$X$$ to each object $$Y$$ in $$C$$, such that for any $$f : Y \to Z$$ in $$C$$, we have the equation $$f \circ X_Y = X_Z$$). Call this a "total cone".
 
 One case where we get total cones is when $$X$$ is an initial object for $$C$$, with the unique maps from $$X$$ to each object of $$C$$ clearly satisfying the cone property. Note that in this case, the self-projection $$X_X$$ is the identity $$1_X$$. And conversely, whenever we have a total cone such that the self-projection is the identity, it arises from an initial object (for the cone conditions then tell us $$f = f \circ 1_X = f \circ X_X = X_Z$$ for any $$f : X \to Z$$, granting uniqueness of the maps out of $$X$$).
@@ -33,9 +35,9 @@ Proof:
 
 We have now established that total limits are the same as initial objects, and are automatically absolute limits (i.e., limits preserved by all functors).
 
-The two most famous named theorems in category theory, the Adjoint Functor Theorem and the (Co)Yoneda lemma/theorem, are special cases of the above, as follows:
+The two most famous named theorems in category theory, the Adjoint Functor Theorem and the (Co)Yoneda lemma/theorem, are special cases of the above, as follows.
 
-REPRESENTABILITY THEOREM:
+## Representability Theorem
 
 Consider the question of when some functor $$F : C \to \mathrm{Set}$$ is representable. To any such functor, we can associate a category of elements $$\mathrm{el}(F)$$, which is the comma category $$(\mathrm{pt} / F)$$ where $$\mathrm{pt}$$ is the one-point set. We say $$F$$ is representable when $$\mathrm{el}(F)$$ has an initial object.
 
@@ -45,9 +47,9 @@ Observe that $$\mathrm{el}(F)$$ comes with a forgetful functor $$: \mathrm{el}(F
 
 This limit criterion for representability of functors deserves a nice name of its own, though I do not know one. It nonetheless comes up often [TODO: see Set as free cocompletion; see the representability of various functors on presheaf categories thus establishing them as elementary toposes; see the HSP theorem]. For now, we shall push on.
 
-Conversely, our original result about total limits being empty colimits is a special case of this now-generalized Representability Theorem, considering that the constantly 1 functor on C is automatically limit-preserving and its category of elements is just C itself, so that this functor is representable (i.e., C will have an initial object) just to the extent that the necessary limit (of all of C) exists in C. [TODO: Pay more attention to deriving the absoluteness of the limit here as well]
+Conversely, our original result about total limits being empty colimits is a special case of this now-generalized Representability Theorem, considering that the constantly 1 functor on C is automatically limit-preserving and its category of elements is just C itself, so that this functor is representable (i.e., C will have an initial object) just to the extent that the necessary limit (of all of C) exists in C. [And in this case, the limit is automatically absolute as well]
 
-YONEDA LEMMA:
+## Yoneda Lemma
 
 The above "Representability Theorem" gives a criterion for when a functor is representable; what follows by applying this to the explicitly representable functor $$\mathrm{Hom}(x, -)$$ is the Yoneda lemma. [TODO: Write this out]. Another way to look at this is as so:
 
@@ -59,7 +61,7 @@ Dually, we also have that $$F(X)$$ is the colimit of $$F$$ applied to all maps i
 
 TODO: Can we recover that total limits are initial objects from the Yoneda lemma?
 
-ADJOINT FUNCTOR THEOREM:
+## Adjoint Functor Theorem
 
 Another corollary of our Representability Theorem is the Adjoint Functor Theorem. A functor of the form $$\mathrm{Hom}(x, G-)$$ preserves any limits $$G$$ preserves, and so by the Representability Theorem criterion, this functor is representable (which is to say, $$G$$ has a left adjoint at $$x$$) if and only if the diagram corresponding to the forgetful functor out of its category of elements has a limit which $$G$$ preserves.
 
