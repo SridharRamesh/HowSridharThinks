@@ -14,3 +14,7 @@ Not only that, but this expansion produces a series $$\frac{1}{n_1} + \frac{1}{n
 This is called an Egyptian fraction expansion. It's far from unique in general, mind you.
 
 Note now that ANY positive rational $$R$$ has an Egyptian fraction expansion using exclusively arbitrarily large denominators, by taking the harmonic series starting from whatever arbitrarily large denominator, and taking as many values as it takes to cross from below to above $$R$$. Consider this crossing point, such that the partial sums up through $$\frac{1}{n}$$ are below $$R$$ but up through $$\frac{1}{n + 1}$$ are above $$R$$. This means that the partial sum up through $$\frac{1}{n}$$ is less than $$\frac{1}{n + 1}$$ below $$R$$. Whatever that remaining error is, as a rational in $$[0, 1)$$, it has its own Egyptian fraction representation by the above, which must use denominators which are all strictly higher than $$n + 1$$ and thus distinct from those in our partial sum so far, completing what we want.
+
+***
+
+This stuff really doesn't matter. Most of my posts are on stuff that matters more. Well, since I was made aware of it, I've recorded it, that's all.
