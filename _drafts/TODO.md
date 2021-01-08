@@ -11,7 +11,7 @@ Delay differential equations
 Heron’s formula
 Cayley’s theorem in matrix algebra
 Platonic solids and Coxeter groups
-Functional equation for the zeta function (see comment "(1) Titchmarsh points out in his book on the zeta function (section 2.3) that if you blindly apply the Poisson summation formula to the function 𝑓(𝑠)=|𝑥|𝑠, you get the functional equation of the Riemann zeta function immediately, and gives a reference to a paper of Mordell where this procedure is justified." at https://mathoverflow.net/questions/58004/how-does-one-motivate-the-analytic-continuation-of-the-riemann-zeta-function. See also "EASY PROOFS OF RIEMANN’S FUNCTIONAL EQUATION…" by Knopp and Robins)
+Functional equation for the zeta function (see comment "(1) Titchmarsh points out in his book on the zeta function (section 2.3) that if you blindly apply the Poisson summation formula to the function 𝑓(𝑠)=|𝑥|𝑠, you get the functional equation of the Riemann zeta function immediately, and gives a reference to a paper of Mordell where this procedure is justified." at https://mathoverflow.net/questions/58004/how-does-one-motivate-the-analytic-continuation-of-the-riemann-zeta-function. See also "EASY PROOFS OF RIEMANN’S FUNCTIONAL EQUATION…" by Knopp and Robins, and "AN ALTERNATIVE FORM OF THE FUNCTIONAL EQUATION FOR RIEMANN′S ZETA FUNCTION" by Ossicini)
 Puzzle from work about rotating table and blindly flipping glasses
 Borsuk-Ulam etc (and see old MathOverflow post about broken proof)
 Jordan decomposition for linear operators and its relationship to partial fraction decomposition and Bezout’s theorem/Chinese Remainder Theorem, three instances of the same fact
