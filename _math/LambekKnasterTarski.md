@@ -53,3 +53,7 @@ We COULD use an inductively built non-subcategory diagram as well, closed under 
 [TODO: Can these accidental isomorphisms ever actually happen? Construct an example or clean everything up by proving it impossible.]
 
 [TODO: Relate Knaster-Tarski proved from below by Adamek to the Banach and Caristi fixed point theorems. Perhaps this involves thinking about Cauchy completeness of categories?]
+
+***
+
+See also: "On Well-Founded and Recursive Coalgebras" by Adamek et al, and the related work mentioned therein (such as by Paul Taylor). Also "Initial Algebras, Terminal Coalgebras, and the Theory of Fixed Points of Functors" by the same authors.
