@@ -17,7 +17,9 @@ Here, T(X + Y) on the left-hand side is like instances of T where the "points" c
 
 Furthermore, the latter is broken down so that Secant(X, Y) is those instances using at least one Y, with the "first" (or some canonically selected one, canonically selected in a way which doesn't depends on its own contents) replaced by a hole, so that Y * Secant(X, Y) plugs the hole.
 
-Then the derivative of T(X) is (the limiting value of, which can be thought of as just the value of under continuity) Secant(X, 0). And this is the same as the instances of T(X) using at least one Y, the first replaced by a hole, the rest unfillable; i.e., the instances of T(X) using precisely one hole, and no other stray Ys.
+Then the derivative of T(X) is Secant(X, 0).[^continuity] And this is the same as the instances of T(X) using at least one Y, the first replaced by a hole, the rest unfillable; i.e., the instances of T(X) using precisely one hole, and no other stray Ys.
+
+[^continuity]: One needs some principle that tells us Secant is uniquely determined, for this to work. In analysis, this principle is continuity; at most one continuous selection can be made. But in lots of contexts, there is some analogous principle constraining the avaiable functions that has nothing to do with infinitesimal limits per se.
 
 All of this falls apart if we cannot make the equation T(X + Y) = T(X) + Y * Secant(X, Y) for some Secant(X, Y); thus, it falls apart for, for instance, T(X) = 2^X.
 
