@@ -19,7 +19,7 @@ Furthermore, the latter is broken down so that Secant(X, Y) is those instances u
 
 Then the derivative of T(X) is Secant(X, 0).[^continuity] And this is the same as the instances of T(X) using at least one Y, the first replaced by a hole, the rest unfillable; i.e., the instances of T(X) using precisely one hole, and no other stray Ys.
 
-[^continuity]: One needs some principle that tells us Secant is uniquely determined, for this to work. In analysis, this principle is continuity; at most one continuous selection can be made. But in lots of contexts, there is some analogous principle constraining the avaiable functions that has nothing to do with infinitesimal limits per se.
+[^continuity]: One needs some principle that tells us Secant is uniquely determined even at Y = 0, once Y * Secant is determined, for this to work. In analysis, this principle is continuity; at most one continuous selection can be made. But in lots of contexts, there is some analogous principle constraining the avaiable functions that has nothing to do with infinitesimal limits per se.
 
 All of this falls apart if we cannot make the equation T(X + Y) = T(X) + Y * Secant(X, Y) for some Secant(X, Y); thus, it falls apart for, for instance, T(X) = 2^X.
 
@@ -33,6 +33,12 @@ What we're really interested in is endofunctors on the category of coproduct inj
 
 The fundamental further principle that lets us do differentiation is that if F(0) = 0, then F(X) = X * G(X) for some G (and then F'(0) = G(0)). This isn't always true even for injection-preserving endofunctors, though; consider, e.g., the functor which reflects sets into propositions (so it sends 0 to 0 and everything else to 1). Thus, just as in analysis class, not everything is differentiable.]
 
+***
+
 TODO: Rewrite all this. Consider F(Y) to be o(Y) just in case every instance of F(Y) uses more than one instance of an Y. Then T(X + Y) = T(X) + Y * T'(X) + o(Y), with a unique decomposition, and this of course lines up with how we think of derivatives. The key thing about o(Y) is that it's closed under linear combinations and contains Y * o(1) [where o(1) means F(0) = 0].
 
 [TODO: See https://en.wikipedia.org/wiki/Combinatorial_species#Differentiation ]
+
+***
+
+Footnotes:
