@@ -24,7 +24,7 @@ Given this super-exponential rate of decay\*, it cannot be that both $$y$$ is ra
 
 In particular, plug in $$\sqrt{x} = \frac{\pi}{2}$$, at which $$f$$ vanishes, to conclude $$y = \frac{1}{\pi^2}$$ is irrational, which is to say, $$\pi^2$$ is irrational.
 
-More generally, this establishes that wherever $$\tan{z}$$ and $$z$$ are in rational ratio to each other, we must have that $$\frac{1}{z^2}$$ is irrational, which is to say for nonzero such $$z$$ that $$z^2$$ is irrational. (This includes, for what it's worth, the case of complex $$z$$; indeed, the whole thing might as well have been phrased in terms of $$\cosh$$, but people find $$\cos$$ more familiar.)
+More generally, this establishes that wherever $$\cos(z)$$ and $$\sinc(z)$$ are in rational ratio to each other, we must have that $$\frac{1}{z^2}$$ is irrational, which is to say for nonzero such $$z$$ that $$z^2$$ is irrational. (This includes, for what it's worth, the case of complex $$z$$; indeed, the whole thing might as well have been phrased in terms of $$\cosh$$, but people find $$\cos$$ more familiar.)
 
 Of course, the corollary people talk about most is that thus $$\pi$$ itself is irrational.
 

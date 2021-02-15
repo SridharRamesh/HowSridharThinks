@@ -59,7 +59,13 @@ By the above, this initial object is a total absolute limit; in particular, it w
 
 Dually, we also have that $$F(X)$$ is the colimit of $$F$$ applied to all maps into $$X$$. This is the content of the co-Yoneda lemma, again generally stated for $$F$$ with codomain $$Set$$, which can also be viewed as telling us that the Yoneda embedding is the free cocompletion for a category. [TODO: Expand on this]. This can also be viewed as telling us how every model has a canonical full presentation in terms of generators and relations. (Again, see ["The Yoneda Lemma"]({{site.baseurl}}{% link _math/Yoneda.md %})). In type-theory/dependent types language, we can say "$$F(X) = \Sigma_{Y \to X} F(Y)$$".
 
-TODO: Can we recover that total limits are initial objects from the Yoneda lemma?
+TODO: Can we recover that total limits are initial objects from the Yoneda lemma? Part of this is straightforward.
+
+If we know that the category C has an initial object 0, then we can see that 0 is the total limit of C by taking F to be the identity functor and X to be 0, and observing that the codomain projection from 0/C to C is an obvious equivalence of categories. And by considering more general F, we find this limit is absolute.
+
+Thus, any initial object is a total absolute limit. The other part of it, though, to seeing from Yoneda that so long as the total limit exists, it is an initial object, I still have to think about.
+
+This invokes the general Yoneda lemma construed as valued in a non-Set category, mind you.
 
 ## Adjoint Functor Theorem
 
@@ -75,7 +81,11 @@ Conversely, our original result about total limits being empty colimits is a spe
 
 ***
 
-Incidentally, a certain addendum which is sometimes useful is that we can obtain an initial object by taking any weakly initial object (one with existence, but not necessarily uniqueness, of morphsims into every other object; that is, any object which becomes initial in the preorder reflction of the category), and equalizing all its endomorphisms. [TODO: Why is this? I believe this is because the inclusion functor of the equalizer morphism $$E \to W$$, where $$W$$ is weakly initial and $$E$$ is the common equalizer of on a weakly initial object is automatically an [initial functor](https://ncatlab.org/nlab/show/final+functor), and thus has the same limit as the identity functor. But I need to work this out. I can then perhaps apply this to bottoms-up Knaster-Tarski, by doing such a coequalizer of all endomorphisms at every stage.]
+## Addenda
+
+Incidentally, a certain addendum which is sometimes useful is that we can obtain an initial object by taking any weakly initial object (one with existence, but not necessarily uniqueness, of morphsims into every other object; that is, any object which becomes initial in the preorder reflction of the category), and equalizing all its endomorphisms. [TODO: Why is this? I believe this is because the inclusion functor of the equalizer morphism $$E \to W$$, where $$W$$ is weakly initial and $$E$$ is the common equalizer of all endomorphisms on a weakly initial object is automatically an [initial functor](https://ncatlab.org/nlab/show/final+functor), and thus has the same limit as the identity functor. But I need to work this out.
+
+As an application of this observation, I can then perhaps apply this to [bottoms-up Knaster-Tarski]({{site.baseurl}}{% link _math/LambekKnasterTarski.md %}), by doing such a coequalizer of all endomorphisms at every stage.]
 
 ***
 
