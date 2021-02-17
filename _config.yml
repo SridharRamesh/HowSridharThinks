@@ -83,3 +83,4 @@ defaults:
 #   - vendor/ruby/
 exclude:
   - exclude/
+  - vendor/
