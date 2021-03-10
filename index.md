@@ -7,6 +7,8 @@ layout: default
 
 You've come to the right place to see how Sridhar thinks about math.
 
+Keep in mind, nothing here is polished, it's full of TODOs, you shouldn't be reading this site, who told you it even exists?
+
 <h1> All Posts, Unorganized</h1>
 
 ([Atom feed](/feed/math.xml))
