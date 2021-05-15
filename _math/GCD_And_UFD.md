@@ -2,8 +2,7 @@
 title: "Greatest Common Divisors and Unique Prime Factorization"
 date: 2020-6-29
 ---
-Initial date: 2020-6-29
-Latest significant revision: 2020-12-26
+A general discussion of jewels of math concerning GCDs in various contexts.
 
 [TODO: Rewrite throughout for general audience, not just people who know math jargon]
 

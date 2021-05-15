@@ -26,4 +26,4 @@ Tl;dr: Natural deduction flavored systems are those designed to minimize explici
 
 I think the name "sequent calculus" has led many people awry. It's a bad name for emphasizing the salient difference; it draws attention to the wrong detail.
 
-[TODO: Speak about cut elimination as ways of reducing terms to normal forms (in the sense of maximally beta-reduced and eta-expanded); frame this 2-categorically for adjunctions in general; do other posts on proofs of normalization and confluence for lambda calculus, on using scone categories, and so on]
+[TODO: Speak about cut elimination as ways of reducing terms to normal forms (in the sense of maximally beta-reduced and eta-expanded); frame this 2-categorically for adjunctions in general (see the work of Kosta Dosen); do other posts on proofs of normalization and confluence for lambda calculus, on using scone categories, and so on]
