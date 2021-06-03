@@ -19,3 +19,5 @@ Now, by looking at the last paragraph's in C^{op}, meaning C with 1-cells revers
 So R ⊣ F is equivalent to - ∘ F ⊣ - ∘ R. Or renaming R into L for convenience, we have that L ⊣ F leads to - ∘ F ⊣ - ∘ L. This seems backwards, with the the left adjoint on the right and the right adjoint on the left in the conclusion, but it is indeed true. We can phrase this as a correspondence between Hom(xF, y) and Hom(x, yL).
 
 [TODO: Rename standardized to L and R, or standardized to F and G]
+----
+F -| R reverses into L -| F because reversing 1-arrows, just like reversing 2-arrows, swaps left and right in an adjunction (seen from the very symmetric unit/counit/triangle identities definition).

@@ -55,3 +55,28 @@ Supply chain phenomena to write about:
 – Casepack theory (optimal policy is a contiguous range of OTLs; how does this interact with backwards induction over time, with K-convexity, etc?).
 – Multi-echelon theory, such as Clark-Scarf for serial systems (or for distribution systems with balance assumption).
 – Necessity of backordering assumption for most of the above; what changes when we use a lost sales model?
+
+----
+
+Generalized factorial
+
+Generalized Riemann zeta?
+
+Generalized power sum formula?
+
+Set up Wallis product recurrence, but have to go over:
+Volume is unaffected by shearing
+Volume of tapering figures in n-dimensional space (pyramids)
+Area relates to surface area on a ball
+Finally, surface of any ball is... (alas, this goes over the same ground as a 3b1b video)
+Talk about Lambert equal area projection and map projection in general, curvature, etc?
+Having gotten the recurrence, we relate to ! and find (1/2)! = sqrt(pi)/2.
+
+Philosophical discussion of how pi comes up in many different contexts.
+
+Do donvolution approach instead as well.
+
+----
+Blind Bartender Problem
+
+Links to game theory in general; tic-tac-toe, Hex, Nim
