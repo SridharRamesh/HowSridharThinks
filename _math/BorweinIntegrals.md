@@ -8,13 +8,13 @@ This has a simple explanation in terms of the fact that this is the point at whi
 
 It will be cleaner to explain this with some reparametrizations.
 
-Observe that all of our integrands are even functions, so the bounds on all our integrals might as well be taken from $$-\infty$$ to $$\infty$$, only doubling the result up to $$\pi$$ rather than $$\frac{\pi}{2}$$.
+Observe that all of our integrands are even functions, so the bounds on all our integrals might as well be taken from $$-\infty$$ to $$\infty$$, only doubling the results up to $$\pi$$ rather than up to $$\frac{\pi}{2}$$.
 
-Simultaneously, let us actually replace $$\mathrm{sinc}(x)$$ with the rescaled $$f(x) = \mathrm{sinc}(\pi x)$$, which change of variable only shrinks the result by a factor of $$\pi$$, now down to $$1$$.
+Simultaneously, let us actually replace $$\mathrm{sinc}(x)$$ with the rescaled $$f(x) = \mathrm{sinc}(\pi x)$$, which change of variable only shrinks the results by a factor of $$\pi$$, to $$1$$.
 
 Thus, $$\int_{-\infty}^{\infty} f(x) dx = 1$$, $$\int_{-\infty}^{\infty} f(x) f(x/3) dx = 1$$, etc, but $$\int_{-\infty}^{\infty} f(x) f(x/3) \ldots f(x/15) dx < 1$$.
 
-Next, note that sinc, f, etc, are Fourier transforms of rectangle functions; specifically, $$f$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-1, 1]$$. And therefore each rescaled $$x \mapsto f(kx)$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-k, k]$$. (Fourier transforms of probability density functions are also called characteristic functions, by the way, which is simply the moment-generating function turned on its side, so to speak. But this is just jargon.)
+Next, note that $$\sinc$$, $$\f$$, etc, are Fourier transforms of rectangle functions; specifically, $$f$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-1, 1]$$. And therefore each rescaled $$x \mapsto f(kx)$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-k, k]$$. (Fourier transforms of probability density functions are also called characteristic functions, by the way, which is simply the moment-generating function turned on its side, so to speak. But this is just jargon.)
 
 Multiplying these integrands together amounts to convolution on the other side of the Fourier transform, and convolution of probability density functions amounts to independent addition of random variables. And the integral over all inputs on one side of the Fourier transform amounts to evaluation at 0 on the other side of the Fourier transform.
 
