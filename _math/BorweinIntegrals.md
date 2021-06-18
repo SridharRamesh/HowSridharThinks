@@ -12,9 +12,9 @@ Observe that all of our integrands are even functions, so the bounds on all our 
 
 Simultaneously, let us actually replace $$\mathrm{sinc}(x)$$ with the rescaled $$f(x) = \mathrm{sinc}(\pi x)$$, which change of variable only shrinks the results by a factor of $$\pi$$, to $$1$$.
 
-Thus, $$\int_{-\infty}^{\infty} f(x) dx = 1$$, $$\int_{-\infty}^{\infty} f(x) f(x/3) dx = 1$$, etc, but $$\int_{-\infty}^{\infty} f(x) f(x/3) \ldots f(x/15) dx < 1$$.
+Thus, the result to explain is that $$\int_{-\infty}^{\infty} f(x) dx = 1$$, $$\int_{-\infty}^{\infty} f(x) f(x/3) dx = 1$$, etc, but $$\int_{-\infty}^{\infty} f(x) f(x/3) \ldots f(x/15) dx < 1$$.
 
-Next, note that $$\mathrm{sinc}$$, $$f$$, etc, are Fourier transforms of rectangle functions; specifically, $$f$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-1, 1]$$. And therefore each rescaled $$x \mapsto f(kx)$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-k, k]$$. (Fourier transforms of probability density functions are also called characteristic functions, by the way, which is simply the moment-generating function turned on its side, so to speak. But this is all just jargon.)
+Next, note that $$\mathrm{sinc}$$, $$f$$, etc, are Fourier transforms of rectangle functions; specifically, $$f$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-1, 1]$$. And therefore each rescaled $$x \mapsto f(kx)$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-k, k]$$. (Fourier transforms of probability density functions are also called "characteristic functions", by the way, which is simply the "moment-generating function" turned on its side, so to speak. But this is all just jargon.)
 
 Multiplying these integrands together amounts to convolution on the other side of the Fourier transform, and convolution of probability density functions amounts to independent addition of random variables. And the integral over all inputs on one side of the Fourier transform amounts to evaluation at 0 on the other side of the Fourier transform.
 
@@ -26,10 +26,10 @@ In other words, the probability that uniformly random variables in the ranges [-
 
 This is guaranteed when 1/3 + 1/5 + ... + our stopping point is itself at most 1. But it stops being guaranteed once we pass that. Hence, the results we've seen.
 
-Incidentally, there's absolutely nothing special about our using reciprocals of odd numbers in order here. Any values will display the same phenomenon: when the bounds of all the factors other than the first sum to $$\leq$$ the first factor, our computation yields a guaranteed 1 probability, and otherwise it yields something smaller.
+Incidentally, there's absolutely nothing special about our using reciprocals of odd numbers in order here. Any values will display the same phenomenon: when the bounds on all the factors other than the first $$f$$ factor sum to $$\leq 1$$, our computation yields a guaranteed 1 probability density, and otherwise it yields something smaller.
 
 That's all there is to it.
 
-[TODO: Add graphics displaying the convolutions of the relevant probability density functions?]
-
 [TODO: Word this in a way where it would be readable to layish-readers who don't know the Fourier transform, etc]
+
+[TODO: Add graphics displaying the convolutions of the relevant probability density functions?]
