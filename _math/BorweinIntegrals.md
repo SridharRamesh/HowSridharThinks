@@ -26,10 +26,12 @@ In other words, the probability that uniformly random variables in the ranges [-
 
 This is guaranteed when 1/3 + 1/5 + ... + our stopping point is itself at most 1. But it stops being guaranteed once we pass that. Hence, the results we've seen.
 
-Incidentally, there's absolutely nothing special about our using reciprocals of odd numbers in order here. Any values will display the same phenomenon: when the bounds on all the factors other than the first $$f$$ factor sum to $$\leq 1$$, our computation yields a guaranteed 1 probability density, and otherwise it yields something smaller.
+Incidentally, there's absolutely nothing special about our using reciprocals of odd numbers in order here. Any values will display the same phenomenon: when the bounds on all the factors other than the first $$f$$ factor sum to $$\leq 1$$, our computation yields a guaranteed 1 probability, and otherwise it yields something smaller.
 
 That's all there is to it.
 
 [TODO: Word this in a way where it would be readable to layish-readers who don't know the Fourier transform, etc]
 
 [TODO: Add graphics displaying the convolutions of the relevant probability density functions?]
+
+[TODO: There's some kind of off by 2 thing I need to hunt down. The probability density on a uniformly random variable in [-1, 1] is constantly 1/2, not 1. No big deal, just something above needs rewording somewhere]
