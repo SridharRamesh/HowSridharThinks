@@ -34,4 +34,4 @@ That's all there is to it.
 
 [TODO: Add graphics displaying the convolutions of the relevant probability density functions?]
 
-[TODO: There's some kind of off by 2 thing I need to hunt down. The probability density on a uniformly random variable in [-1, 1] is constantly 1/2, not 1. No big deal, just something above needs rewording somewhere]
+[TODO: There's some kind of off by 2 thing I need to hunt down. The probability density on a uniformly random variable in [-1, 1] is constantly 1/2, not 1. No big deal, just something above needs rewording somewhere, in the details of exactly which Fourier transform we are using. Note also the distinction in standard terminology between the unnormalized and normalized sinc functions.]

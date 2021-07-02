@@ -80,3 +80,9 @@ Do donvolution approach instead as well.
 Blind Bartender Problem
 
 Links to game theory in general; tic-tac-toe, Hex, Nim
+
+----
+
+If a monad has a left adjoint, then this left adjoint is a comonad with the same Kleisli category and same inclusion of the pure category into the Kleisli category. If a monad has a right adjoint, then this right adjoint is a comonad with the same Eilenberg-Moore category and the same forgetful functor out of the Eilenberg-Moore category.
+
+Write up the general theory of Clifford algebras, including the observation that the Clifford algebra can be taken as isomorphic as a vector space to the exterior algebra (non-obvious! See Chevalley's linear identification at http://people.math.harvard.edu/~shlomo/docs/lie_algebras.pdf). Relate this to quaternions, write about spinors. Note the observation that spinors are closed under addition for quaternions because of dimension concerns (two planes in 3d space must intersect in a line).

@@ -22,6 +22,8 @@ Note that F-algebras and F-coalgebras comprise a category together. For any diag
 
 We can consider the notion of an F-algebra-initial F-coalgebra: those F-coalgebras with unique homomorphisms into each F-algebra. This class is closed under the natural action of F and under colimits within the category of coalgebras together with algebras (insofar as the colimits exist).
 
+[Apparently, many use the term "recursive coalegbra" rather than "algebra-initial coalgebra" here. Or in the same way, they speak of "corecursive algebra" rather than "coalgebra-terminal algebra".]
+
 By Lambek's lemma above, an initial algebra is the same thing as a terminal algebra-initial coalgebra (since any terminal such coalgebra will have to be an isomorphism). A sufficient (though not necessary) condition for this to exist is for the forgetful functor from algebra-initial coalgebras into the underlying category to have a colimit (because then this colimit must itself comprise a colimit within the algebra-initial coalgebras, and thus be a total colimit, which is to say, terminal; see ["Total Limits Are Empty Colimits"]({{site.baseurl}}{% link _math/TotalLimits.md %})).
 
 This is the bottoms up approach to the initial algebra given by Knaster-Tarski.
