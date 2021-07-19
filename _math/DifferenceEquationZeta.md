@@ -44,6 +44,6 @@ We can also find unique-up-to-an-additive constant asymptotically-vanishing-high
 
 [TODO: Investigate how to carry out the Fourier-theoretic proof of the functional equation for the zeta functions, and particularly in the context of this approach to the analytic continuation]
 
-[TODO: Because of the relationship between decay of a function and the smoothness of its Fourier transform, this approach to finding F from f should amount to something like, in Fourier transformed space, dividing Fourier(f) by 1 - R^x for suitable base R to get Fourier(F), choosing the sufficiently smooth result of this division to handle the ambiguity at the zeros of 1 - R^x. Flesh this out.]
+[TODO: Because of the relationship between decay of a function and the smoothness of its Fourier transform, this approach to finding F from f should amount to something like, in Fourier transformed space, dividing Fourier(f) by 1 - R^x for suitable base R to get Fourier(F), choosing the sufficiently smooth result of this division to handle the ambiguity at the zeros of 1 - R^x. Flesh this out. Or rather, the Laplace transform, since we are only interested in one-sided decay.]
 
 [TODO: Clean up the above by removing the TODO notes, and writing in terms of averages rather than difference equations where useful. Absorb the insights from https://twitter.com/RadishHarmers/status/1330414491436277761 ]
