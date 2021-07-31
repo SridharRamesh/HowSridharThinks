@@ -25,8 +25,10 @@ The equivalence of various definitions of adjunctions, including the “backward
 A general post on things students are made to tackle by induction that are seen more clearly in other ways
 A general post on things people tackle by +1 reasoning instead of general monoid reasoning, that are seen more clearly in the full picture (including, e.g., the Mobius inversion chromatic polynomial thing)
 Monty Hall/two boys/etc probability puzzle ambiguity language rant
-Resultants/discriminants/etc
-Symmetric polynomials, the theorem that any symmetric polynomial of r1, ..., rn is a polynomial in the coefficients of (x + r1)...(x + rn). [Note that, replacing "polynomial" by "rational function" here, this follows directly from Galois theory. Can we get the polynomial version from that in some way, or is there some relation?]
+Resultants/discriminants/Bezout matrix/etc
+Symmetric polynomials, the theorem that any symmetric polynomial of r1, ..., rn is a polynomial in the coefficients of (x + r1)...(x + rn). [Note that, replacing "polynomial" by "rational function" here, this follows directly from Galois theory. Can we get the polynomial version from that in some way, or is there some relation? I suppose we can get the polynomial version fully from the rational version, because we can readily check whether a rational function is actually polynomial by investigating whether it has poles. But I also suppose the fundamental theorem of symmetric polynomials is probably part of the proof of the fundamental theorem of Galois theory in the first place. Anyway, see https://math.stackexchange.com/questions/192565/a-proof-of-the-fundamental-theorem-of-symmetric-polynomials which answers some of this.]
+Galois theory, with reference to the abstract model-theoretic perspective from the Alice Medvedev et al paper, plus the points that are more field specific having to do with dimension. Building off the Discrete Fourier Transform and Galois theory post we already did.
+Counterfeit coin balance problems (see http://math.uni.lodz.pl/~andkom/Marcel/Kule-en.pdf)
 
 Talk about the Legendre transform from a tropical Fourier-transform perspective (keeping in mind how the ordinary properties fail a little and one must use one sup- Legendre transform followed by one min- Legendre transform, to recover the original function, with this working just in case the original function is convex). Discuss duality in linear programming from this perspective.
 
