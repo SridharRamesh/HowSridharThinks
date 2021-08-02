@@ -24,4 +24,4 @@ Note that containing $$\Box (\Box A \Rightarrow A) \vdash \Box A$$ as an axiom i
 
 Accordingly, we can derive the external Loeb's theorem from the internal Loeb's theorem. Like so: Suppose we have the former in play. Then from $$\Box A \vdash A$$ we derive $$\vdash \Box A \Rightarrow A$$ and thus $$\vdash \Box(\Box A \Rightarrow A)$$. Applying our internal version of Loeb's theorem, we get $$\vdash \Box A$$. But now we can combine this with our starting presumption of $$\Box A \vdash A$$, and conclude $$\vdash A$$, as desired.
 
-Conversely, given internal Loeb's theorem and 4, we can derive external Loeb's theorem, like so: Suppose given $$\Box A \vdash A$$. We readily get $$\vdash \Box (\Box A \vdash A)$$ from this, and then by applying internal Loeb's theorem, we get $$\vdash \Box A$$. But now by applying again our original $$\Box A \vdash A$$, we can conclude $$\vdash A$$, as desired.
+Conversely, given external Loeb's theorem and 4, we can derive internal Loeb's theorem, like so: TODO
