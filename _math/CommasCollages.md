@@ -79,3 +79,5 @@ Also, I'm not sure if it's actually true in n-Cat in general that every cofibrat
 In fact, even codiscreteness is a convoluted way of looking at things. The appropriate condition telling us which cospans are collages/cocommas is that we have a functor into the arrow category, whose preimages at the objects are the corners of the cospan.]
 
 [TODO: Actually, for n-categories, I'm not sure the comma construction is the right way to extract Hom-categories from the collage, and similarly therefore the cocomma may not be right. Consider that a natural transformation between two functors from \*->\* into C does not give a non-invertible 2-cell in C. See https://nforum.ncatlab.org/discussion/3533/extracting-homcategories-as-limits/]
+
+[TODO: Discuss Kan extensions, pointwise Kan extensions, and Kan lifts]
