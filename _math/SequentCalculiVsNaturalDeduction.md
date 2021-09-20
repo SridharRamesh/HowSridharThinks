@@ -14,11 +14,11 @@ That is, we can choose for both of $$F$$ and $$G$$ whether we want to deal with 
 
 From any of these, we can get any of the others, of course, by use of structural rules around binary composition (cut rule) and identity.
 
-A sequent calculus, in my mind, is a system set up so that you don't actually need to use any binary compositions (cut elimination) or any identities other than identity at atomic variables in order to prove tautologies, and such that each rule is set up to have the subformula property that all formulas in its requisite sequents are subformulas of those appearing in the granted sequent.
+A sequent calculus, in my mind, is a system set up so that you don't actually need to use any binary compositions (cut elimination) or any identities other than identity at atomic variables in order to prove tautologies, and such that each rule is set up to have the subformula property that all formulas in its prerequisite sequents are subformulas of those appearing in the granted sequent.
 
 In sequent calculus, we encode all rules as composition actions, so that we never need to invoke cut explicitly (in proving tautologies). We use whichever of post-composition or pre-composition encoding will, for that particular rule, give us the subformula property, based on whether F is a subformula of G or vice versa in the $$F \vdash G$$ we are trying to encode.
 
-A natural deduction system, on the other hand, in my mind, is one set up with no worry about rules satisfying the subformula property, but instead is set up with rules emphasizing postcomposition actions: in general, $$F \vdash G$$ is encoded via "From $$X \vdash F$$, conclude $$X \vdash G$$". That is, rules which for the most part don't involve interacting with/thinking too much about the left sides of sequents.
+A natural deduction system, on the other hand, in my mind, is one set up with no worry about rules satisfying the subformula property, but instead is set up with rules emphasizing postcomposition actions: in general, $$F \vdash G$$ is encoded via "From $$X \vdash F$$, conclude $$X \vdash G$$". That is, rules which for the most part don't involve interacting with/thinking too much about the left sides of sequents. The left sides stay unchanged or minimally changed throughout inferences as much as possible.
 
 (Often, natural deduction is also presented in such a way that things aren't even written explicitly as sequents, and keeping track of what assumptions are around is notationally implicit rather than explicit, but that's irrelevant to the underlying concept.)
 
