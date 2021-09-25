@@ -79,6 +79,13 @@ Note that an instance of all this is a criterion for when a category has any par
 
 Conversely, our original result about total limits being empty colimits is a special case of this now-generalized Adjoint Functor Theorem, considering that a functor from C to C^0 = 1 always preserves all limits, so it will have a left adjoint (i.e., C will have an initial object) just to the extent that the necessary limit (of all of C) exists in C. [TODO: Pay more attention to deriving the absoluteness of the limit here as well]
 
+## Colimits are limits and limits are colimits
+It's not just the case that the empty colimit is a limit. In general, all colimits are limits. This will involve slightly less "co"s if I say it in its dual form, that all limits are colimits, so I will say it that way.
+
+After all, a limit is a terminal cone. Therefore, it is a total colimit of all cones, within in the category of cones.
+
+What's more, the forgetful functor which sends cones to their apex creates colimits. Thus, we can also create a limit by taking the colimit, within the original category itself, of this forgetful functor (from the category of cones to the original category).
+
 ***
 
 ## Addenda
