@@ -81,3 +81,23 @@ In fact, even codiscreteness is a convoluted way of looking at things. The appro
 [TODO: Actually, for n-categories, I'm not sure the comma construction is the right way to extract Hom-categories from the collage, and similarly therefore the cocomma may not be right. Consider that a natural transformation between two functors from \*->\* into C does not give a non-invertible 2-cell in C. See https://nforum.ncatlab.org/discussion/3533/extracting-homcategories-as-limits/]
 
 [TODO: Discuss Kan extensions, pointwise Kan extensions, and Kan lifts]
+
+----
+
+Kan lifts: We need to discuss profunctors first, aka bimodules or bi-indexed sets (as above) or distributors or the Kleisli category of the free cocompletion (which matches the presheaf category, with unit given by the Yoneda embedding; TODO: write a post on this). 
+
+A key thing to note about profunctors: Cat embeds into Prof in four different ways: The canonical one, but also, since $$Cat = Cat^{co}$$ (via reading a functor from C to D also as a functor from C^{op} to D^{op}) and $$Prof = Prof^{op}$$ (via reading a bifunctor C^{op} x D -> Set not just as a profunctor from D to C but also a profunctor from C^{op} to D^{op}), we also have that Cat embeds into Prof^{co}, Prof^{op}, and Prof^{coop}.
+
+Another key thing to note about profunctors: Every ordinary functor has a right adjoint, as a profunctor. This is just by taking f : A -> B and turning it into g(b) = Hom(f(a), b), the map from B to Psh(A) which would be the right adjoint for f as a genuine functor if its outputs were always representable presheaves.
+
+Because every ordinary functor has a right adjoint as a profunctor, we automatically get the right Kan lift of an ordinary functor along an ordinary functor, as a profunctor (as composition with a right adjoint yields a Kan lift). The formula this yields is that the right Kan lift of s : B -> C along r : A -> C is the profunctor from B to A given by Hom_C(r(a), s(b)).
+
+Note that this is precisely the same as the bi-indexed set that corresponds to this cospan under the right adjoint or coreflection in the gamut/idempotent adjunction noted above.
+
+\[Note that, if A is cocomplete, we also automatically get a way to turn profunctors into A into ordinary functors into A. TODO: Speak more on the implications of this with respect to size.\]
+
+It turns out, we can even take the right Kan lift of a profunctor along a profunctor in the same way. Just interpret the profunctors as ordinary functors into a presheaf category, and use the same formula. It's not quite automatic to see that this follows from the above, we can reason to this from the fact that the Yoneda embedding acting on a category which is already a presheaf category has as a left adjoint the multiplication for the free cocompletion monad. But that's a pain. We can also see it just by working through the formula to explicitly confirm that it works: When C is replaced by Set^{C^{op}} and then r and s are replaced by profunctors accordingly \[but for which I will write the contravariant argument first rather than the covariant argument, for my convenience\], the formula turns into "forall c. Hom_C(r c a, s c b)". It's not hard to show that another profunctor g a b entails this iff we have a map from r composed with g into s, given the definition of profunctor composition in terms of a co-end. \[TODO\]
+
+Thus, we have the general formula for right Kan lifts of profunctors along profunctors, yielding profunctors. Of course, if we right Kan lift a functor along a functor this way within Prof, and the result is a gneuine functor, it remains also a right Kan lift in Cat. This gives us our "pointwise" right Kan lifts (TODO: talk more about why this is the right notion of pointwise).
+
+By swapping out the way that Cat embeds into Prof for one of the other ways of the four, we can turn this also into pointwise right Kan extensions as profunctors, or pointwise left Kan lifts/extensions as "ind-functors" (by which I mean, maps into (Set^C)^{op} rather than Set^(C^{op})).
