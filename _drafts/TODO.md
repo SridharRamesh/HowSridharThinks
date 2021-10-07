@@ -74,3 +74,6 @@ Links to game theory in general; tic-tac-toe, Hex, Nim
 ---
 
 Write up the general theory of Clifford algebras, including the observation that the Clifford algebra can be taken as isomorphic as a vector space to the exterior algebra (non-obvious! See Chevalley's linear identification at http://people.math.harvard.edu/~shlomo/docs/lie_algebras.pdf). Relate this to quaternions, write about spinors. Note the observation that spinors are closed under addition for quaternions because of dimension concerns (two planes in 3d space must intersect in a line).
+
+---
+Make videos!
