@@ -2,6 +2,8 @@
 title: "Non-Elementary Prime Counting with the Riemann Zeta Function"
 date: 2021-10-10
 ---
+This is a much more advanced follow-up to our post on [elementary prime counting]({{ site.baseurl }}{% link _math/Primes/PrimeCounting.md %}).
+
 I will define $$Z(s)$$ to be $$1^s + 2^s + 3^s + 4^s + \ldots = \sum_{n \in \mathbb{N}^+} n^s$$. This is missing a negation sign from the usual convention for the Riemann zeta function (which is $$Z(-s)$$), but I find it easier sometimes to think without that negation sign, and this is How Sridhar Thinks.
 
 The Fundamental Theorem of Arithmetic is the observation that $$Z(s) \prod_p (1 - p^s) = 1$$, or put another way, $$Z(s) = \prod_p (1 - p^s)^{-1}$$. Note that both the existence AND the uniqueness of prime factorizations are used here; each term from $$Z(s)$$ needs to be accounted for by precisely once by some prime factorization.
@@ -20,7 +22,7 @@ Note that, as a function of $$x$$, this indicator function is just the Heaviside
 
 When we want a linear correspondence where translation on one side corresponds to multiplication on the other side, we are looking at some kind of Laplace-Fourier(-Mellin-Z-etc) transform. We want the transform which sends the constant $$1$$ to the Heaviside step function and which turns multiplication by $$n^s$$ into translation by $$n$$ (in the direction of $$(x \mapsto f(x)) \mapsto (x \mapsto f(x - n))$$).
 
-Actually, we can't turn multiplication by $$n^s$$ into translation by $$n$$. Because multiplication by $$n^s$$ followed by multiplication by $$m^s$$ is multiplication by $$(nm)^s$$, not $$(n + m)^s$$. So instead, we should think of the indicator function for $$x \geq n$$ in a different: this is the indicator function for $$x \geq 1$$ dilated by a multiplicative factor, rather than translated by an additive factor. Put another way, if we set $$x = \log(t)$$, then multiplicative dilations of functions of $$x$$ correspond to additive translations of functions of $$t$$. We want multiplication by $$n^s$$ to correspond to dilation of functions of $$x$$ by $$n$$, which means translation of functions of $$t$$ by $$\log(n)$$.
+Actually, we can't turn multiplication by $$n^s$$ into translation by $$n$$. Because multiplication by $$n^s$$ followed by multiplication by $$m^s$$ is multiplication by $$(nm)^s$$, not $$(n + m)^s$$. So instead, we should think of the indicator function for $$x \geq n$$ in a different way: this is the indicator function for $$x \geq 1$$ dilated by a multiplicative factor, rather than the indicator function for $$x \geq 0$$ translated by an additive factor. Put another way, if we set $$x = \log(t)$$, then multiplicative dilations of functions of $$x$$ correspond to additive translations of functions of $$t$$. We want multiplication by $$n^s$$ to correspond to dilation of functions of $$x$$ by $$n$$, which means translation of functions of $$t$$ by $$\log(n)$$.
 
 Now everything is easy enough: Given a function $$F(s)$$, let us say that $$\hat{F}(x)$$ is the Laplace-Fourier transform of $$F(s)/s$$ evaluated at $$x = \log(t)$$, using the Laplace-Fourier transform that sends $$1/s$$ to the Heaviside step function $$u(t)$$ and under which multiplication by $$\exp(ks)$$ is turned into translation of functions of $$t$$ by $$k$$. \[Keep in mind that, as with Laplace-Fourier transforms in general, we must also therefore have correspondingly that translation by $$k$$ turns into multiplication by $$\exp(-kt)$$.\]
 
