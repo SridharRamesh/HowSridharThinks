@@ -30,7 +30,7 @@ This defines the usual extension of the factorial function to arbitrary inputs (
 
 One last note: the so-called Gamma ($$\Gamma$$) function is just this extension of the factorial function, shifted over by one. The shifting over by one is of no importance at all. It's just a stupid historical convention. So don't worry about it. All that actually matters is the argument above, constructing and establishing the uniqueness of a suitable interpretation of factorial for general (non-integer) inputs.
 
-Connection to the sine function
+# Connection to the sine function
 There is a also a wonderful connection between the generalized factorial and the sine function. As we just saw, we have this product representation for the generalized factorial:
 
 $$\frac{1}{x!} = \displaystyle \lim_{N \to \infty} N^{-x} \prod_{k = 1}^{N} \left(1 + \frac{x}{k} \right)$$.
