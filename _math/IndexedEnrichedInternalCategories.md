@@ -2,7 +2,7 @@
 title: "Indexed, Enriched, and Internal Categories"
 date: 2021-10-2
 ---
-In general, there are many things to say about these. I just wanted to record for myself some thoughts I realized today. (There's things to say about indexed, enriched, and internal STRUCTURES in general, but the particular observation I want to make involves some aspects that are specific to CATEGORIES in particualr.)
+In general, there are many things to say about these. I just wanted to record for myself some thoughts I realized today. (There's things to say about indexed, enriched, and internal STRUCTURES in general, but the particular observation I want to make involves some aspects that are specific to CATEGORIES in particular.)
 
 Recall that a $$T$$-indexed category $$C$$ is a category internal to $$Psh(T)$$, the category of presheaves over $T$. If $$Mor(C)$$ and $$Ob(C)$$ are "small" in the sense of being representable presheaves, then this is the same as being internal to $$T$$.
 
@@ -10,7 +10,7 @@ On the other hand, if $$Ob(C)$$ is a constant set (a copower of the constantly 1
 
 Now, suppose given a functor $$f : T \to S$$. Under what situations does this take a $$T$$-indexed/enriched/internal category to an $$S$$ category of the same respective sort?
 
-If $$f$$ is a lexfunctor between lexcategories, then its Yoneda extension $$: Psh(T) \to Psh(S)$$ (the one given by left Kan extension of presheaves along $$f$$, which turns out to indeed match the behavior of $$f$$ on representable presheaves) also preserves finite limits (see Diaconescu's theorem). Thus, automatically, it takes $$T$$-indexed categories to $$S$$-indexed categories, and in the same way, takes $$T$$-internal categories to $$SS$-internal categories.
+If $$f$$ is a lexfunctor between lexcategories, then its Yoneda extension $$: Psh(T) \to Psh(S)$$ (the one given by left Kan extension of presheaves along $$f$$, which turns out to indeed match the behavior of $$f$$ on representable presheaves) also preserves finite limits (see Diaconescu's theorem). Thus, automatically, it takes $$T$$-indexed categories to $$S$$-indexed categories, and in the same way, takes $$T$$-internal categories to $$S$$-internal categories.
 
 But what if $$f$$ merely preserves finite products? There's a direct way to see that this is good enough to take $$T$$-enriched categories to $$S$$-enriched categories, by looking at the traditional account of enrichment. But we can also see it indirectly. The Yoneda extension of $$f$$ now preserves finite products (see https://mathoverflow.net/questions/255282/yoneda-extension-preserving-finite-products). Yoneda extensions also always preserve all colimits (as they are left adjoints, or just as well, as they correspond to the free cocompletion functor). It thus takes a constant set to the corresponding constant set. The local smallness conditions are also easy enough. But what's not necessarily obvious is that it takes the structure of an internal category to the structure of an internal category, as this structure involves general finite limits (such as pullbacks or equalizers), and we don't have a general guarantee of preserving finite limits.
 
