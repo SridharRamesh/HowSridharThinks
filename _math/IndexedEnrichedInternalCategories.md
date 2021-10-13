@@ -4,7 +4,7 @@ date: 2021-10-2
 ---
 In general, there are many things to say about these. I just wanted to record for myself some thoughts I realized today. (There's things to say about indexed, enriched, and internal STRUCTURES in general, but the particular observation I want to make involves some aspects that are specific to CATEGORIES in particular.)
 
-Recall that a $$T$$-indexed category $$C$$ is a category internal to $$Psh(T)$$, the category of presheaves over $T$. If $$Mor(C)$$ and $$Ob(C)$$ are "small" in the sense of being representable presheaves, then this is the same as being internal to $$T$$.
+Recall that a $$T$$-indexed category $$C$$ is a category internal to $$Psh(T)$$, the category of presheaves over $$T$$. If $$Mor(C)$$ and $$Ob(C)$$ are "small" in the sense of being representable presheaves, then this is the same as being internal to $$T$$.
 
 On the other hand, if $$Ob(C)$$ is a constant set (a copower of the constantly 1 presheaf), and the Hom map $$Mor(C) \to Ob(C)^2$$ has "small" fibers (in the sense that its pullback along any map out of a small set is itself small), then we say this is a $$T$$-enriched category (with respect to the cartesian product on $$T$$; we are not considering non-cartesian notions of enrichment here).
 

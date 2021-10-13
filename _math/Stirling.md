@@ -12,14 +12,14 @@ For large $$n$$, this of course approaches $$1$$. But in general, this tells us 
 
 What is the asymptotic behavior of this series? Well, again, people like to talk about things summatively rather than multiplicatively, so let's apply a logarithm. This turns our series into $$-1 + \sum_{t = 1}^{n - 1} [t \log \left(1 + \frac{1}{t} \right) - 1] = -1 + \sum_{t = 1}^{n - 1} [-\frac{1}{2t} + \frac{1}{3t^2} - \frac{1}{4t^3} + \ldots]$$, using the Mercator series expansion of the logarithm.
 
-Asymptotically, we have that $$\sum_{t = 1}^{n - 1} -\frac{1}{2t} \approx -\frac{1}{2} \log(n) = \log(n^{-1/2})$$, while all the further summations of $$\sum_{t = 1}^{n - 1} [\frac{1}{3t^2} - \frac{1}{4t^3} + \ldots]$$ converge as $$n \to \infty$$. The $$\approx$$ here represents a difference which also converges as $$n \to \infty$$ (this amounts to the existence of the Euler-Mascheroni constant). Thus, overall, we find that $$\frac{A(n)}{n! n^{-1/2}}$$ approaches a constant as $$n$$ grows large.
+Asymptotically, we have that $$\sum_{t = 1}^{n - 1} -\frac{1}{2t} \approx -\frac{1}{2} \log(n) = \log(n^{-1/2})$$, while all the further summations of $$\sum_{t = 1}^{n - 1} [\frac{1}{3t^2} - \frac{1}{4t^3} + \ldots]$$ converge as $$n \to \infty$$. The $$\approx$$ here represents a difference which also converges as $$n \to \infty$$ (this amounts to the existence of the Euler-Mascheroni constant $$\gamma$$). Thus, overall, we find that $$\frac{A(n)}{n! n^{-1/2}}$$ approaches a constant as $$n$$ grows large.
 
 In other words, $$n! \sim F \sqrt{n} \left(\frac{n}{e}\right)^n$$, for some constant $$F$$. This is Stirling's approximation.
 
 What is the value of that constant $$F$$? Well, this can be determined by using the duplication formula for the factorial.
 
 # Duplication/Multiplication Formula
-Let $$f_M(x) = \prod_{T = 0}^{M - 1} [\left(x - \frac{T}{M}\right)!]$$. Note that $$f_M(x/M) M^{x}$$ clearly satisfies the same "pseudopolynomiality" and recurrence as a function of $$x$$ that $$x!$$ does. So the two are equal up to a constant of proportionality, which is readily determined. [TODO: Link to Generalized Factorial.]
+Let $$f_M(x) = \prod_{T = 0}^{M - 1} [\left(x - \frac{T}{M}\right)!]$$. Note that $$f_M(x/M) M^{x}$$ clearly satisfies the same "pseudopolynomiality" and recurrence as a function of $$x$$ that $$x!$$ does. So the two are equal up to a constant of proportionality, which is readily determined. See this discussion of the [generalized factorial](./FactorialGeneralized.html).
 
 That is, there is some $$\lambda(M)$$ such that $$f_M(x/M) M^{x} = x! \lambda(M)$$. Put another way, $$f_M(x) = (Mx)! M^{-Mx} \lambda(M)$$.
 
@@ -35,9 +35,9 @@ We could derive $$\lambda(M)$$ also like so (essentially the infinite N case of 
 
 Going back and plugging this all into our original multiplication theorem, we have that $$f_M(x) = (Mx)! M^{-Mx - 1/2} b^{M - 1}$$. As for the actual value of $$b$$, it follows, of course, that $$b = g(2) = \lambda(2) \sqrt{2} = (-1/2)! \sqrt{2}$$, as well as that $$b = \int_{-1}^{0} \log(x!) dx$$ as we just saw.
 
-Now, looking at the Stirling asymptotics on any particular case (perhaps most easily the M = 2 or M = infinity cases) of the multiplication theorem as we look at $$(x + N)!$$ with $$N$$ large, we conclude that the Stirling theorem constant $$F$$ is the same as the multiplication theorem constant $$b$$.
+Now, looking at the Stirling asymptotics on any particular case (perhaps most easily the $$M = 2$$ or $$M = \infty$$ cases) of the multiplication theorem as we look at $$(x + N)!$$ with $$N$$ large, we conclude that the Stirling theorem constant $$F$$ is the same as the multiplication theorem constant $$b$$.
 
-Indeed, just as well, we could've concluded Stirling's theorem directly from the multiplication theorem like so: By the trapezoid rule, we know that $$\int_{0}^{1} \log(x!) dx$$ is equal to $$\log(f_N(1))/N$$ plus an error term which is $$O(N^{-2})$$. But $$\int_{0}^{1} \log(x!) dx = \int_{0}^{1} \log((x - 1)!) + log(x) dx = b - 1$$, and our multiplication theorem tells us that $$\log(f_N(1)) = \log(N!) - N\log(N) + (N - 1)b - \log(N)/2$$. Thus, $$N (b - 1) = \log(N!) - N\log(N) + (N - 1)b - \log(N)/2 + O(N^{-1})$$, which means $$\log(N!) = b + \log(N)/2 + N(\log(N) - 1) + O(N^{-1})$$, which is Stirling's approximation.
+Indeed, just as well, we could've concluded Stirling's theorem directly from the multiplication theorem like so: By the trapezoid rule, we know that $$\int_{0}^{1} \log(x!) dx$$ is equal to $$\log(f_N(1))/N$$ plus an error term which is $$O(N^{-2})$$. But $$\int_{0}^{1} \log(x!) dx = \int_{0}^{1} \log((x - 1)!) + \log(x) dx = b - 1$$, and our multiplication theorem tells us that $$\log(f_N(1)) = \log(N!) - N\log(N) + (N - 1)b - \log(N)/2$$. Thus, $$N (b - 1) = \log(N!) - N\log(N) + (N - 1)b - \log(N)/2 + O(N^{-1})$$, which means $$\log(N!) = b + \log(N)/2 + N(\log(N) - 1) + O(N^{-1})$$, which is Stirling's approximation.
 
 [TODO: If you know the reflection formula $$z!(-z)! = 1/sinc(\pi z)$$, then the multiplication theorem for the factorial is equivalent to a multiplication theorem for sine, by pairing up each (k/M)! with (1 - k/M)! = (-k/M)!(1 - k/M). This multiplication theorem for sine should be the same as what I illustrated in my 3blue1brown video on the sine product. Is there a natural calculus way to turn the gamma function integral into the reflection formula? There's a clear way to get the reflection formula once one has both the infinite products for sine and factorial, of course.]
 

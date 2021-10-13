@@ -32,6 +32,8 @@ And should anyone ever prove the Riemann Hypothesis, that would give us even tig
 
 ***
 
-[TODO: Write up all the relationships between all the prime counting functions: ordinary vs Chebyshev theta vs Chebyshev psi vs Riemann's J vs etc.]
+For a much more advanced continuation of the story in this post, counting the number of primes much more exactly, see [here](./ZetaPrimeCounting.html).
 
-(Also worth discussing in a post somewhere, since no one seems to have written this up in a nice way for anyone: the heuristic/intuitive argument for the first Hardy-Littlewood conjecture (as well the intuition for the second conjecture, but also noting why the second conjecture is incompatible with the first one). Full discussion of the Riemann zeta function, and how to obtain the prime-counting function’s explicit formula from it.)
+****
+
+(TODO: Also worth discussing in a post somewhere, since no one seems to have written this up in a nice way for anyone: the heuristic/intuitive argument for the first Hardy-Littlewood conjecture (as well the intuition for the second conjecture, but also noting why the second conjecture is incompatible with the first one).)
