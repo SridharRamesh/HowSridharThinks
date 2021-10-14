@@ -6,7 +6,7 @@ This is a much more advanced follow-up to our post on [elementary prime counting
 
 I will define $$Z(s)$$ to be $$1^s + 2^s + 3^s + 4^s + \ldots = \sum_{n \in \mathbb{N}^+} n^s$$. This is missing a negation sign from the usual convention for the Riemann zeta function (which is $$\zeta(s) = Z(-s)$$), but I find it easier sometimes to think without that arbitrary negation sign, and this is How Sridhar Thinks.
 
-The Fundamental Theorem of Arithmetic is the observation that $$Z(s) \prod_p (1 - p^s) = 1$$, or put another way, $$Z(s) = \prod_p (1 - p^s)^{-1}$$, over prime $p$. (This is an instance of general [Möbius inversion](../MoebiusInversion.html)). Note that both the existence AND the uniqueness of prime factorizations are used here; each term from $$Z(s)$$ needs to be accounted for precisely once by some prime factorization.
+The Fundamental Theorem of Arithmetic is the observation that $$Z(s) \prod_p (1 - p^s) = 1$$, or put another way, $$Z(s) = \prod_p (1 - p^s)^{-1}$$, over prime $$p$$. (This is an instance of general [Möbius inversion](../MoebiusInversion.html)). Note that both the existence AND the uniqueness of prime factorizations are used here; each term from $$Z(s)$$ needs to be accounted for precisely once by some prime factorization.
 
 If we take $$Z(s) = \prod_p (1 - p^s)^{-1}$$ and calculate logarithmic derivatives of both sides, we get on the right hand side $$\sum_{n \in \mathbb{N}^+} \Lambda(n) n^s$$, where $$\Lambda(n)$$ is the von Mangoldt function (such that $$\Lambda(p^k) = \log(p)$$ at prime $$p$$ and positive integer $$k$$, and $$\Lambda$$ is everywhere else zero). The left hand side is $$\frac{Z'(s)}{Z(s)}$$, where $$Z'(s) = \sum_{n \in \mathbb{N}^+} \log(n) n^s$$. This is just a generatingfunctionology way in Dirichlet series land of expressing something we could just as well directly express about the series in themselves. It's just another way of expressing our Fundamental Theorem of Arithmetic (in log scale additive world and generatingfunctionology Dirichlet series terms): Every number is the product, over all of its prime power factors, of the corresponding prime.
 
@@ -74,7 +74,7 @@ And that does it. We now have a series for the ordinary prime counting function,
 
 ****
 
-Our insights came in two parts: First, after setting $$L(s) = \log(Z(s))' = \frac{Z'(s)}{Z(s)}$$, we know that $$\psi$$ is $$L(s)$$ divided by $$s$$ and Laplace-Fourier transformed, that $$\Pi$$ is $$\psi'$$ (aka, $$L$$ itself Laplace-Fourier transformed; aka, a $$\Lambda$$-weighted Dirac comb) divided by $$\log$$ and integrated, and that $$\pi$$ is obtained from $$\Pi$$ by Möbius inversion.
+Our insights came in two parts: First, after setting $$L(s) = \log(Z(s))' = \frac{Z'(s)}{Z(s)}$$, we know that $$\psi$$ is $$L(s)$$ divided by $$s$$, Laplace-Fourier transformed, and evaluated at $$t = log(x)$$; that $$\Pi$$ is $$\psi'$$ (aka, a $$\Lambda$$-weighted Dirac comb) divided by $$\log$$ and integrated; and that $$\pi$$ is obtained from $$\Pi$$ by Möbius inversion.
 
 And secondly, we had the Hadamard product representation of a meromorphic function like $$Z$$ in terms of its zeros and poles (and an additional Taylor series which turns out not to matter beyond one term, both because of the rate of growth of $$Z$$ in the complex plane and independently also not mattering in our $$x > 1$$ range of interest because all the higher degree terms just become derivatives of the Dirac delta after our Laplace-Fourier transform above).
 
