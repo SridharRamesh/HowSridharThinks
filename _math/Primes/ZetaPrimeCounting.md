@@ -74,7 +74,7 @@ And that does it. We now have a series for the ordinary prime counting function,
 
 ****
 
-Our insights came in two parts: First, after setting $$L(s) = \log(Z(s))' = \frac{Z'(s)}{Z(s)}$$, we know that $$\psi$$ is $$L(s)$$ divided by $$s$$, Laplace-Fourier transformed, and evaluated at $$t = log(x)$$; that $$\Pi$$ is $$\psi'$$ (aka, a $$\Lambda$$-weighted Dirac comb) divided by $$\log$$ and integrated; and that $$\pi$$ is obtained from $$\Pi$$ by Möbius inversion.
+Our insights came in two parts: First, after setting $$L(s) = \log(Z(s))' = \frac{Z'(s)}{Z(s)}$$, we know that $$\psi$$ is $$L(s)$$ divided by $$s$$, Laplace-Fourier transformed, and evaluated at $$t = \log(x)$$; that $$\Pi$$ is $$\psi'$$ (aka, a $$\Lambda$$-weighted Dirac comb) divided by $$\log$$ and integrated; and that $$\pi$$ is obtained from $$\Pi$$ by Möbius inversion.
 
 And secondly, we had the Hadamard product representation of a meromorphic function like $$Z$$ in terms of its zeros and poles (and an additional Taylor series which turns out not to matter beyond one term, both because of the rate of growth of $$Z$$ in the complex plane and independently also not mattering in our $$x > 1$$ range of interest because all the higher degree terms just become derivatives of the Dirac delta after our Laplace-Fourier transform above).
 

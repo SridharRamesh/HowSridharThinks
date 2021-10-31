@@ -21,13 +21,13 @@ Finally... We note the observation that rotation by angle X around direction D i
 
 If we don't identify these two antipodal representations, we get a space Q which is a covering space for SO(3). \[More generally, we could do the same thing for rotation around any number of dimensions of allowed axes, and everything from this second part onward will work the same.\]
 
-It is easy enough to convince oneself it is a covering space, and a double cover at that: Each rotation has two disjoint preimages, and each of those preimages has a neighborhood which maps onto a neighborhood of the original rotation.
+It is easy enough to convince oneself it is a covering space, and a double cover at that: Each rotation has two disjoint preimages, and each of those preimages has a neighborhood which maps homeomorphically onto a neighborhood of the original rotation.
 
 ----
 
 Now for the third part:
 
-This covering space Q is clearly homotopic (indeed, homeomorphic) to the 3-sphere. But the 3-sphere is simply connected. Therefore, Q is the universal over of SO(3).
+This covering space Q is clearly homotopic (indeed, homeomorphic) to the 3-sphere. But the 3-sphere is simply connected. Therefore, Q is the universal cover of SO(3).
 
 Why is the 3-sphere simply connected? Because the 3-sphere is the union of two 3-disk hemispheres \[which are contractible and thus simply connected\] along a 2-sphere equator \[which is connected\].
 
