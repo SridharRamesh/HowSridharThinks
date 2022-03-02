@@ -101,3 +101,84 @@ It turns out, we can even take the right Kan lift of a profunctor along a profun
 Thus, we have the general formula for right Kan lifts of profunctors along profunctors, yielding profunctors. Of course, if we right Kan lift a functor along a functor this way within Prof, and the result is a gneuine functor, it remains also a right Kan lift in Cat. This gives us our "pointwise" right Kan lifts (TODO: talk more about why this is the right notion of pointwise).
 
 By swapping out the way that Cat embeds into Prof for one of the other ways of the four, we can turn this also into pointwise right Kan extensions as profunctors, or pointwise left Kan lifts/extensions as "ind-functors" (by which I mean, maps into (Set^C)^{op} rather than Set^(C^{op})).
+
+----
+
+As mentioned above, a better perspective on comma, cocommas, etc, is available by thinking about profunctors.
+
+In the following diagram, squiggly arrows represent profunctors (and we follow the usual, though arbitrary, convention for the direction in which these point). The indicated 2-cells are the universal ones provided by the Kan extensions/lifts.
+
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwyLCJcXGJ1bGxldCJdLFswLDEsIkwiLDJdLFswLDIsIlQiXSxbMiwzLCJSIl0sWzEsMywiQiIsMl0sWzEsMiwiXFxtYXRocm17TGFufV9MKFQpIiwwLHsib2Zmc2V0IjotMiwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMSwyLCJcXG1hdGhybXtSaWZ0fV9SKEIpIiwyLHsib2Zmc2V0IjoyLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9fX1dLFs1LDEsIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMH19XSxbMiw3LCIiLDAseyJzaG9ydGVuIjp7InRhcmdldCI6MjB9fV1d&embed" width="944" height="432" style="border-radius: 8px; border: none;"></iframe>
+{% comment %}
+\[\begin{tikzcd}
+  \bullet &&&& \bullet \\
+  \\
+  && \bullet &&&& \bullet
+  \arrow["L"', from=1-1, to=3-3]
+  \arrow[""{name=0, anchor=center, inner sep=0}, "T", from=1-1, to=1-5]
+  \arrow["R", from=1-5, to=3-7]
+  \arrow[""{name=1, anchor=center, inner sep=0}, "B"', from=3-3, to=3-7]
+  \arrow["{\mathrm{Lan}_L(T)}", shift left=2, squiggly, from=3-3, to=1-5]
+  \arrow["{\mathrm{Rift}_R(B)}"', shift right=2, squiggly, from=3-3, to=1-5]
+  \arrow[shorten <=7pt, Rightarrow, from=0, to=3-3]
+  \arrow[shorten >=7pt, Rightarrow, from=1-5, to=1]
+\end{tikzcd}\]
+{% endcomment %}
+
+Note that Cat embeds into Prof in a way which is surjective on 0-cells, 2-cells, and 3-cells, just not on 1-cells. Prof introduces new 1-cells, but no new 0-cells, no new 2-cells between existing 1-cells, and no new 3-cells between existing 2-cells.
+
+Every span induces a corresponding profunctor via left Kan extension, as indicated. And every cospan induces a corresponding profunctor via right Kan lift, as indicated. What's more, these right Kan lifts are pointwise/absolute: We have that $$ L ; \mathrm{Rift}_R(B) = \mathrm{Rift}_R(L ; B) $$.
+
+As a result, note that 2-cells from $$ \mathrm{Lan}_L(T) $$ to $$\mathrm{Rift}_R(B) $$ correspond (by the universal property of left Kan extension) to diagrams of the following form, where now the indicated 2-cell on the left is arbitrary, while the 2-cell on the right remains the designated one for the Kan lift:
+
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwyLCJcXGJ1bGxldCJdLFswLDEsIkwiLDJdLFswLDIsIlQiXSxbMiwzLCJSIl0sWzEsMywiQiIsMl0sWzEsMiwiXFxtYXRocm17UmlmdH1fUihCKSIsMix7Im9mZnNldCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbNSwxLCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjB9fV0sWzIsNywiIiwwLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfX1dXQ==&embed" width="944" height="432" style="border-radius: 8px; border: none;"></iframe>
+{% comment %}
+\[\begin{tikzcd}
+    \bullet &&&& \bullet \\
+    \\
+    && \bullet &&&& \bullet
+    \arrow["L"', from=1-1, to=3-3]
+    \arrow[""{name=0, anchor=center, inner sep=0}, "T", from=1-1, to=1-5]
+    \arrow["R", from=1-5, to=3-7]
+    \arrow[""{name=1, anchor=center, inner sep=0}, "B"', from=3-3, to=3-7]
+    \arrow["{\mathrm{Rift}_R(B)}"', shift right=2, squiggly, from=3-3, to=1-5]
+    \arrow[shorten <=7pt, Rightarrow, from=0, to=3-3]
+    \arrow[shorten >=7pt, Rightarrow, from=1-5, to=1]
+\end{tikzcd}\]
+{% endcomment %}
+
+These in turn correspond, by the universal property of right Kan lifts and the fact that  $$ L ; \mathrm{Rift}_R(B) = \mathrm{Rift}_R(L ; B) $$, to diagrams of the following form, with an arbitrary 2-cell:
+
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwyLCJcXGJ1bGxldCJdLFswLDEsIkwiLDJdLFswLDIsIlQiXSxbMiwzLCJSIl0sWzEsMywiQiIsMl0sWzIsMSwiIiwwLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfSwibGV2ZWwiOjJ9XV0=&embed" width="944" height="432" style="border-radius: 8px; border: none;"></iframe>
+{% comment %}
+\[\begin{tikzcd}
+    \bullet &&&& \bullet \\
+    \\
+    && \bullet &&&& \bullet
+    \arrow["L"', from=1-1, to=3-3]
+    \arrow["T", from=1-1, to=1-5]
+    \arrow["R", from=1-5, to=3-7]
+    \arrow["B"', from=3-3, to=3-7]
+    \arrow[shorten >=11pt, Rightarrow, from=1-5, to=3-3]
+\end{tikzcd}\]
+{% endcomment %}
+
+In this way, we get our gamut from spans to profunctors to cospans, defining maps from each to each later thing as the suitable commutative diagrams. We also have functors from spans to profunctors representing that leg of the gamut (left Kan extension), and from cospans to profucntors representing that leg of the gamut (right Kan lift). And it turns out by our last argument that these also represent the full gamut; that is, a map from a span to a cospan is the same as a map of profunctors between the left Kan extension and right Kan lift.
+
+All this should be worded better, of course.
+
+Anyway, it turns out these functors also have adjoints; there is a right adjoint to turning a span into a profunctor, and there is a left adjoint to turning a cospan into a profunctor.
+
+In this way, the notion of span to cospan maps is also representable, both by turning a span into a profunctor and then into a cospan (cocomma category), and by turning a cospan into a profunctor and then into a span (comma category).
+
+Incredibly, both the adjunction between spans and profunctors and the adjunction between profunctors and cospans are idempotent, in such a way as that profunctors are a reflective full subcategory of the spans and a coreflective full subcategory of the cospans.
+
+These are the observations that were made above. Finally, we note that the way in which nCat-valued profunctors on nCats embed as spans is as an nCat, but the way in which these embed as cospans involves an (n + 1)Cat.
+
+----
+
+Note that by thinking about proarrow equipments, we can also better understand the significance of lexcategories. A lexcategory is like a 1-category equipped also with a 2-category which it maps into surjectively on 0-cells, 2-cells, and 3-cells. (That is, a 1-category acting like Set, and a 2-category acting like Set-valued profunctors between sets). We might axiomtize all this as a 1-category Set, a 2-category SetProf, a functor from Set into SetProf which is surjective on 0-, 2-, and 3-cells (everything but 1-cells), such that every 1-cell in Set has a right adjoint in SetProf, and such that Set has a terminal object 1, and the 1-category SetProf(1, 1) is equivalent to Set. We can also add rules for left Kan extensions and right Kan lifts to SetProf, and that the right Kan lifts should be pointwise/absolute. Then we will find that any instance of this structure is such that Set is a category with finite limits (buildable from this structure), and conversely, any category with finite limits gives rise to an instance of this structure, in a 1 : 1 way.
+
+We might want to axiomatize this differently, by saying not that Set is included in SetProf, but rather, profunctors can be composed on either side with functions from Set (covariantly on one side and contravariantly on the other side), or some such principles. We might want to axiomatize this in a way where we don't take the Yoneda embedding, etc, as a given, but somehow can derive these. I will think about this more. But something like this is where the great significance of lexcategories can be seen to come from, from viewing Set as also having proarrows with suitable properties.
+
+The 0-ary compositions of 1-cells in SetProf are the Hom functors, and correspond in this context to having equality types/identity types (thus, yielding equalizers, pullbacks, etc, of which binary products are a special case). The 2-ary compositions of 1-cells in SetProf involve a summation, and thus induce sigma types (of which also binary products are a special case).
