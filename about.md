@@ -12,4 +12,4 @@ Nothing here is polished, it’s full of TODOs, you shouldn’t be reading this 
 
 A number I fiddle with to see if GitHub has updated yet: 0.
 
-[Drafts](./drafts/)
+[Drafts](../drafts/)
