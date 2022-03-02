@@ -11,3 +11,5 @@ Nothing here is polished, it’s full of TODOs, you shouldn’t be reading this 
 ![My smiling face]({{site.baseurl}}/assets/avi.jpg){:height="250px"}
 
 A number I fiddle with to see if GitHub has updated yet: 0.
+
+[Drafts](./drafts/)
