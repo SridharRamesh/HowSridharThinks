@@ -104,6 +104,28 @@ By swapping out the way that Cat embeds into Prof for one of the other ways of t
 
 ----
 
+It's very easy to get my head turned around on all this, so I've written it out explicitly, the four ways to map the 2-category Cat into the 2-category Prof (possibly with contravariance or opvariance):
+
+A profunctor from C to D is a bifunctor C x D^{op} -> Set
+
+Hom(d, Fc), we have c as the first argument, d as the second argument, and the categories involved are C and D.
+C x D^{op} -> Set; profunctor from C to D.
+This embedding is a 2-functor from Cat to Prof which keeps 1-cells oriented the same and 2-cells oriented the same.
+
+Hom(d, Fc), we have d as the first argument, c as the second argument, and the categories involved are D^{op} and C^{op}.
+D^{op} x C -> Set; profunctor from D^{op} to C^{op}.
+This embedding is a 2-functor from Cat to Prof which turns 1-cells around and keeps 2-cells the same.
+
+Hom(Fc, d), we have c as the first argument, d as the second argument, and the categories involved are C^{op} and D^{op}
+C^{op} x D -> Set; profunctor from C^{op} to D^{op}.
+This embedding is a 2-functor from Cat to Prof which keeps 1-cells oriented the same and turns 2-cells around.
+
+Hom(Fc, d), we have d as the first argument, c as the second argument, and the categories involved are D and C.
+D x C^{op} -> Set; profunctor from D to C.
+This embedding is a 2-functor from Cat to Prof which turns 1-cells around and turns 2-cells around.
+
+----
+
 As mentioned above, a better perspective on comma, cocommas, etc, is available by thinking about profunctors.
 
 In the following diagram, squiggly arrows represent profunctors (and we follow the usual, though arbitrary, convention for the direction in which these point). The indicated 2-cells are the universal ones provided by the Kan extensions/lifts.
@@ -182,3 +204,5 @@ Note that by thinking about proarrow equipments, we can also better understand t
 We might want to axiomatize this differently, by saying not that Set is included in SetProf, but rather, profunctors can be composed on either side with functions from Set (covariantly on one side and contravariantly on the other side), or some such principles. We might want to axiomatize this in a way where we don't take the Yoneda embedding, etc, as a given, but somehow can derive these. I will think about this more. But something like this is where the great significance of lexcategories can be seen to come from, from viewing Set as also having proarrows with suitable properties.
 
 The 0-ary compositions of 1-cells in SetProf are the Hom functors, and correspond in this context to having equality types/identity types (thus, yielding equalizers, pullbacks, etc, of which binary products are a special case). The 2-ary compositions of 1-cells in SetProf involve a summation, and thus induce sigma types (of which also binary products are a special case).
+
+Probably the best thing to do is to consider a 1-category Set with proarrow equipment (giving rise to ProfSet, including composability of profunctors; note that we can think of this in terms of double categories with universal fillings for niches), which also has a terminal object 1. Note that we obtain a functor from Set into ProfSet(1, 1) by considering the composite profunctor 1 to A to 1 for each object A of set, using the unique morphism from A to 1 (which can be read as a profunctor in either direction). If we further demand that this functor from Set into ProfSet(1, 1) be an equivalence, I believe the result may be the same as making Set a lexcategory and Prof the corresponding canonical proarrow equipment? And maybe this extends to Cat and Prof as well?
