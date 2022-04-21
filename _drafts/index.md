@@ -9,4 +9,5 @@ You've come to the right place to see how Sridhar thinks about drafts.
 
 <h1> All Drafts, Unorganized, Unfinished</h1>
 
-{%- include collectionIndex.html collection=site.drafts  | reverse -%}
+{%- assign draftposts = site.drafts | reverse -%}
+{%- include collectionIndex.html collection=draftposts -%}

@@ -42,13 +42,15 @@ Indeed, just as well, we could've concluded Stirling's theorem directly from the
 [TODO: If you know the reflection formula $$z!(-z)! = 1/sinc(\pi z)$$, then the multiplication theorem for the factorial is equivalent to a multiplication theorem for sine, by pairing up each (k/M)! with (1 - k/M)! = (-k/M)!(1 - k/M). This multiplication theorem for sine should be the same as what I illustrated in my 3blue1brown video on the sine product. Is there a natural calculus way to turn the gamma function integral into the reflection formula? There's a clear way to get the reflection formula once one has both the infinite products for sine and factorial, of course.]
 
 # How does this relate to $$\pi$$?
-But what is $$\left(-\frac{1}{2}\right)!$$? Well... [TODO: Link to Donvolution, or to Wallis Product]
+But what is $$\left(-\frac{1}{2}\right)!$$? Well...
 
 By applying the Stirling formula to $$\binom{2n}{n} = \frac{(2n)!}{n!^2}$$, we automatically get $$\binom{2n}{n} \sim \frac{4^n}{F \sqrt{n/2}}$$. Note that we can read the Wallis Product in these terms as well. $$ \frac{2}{1} \times \frac{4}{3} \times \frac{6}{5} \times \ldots \times \frac{2n}{2n - 1} = \frac{2^n n!}{\frac{(2n)!}{2^n n!}} = \frac{4^n}{\binom{2n}{n}} \sim F \sqrt{n/2}$$. And $$ \frac{2}{3} \times \frac{4}{5} \times \frac{6}{7} \times \ldots \times \frac{2n}{2n + 1}$$ in the same way comes out to $$\frac{4^n}{\binom{2n}{n}} \times \frac{1}{2n + 1} \sim F \sqrt{n/2} / (2n)$$. Multiplying these together gives us that the Wallis Product comes to $$\frac{F^2}{4}$$.
 
 If we happen to know that the Wallis Product comes to $$\frac{\pi}{2}$$ (see [Wallis Product proved by higher-dimensional geometry]({{ site.baseurl }}{% link _math/WallisProductGeometric.md %}) and [Wallis Product as instance of sine product]({{ site.baseurl }}{% link _math/SineProductProofs.md %})), then we can conclude that $$F = \sqrt{2 \pi}$$.
 
 Actually, this just amounts to using the two-factor multiplication formula implicitly again to relate the Stirling constant to (-1/2)!, and then using the Wallis product to compute (-1/2)!. It's not actually different from the previous. But some may enjoy seeing it presented in this language, instead of in terms of the multiplication formula language.
+
+See also [Donvolution]({{ site.baseurl }}{% link _math/Donvolution.md %}), whose general formula tells us that in particular, the area of a quarter-circle of unit radius is given by $$\left(\frac{1}{2}\right)!^2$$, so that $$\left(\frac{1}{2}\right)! = \sqrt{\pi}/2$$ and thus $$\left(-\frac{1}{2}\right)! = \sqrt{\pi}$$.
 
 # TODO
 [TODO: Talk about the full Stirling series and how to derive it as a non-convergent asymptotic expansion. This should be viewed as a series for the trigamma function, as trigamma(z) = sum of B_n/z^(n + 1), using the +1/2 convention (B_n(1)). This can be seen be seeing that G(z) = sum of B_n z^n satisfies the formal recurrence that G(z/(1 - z)) - G(z) = z^2. See Proposition A.1 on page 241 of https://people.mpim-bonn.mpg.de/zagier/files/doi/10.1007/978-4-431-54919-2/curious-bernoulli.pdf. We can also see this just by using the full Euler-Maclaurin formula for integrating log(x!) from 0 to 1 using N steps, or for integrating log(x) from 0 to N using N steps.]
