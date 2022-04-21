@@ -1,5 +1,7 @@
 Note that in Jekyll 4, the need to append baseurl in front of {link} links goes away. But GitHub Pages is stuck on Jekyll 3. Note that there is a jekyll-relative-links package but using it instead of links specified with Jekyll's "link" construct does not warn us when links are broken; on the other hand, using links specified with the link construct does not automatically make them base url stable links, for some dumb reason; it gives the relative link from the root rather than the relative link from the current page, which is wild.
 
+Apparently, we can upgrade to Jekyll 4 by using GitHub Actions if we like. See https://github.com/marketplace/actions/jekyll-4-build-deploy.
+
 In the unreleased latest version of minima, custom-head.html is loaded automatically, and I will not not a custom default.html to do so. But again, GitHub Pages is stuck not using this.
 
 The unreleased latest version of minima supports pagination. Perhaps this can be cobbled together even without that?
