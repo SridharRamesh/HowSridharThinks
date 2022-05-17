@@ -2,7 +2,7 @@
 title: "Non-Elementary Prime Counting with the Riemann Zeta Function"
 date: 2021-10-10
 ---
-This is a much more advanced follow-up to our post on [elementary prime counting](./PrimeCounting.html).
+This is a much more advanced follow-up to our post on [elementary prime counting](./PrimeCounting.html). \[Beware, for dumb reasons, this relative link will not work correctly on the index page, only when you click through to this post.\]
 
 I will define $$Z(s)$$ to be $$1^s + 2^s + 3^s + 4^s + \ldots = \sum_{n \in \mathbb{N}^+} n^s$$. This is missing a negation sign from the usual convention for the Riemann zeta function (which is $$\zeta(s) = Z(-s)$$), but I find it easier sometimes to think without that arbitrary negation sign, and this is How Sridhar Thinks.
 
@@ -48,13 +48,13 @@ For our $$Z(s)$$, it turns out that we can study the order of growth in the comp
 
 So that's it. At $$x > 1$$, we have that $$\psi(x)$$ is the sum of terms $$z \frac{x^{-k}}{k}$$ for each zero of $$Z$$ [^zeronegate] at $$k$$ of integer multiplicity $$z$$ (including poles as negative multiplicity), plus an additive constant [^TheConstant].
 
-Also, this series is conditionally convergent and needs to have it terms bundled just so, and also this series dosn't converge exactly to $$\psi(x)$$ at its jump discontinuities, but to the halfway point, as is typical for Fourier series decomposition, but nevermind such formalities for now. Similarly, we've been commuting limits all over the place (e.g., commuting infinite sums and the integrals defining Laplace-Fourier transforms) and whatnot. All sorts of things which a rigorous treatment would pay more care to. But here, we only care about the moralities and not the formalities.
+Also, this series is conditionally convergent and needs to have it terms bundled just so, and also this series doesn't converge exactly to $$\psi(x)$$ at its jump discontinuities, but to the halfway point, as is typical for Fourier series decomposition, but nevermind such formalities for now. Similarly, we've been commuting limits all over the place (e.g., commuting infinite sums and the integrals defining Laplace-Fourier transforms) and whatnot. All sorts of things which a rigorous treatment would pay more care to. But here, we only care about the moralities and not the formalities.
 
 In particular, the rate of growth for $$\psi(x)$$ will thus be controlled by the zeros or poles of $$Z(s)$$ of most negative real component. There are none with real component below $$-1$$ (as this is where $$Z(s)$$ is absolutely convergent to a nonzero value), and there is a pole of multiplicity $$1$$ at $$s = -1$$ (from the harmonic series) but no other zeros or poles with real component $$-1$$ [^criticalline]. This means $$\psi(x) \approx x$$. The Riemann Hypothesis asserts that the next most negative real component of a critical point of $$Z$$ is at real component $$-\frac{1}{2}$$, so that the next terms in the expansion of $$\psi(x)$$ grow of order comparable to $$\sqrt{x}$$ [^ordertechnicality].
 
 # Other prime counting functions
 
-How does this relate to the ordinary prime counting function $$\pi(x)$$? The key thing is that almost all prime powers $$\leq x$$ are in fact primes which are nearly $$x$$, so that $$\psi(x)/\pi(x)$$ is nearly $$\ln(x)$$, asymptotically. Hence, asymptotically, $$\pi(x) \approx \frac{x}{\ln(x)}$$. But we can derive in more detail an exact formula for $$\pi(x)$$, like so:
+How does this relate to the ordinary prime counting function $$\pi(x)$$? The key thing is that almost all prime powers $$\leq x$$ are in fact primes which are nearly $$x$$, so that $$\psi(x)/\pi(x)$$ is nearly $$\ln(x)$$, asymptotically. Hence, asymptotically, $$\pi(x) \approx \frac{\psi(x)}{\ln(x)} \approx \frac{x}{\ln(x)}$$. But we can derive in more detail an exact formula for $$\pi(x)$$, like so:
 
 As we work towards moving from $$\psi(x)$$ to $$\pi(x)$$, let us first consider another weighted prime power counting function. One of the bothers with $$\psi$$ (the summatory function for $$\Lambda$$) is that it assigns primes different weights, logarithmically. Let us try to cancel this out, by saying that $$weight(p^k) = \frac{\Lambda(n)}{\log(n)}$$. Now all primes are counted equally. But remember, $$\Lambda$$ also counted prime powers. What will happen now is that $$weight(p^k) = \frac{1}{k}$$ for prime $$p$$ and positive integer $$k$$ and is otherwise zero. So we count all primes equally, but we also count prime squares as half of a prime, prime cubes as a third of a prime, and so on. Still, this is progress towards our goal. Let us now derive an explicit formula for $$\Pi(x) = \sum_{n \leq x} weight(n)$$ from our explicit formula for $$\psi(x)$$.
 

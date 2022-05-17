@@ -16,7 +16,7 @@ This all can be generalized a bit beyond just product structure, but requires a 
 
 The relationship of Lawvere theories to monads is this:
 
-A monad M on Set gives rise to a Kleisli category, where the objects in the Kleisli category are the same as he objecs in Set, and a morphism in the Kleisli category from A to B amounts to a morphism from A to MB in Set, with composition in the Kleisli category being the only thing it possibly could be at this level of abstraction.
+A monad M on Set gives rise to a Kleisli category, where the objects in the Kleisli category are the same as the objects in Set, and a morphism in the Kleisli category from A to B amounts to a morphism from A to MB in Set, with composition in the Kleisli category being the only thing it possibly could be at this level of abstraction.
 
 Since the objects in Set are precisely the set-sized (aka, "small") coproduct-powers of 1, it will follow that the same property holds for the Kleisli category of any monad. Taking the dual category of the Kleisli category, there is one object which generates all the other objects as product-powers. Thus, it is a single-sorted Lawvere theory with set-sized products.
 
