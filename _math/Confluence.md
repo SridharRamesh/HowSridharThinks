@@ -24,7 +24,7 @@ For example:
 
 The Jordan-Holder theorem is another instance of this labelled confluence unique factorization result: If $$G$$ is a group, with $$N_1$$ and $$N_2$$ as distinct normal subgroups with corresponding simple quotient groups $$s_1$$ and $$s_2$$, then $$N_1 \cap N_2$$ is a normal subgroup of both $$N_1$$ and $$N_2$$, and the quotients are nontrivial normal subgroups of $$s_2$$ and $$s_1$$ respectively; thus, $$s_2$$ and $$s_1$$ respectively. This gives us labelled near-confluence, taking multiset equivalence on products of labels, establishing that any two composition series for the same group have the same multiset of composition factors.
 
-[TODO: Perhaps discuss lambda calculus confluence as well.]
+[TODO: Perhaps discuss lambda calculus confluence as well. Here, we can use "parallel one-step reduction" to get confluence; i.e., the method of Tait and Martin-Loef]
 
 [TODO: Note that uniqueness of prime factorizations in a GCD domain follows this pattern as well (though it's easy enough to see without using this formulation, but nonetheless, it is a special case of this, closely related to the Joran-Holder instance above). This is a "commutative" example; one where the moves available only shrink after moves are taken, never expand in any way, so that it follows that, given (near-)confluence, we can transpose any two adjacent moves, and therefore EVERY permutation of a reduction to normal form gives another reduction to the same normal form]
 

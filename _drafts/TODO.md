@@ -30,6 +30,7 @@ Symmetric polynomials, the theorem that any symmetric polynomial of r1, ..., rn 
 Galois theory, with reference to the abstract model-theoretic perspective from the Alice Medvedev et al paper, plus the points that are more field specific having to do with dimension. Building off the Discrete Fourier Transform and Galois theory post we already did.
 Counterfeit coin balance problems (see http://math.uni.lodz.pl/~andkom/Marcel/Kule-en.pdf)
 Proof that the covering group of SO(n) is Z_2, for n >= 3. Simpler: The covering group of the space of planar rotations around one axis, plus identity, is Z_2. The covering space can be taken as an angle between 0 and 360, plus a direction for the axis, with angles of 0 or 360 not needing to specify a direction. This is a double cover, and it's homotopic (indeed, homeomorphic) to the (n - 1)-sphere, which is simply connected for n >= 2. [But also discuss Euler rotation theorem]
+Abelian sandpile toppling
 
 Talk about the Legendre transform from a tropical Fourier-transform perspective (keeping in mind how the ordinary properties fail a little and one must use one sup- Legendre transform followed by one min- Legendre transform, to recover the original function, with this working just in case the original function is convex). Discuss duality in linear programming from this perspective.
 
@@ -77,3 +78,7 @@ Write up the general theory of Clifford algebras, including the observation that
 
 ---
 Make videos!
+
+----
+
+For what it's worth, there's a good theory of transfinite heaps (rooted trees with no finiteness restrictions, whose nodes are labelled with elements of a well-ordered set, each node less than its children and thus descendants), and transfinite iterates of the deleteMin operation on them. https://twitter.com/RadishHarmers/status/920546426219773953
