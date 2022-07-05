@@ -61,6 +61,8 @@ The argument for epicness that I couldn't follow in Freyd-Scedrov should I think
 
 ***
 
+The following are my attempts to make sense of the Venn-style diagrams by Ravi Vakli, Terry Tao, et al, for reasoning about abelian categories:
+
 To an abelian category, we may attach a (partial, multivalued) monoid like so:
 
 We say X = Y as shorthand for "There is an isomorphism from X to Y". Of course, for a given X and Y, there may be multiple isomorphisms. A more proper account of things would consider this.
@@ -89,28 +91,72 @@ Note that in an abelian category, there is a 1 : 1 correspondence between ways i
 
 Clearly, the rest of the diagram is uniquely determined by the pullback/pushout square. Furthermore, once we know either the span or the cospan of the pullback/pushout square, this uniquely determines the rest. In an abelian category, any monic-epic span is the pushout of its pullback, and dually for monic-epic cospans as the pullback of their pushout (TODO: This sentence may be completely wrong, I should check it). (This has some relation to [commas and cocommas](./CommasCollages.html)).
 
-We may consider such a diagram as indicating how SXQ = Y, and thus providing an associative law. That is, if we know that XQ = R and SR = Y, we obtain from this also some SX = L and LQ = Y. And dually, we obtain from the latter, the former, and the back and forth in either direction is identity (up to the appropriate notion of isomorphism). Thus, of the expressions S(XQ) and (SX)Q, the possible values for one (which may be undefined or multiply defined) are the same as the possible values of the other. In this way, our partial or multivalued monoid does indeed satisfy the associativity law. Thus allows us to say more generally that any n-valued composition for n ≥ 1 makes sense and can be rebracketed arbitrarily.
+We may consider such a diagram as indicating how SXQ = Y, and thus providing an associative law. That is, if we know that XQ = R and SR = Y, we obtain from this also some SX = L and LQ = Y. And dually, we obtain from the latter, the former, and the back and forth in either direction is identity (up to the appropriate notion of isomorphism). Thus, of the expressions S(XQ) and (SX)Q, the possible values for one (which may be undefined or multiply defined) are the same as the possible values of the other. In this way, our partial or multivalued monoid does indeed satisfy the associativity law. Thus allows us to say more generally that any n-ary composition for n ≥ 1 makes sense and can be rebracketed arbitrarily.
 
-Clearly such squares can be composed in a straightforward way, using the pushback/pullout and composition structure.
+For illustration, here is a 5-ary composition (and it's clear how any n-ary composition would work analogously). The entire diagram is uniquely determined just by knowing enough information to specify any particular bracketed breakdown of it (e.g., in terms of 2-ary compositions).
 
-We might imagine ourselves in a position where, although we do not know much, we know how to invert and compose isomorphisms, compose monics, compose epics, pullback monic-epic spans, and pushout monic-epic cospans. This is enough to know how to compose such squares.
+<!--
+\[\begin{tikzcd}
+    A && B && C && D && E \\
+    & AB && BC && CD && DE \\
+    && ABC && BCD && CDE \\
+    &&& ABCD && BCDE \\
+    &&&& ABCDE
+    \arrow[tail, from=2-2, to=3-3]
+    \arrow[two heads, from=3-3, to=2-4]
+    \arrow[two heads, from=2-2, to=1-3]
+    \arrow[tail, from=1-3, to=2-4]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=45}, draw=none, from=2-2, to=2-4]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-135}, draw=none, from=2-4, to=2-2]
+    \arrow[two heads, from=2-4, to=1-5]
+    \arrow[tail, from=1-1, to=2-2]
+    \arrow[tail, from=1-5, to=2-6]
+    \arrow[two heads, from=2-6, to=1-7]
+    \arrow[tail, from=2-4, to=3-5]
+    \arrow[two heads, from=3-5, to=2-6]
+    \arrow[tail, from=3-3, to=4-4]
+    \arrow[two heads, from=4-4, to=3-5]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=45}, draw=none, from=2-4, to=2-6]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-135}, draw=none, from=2-6, to=2-4]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=45}, draw=none, from=3-3, to=3-5]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-135}, draw=none, from=3-5, to=3-3]
+    \arrow[tail, from=1-7, to=2-8]
+    \arrow[two heads, from=2-8, to=1-9]
+    \arrow[tail, from=2-6, to=3-7]
+    \arrow[two heads, from=3-7, to=2-8]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=45}, draw=none, from=2-6, to=2-8]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-135}, draw=none, from=2-8, to=2-6]
+    \arrow[tail, from=3-5, to=4-6]
+    \arrow[two heads, from=4-6, to=3-7]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=45}, draw=none, from=3-5, to=3-7]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-135}, draw=none, from=3-7, to=3-5]
+    \arrow[tail, from=4-4, to=5-5]
+    \arrow[two heads, from=5-5, to=4-6]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=45}, draw=none, from=4-4, to=4-6]
+    \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-135}, draw=none, from=4-6, to=4-4]
+\end{tikzcd}\]
+-->
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsMTUsWzEsMSwiQUIiXSxbMiwyLCJBQkMiXSxbMywxLCJCQyJdLFsyLDAsIkIiXSxbNCwwLCJDIl0sWzAsMCwiQSJdLFs2LDAsIkQiXSxbNSwxLCJDRCJdLFs0LDIsIkJDRCJdLFszLDMsIkFCQ0QiXSxbOCwwLCJFIl0sWzcsMSwiREUiXSxbNiwyLCJDREUiXSxbNSwzLCJCQ0RFIl0sWzQsNCwiQUJDREUiXSxbMCwxLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzEsMiwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzMsMiwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFswLDIsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFsyLDAsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFsyLDQsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs1LDAsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbNCw3LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzcsNiwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsOCwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFs4LDcsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDksIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbOSw4LCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiw3LCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XSxbNywyLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XSxbMSw4LCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XSxbOCwxLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XSxbNiwxMSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxMSwxMCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzcsMTIsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMTIsMTEsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDExLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XSxbMTEsNywiIiwxLHsic3R5bGUiOnsibmFtZSI6ImNvcm5lciJ9fV0sWzgsMTMsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMTMsMTIsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDEyLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XSxbMTIsOCwiIiwxLHsic3R5bGUiOnsibmFtZSI6ImNvcm5lciJ9fV0sWzksMTQsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMTQsMTMsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs5LDEzLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XSxbMTMsOSwiIiwxLHsic3R5bGUiOnsibmFtZSI6ImNvcm5lciJ9fV1d&embed" width="1353" height="688" style="border-radius: 8px; border: none;"></iframe>
 
-If we also know about the zero object (which is simultaneously a quotient and a subobject of everything, in a trivial way), then we also have that X0 = X and 0X = X in a straightforward way, where 0 is the zero object of our abelian category (sorry for mixing multiplicative and additive notation like this). Thus we have a monoid (except, as always, for the partialness or multivaluedness).
+We might imagine ourselves in a position where, although we do not know much, we know how to invert and compose isomorphisms, compose monics, compose epics, take kernels and cokernels, pull back monic-epic spans, push out monic-epic cospans, and take the factorizations coming from those those pullback or pushout universal properties. This is enough to know how to compose such diagrams.
+
+The zero object of our abelian category arises as the kernel or cokernel of identity, from which we also have that X0 = X and 0X = X in a straightforward way (sorry for mixing multiplicative and additive notation like this). Thus we indeed have an identity and thus have a monoid (except, as always, for the partialness or multivaluedness).
 
 Note that if AB = 0, then A = B = 0, as 0 has no nontrivial subobjects or quotients. Thus, we are in a monoid with no nontrivial inverses.
 
-We might imagine that, though we know how to do the various things outlined above, we don't know how to take direct sums (aka direct products or biproducts, in the binary case we are interested in) in general. However, when the direct sum A + B exists, we get short exact sequences such that AB = A + B and BA = A + B; thus, AB = BA (I really must apologize for mixing multiplicative and additive notation now. The multiplicative notation refers to our monoid based on short exact sequences, the additive notation refers to the biproduct structure of the abelian category). Thus, direct sums induce commuting values.
+We might imagine that, though we are given the operations above, we are not in general given the operation of direct sum (aka direct products or biproducts, in the binary case we are interested in). However, when the direct sum A + B exists, we get short exact sequences such that AB = A + B and BA = A + B; thus, AB = BA (I really must apologize for mixing multiplicative and additive notation now. The multiplicative notation refers to our monoid based on short exact sequences, the additive notation refers to the biproduct structure of the abelian category). Thus, the direct sums we happen to have induce commuting values.
 
 Our monoid is also cancellative in the following sense: Suppose we have $$XY_1 = Z = XY_2$$ where the short exact sequences both use the same inclusion from X into Z. Then the cokernel of this inclusion is uniquely determined, so $$Y_1 = Y_2$$. Similarly dually for kernels of quotients (everything we do will be self-dual, because abelian categories are a self-dual concept).
 
+If we are fortunate to be ignorant in just the right way of the full scope of what exists in the world, we may be in a position where we know so little, that our monoid remains at most single-valued (this is why it is key to not know how to take direct sums in general, which would automatically induce a particular monoid product for any two objects which might not be the one we want in a single-valued world).
 
-In general, we may imagine ourselves fortunate enough to be in a position where, for any X and Y, we have nearly at most one way to see Y as of the form SXQ (thus, at most one canonical way to see X as "a part of" Y). We may specifically have that if there is any such decomposition, then there is some S, Q, and A such that any Y = S'XQ' is such that S' = SA_1 and Q' = A_2Q, with A_1, A_2, and X all commuting, and A_1 A_2 = A. We may call this strong cancellativity. We may think of S as what juts into X, Q as what X juts into, and A as the remainder of Y which commutes with X.
+Scratch the above a bit. Perhaps this is the way to go: We imagine ourselves in a category with a subcategory of M-maps and a subcategory of E-maps. The isomorphisms are precisely the maps which are both M and E. The M maps all are monic (though other maps may also be monic, for all I care about right now), and similarly the E maps all are epic. This category has (E; M) factorization. Furthermore, all pullbacks of M maps exist and are M, and all pushouts of E maps exist and are E. Finally, for each object X, we have a suitably monotonic bijection between the M-subobjects of X and the E-quotients of X. And this bijection interacts appropriately with the pullback/pushout structure (I'm not sure what the appropriate interaction is, exactly, but consider for example that an (M, E)-cospan has a pullback which can be computed purely by swinging the M map into an E-map, composing the two E-maps, then swinging this back into an M map, or also dually computed in the other way starting with swinging the E map. So we need to at least say these two processes result in the same object in the end, and also dually for (M, E) spans.)
 
-As a special case of this, we will have at most one injection or at most one projection between two objects. But in fact, this is an even stronger condition than one-sided cancellativity. We may also imagine ourselves so fortunate as that, for any A and B, there is at most one way we are aware of to solve AB = X. In these contexts, we are genuinely in a strongly cancellative partial (but not multi-valued) monoid with only trivial inverses.
+We also have a zero object, with no nontrivial subobjects or quotient objects. If we are fortunate, it may be that from any A to B, there is at most one M-or-E-or-both map.
 
-In a strongly cancellative partial monoid with only trivial inverses, we get a nice poset (not simply preorder) structure for "part of". For if Y = SXQ while X = LYR, then I think it will follow that X = Y? (TODO)
+This should be enough structure to set up much of what we want with our partial monoids, while still allowing the possibility of having somewhat unique containments as illustrated by Ravi Vakli style diagrams.
 
-All this strong cancellativity is maybe not bothering with? Well, no, maybe it makes sense. A subquotient X of Y can be thought of as a partial equivalence relation on Y. If we add in reflexivity, we get an equivalence relation, corresponding to the smallest quotient XQ of Y of which X is a subobject; this gives us our Q. On the other hand, if we take the partial equivalence relation, and just focus on its support (those elements which are reflexive), we get the smallest subobject SX of Y of which X is a quotient; this gives us our S. These are the corners of the pullback/pushout square from X to Y. Hm. This again makes it seem like we can't have arbitrary monic/epics in a pullback-pushout square. I think the problem here is that the same object may arise from different PERs. Consider how the zero object arises from total equivalence relations on any subobject. Consider the diamond lemma in general.
+Note that we can't really in general hope to do everything the Ravi Vakli style diagrams do in terms of identifying subquotients, because these diagrams carry implications which are not in general valid. For example, these diagrams imply that if A, B, and C are subspaces of an ambient space, with A and B complementary, and A and C complementary, then B = C (not just as isomorphic spaces, but equal qua subspace). Since B and C will both be identified with the quotient by A, in a Ravi Vakli diagram. But this implication is not true in general, because of failure of distributivity in lattices of subspaces.
 
 ***
 
