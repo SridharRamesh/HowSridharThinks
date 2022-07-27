@@ -1,0 +1,29 @@
+---
+title: "Yoneda Extension"
+date: 2022-7-26
+---
+Why is the Yoneda embedding the free cocompletion?
+
+$$\newcommand{\Set}{\mathrm{Set}}$$
+
+Recall that every ordinary functor $$f : A \to B$$ has a right adjoint qua profunctor, where a profunctor from $$B$$ to $$A$$ is an ordinary functor from $$B$$ to $$\Set^{A^{op}}$$, with suitable composition rules. (It has also has a left adjoint qua "indfunctor", where by an indfunctor from $$B$$ to $$A$$, I mean an ordinary functor from $$B$$ to $$(\Set^A)^{op}$$.)
+
+Thus, if we have an ordinary functor $$f : A \to B$$, it has a right adjoint $$g : B \to \Set^{A^{op}}$$. We could think of this $$g$$ as a profunctor into $$A$$, but also as an ordinary functor into $$\Set^{A^{op}}$$. Thus, when thinking of $$g$$ as an ordinary functor, it in turn has a left adjoint indfunctor $$h: \Set^{A^{op}} \to (\Set^B)^{op}$$.
+
+As a left adjoint, this $$h$$ preserves all colimits.
+
+Furthermore, let us show that $$h(y(-)) = Y(f(-))$$ where $$y : A \to \Set^{A^{op}}$$ and $$Y : B \to (\Set^B)^{op}$$ are the appropriate Yoneda embeddings: TODO.
+
+Note that $$Y$$ preserves any colimits that exist in $$B$$. Furthermore, by [the co-Yoneda lemma](./TotalLimits.html), every object of $$\Set^{A^{op}}$$ is a small colimit of objects in the range of $$y$$. Since $$h$$ preserves all colimits, we can thus conclude that $$h$$ applied to an arbitrary presheaf is given as a small colimit of $$h$$ applied to presheaves of the form $$y(-)$$, which is a small colimit of values of the form $$Y(f(-))$$.
+
+If $$B$$ has all small colimits, this then turns into $$Y$$ applied to a small colimit of values of the form $$f(-)$$. Thus, the range of $$h$$ is included in the range of $$Y$$. We can reinterpret the codomain of $$h$$ therefore as the full subcategory $$B$$ of $$(\Set^B)^{op}$$. As small colimits in $$B$$ are inherited from those in $$(\Set^B)^{op}$$, our $$h$$ continues to preserve small colimits under this reinterpretation.
+
+Thus, when $$B$$ has all small colimits, we are able to find an $$h : \Set^{A^{op}} \to B$$ such that $$h(y(-)) = f(-)$$ and such that $$h$$ preserves all small colimits. Such an $$h$$ is unique, as well, since every object in its domain is a small colimit of objects of the form $$y(-)$$, on which its action is prescribed.
+
+Thus, composition with the Yoneda embedding $$y(-)$$ gives us a 1:1 correspondence between arbitrary functors $$: A \to B$$ and small colimit preserving functors $$: \Set^{A^{op}} \to B$$. This exhibits the Yoneda embedding as the free cocompletion.
+
+***
+
+TODO: Discuss also free cocompletions which preserve specified colimits. This should just be the full subcategory of $$\Set^{A^{op}}$$ respecting those colimits, with this following quickly from the above result.
+
+TODO: Fill in more details about the reasoning about profunctors and indfunctors as adjoints.
