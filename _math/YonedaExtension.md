@@ -4,7 +4,7 @@ date: 2022-7-26
 ---
 Why is the Yoneda embedding the free cocompletion?
 
-Let $$\newcommand{\Set}{\mathrm{Set}} \newcommand{\Hom}{\mathrm{Hom}} \newcommand{\Psh}{\mathrm{Psh}} \newcommand{\Rsh}{\mathrm{Rsh}} A$$ and $$B$$ be arbitrary categories, with $$y : A \to \Set^{A^{op}}$$ and $$Y : B \to (\Set^B)^{op}$$ as the Yoneda embeddings of the indicated type. By the Yoneda embedding lemma, these can be thought of as inclusions of full subcategories. Note that $$y$$ preserves any limits which exist in $$A$$ and $$Y$$ preserves any colimits which exist in $$B$$.
+Let $$\newcommand{\Set}{\mathrm{Set}} \newcommand{\Hom}{\mathrm{Hom}} \newcommand{\Psh}{\mathrm{Psh}} \newcommand{\Rsh}{\mathrm{Rsh}} A$$ and $$B$$ be arbitrary categories, with $$y : A \to \Set^{A^{op}}$$ and $$Y : B \to (\Set^B)^{op}$$ as the Yoneda embeddings of the indicated type. By the Yoneda embedding lemma, these can be thought of as inclusions of full subcategories. Note that $$y$$ preserves any limits which exist in $$A$$, while $$Y$$ preserves any colimits which exist in $$B$$.
 
 Recall that every functor $$f : A \to B$$ is the left $$y$$-relative adjoint of a profunctor $$g : B \to \Set^{A^{op}}$$. Specifically, if we define $$g(b)(a) = \Hom_B(f(a), b)$$, then we have a correspondence $$\Hom_B(f(a), b) = \Hom_{\Set^{A^{op}}}(y(a), g(b))$$ by the Yoneda lemma. Note that such $$g$$ preserves all limits, as would be expected from its right adjoint nature.
 
@@ -16,13 +16,11 @@ Thus, let arbitrary $$f : A \to B$$ be given, define $$g : B \to \Set^{A^{op}}$$
 
 Now let us show that $$h \circ y = Y \circ f$$. That is, we will show that $$h(y(a))(b) = Y(f(a))(b)$$ for $$a \in A, b \in B$$. By definition, $$h(y(a))(b)$$ is $$\Hom_{\Set^{A^{op}}}(y(a), g(b))$$, which by the Yoneda lemma is $$g(b)(a)$$, which by definition is $$\Hom_B(f(a), b)$$, which is the definition of $$Y(f(a))(b)$$.
 
-Let us now write $$\Psh(A)$$ for the full subcategory of $$\Set^{A^{op}}$$ which is generated from $$A$$ by small colimits. (Note that, by [the co-Yoneda lemma](./TotalLimits.html), we will have that $$\Psh(A)$$ is all of $$\Set^{A^{op}}$$ when $$A$$ is itself small). This $$\Psh(A)$$ inherits all small colimits from $$A$$, so even if we restrict the domain of $$h$$ to $$\Psh(A)$$, we will still have the property that $$h$$ preserves small colimits.
+Let us now write $$\Psh(A)$$ for the full subcategory of $$\Set^{A^{op}}$$ which is generated from $$y(A)$$ by small colimits. (Note that, by [the co-Yoneda lemma](./TotalLimits.html), we will have that $$\Psh(A)$$ is all of $$\Set^{A^{op}}$$ when $$A$$ is itself small). We can now observe that $$h$$ applied to an arbitrary object in $$\Psh(A)$$ (that is, $$h$$ applied to an arbitrary colimit of a small diagram in the range of $$y : A \to \Psh(A)$$) is a colimit of a small diagram in the range of $$h \circ y$$, which by the previous paragraph is a small colimit of a diagram in the range of $$Y \circ f$$.
 
-We can thus conclude that $$h$$ applied to an arbitrary object in $$\Psh(A)$$ (that is, $$h$$ applied to an arbitrary small colimit of a diagram in the range of $$y : A \to \Psh(A)$$) is a small colimit of a diagram in the range of $$h \circ y$$, which by two paragraphs ago is a small colimit of a diagram in the range of $$Y \circ f$$.
+Let us now presume that $$B$$ has all small colimits. Recalling that $$Y$$ preserves any colimits that exist in $$B$$, this last diagram turns into $$Y$$ applied to a colimit of a small diagram in the range of $$f$$. Thus, the range of $$h$$ acting on domain $$\Psh(A)$$ is included in the range of $$Y$$.
 
-Let us now presume that $$B$$ has all small colimits. Recalling that $$Y$$ preserves any colimits that exist in $$B$$, this last diagram turns into $$Y$$ applied to a small colimit of a diagram in the range of $$f$$. Thus, the range of $$h$$ acting on domain $$\Psh(A)$$ is included in the range of $$Y$$.
-
-We can thus now reinterpret the codomain of $$h$$ therefore as the full subcategory $$B$$ of $$(\Set^B)^{op}$$. As small colimits in $$B$$ are inherited from those in $$(\Set^B)^{op}$$, our $$h : \Psh(A) \to B$$ continues to preserve small colimits under this reinterpretation.
+We can thus now reinterpret $$h$$ as having domain $$\Psh(A)$$ and codomain $$B$$. As small colimits in $$B$$ match those in $$(\Set^B)^{op}$$ (which is just to say, $$Y$$ preserves small colimits), while small colimits in $$\Psh(A)$$ are inherited from $$\Set^{A^{op}}$$, our $$h : \Psh(A) \to B$$ continues to preserve small colimits under this reinterpretation.
 
 Thus, when $$B$$ has all small colimits, we are able to find, for arbitrary $$f : A \to B$$, a corresponding $$h : \Psh(A) \to B$$ such that $$h \circ y = f$$ and such that $$h$$ preserves all small colimits. Such an $$h$$ is unique, as well, since every object in its domain is a small colimit of a diagram in the range of $$y$$, on which its action is prescribed.
 
