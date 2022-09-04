@@ -22,7 +22,7 @@ Let us now presume that $$B$$ has all small colimits. Recalling that $$Y$$ prese
 
 We can thus now reinterpret $$h$$ as having domain $$\Psh(A)$$ and codomain $$B$$. As small colimits in $$B$$ match those in $$(\Set^B)^{op}$$ (which is just to say, $$Y$$ preserves small colimits), while small colimits in $$\Psh(A)$$ are inherited from $$\Set^{A^{op}}$$, our $$h : \Psh(A) \to B$$ continues to preserve small colimits under this reinterpretation.
 
-Thus, when $$B$$ has all small colimits, we are able to find, for arbitrary $$f : A \to B$$, a corresponding $$h : \Psh(A) \to B$$ such that $$h \circ y = f$$ and such that $$h$$ preserves all small colimits. Such an $$h$$ is unique, as well, since every object in its domain is a small colimit of a diagram in the range of $$y$$, on which its action is prescribed.
+Thus, when $$B$$ has all small colimits, we are able to find, for arbitrary $$f : A \to B$$, a corresponding $$h : \Psh(A) \to B$$ such that $$h \circ y = f$$ and such that $$h$$ preserves all small colimits. Such an $$h$$ is unique, as well, since every object in its domain is a colimit of a small diagram in the range of $$y$$, on which its action is prescribed.
 
 Thus, composition with the Yoneda embedding $$y : A \to \Psh(A)$$ gives us a 1:1 correspondence between arbitrary functors $$: A \to B$$ and small colimit preserving functors $$: \Psh(A) \to B$$. This exhibits the Yoneda embedding as the free cocompletion.
 
