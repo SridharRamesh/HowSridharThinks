@@ -90,9 +90,18 @@ What's more, the forgetful functor which sends cones to their apex creates colim
 
 ## Addenda
 
-Incidentally, a certain addendum which is sometimes useful is that we can obtain an initial object by taking any weakly initial object (one with existence, but not necessarily uniqueness, of morphsims into every other object; that is, any object which becomes initial in the preorder reflction of the category), and equalizing all its endomorphisms. [TODO: Why is this? I believe this is because the inclusion functor of the equalizer morphism $$E \to W$$, where $$W$$ is weakly initial and $$E$$ is the common equalizer of all endomorphisms on a weakly initial object is automatically an [initial functor](https://ncatlab.org/nlab/show/final+functor), and thus has the same limit as the identity functor. But I need to work this out.
+Incidentally, a certain addendum which is often useful is the following:
 
-As an application of this observation, I can then perhaps apply this to [bottoms-up Knaster-Tarski]({{site.baseurl}}{% link _math/LambekKnasterTarski.md %}), by doing such a coequalizer of all endomorphisms at every stage.]
+Suppose $$W$$ is a weakly initial object, in the sense that it has at least one morphism to every object. Suppose also we are in a locally small category with all small limits (including binary equalizers). Let $$e : E \to W$$ be the joint equalizer of every endomorphism of $$W$$. Then $$E$$ is an initial object.
+
+Proof:
+Clearly $$E$$ is weakly initial as well (as it has a morphism into a weakly initial object). Thus, our task is to show that any two parallel maps out of $$E$$ are equal. Because we have binary equalizers, it suffices to show that every regular subobject of $$E$$ is equivalent to the identity subobject. That is, we must show that every regular subobject of $$E$$ is furthermore epic. Let $$d : D \to E$$ be a regular subobject of $$E$$. Because $$W$$ is weakly initial, we have also some $$w : W \to D$$. This gives us the endomorphism $$w;d;e$$ on $$W$$. Because $$e$$ equalizes every endomorphism of $$W$$, we have that $$e;w;d;e = e;id = e = id;e$$. Since $$e$$ is monic (as it is a regular subobject), this tells us that $$e;w;d = id$$. Thus, $$d$$ is split epic, completing the proof.
+
+\[I believe there may also be an alternative proof along the following lines: The inclusion functor of the monoid of all endomorphisms of $$W$$ into the overall category is automatically an [initial functor](https://ncatlab.org/nlab/show/final+functor), and thus has the same limit as the identity functor. But I need to work this out.\]
+
+This process of turning weakly initial objects into initial objects ends up becoming the "solution set condition" in the "General Adjoint Functor Theorem".
+
+As another application of this observation, I can then perhaps apply this to [bottoms-up Knaster-Tarski]({{site.baseurl}}{% link _math/LambekKnasterTarski.md %}), by doing such a coequalizer of all endomorphisms at every stage.]
 
 ***
 

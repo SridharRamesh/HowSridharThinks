@@ -32,7 +32,7 @@ Of course, this is just the previous argument carried out integrated, in that $$
 
 I am fond of this proof as well, because I discovered it and it is nice, even though I do not think this is as Book as the previous one. I will write this up in text form eventually, but here's the video:
 
-See further details at [3blue1brown: The Wallis Product and the Sine Product]({{ site.baseurl }}{% link _math/3b1bSineProduct.md %}).
+See further details at [3blue1brown: The Wallis Product and the Sine Product]({{ site.baseurl }}{% link _math/3b1bSineProduct.md %}) and [on this very blog](./3b1bSineProduct.html).
 
 # Euler's original proof
 

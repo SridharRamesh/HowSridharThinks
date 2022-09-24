@@ -10,7 +10,19 @@ In a past life, I worked for 3blue1brown, and I discovered and made a video for 
 [The video](https://www.youtube.com/watch?v=8GPy_UMV-08)
 
 
-Recap: \[TODO\]
+Recap: \[TODO, phrase all the following in terms of lighthouses and a Sailor and Keeper, as in the video, and reconcile it to the phrasing in the following section.\]
+
+The gist is like so: For each natural $n$, let $$P_n(x) = x^n - 1$$ be the $$n$$-th cyclotomic polynomial. This is the product of $$(x - \zeta)$$ over all $$n$$-th roots of unity $$\zeta$$. In other words, restricting attention to the case of odd $$n = 2m + 1$$ for convenience, this is $$\prod_{k = -m}^{k = m} (x - R^{k/n})$$, where $$R = e^{\tau i}$$.
+
+Let $$$Q_n(x) = P_n(x)/(x - 1) = 1 + x + x^2 + \ldots + x^{n - 1}$$ be the same product dropping the $$k = 0$$ factor. For convenience, let us reparametrize this as $$H_n(f) = Q_n(R^{f/n})$$. Note that $$H_n(0) = Q_n(1) = n$$. 
+
+Now consider $$H_n(f) / H_n(0)$$. On the one hand, this is clearly $$(R^{1/f} - 1) / ((R^{f/n} - 1) n)$$. In the limit as $$n \to \infty$$, the denominator here approaches $$f \tau i$$.
+
+On the other hand, this is the product of $$\frac{R^{f/n} - R^{k/n}} {1 - R^{k/n}}$$ over $$k \in [-m, m], k \neq 0$$. This factor approaches $$\frac{f - k}{0 - k} = 1 - \frac{f}{k}$$ in magnitude as $$\n \to \infty$$.
+
+Thus, with use of Dominated Convergence as below, we may conclude that the product of $$1 - \frac{f}{k}$$ over all nonzero integers $$k$$, suitably construed, approaches $$\frac{R^f - 1}{f \tau}$$ in magnitude. Put another way, $$f \tau$$ times the product of $$1 - \frac{f}{k}$$ over all nonzero integers $$k$$ approaches $$R^f - 1$$ in magnitude.
+
+In the following, we write $$\mathrm{Chord}(f)$$ for $$|R^{1/f} - 1|$$.
 
 # Commuting limits using Dominated Convergence:
 

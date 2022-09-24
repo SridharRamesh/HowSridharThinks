@@ -76,6 +76,12 @@ Links to game theory in general; tic-tac-toe, Hex, Nim
 
 Write up the general theory of Clifford algebras, including the observation that the Clifford algebra can be taken as isomorphic as a vector space to the exterior algebra (non-obvious! See Chevalley's linear identification at http://people.math.harvard.edu/~shlomo/docs/lie_algebras.pdf). Relate this to quaternions, write about spinors. Note the observation that spinors are closed under addition for quaternions because of dimension concerns (two planes in 3d space must intersect in a line).
 
+----
+
+The Eckman-Hilton argument should yield the Hopf fibration, but no one seems to have written this up properly. The only reference I can find is https://mathoverflow.net/a/336620/3902, but this does not demonstrate that the resulting map actually is the Hopf fibration, and I don't know how to do that either.
+
+On the same topic, thinking of 2-cells as maps out of the Earth with the North pole as the corresponding 0-cell, we can consider rotating the Earth around the polar axis over time by one revolution. This should give us some 3-cell from any 2-cell to itself (which is just as well a 3-cell from identity to identity, in the groupoidal context). Can we carry out this construction in an arbitrary groupoid? We should be able to, by the homotopy hypothesis. Is what it yields the same as the Eckman-Hilton argument and Hopf fibration?
+
 ---
 Make videos!
 

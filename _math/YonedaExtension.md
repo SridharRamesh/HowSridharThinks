@@ -22,7 +22,7 @@ Let us now presume that $$B$$ has all small colimits. Recalling that $$Y$$ prese
 
 We can thus now reinterpret $$h$$ as having domain $$\Psh(A)$$ and codomain $$B$$. As small colimits in $$B$$ match those in $$(\Set^B)^{op}$$ (which is just to say, $$Y$$ preserves small colimits), while small colimits in $$\Psh(A)$$ are inherited from $$\Set^{A^{op}}$$, our $$h : \Psh(A) \to B$$ continues to preserve small colimits under this reinterpretation.
 
-Thus, when $$B$$ has all small colimits, we are able to find, for arbitrary $$f : A \to B$$, a corresponding $$h : \Psh(A) \to B$$ such that $$h \circ y = f$$ and such that $$h$$ preserves all small colimits. Such an $$h$$ is unique, as well, since every object in its domain is a colimit of a small diagram in the range of $$y$$, on which its action is prescribed.
+Thus, when $$B$$ has all small colimits, we are able to find, for arbitrary $$f : A \to B$$, a corresponding $$h : \Psh(A) \to B$$ such that $$h \circ y = f$$ and such that $$h$$ preserves all small colimits. Such an $$h$$ is unique, as well, since every object in its domain is a colimit of a small diagram in the range of $$y$$, on which its action is prescribed. \[TODO: What about morphisms?\]
 
 Thus, composition with the Yoneda embedding $$y : A \to \Psh(A)$$ gives us a 1:1 correspondence between arbitrary functors $$: A \to B$$ and small colimit preserving functors $$: \Psh(A) \to B$$. This exhibits the Yoneda embedding as the free cocompletion.
 
@@ -36,8 +36,14 @@ Let $$y : A \to \Psh(A)$$ be the Yoneda embedding and let $$B$$ be some arbitrar
 
 We already know that composition with the Yoneda embedding induces a 1:1 correspondence between small colimit preserving functors from $$\Psh(A)$$ to $$B$$, and arbitrary functors from $$A$$ to $$B$$. For every arbitrary functor $$f: A \to B$$, there is one and only one small colimit preserving $$F : \Psh(A) \to B$$ such that $$F \circ y = f$$.
 
-There is also at most one small colimit preserving $$\phi : \Rsh(A) \to B$$ such that $$\phi \circ y = f$$, for the exact same reason (every object in $$\Rsh(A)$$ is a small colimit of representable presheaves). 
+There is also at most one small colimit preserving $$\phi : \Rsh(A) \to B$$ such that $$\phi \circ y = f$$, for the exact same reason (every object in $$\Rsh(A)$$ is a small colimit of representable presheaves \[TODO: Morphisms?\]). 
 
 We want to show, when $$f$$ preserves the special colimits, there is a unique choice of such $$\phi$$ that preserves the special colimits as well, and then we are done in establishing $$\Rsh(A)$$ as the free cocompletion of $$A$$ preserving the chosen colimits. We've already established uniqueness of $$\phi$$ so we just need existence. The obvious choice is to take $$\phi$$ to be $$F$$ restricted to $$\Rsh(A)$$.
 
 We then just need to show that $$F$$ preserves the special colimits, so long as $$f$$ does. But of course it does, because $$F$$ takes the special colimits to the same thing $$f$$ does, because $$F$$ and $$f$$ agree on diagrams in $$A$$.
+
+***
+
+TODO: Fill in the TODOs above morphisms using the observation that representables are tiny objects among presheaves, in the sense that Hom(r, -) for a representable r preserves small colimits of presheaves (this follows from the fact that small colimits of presheaves are computed pointwise, and the Yoneda lemma).
+
+More generally, we see that if a category is such that every object within it is a small colimit of tiny objects, then the map from said category to small presheaves on those tiny objects is an equivalence, exhibiting this category as the free cocompletion of its full subcategory of tiny objects.
