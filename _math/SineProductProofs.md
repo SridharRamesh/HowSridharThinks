@@ -28,9 +28,9 @@ And thus we get the cotangent series desired. As far as I am concerned, this is 
 
 Of course, this is just the previous argument carried out integrated, in that $$\log(\abs{x})$$ is the integral of $$1/x$$ and $$\frac{1}{\abs{x}}$$ is the division by $$x$$ of the signum function. So actually, this is no different.]*
 
-# Sridhar's 3blue1brown proof (the Sailor and the Keeper)
+# Sridhar's 3blue1brown proof (the Sailor and the Keeper). Aka, the best proof.
 
-I am fond of this proof as well, because I discovered it and it is nice, even though I do not think this is as Book as the previous one. I will write this up in text form eventually, but [here's the video](https://www.youtube.com/watch?v=8GPy_UMV-08). See further details [here](./3b1bSineProduct.html).
+I am fond of this proof as well, because I discovered it and it is nice. Maybe it's the best proof also, I don't know. I will write this up in text form eventually, but [here's the video](https://www.youtube.com/watch?v=8GPy_UMV-08). See further details [here](./3b1bSineProduct.html).
 
 In short, we analyze the function $$f_N(x) = x^{N/2} - x^{-N/2}$$ for natural number $$N$$, noting that this is $$x^{-N/2} \prod_{r^N = 1} (x - r) = \prod_{r^N = 1} (x - r) x^{-1/2}$$ as $$r$$ ranges over all the $$N$$-th roots of unity. The $$N$$th roots of unity can be expressed as $$R^{k/N}$$ for integer $$k$$ where $$R = e^{2 \pi i}$$, so this is $$\prod_{k \in (-N/2, N/2]} (x - R^{k/N}) x^{-1/2}$$. Since we also have $$f_1(x) = f_N(x^{1/N})$$, and $$\sin(\pi x) = f_1(R^x)/(2i)$$ we find that $$\frac{\sin(x)}{\sin(y)} = \prod_{k \in (-N/2, N/2]} \frac{R^{x/N} - R^{k/N}}{R^{y/N} - R^{k/N}} R^{(y - x)/(2N)}$$. In the limit as $$N \to \infty$$, we find that $$\frac{R^{x/N} - R^{k/N}}{R^{y/N} - R^{k/N}} R^{(y - x)/(2N)} \to \frac{x - k}{y - k}$$ for any fixed $$k$$. Thus, if we could commute limits suitably, we could conclude that $$\frac{\sin(x)}{\sin(y)} = \prod_{k \in \mathbb{Z}} \frac{x - k}{y - k}$$. Finally, we use a dominated convergence argument, as noted [here](./3b1bSineProduct.html), to commute the limits (at least as far as magnitude is concerned. TODO: Work this out for phase as well.)
 

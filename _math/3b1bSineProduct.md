@@ -18,11 +18,11 @@ Let $$$Q_n(x) = P_n(x)/(x - 1) = 1 + x + x^2 + \ldots + x^{n - 1}$$ be the same 
 
 Now consider $$H_n(f) / H_n(0)$$. On the one hand, this is clearly $$(R^{1/f} - 1) / ((R^{f/n} - 1) n)$$. In the limit as $$n \to \infty$$, the denominator here approaches $$f \tau i$$, thus having magnitude $$f \tau$$.
 
-On the other hand, this is the product of $$\frac{R^{f/n} - R^{k/n}} {1 - R^{k/n}}$$ over $$k \in [-m, m], k \neq 0$$. The $$k$$-th such factor approaches $$\frac{f - k}{- k} = 1 - \frac{f}{k}$$ in magnitude as $$\n \to \infty$$.
+On the other hand, this is the product of $$\frac{R^{f/n} - R^{k/n}} {1 - R^{k/n}}$$ over $$k \in [-m, m], k \neq 0$$. The $$k$$-th such factor approaches $$\frac{f - k}{- k} = 1 - \frac{f}{k}$$ in magnitude as $$n \to \infty$$.
 
 Thus, with use of Dominated Convergence as below, we may conclude that the product of $$1 - \frac{f}{k}$$ over all nonzero integers $$k$$, suitably construed, approaches $$\frac{R^f - 1}{f \tau}$$ in magnitude. Put another way, $$f \tau$$ times the product of $$1 - \frac{f}{k}$$ over all nonzero integers $$k$$ approaches $$R^f - 1$$ in magnitude.
 
-In the following, we write $$\mathrm{Chord}(f)$$ for the magnitude $$|R^{1/f} - 1|$$. This can also be expressed as $$2 \sin(f \pi)$$.
+In the following, we write $$\mathrm{Chord}(f)$$ for the magnitude $$\abs{R^{1/f} - 1}$$. This can also be expressed as $$2 \sin(f \pi)$$.
 
 # Commuting limits using Dominated Convergence:
 
