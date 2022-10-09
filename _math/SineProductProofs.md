@@ -30,9 +30,9 @@ Of course, this is just the previous argument carried out integrated, in that $$
 
 # Sridhar's 3blue1brown proof (the Sailor and the Keeper)
 
-I am fond of this proof as well, because I discovered it and it is nice, even though I do not think this is as Book as the previous one. I will write this up in text form eventually, but here's the video:
+I am fond of this proof as well, because I discovered it and it is nice, even though I do not think this is as Book as the previous one. I will write this up in text form eventually, but [here's the video](https://www.youtube.com/watch?v=8GPy_UMV-08). See further details [here](./3b1bSineProduct.html).
 
-See further details at [3blue1brown: The Wallis Product and the Sine Product]({{ site.baseurl }}{% link _math/3b1bSineProduct.md %}) and [on this very blog](./3b1bSineProduct.html).
+In short, we analyze the function $$f_N(x) = x^{N/2} - x^{-N/2}$$ for natural number $$N$$, noting that this is $$x^{-N/2} \prod_{r^N = 1} (x - r) = \prod_{r^N = 1} (x - r) x^{-1/2}$$ as $$r$$ ranges over all the $$N$$-th roots of unity. The $$N$$th roots of unity can be expressed as $$R^{k/N}$$ for integer $$k$$ where $$R = e^{2 \pi i}$$, so this is $$\prod_{k \in (-N/2, N/2]} (x - R^{k/N}) x^{-1/2}$$. Since we also have $$f_1(x) = f_N(x^{1/N})$$, and $$\sin(\pi x) = f_1(R^x)/(2i)$$ we find that $$\frac{\sin(x)}{\sin(y)} = \prod_{k \in (-N/2, N/2]} \frac{R^{x/N} - R^{k/N}){R^{y/N} - R^{k/N} R^{(y - x)/(2N)}$$. In the limit as $$N \to \infty$$, we find that $$\frac{R^{x/N} - R^{k/N}){R^{y/N} - R^{k/N} \to \frac{x - k}{y - k}$$ for any fixed $$k$$, while $$R^{(y - x)/(2N)} \to 1$$. Thus, if we could commute limits suitably, we could conclude that $$\frac{\sin(x)}{\sin(y)} = \prod_{k \in \mathbb{Z}} \frac{x - k}{y - k}$$. Finally, we use a dominated convergence argument, as noted [here](./3b1bSineProduct.html), to commute the limits (at least as far as magnitude is concerned. TODO: Work this out for phase as well.)
 
 # Euler's original proof
 

@@ -75,3 +75,23 @@ Legendre transform: Note with the Legendre transform (defined as L(f) = sup_{y}(
 Note that the output of L is always a convex function, as it is a supremum of convex functions. Conversely, any convex f satisfies f = L^2(f). Thus, the fixed points of L^2 are precisely the convex functions.
 
 Put another way, let Linf(f) = Inf_y(f(x) - x * y), while Lsup(f) = Sup_y(f(x) + x * y). Then Lsup(Linf(f)) = L^2(f). And it's easy to see that Lsup(Linf(f)) is the convex hull of f. Linf sends each potential slope to the smallest value at the origin with which a line of such slope could intersect the graph of f. Lsup(Linf(f)) then takes the supremum of all these tangent lines to the graph of f.
+
+***
+
+Alternative argument for inversion theorem (extracted from Theorem 1.5.1 in Rudin's Fourier Analysis on Groups):
+
+Recall the property F(x convolved with y) = F(x) times F(y).
+
+Recall also the property F(F(x) times y) = (x reversed) convolved with F(y) from above.
+
+Finally, keep in mind that F(reverse x) = reverse F(x), and reverse similarly threads through multiplications and convolutions.
+
+Let x, y, and z be arbitrary. We have F(x) convolve (reverse z) convolve F(y) = F( F((reverse F(x)) convolve z) times y) = F( (reverse FF(x)) times F(z) times y). Evaluating this at 0, we get the total integral of (reverse FF(x)) times y times F(z).
+
+But by symmetry, our starting point was also F(y) convolve (reverse z) convolve F(x), and so our ending point is also the total integral of (reverse FF(y)) times x times F(z).
+
+Thus, as long as the range of values of F(z) is dense enough with respect to this dot product, we may conclude that (reverse FF(x)) times y = (reverse FF(y)) times x for arbitrary x and y. In other words, the multiplicative ratio of reverse F(F(x)) to x does not depend on x.
+
+In particular, this means that this ratio stays the same even when x is translated, which also translates F(F(x)), and thus also translates the multiplicative ratio. Thus, this multiplicative ratio is a constant.
+
+Thus, reverse F(F(x)) is proportional to x in general, concluding the inversion theorem. [Modulo concerns about dividing by zero in producing this ratio]
