@@ -32,7 +32,23 @@ Of course, this is just the previous argument carried out integrated, in that $$
 
 I am fond of this proof as well, because I discovered it and it is nice. Maybe it's the best proof also, I don't know. I will write this up in text form eventually, but [here's the video](https://www.youtube.com/watch?v=8GPy_UMV-08). See further details [here](./3b1bSineProduct.html).
 
-In short, we analyze the function $$f_N(x) = x^{N/2} - x^{-N/2}$$ for natural number $$N$$, noting that this is $$x^{-N/2} \prod_{r^N = 1} (x - r) = \prod_{r^N = 1} (x - r) x^{-1/2}$$ as $$r$$ ranges over all the $$N$$-th roots of unity. The $$N$$th roots of unity can be expressed as $$R^{k/N}$$ for integer $$k$$ where $$R = e^{2 \pi i}$$, so this is $$\prod_{k \in (-N/2, N/2]} (x - R^{k/N}) x^{-1/2}$$. Since we also have $$f_1(x) = f_N(x^{1/N})$$, and $$\sin(\pi x) = f_1(R^x)/(2i)$$ we find that $$\frac{\sin(x)}{\sin(y)} = \prod_{k \in (-N/2, N/2]} \frac{R^{x/N} - R^{k/N}}{R^{y/N} - R^{k/N}} R^{(y - x)/(2N)}$$. In the limit as $$N \to \infty$$, we find that $$\frac{R^{x/N} - R^{k/N}}{R^{y/N} - R^{k/N}} R^{(y - x)/(2N)} \to \frac{x - k}{y - k}$$ for any fixed $$k$$. Thus, if we could commute limits suitably, we could conclude that $$\frac{\sin(x)}{\sin(y)} = \prod_{k \in \mathbb{Z}} \frac{x - k}{y - k}$$. Finally, we use a dominated convergence argument, as noted [here](./3b1bSineProduct.html), to commute the limits (at least as far as magnitude is concerned. TODO: Work this out for phase as well.)
+In short, we analyze the function $$f_N(x, y) = x^N - y^N$$ for natural number $$N$$, noting that this is $$\prod_{r^N = 1} (x - ry)$$ as $$r$$ ranges over all the $$N$$-th roots of unity. The $$N$$th roots of unity can be expressed as $$R^{k/N}$$ for integer $$k$$ where $$R = e^{2 \pi i}$$, so, restricting to odd $$N$$ for convenience, this is $$\prod_{k \in (-N/2, N/2)} (x - R^{k/N}y)$$.
+
+(The even $$N$$ case is basically the same, but involves having to make some choice as to whether to consider $$R^{1/2}$$ as indexed by a positive $$k$$ or negative $$k$$ or split the difference in some fashion, a complication we needn't bother with if we just consider odd $$N$$. This pairing off of the roots of unity apart from $$k = 0$$ will in general be convenient for us.)
+
+Although not necessary, it is cutely symmetric for us to rewrite this as $$\prod_{k \in (-N/2, N/2)} (xR^{-\frac{k}{2N}} - yR^{\frac{k}{2N}})$$ for odd $$N$$ (this just multiplies each $$k$$-indexed factor from before by $$R^{\frac{k}{2N}}$$, which cancels out over opposite $$k$$ and also at $$k = 0$$). For that matter, I minorly prefer to move the negative sign off the $$x$$ (again, not at all important, just an aesthetic thing), so let's substitute $$-k$$ in for $$k$$ and make this $$\prod_{k \in (-N/2, N/2)} (xR^{\frac{k}{2N}} - yR^{-\frac{k}{2N}})$$.
+
+We now choose a function $$g$$ such that $$\lim_{N \to \infty} g(\frac{x}{N})^N = R^{x}$$ and $$g$$ is differentiable at zero. The latter condition is equivalent to asking for $$g(x)R^x$$ to be differentiable at zero, which ensures that $$\lim_{N \to \infty} \frac{g(\frac{x}{2N})R^{\frac{k}{2N}} - g(-\frac{x}{2N})R^{-\frac{k}{2N}}}{g(\frac{y}{2N})R^{\frac{k}{2N}} - g(-\frac{y}{2N})R^{-\frac{k}{2N}}} = \frac{x + k}{y + k}$$.
+
+The simplest choice for $$g(x)$$ is $$R^{x}$$ itself, but we may also consider the linear approximation $$g(x) = 1 + 2 \pi i x$$. \[TODO: Verify that our second condition on $$g$$ does indeed follow from the first one, or at least show how it holds for our second possible choice of $$g$$.\]
+
+After having chosen such a $$g$$, we consider $$f_N(g(\frac{x}{2N}), g(-\frac{x}{2N})) = g(\frac{x}{2N})^N - g(-\frac{x}{2N})^N$$. We can expand this as exactly $$\prod_{k \in (-N/2, N/2)} g(\frac{x}{2N})R^{\frac{k}{2N}} - g(-\frac{x}{2N})R^{-\frac{k}{2N}}$$. But in the limit as $$N \to \infty$$, this tells us $$R^{\frac{x}{2}} - R^{-\frac{x}{2}}$$ is proportional to $$\prod_{k \in \mathbb{Z}} (x + k)$$, in a suitable sense.
+
+Technically, the claim in the end is that $$\frac{\sin(\pi x)}{\sin(\pi y)} = \lim_{M \to \infty} \prod_{k \in (-M, M)} \frac{x + k}{y + k}$$.
+
+To commute limits (in taking the limit of an infinite product to be equal to the product of an infinite limit), we make use of dominated convergence. TODO, see [here](./3b1bSineProduct.html).
+
+For what it's worth, note that the exact equation we get with $$g(x) = R^x$$ is $$h(x) = \prod_{k \in (-N/2, N/2)} h((x + k)/N)$$, where $$h(x) = g(x/2) - g(-x/2) = R^{x/2} - R^{-x/2}$$. Since $$h(x) = 2 i \sin(\pi x)$$, we may also frame this as the observation that $$\sin(\pi x) \propto \prod_{k \in (-N/2, N/2)} \sin(\pi (x + k)/N)$$. Those are written following our odd $$N$$ convention, but an interesting curiosity is that we also have the particularly clean equation $$2 \sin(x) = \prod_{k \in [0, N)} 2 \sin((x + \pi k)/N)$$, which is an exact equality regardless of the parity of $$N$$, by taking our original $$\prod_{k} (x - R^{k/N}y)$$, multiplying by suitable powers of $$R$$ at each factor, and noting overall that $$\sum_{k \in [0, N)} \frac{K}{2N} - \frac{1}{4} = - \frac{1}{4}$$.
 
 # Euler's original proof
 
@@ -48,7 +64,7 @@ As $$N$$ approaches infinity, $$N \tan(k\pi/N)$$ approaches $$k\pi$$. Thus, we h
 
 [This last step is slightly glib, in that we've commuted limits without justification. We can rectify that by bundling together the factors where k differs only in sign, saying $$f_N(x)/x =$$ the product of $$1 - (x/[N \tan(k\pi/N)])^2$$ over $$k$$ in $$(0, N/2)$$. Now we note that the movement of the size of the factors toward their limit is monotonic in $$N$$ (considering the $$k$$-th factor to be 1 when $$N/2 \leq k$$), which yields sufficient justification for commuting the limits.]
 
-[TODO: This is substantively distinct from, yet still reminiscent of, the 3blue1brown proof above; discuss the relation between these]
+[TODO: This is substantively distinct from, yet still reminiscent of, the 3blue1brown proof above; discuss the relation between these. The relation is actually just that this is the version of the above proof where $$g(x)$$ is chosen to be $$1 + ix$$ instead of $$R^x$$, although Euler does not present it by going through $$\prod_{r^N = 1} (x^N - r y^N)$$ as such.]
 
 # Weierstrass-Hadamard Factorization Theorem
 
