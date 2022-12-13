@@ -17,3 +17,11 @@ On average, how long will it take for someone to make it all the way through S? 
 This is the answer, then. The mean number of keystrokes it takes is the sum of N^k over all positive k such that the first k characters of S match the last k characters of S.
 
 See https://projecteuclid.org/download/pdf_1/euclid.aop/1176994578 ("A Martingale Approach to the Study of Occurrence of Sequence Patterns in Repeated Experiments" by Shuo-Yen Robert Li) for some further generalizations.
+
+****
+
+Alternative perspective on the above:
+
+Suppose we have a Markov chain in which nodes are labelled with natural numbers, and no transition raises the number by more than one. What is the mean number of steps to go from n to n + m (call this F_{n, n + m})? Well, this is the sum of E_n, E_{n + 1}, …, E_{n + m - 1}, where E_n is the mean number of steps to go from n to n + 1.
+
+And how can we compute E_n? Let p_x be the probability of transitioning into state x in a single step, when starting from state n. Then E_n is 1/p_{n + 1} + the sum of p_x/p_{n + 1} * F_{x, n} over all x other than n + 1. On average, in going from state n to state n + 1, we make p_x/p_{n + 1} many transitions from state n to state x (these sum up to 1/p_{n + 1}). After each transition from state n to state x, it takes on average F_{x, n} many transitions to return to state n.

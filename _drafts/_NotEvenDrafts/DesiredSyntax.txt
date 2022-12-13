@@ -1,0 +1,24 @@
+We should be able to define the following objects:
+
+Finitely presented displex categories (fp-displexcats):
+    The initial fp-displexcat
+    Augmenting an fp-displexcat with a new object
+    Augmenting an fp-displexcat with a new morphism between two of its objects
+    Augmenting an fp-displexcat with a new equation between two of its morphisms
+    Augmenting an fp-displexcat with the fact that one of its morphisms is display
+
+Objects within fp-displexcats
+Morphisms between such
+Equations between such
+Demonstrations that a morphism is display
+
+Displex functors between fp-displexcats (assign each generating n-cell an n-cell, for n in 0, 1, 2, and preservation of the display property).
+Natural transformations between such (assign each generating n-cell an (n + 1)-cell, for n in 0, 1. Is there any importance to considering the special case property when all assigned 1-cells are display? These are used to make the functor categories displex.).
+Equations between such (assign each generating n-cell an (n + 2)-cell, for n in 0).
+
+Some kind of internalization process (turn an fp-displexcat into the theory of interior models of such)
+Some kind of externalization process (given an internal fp-displexcat, take its global aspect, or perhaps even its aspect at any old object, the displex functors between these from any old morphism, and so on)
+These last two combine into something like a functor from the category of Fp-Displexcats to Fp-Displexcats(Free fp-displexcat on one object, the theory of fp-displexcats), which is surjective on n-cells for all n > 0 (thus, a full faithful equivalence onto a full subcategory). Maybe this is even fully an equivalence. I think it is!
+
+-------
+Should it be possible to augment a lexcat by saying two objects are equal? Should it be possible to say of two lexfunctors that they are equal? These things all become possible once we internalize into the theory of strict lexcats, after all. There is this mismatch between strictness and non-strictness in that way.
