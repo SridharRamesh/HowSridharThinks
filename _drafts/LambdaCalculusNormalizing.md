@@ -25,3 +25,25 @@ It's possible I've gotten something wrong in here. I need to remember how expone
 This is something like normalizing under beta/eta equality. For normalization in a directed way, using only reductions, I forget the details, but this probably can be handled by the Seely (is it Seely?) stuff on ordered cccs. It also follows from our Church-Rosser property above.
 
 This shows weak normalization, but how to show strong normalization?
+
+****
+
+Some further scratch notes I discovered, about the fact that the free cartesian closed category on a category with finite products contains the latter fully and faithfully:
+
+We take a starting category with finite products C, and let C' be the corresponding free CCC. The map C → C' induces also a map C' → Psh(C) (its profunctor right adjoint; this will be product-preserving, though not exponential-preserving). Note that this is different from the ccc map C' → Psh(C) which exists by the universal property of C'. Whenever we write C' → Psh(C), we mean the profunctor right adjoint to C → C', not the ccc map.
+
+This gives us a comma category K = (Psh(C), C' → Psh(C)). On general comma category grounds, this K is ccc, the projection K → Psh(C) preserves finite products (though NOT exponentials!), and the projection K → C' is a ccc functor.
+
+From the universal property of K as a comma category (indeed, a comma object even within the 2-category of categories with finite products), and the straightforward natural transformation from the Yoneda embedding C → Psh(C) to the composite C → C' → Psh(C), we obtain a map C → K such that the composite C → K → Psh(C) is the Yoneda embedding, while the composite C → K → C' matches our original map C → C'. Since C → K → Psh(C) is faithful, we have that C → K must itself be faithful. Furthermore, by considering what the morphisms in K are between objects in the range of C → K, and then applying some Yoneda lemma business, we find that C → K must be full [TODO: expand on this. This is where it's important we use the particular C' → Psh(C) that we used].
+
+By the universal property of C', the map C → K factors as C → C' → K. Thus, our map C → C' = C → K → C' further factors as C → C' → K → C'. The C' → K → C' are ccc functors, and thus compose to identity on C' by the universal property of C'. It follows that C' → K is faithful. But also C → K = C → C' → K was previously noted to be a full and faithful functor. It follows that C → C' is full and faithful (if a bijection is given by f followed by an injection, then f must itself be bijective).
+
+****
+
+To write up:
+
+Comma category exponentials
+Comma category subobject classifier
+Comma category general representation theorem?
+Representability for subcategories of presheaf categories
+The above full faithfulness theorem for CFP -> lambda calculus
