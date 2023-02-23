@@ -2,7 +2,7 @@
 title: "Free Theory With An Internal X"
 date: 2021-1-12
 ---
-Consider the free theory with an internal X extending x. When we internalize its internal X, we get some X extending x. But is it x on the dot, or might it be changed from x to have more in it? It seems obvious but not obviously obvious that, when Set itself is an X, we should get back x on the dot. Here, I want to write out the reasoning, to make it obviously obvoius.
+Consider the free theory with an internal X extending x. When we externalize its internal X, we get some X extending x. But is it x on the dot, or might it be changed from x to have more in it? It seems obvious but not obviously obvious that, when Set itself is an X, we should get back x on the dot. Here, I want to write out the reasoning, to make it obviously obvoius.
 
 I'm phrasing this very abstractly, because I mean for it to apply very broadly. Whatever Xes are, they should form a category. And whatever theories with an internal X are, they should form a category. From the latter to the former, we should have a functor G which sends any theory with an internal X to the externalization of its designated internal X. To say that we have, for any given x : X, a free theory with internal X extending x, is to say that this functor we just noted has a left adjoint F. And to ask for the externalization of this free structure's internal X to be x again, in the desired way, is to ask for the unit of this adjunction to be an isomorphism.
 

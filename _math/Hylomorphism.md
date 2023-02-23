@@ -22,7 +22,7 @@ In other words, a fixed point to the map $$x \mapsto M \circ F(-) \circ W$$.
 
 Recall that, when dealing with two functions $$f$$ and $$g$$ in opposite direction between two sets, the fixed points of $$f \circ g$$ and of $$g \circ f$$ are in bijection, as induced by $$g$$ and $$f$$.
 
-Thus, when $$F$$ and $$G$$ are functors in opposite direction between two categories, we have a bijective correspondence between $$FG$$-hylomorphisms $$F(V) \circ W$ \to M \circ F(N)$$ and $$GF$$-hylomorphisms $$G(W) \circ V \to G(M) \circ N$$, as illustrated below:
+Thus, when $$F$$ and $$G$$ are functors in opposite direction between two categories, we have a bijective correspondence between $$FG$$-hylomorphisms $$F(V) \circ W \to M \circ F(N)$$ and $$GF$$-hylomorphisms $$G(W) \circ V \to G(M) \circ N$$, as illustrated below:
 
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsMTIsWzMsMiwidiJdLFs0LDIsIm4iXSxbMywwLCJHKEYodikpIl0sWzQsMCwiRyhGKG4pKSJdLFszLDEsIkcodykiXSxbNCwxLCJHKG0pIl0sWzAsMSwiRih2KSJdLFswLDAsIkYoRyh3KSkiXSxbMSwwLCJGKEcobSkpIl0sWzEsMSwiRihuKSJdLFswLDIsInciXSxbMSwyLCJtIl0sWzAsMSwieSIsMl0sWzIsMywiRyhGKHkpKSJdLFs0LDIsIkcoVykiXSxbMyw1LCJHKE0pIl0sWzAsNCwiViJdLFs1LDEsIk4iXSxbNiw3LCJGKFYpIl0sWzgsOSwiRihOKSJdLFs3LDgsIkYoRyh4KSkiXSxbMTAsMTEsIngiLDJdLFsxMCw2LCJXIl0sWzksMTEsIk0iXV0=&embed" width="912" height="432" style="border-radius: 8px; border: none;"></iframe>
 {% comment %}
