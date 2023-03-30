@@ -24,7 +24,7 @@ Most states $$T$$ have two edges in and two edges out: You can age into them or 
 
 In our distribution $$p$$, because it is constant as all $$t_i$$ go up and all $$s_i$$ go down by the same amount, the flow into such a node via aging matches the flow out of that node by aging; the purely aging dynamics do not change the value of such a node.
 
-The flow into a node by queue exit and the flow out of a node by queue entrance also match up: If $$ \vert T \vert  = C$$, these are both impossible. Otherwise, the rate of queue exit taking us to $$ \vert T \vert $$ is the integral over all $$(t, 0)$$ of $$p( \vert T \vert  \cup \{(t, 0)\} dt$$, which comes to $$\lambda p( \vert T \vert )$$. This matches the rate of queue arrival taking us out of state $$ \vert T \vert $$. [TODO: Be careful about the dt ds in (t, 0) here and in general]
+The flow into a node by queue exit and the flow out of a node by queue entrance also match up: If $$ \vert T \vert  = C$$, these are both impossible. Otherwise, the rate of queue exit taking us to $$ T $$ is the integral over all $$(t, 0)$$ of $$p( T  \cup \{(t, 0)\} dt$$, which comes to $$\lambda p( T )$$. This matches the rate of queue arrival taking us out of state $$ T $$. [TODO: Be careful about the dt ds in (t, 0) here and in general]
 
 There are some special states that cannot be aged into or aged out of. If a state has a $$t_i = 0$$, it cannot be aged into, but it CAN be queue arrivaled into. The amount of density which flows out of such $$T \cup \{0, s\}$$ by aging is all of $$p(T \cup \{0, s\})$$. And the queue arrivals come at exactly the rate to balance all the density aging out: The rate of queue arrivals into $$T \cup \{0, s\}$$ is $$\lambda f(s) p(T) = p(T \cup \{0, s\})$$.
 
