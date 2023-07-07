@@ -8,7 +8,9 @@ The Fourier transform is characterized by the fact that the Dirac delta as input
 
 It is straightforwardly seen from the definition of the Fourier transform that also, conversely, multiplication by suitable exponentials on inputs turns into translation on the inputs. Note that the translations corresponding to a given exponential are opposite in these two correspondences.
 
-The translation of inputs -> multiplication by exponentials of outputs property immediately generalizes into the property that F(x convolved with y) = F(x) times F(y), by thinking of convolution with x as a linear combination of various translations. Similarly, the multiplication of inputs -> translation of outputs property tells us that F(F(x) times y) = (x reversed) convolved with F(y), again by thinking of convolution with x as a linear combination of suitable translations. (The reversal here comes from the last sentence of the previous paragraph).
+The translation of inputs -> multiplication by exponentials of outputs property immediately generalizes into the property that F(x convolved with y) = F(x) times F(y), by thinking of convolution with x as a linear combination of various translations. Similarly, the multiplication of inputs by exponentials -> translation of outputs property tells us that F(F(x) times y) = (x reversed) convolved with F(y), again by thinking of convolution with x as a linear combination of suitable translations. (The reversal here comes from the last sentence of the previous paragraph).
+
+\[At this point, we know that the double Fourier transform followed by reversal commutes with both translation and multiplication by exponentials. We want to show that this entails being the identity times some constant.\]
 
 If we wish to show that F(F(x)) is proportional to (x reversed), it thus suffices to show that when y is proportional to the unit of multiplication (the constantly 1 function), we have that F(y) is proportional to the unit of convolution (the Dirac delta).
 

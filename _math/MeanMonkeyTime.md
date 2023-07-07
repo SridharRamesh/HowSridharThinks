@@ -25,3 +25,7 @@ Alternative perspective on the above:
 Suppose we have a Markov chain in which nodes are labelled with natural numbers, and no transition raises the number by more than one. What is the mean number of steps to go from $$n$$ to $$n + m$$ (call this $$F_{n, n + m}$$)? Well, this is the sum of $$E_n, E_{n + 1}, \ldots, E_{n + m - 1}$$, where $$E_n$$ is the mean number of steps to go from $$n$$ to $$n + 1$$.
 
 And how can we compute $$E_n$$? Let $$p_x$$ be the probability of transitioning into state $$x$$ in a single step, when starting from state $$n$$. Then $$E_n$$ is $$\frac{1}{p_{n + 1}} +$$ the sum of $$\frac{p_x}{p_{n + 1}} F_{x, n}$$ over all $$x$$ other than $$n + 1$$. On average, in going from state $$n$$ to state $$n + 1$$, we make $$\frac{p_x}{p_{n + 1}}$$ many transitions from state $$n$$ to state $$x$$ (including $$x = n + 1$$, these sum up to $$\frac{1}{p_{n + 1}}$$). After each transition from state $$n$$ to state $$x$$, it takes on average $$F_{x, n}$$ many transitions to return to state $$n$$.
+
+****
+
+See https://twitter.com/RadishHarmers/status/1641218111889190918 and https://en.wikipedia.org/wiki/Absorbing_Markov_chain#Variance_on_number_of_steps for discussion of the variance of the number of steps.

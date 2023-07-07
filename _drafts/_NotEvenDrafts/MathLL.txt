@@ -1,0 +1,176 @@
+Notes on Math Learned League one day from 2023, which includes as question 4 a thing about Spirographs I got rather into thinking about:
+
+1. Answer is 10.
+
+Outside of the median point, there is a direction to move in which the sum of distances lessens. So the answer must be the median point.
+
+2. Answer is 9.
+
+If three or more lines meet at a point, the number of intersections drops by at least 2 from the generic case.
+
+3. Answer is 30.
+
+By continued fraction expansion.
+1001/101 = 9 + 92/101
+101/92 = 1 + 9/92
+92/9 = 10 + 2/9
+9/2 = 4 + 1/2
+
+2 = 1 + 1
+
+So... 1 increment to take the starting 1 to 2
+Then 1 reciprocal to take 2 to 1/2
+Then 4 increments to take 1/2 to 9/2
+Then 1 reciprocal to take 9/2 to 2/9
+Then 10 increments to take 2/9 to 92/9
+Then 1 reciprocal to take 92/9 to 9/92
+Then 1 increment to take 9/92 to 101/92
+Then 1 reciprocal to take 101/92 to 92/101
+Then 9 increments to take 92/101 to 1001/101
+Then 1 increment to take 1001/101 to 101/1001
+
+That's 30 button presses all together.
+
+4. Answer is 10.
+
+We need to get back up to 0.7 or better, including the four missed math questions. So 4 missed must be 30% of total. 4 = 3/10 * x. x = 40/3 = 14 when rounded up. That means at least 10 more questions answered, after the 4.
+
+9/13 < 0.7. 10/14 > 0.7
+
+5. ???
+
+90/162 = 5/9 [scaled by 18] = 10/18 [scaled by 9].
+
+Let's say the small gear's radius is 10u, and the large gear's radius is 18u. The small gear's center is on a circle of radius 8u around the large gear's center [since it's 10u inwards from an 18u circle]. The pen is at distance 5u from this.
+
+So the pen fluctuates outside of a circle, at a distance 5/8 times this circle's radius.
+
+6. Answer is 2.
+
+In general, we're looking at 2^N * (2^(N + 1) - 1).
+
+The sum of reciprocal divisors of 2^N is (1 + 2 + ... + 2^N)/2^N = (2^(N + 1) - 1)/2^N.
+
+The sum of reciprocal divisors of (prime) 2^(N + 1) - 1 is 1 + 1/(2^(N + 1) - 1) = 2^(N + 1)/(2^(N + 1) - 1).
+
+Multilying these together, we get 2^(N + 1)/2^N = 2.
+
+7. Answer is 1010.
+
+For a 1 x 1 edge triangle, the number of ways to get from corner A to corner B is 2. Call this Any(2^0).
+For a 1 x 1 edge triangle, the number of ways to get from corner A to corner B specifically via corner C is 1. Call this Carom(2^0).
+
+Any(2^(n + 1)) = Any(2^n)^2 + Any(2^n) * [Any(2^n)^2 - Carom(2^n)^2]
+Carom(2^(n + 1)) = Carom(2^n) * [Any(2^n)^2 - Carom(2^n)^2]
+
+So Carom(2^1) = Carom(2^0) * [Any(2^0)^2 - Carom(2^0)^2] = 1 * [2^2 - 1^2] = 3.
+Any(2^1) = Any(2^0)^2 + Any(2^0) * [Any(2^0)^2 - Carom(2^0)^2] = 2^2 + 2 * [2^2 - 1^2] = 4 + 2 * 3 = 10.
+
+Any(2^2) = 10^2 + 10 * [10^2 - 3^2] = 100 + 10  * [100 - 9] = 100 + 910 = 1010.
+
+8. Answer is 1/14.
+
+Determinant of matrix. Also periodicity within row or within column, and every row/every column has a dark square.
+
+9. Answer is 3/40.
+
+10. Answer is 30.
+
+11. Answer is 729.
+
+The answer is 3^(log_2(64)) = 3^6 = 9^3 = 9 * 81.
+
+12. Answer is 4/7.
+
+----------
+
+(2^(...3) - 1)/2^(...2)
+
+1.11111... through 1/2^(...2)
+* (1 + 1/[2^(...3) - 1])
+
+----
+
+0 to 5/9
+1 to 6/9
+2 to 7/9
+3 to 8/9
+4 to 9/9
+5 to 1
+6 to 2
+7 to 3
+8 to 4
+
+2(5) - 1 = 9
+
+5/9
+
+5/9
+
+6/9
+
+
+5/9...
+
+6/9, 7/9, 8/9 -> 
+
+0 to 5/8
+1 to 6/8
+2 to 7/8
+3 to 8/8
+4 to 9/8
+
+x^2 + y^2 + 2xy cos(...)
+
+(x + ye^(...))(x + ye^(-...))
+---------
+
+Ar^(mx) + Br^(-nx)
+
+Derivative is i (Am r^(mx) - Bn r^(-nx))
+
+Imaginary component of derivative times original conjugate is real component of (Am r^(mx) - Bn r^(-nx)) (Ar^(-mx) + Br^(nx)) = A^2 m - B^2n + AmB r^((m + n)x) - ABn r^((-m - n)x) = A^2m - B^2n + AB(m - n) cos((m + n)x)
+
+This is between A^2 m - B^2n + AB(m - n) and A^2m - B^2n - AB(m - n).
+
+(A + B)(Am - Bn) and (A - B)(Am + Bn)
+
+A = 8, B = 5, m = 5, n = 9... 4
+
+Am - Bn has same sign as Am + Bn where A > 
+
+8 *  5 - 5 * 4
+
+---------
+
+Here's the general setup I wish to consider: We have a curve in a complex plane of the form A e^(i m θ) + B e^(i n θ) as θ varies for some fixed complex vectors A and B and real parameters m and n. Of course, this is invariant under swapping (A, m) and (B, n).
+
+I'll speak to two things about this. First, how this general setup relates to Spirographs specifically. Secondly, not specifically concerned about Spirographs, the angle monotonicity properties of this general setup.
+
+By a hypospirograph (aka hypotrochoids, I see now on Wikipedia, but I worked this all out before seeing that), I mean moving a pen in a small gear inside a large gear. For these, we may take A = the starting displacement from the center of the large gear to the center of the small gear, while B = the starting displacement from the center of the small gear to the pen. Letting G = the radius of the large gear, g = the radius of the small gear, and p = the fraction out along the small gear's radius at which the pen is located, we have |A| = G - g, and |B| = pg. Furthermore, mθ is the angle by which the small gear has moved around the center of the large gear, while nθ is the angle by which the orientation of the small gear has changed. This nθ is m0 (1 - G/g). Thus, n/m = 1 - G/g. Observe also that p = -(n/m) |B/A|.
+
+With hypospirographs, we will always have G ≥ g ≥ 0 and p in [0, 1]. (For example, in our Learned League case, we have G/g = 162/90 and p = 1/2.)
+
+Conversely, from our general set up, when n and m have opposite sign, we may define p to be -(n/m) |B/A|, define g as |B|/p, and define G as (1 - n/m)g to see it as a kind of generalized hypospirograph. We will automatically have p ≥ 0 and G ≥ g ≥ 0 as expected. p will furthermore be ≤ 1 as expected just in case |Am| ≥ |Bn|.
+
+But what if |Am| ≤ |Bn|? Well, then, just swap (A, m) and (B, n) and go from there. Thus, our general setup restricted to m and n with opposite sign is precisely equivalent to the various hypospirographs we may consider (ignoring issues around degenerate cases that would cause divisions by zero). [This also tells us that any generalized hypospirograph for which p ≥ 1 is equivalent to another ordinary hypospirograph with p ≤ 1. In particular, each p = 1 hypospirograph (aka hypocycloid) has another equivalent p = 1 hypospirograph, by sending (G, g) to (G, G - g).]
+
+We could also consider other kinds of generalized Spirographs corresponding to n and m with the same sign. I believe this corresponds to the two cases of turning a pen in a large gear rolling "inside" a small gear and of turning a pen in one gear rolling outside another gear, according as whether |n/m| |B/A| is below or above). I will discuss these later, nevermind them for now, except to say that they are subsumed by our general framework.
+
+Now, under what conditions is it the case that the angle (i.e., argument) of f(θ) = A e^(i m θ) + B e^(i n θ) varies monotonically as θ varies? This happens just in case the derivative of f times the conjugate of f has an imaginary component which never switches sign. Straightforward calculus shows that this imaginary coefficient is i times (|A|^2 m + |B|^2 n + |AB|(m + n) cos((m - n)θ)). Thus, it oscillates between (|A| + |B|) (|A|m + |B|n) and (|A| - |B|) (|A|m - |B|n). So we need those to have the same sign.
+
+This happens just in case |A| - |B| and |Am| - |Bn| have the same sign (you can reason to this either by WLOG assuming |A| ≥ |B|, or by multiplying all the relevant factors together and noting that (x + y)(x - y) = x^2 - y^2 has the same sign as |x| - |y|).
+
+Note that the cos((m - n)θ) oscillation is exactly the same as for the magnitude of f(θ) [as easily seen by considering f(θ) e^(-i n θ)]. So these oscillations are within one swoop. So we see that even if we have a failure of angle monotonicity, it's just that each swoop self-intersects once.
+----
+
+Ar^(mx) + Br^(nx)
+Derivative is i (Am r^(mx) + Bn r^(nx))
+Imaginary component of derivative times original conjugate is real component of (Am r^(mx) + Bn r^(nx))(Ar^(-mx) + Br^(-nx)) = A^2m + B^2n + ABm r^((m - n)x) + ABn r^((n - m)x) = A^2m + B^2n + AB(m + n) cos((m - n)x).
+
+This is between A^2m + B^2n + AB(m + n) and A^2m + B^2n - AB(m + n).
+(A + B)(Am + Bn) and (A - B)(Am - Bn)
+
+--------------
+
+arccos( |A|^2 m + |B|^2 n     /    |AB|(m + n)   ) / (m - n) is the θ at which the curveback happens
