@@ -13,3 +13,5 @@ Both of these occur for the same reason: For small C, using the Yoneda lemma and
 Thus, exponentials exist because any set-sized colimit-preserving functor F out of C has a right adjoint: Hom(F(-), d) will necessarily take set-sized coimits to limits. And we know that for any object p in Psh(C), the functor p x - is set-sized colimit-preserving because this is true componentwise, because of the existence of the existence of exponentials in Set itself.
 
 Similarly, the subobject functor is representable because being a subobject is a limit-definable condition (a map is monic in case its kernel pair is trivial), and thus can be checked componentwise in Psh(C). Thus, subobject functor on Psh(C) turns set-sized colimits into limits, and thus is representable.
+
+[TODO: It's fairly straightforward to show with the Yoneda lemma that the Yoneda embedding preserves cartesian exponentials. What about the fact that the presheaf category on a monoidal category also is monoidal closed (via Day convolution)? Does the Yoneda embedding preserve those exponentials?]
