@@ -18,7 +18,7 @@ Let $$F$$ be an endofunctor on some category, let $$W : w \to F(w)$$ be an $$F$$
 \end{tikzcd}\]
 {% endcomment %}
 
-In other words, a fixed point for the map $$x \mapsto M \circ F(-) \circ W$$.
+In other words, a fixed point for the map $$x \mapsto M \circ F(x) \circ W$$.
 
 Recall that, when dealing with two functions $$f$$ and $$g$$ in opposite direction between two sets, the fixed points of $$f \circ g$$ and of $$g \circ f$$ are in bijection, as induced by $$g$$ and $$f$$.
 

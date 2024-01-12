@@ -45,4 +45,4 @@ One particular way to represent this double cover explicitly is to think of vect
 
 ----
 
-TODO: Add more on spinors and (s)pin group, generalizing this last segment. The general idea of thinking of reflections as acting by this conjugation, like in the last semgent, and rotations as composites of reflections.
+TODO: Add more on spinors and (s)pin group, generalizing this last segment. The general idea of thinking of reflections as acting by this conjugation, like in the last section, and rotations as composites of reflections.
