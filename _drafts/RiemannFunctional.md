@@ -10,6 +10,8 @@ By re-applying this rule, we will have that k(s) * k(1 - s) = 1.
 
 The exact nature of k(s) is not important to us right now, though we will see its form later.
 
+(Incidentally, one corollary of this is that k(1/2) = 1 and |x|^(-1/2) is its own Fourier transform. Or rather, we can quickly see that either this is true or that k(1/2) = -1 and |x|^(-1/2) is the negation of its Fourier transform. I suppose a bit more work is involved to see that its Fourier transform is specifically positive.)
+
 ----
 
 Observe that if f is any function which is its own Fourier transform, then the integral f(x) |x|^(-s) dx over the entire real line is equal [by the unitarity of the Fourier transform, and thinking of this as a dot product between f and the other function] to k(s) times the integral of f(x) |x|^(-1 + s) dx over the entire real line.
@@ -42,10 +44,57 @@ The integral of the [y^(-s - 1) - y^(-s - 2)] dy part from 1 to infinity comes o
 
 So we get overall the integral from 1 to infinity of q(x) [x^s + x^(-s - 1)] dx + f(0)/2 * [1/s + 1/(-s - 1)].
 
-This is manifestly meromorphic (with only the given poles at s = 0 and s = -1), and invariant under repalcing s with -1 - s.
+This is manifestly meromorphic (with only the given poles at s = 0 and s = -1), and invariant under replacing s with -1 - s. [TODO: Why is it manifestly meromorphic? Presumably because Mellin transforms are meromorphic interior to their region of convergence. That this Mellin transform is convergent everywhere presumably depends on f.]
 
 Thus we get the functional equation that the integral of q(x) x^s dx from 0 to infinity [meromorphically extended to the entire complex plane] is invariant under replacing s with -1 - s.
 
-This was the sum of the integral f(nx) x^s dx over all real x and all positive integers n. By rescaling x by a factor of n, this is the sum of the integral f(x) x^s dx n^(-s - 1) over all positive integers n. Thus, ζ(s + 1) times the Mellin transform of a fixed point f of the Fourier transform (or rather, M(-s) where M is the Mellin transform as defined with kernel |x|^(-s) as before). So ζ(s + 1) M(-s) is invariant under replacing s with -1 - s. Thus, ζ(s + 1) M(-s) = ζ(-s) M(1 + s). Or put another way, ζ(1 - s) M(s) = ζ(s) M(1 - s). Since M(s) = k(s) M(1 - s), we have ζ(1 - s) k(s) M(1 - s) = ζ(s) M(1 - s). Dividing by M(1 - s), we have ζ(s) = k(s) ζ(1 - s).
+This was the sum of the integral f(nx) x^s dx over all real x and all positive integers n. By rescaling x by a factor of n, this is the sum of the integral f(x) x^s dx n^(-s - 1) over all positive integers n. Thus, ζ(s + 1) times the Mellin transform of a fixed point f of the Fourier transform (or rather, M(-s) where M is the Mellin transform as defined with integration kernel |x|^(-s) as before). So ζ(s + 1) M(-s) is invariant under replacing s with -1 - s. Thus, ζ(s + 1) M(-s) = ζ(-s) M(1 + s). Or put another way, ζ(1 - s) M(s) = ζ(s) M(1 - s). Since M(s) = k(s) M(1 - s), we have ζ(1 - s) k(s) M(1 - s) = ζ(s) M(1 - s). Dividing by M(1 - s), we have ζ(s) = k(s) ζ(1 - s).
 
-This is the functional equation we sought.
+This is the functional equation we sought. This also gives the analytic continuation of ζ as ζ(s + 1) M(-s) / M(-s). Of course, different choices of f give different choices of M here. [TODO: Presumably, it is important to pick an f such that the numerator and denominator here are both convergent on the entire complex plane]
+
+----
+
+TODO: By Poisson summation reasoning, letting Rexp(x) = e^(2πix) and letting Z(a, b, s) = the sum of Rexp(an) |n + b|^(-s) over all integers n, we find a relationship between Z(a, b, s) and Z(-b, a, 1 - s). [First in the range 0 < Re(s) < 1, so these series are actually convergent, then extended to arbitrary s by meromorphic continuation.]
+
+Since Z(a, b, s) only depends on the values of a or b mod 1, we can also write this as a relationship between Z(a, b, s) and Z(1-b, a, 1 - s), which will be convenient for reasons which will become apparent in a second.
+
+More specifically, let L(a, b, s) = the sum of Rexp(an) |n + b|^(-s) over all POSITIVE integers n. Then we have that Z(a, b, s) = L(a, b, s) + Rexp(-a) L(-a, 1 - b, s) for b in [0, 1]. (The absolute value in |n + b| is what leads to this particular restriction on b in this formula.)
+
+From now on, presume both a and b to be real and in (0, 1) (avoiding the endpoints so that we don't have to think about 0^(-s) or 0^-(1 - s)).
+
+Now our relationship between Z(a, b, s) and Z(1 - b, a, 1 - s) can be seen as a relationsip between four L terms.
+
+TODO: Derive from this the three L term functional equation for real non-integer a and b, as in the proof of (1.4) from (2.4) in "ON THE LERCH ZETA FUNCTION" by Apostol. (This seems to involve considering the analogue of our existing Z relationship where we use |n + b|^(-s) * sgn(n + b) instead of just |n + b|^(-s). Perhaps we can directly reason about this with Poisson summation type reasoning again. We get the same four L terms but with different coefficients. Then we add our two Z relationships together, which cancels away one of the L terms and leaves us with a three L term relationship. Perhaps this is also like using Poisson summation on u(x) * x^s.)
+
+By continuity, presume this three L term functional equation continues to hold for integer a or b as well, whenever we have Re(s) < 0 such that we can ignore the 0^(-s) term on one side. (The advantage of this three L term functional equation is that we only have the one 0^(-s) term show up, without any 0^(-(1 - s)) term to also worry about.) Then generalize this to arbitrary s by meromorphic continuation.
+
+Then the Hurwitz zeta functional equation is a special case of that, and the Riemann zeta functional equation is a special case of that.
+
+---------
+
+Better approach to everything:
+
+Let ζ(s, a) be the sum of (n + a)^(-s) over natural numbers n. This is the Hurwitz zeta function.
+
+Let P(s, a) be the sum of f(n + a) over all integers n, where f(x) = u(x) * x^(-s). This is clearly periodic in a.
+
+Note that P(s, a) = ζ(s, a) for 0 < a < 1.
+
+By Poisson summation, P(s, a), viewed as a function of a with s fixed, has a Fourier series whose coefficients are given by the Fourier transform of f, evaluated at the integers. This Fourier series will converge back to P wherever P is, say, differentiable (again, as a function of a), or even just left and right differentiable (in the sense of being continuous and having directional derivatives in both directions, possibly not matching; if the function is otherwise continuously differentiable, this amounts to a jump discontinuity in the derivative).
+
+As ζ(s, a) is differentiable in a, so is P(s, a) as a ranges over (0, 1). Furthermore, if ζ(s, 0) = ζ(s, 1) [i.e., if 0^(-s) = 0; i.e., if Re(s) < 0], then the left and right limits of P(s, a) as a approaches any integer will match and equal this as well.
+
+One remaining hitch is that when Re(s) < 0, our definitions of ζ(s, a) and P(s, a) don't actually converge. But rather, we will interpret P(s, a) as the unique periodic function whose average value is zero and whose sufficiently high derivatives are given by the appropriate convergent series. TODO
+
+We can split ζ(s, a) into ζ(s, a + 1) + a^(-s). Now suppose we want to take the Fourier series corresponding to evaluating this over 0 < a < 1. The regime where we can handle ζ(s, a + 1) as a sum, with furthermore convergent integrals for its Fourier series, is with Re(s) > 1 (note in particular that we will not have difficulty with the integrand a^(-s) blowing up at a = 0, because these integrals will be of (a + 1)^(-s) exp(i * whatever) from a = 0 to 1 instead). The regime where we can handle a^(-s) with convergent integrals for its Fourier series will be with Re(s) < 1 (so that a^(-s + 1) approaches 0 at a = 0). These are different regimes, but both ζ(s, a + 1) and a^(-s) satisfy nice properties relating shifting s to differentiating wrt a. Thus, we will be able to obtain their Fourier series in the separate nice s regimes for each, then hopefully turn this into their Fourier series in some overlapping s regime of interest, thus obtaining a Fourier series for ζ(s, a) in that regime.
+
+***
+
+Some resources:
+
+https://dept.math.lsa.umich.edu/~lagarias/TALK-SLIDES/ucsd-starkconf2013sep.pdf
+https://msp.org/pjm/1951/1-2/pjm-v1-n2-p01-s.pdf
+https://www.jstor.org/stable/2031757?read-now=1&seq=2#page_scan_tab_contents
+https://fixedpointtheoryandalgorithms.springeropen.com/articles/10.1186/1687-1812-2013-70
+https://sci-hub.st/https://doi.org/10.1186/1687-1812-2013-70
+https://www.jstor.org/stable/2032062?read-now=1&seq=1#page_scan_tab_contents

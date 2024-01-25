@@ -97,3 +97,15 @@ Thus, as long as the range of values of F(z) is dense enough with respect to thi
 In particular, this means that this ratio stays the same even when x is translated, which also translates F(F(x)), and thus also translates the multiplicative ratio. Thus, this multiplicative ratio is a constant.
 
 Thus, reverse F(F(x)) is proportional to x in general, concluding the inversion theorem. [Modulo concerns about dividing by zero in producing this ratio]
+
+***
+
+Perhaps a repeat of some of what has been said above:
+
+For a nice space of functions (e.g., Schwartz functions) closed under linear combination and Fourier transforms, we have that F(F(x)) reversed is proportional to x, by the following argument: Let's actually write F'(F(x)) where F' is the Fourier transform with the reverse convention, such that we wish to show F'(F(x)) = x.
+
+It's easy to see that F(x translated) = F(x) times an exponential and F'(x times such an exponential) = F(x) translated so, in such a way that F'(F(x translated)) = F'(F(x)) translated so. So it suffices to show that F'(F(x)) and x are proportional at input 0, after which by this translation property they will have to be similarly proportional everywhere.
+
+If we can show that F'(F(x)) has output 0 at input 0 whenever x does, then we will have shown that whenever x and y have the same value at input 0, so do F(F(x)) and F(F(y)). It will then follow that the output of F'(F(x)) at input 0 depends only on the output of x at input 0, in a linear way, so that we may conclude the desired proportionality. [We may then continue as in a previous section to show that the constant of proportionality is nonzero and indeed positive]
+
+So our task is to show that F'(F(x)) has output 0 at input 0 whenever x does. When our nice space of functions has a sufficient smoothness property, then x has output 0 at input 0 iff x is divisible by the identity function (or just as well, some other convenenient function which divides and is divisible by the identity). And F(x times identity) = F(x) differentiated, while F'(x differentiated) = F'(x) times identity, so that F(F(x times identity)) = F(F(x)) times identity. This concludes the proof.
