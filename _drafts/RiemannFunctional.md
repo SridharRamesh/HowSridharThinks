@@ -98,3 +98,34 @@ https://www.jstor.org/stable/2031757?read-now=1&seq=2#page_scan_tab_contents
 https://fixedpointtheoryandalgorithms.springeropen.com/articles/10.1186/1687-1812-2013-70
 https://sci-hub.st/https://doi.org/10.1186/1687-1812-2013-70
 https://www.jstor.org/stable/2032062?read-now=1&seq=1#page_scan_tab_contents
+
+***
+
+## Defining the zeta functions
+
+Recall from our previous discussion of [difference equations](./DifferenceEquationZeta.html) that there is a unique function $$F(p, x)$$ such that we have:
+1. $$F(p, x) = (p + 1) \sum_{n \in \nat} x^p$$ whenever $$\Re(p) < -1$$
+2. $$\frac{d}{dx} F(p, x) = (p + 1) F(p - 1, x)$$
+3. $$\int_{x = \beta + 1}^{\beta} F(p, x) \; dx = \beta^(p + 1)$$, for all values of $$\beta$$.
+
+Furthermore, this unique function $$F(p, x)$$ is complex-differentiable with respect to $$p$$ as well.
+
+Note that given condition (2) at exponent $$p - 1$$, we find that condition (3) at exponent $$p$$ is equivalent to saying $$F(p, x) - F(p, x + 1) = (p + 1) x^p$$.
+
+Where $$s \neq 1$$, we define the Hurwitz zeta function as $$\zeta(s, x) = F(-s, x)/(-s + 1)$$ and the Riemann zeta function as $$\zeta(s) = \zeta(s, 1)$$. The factor $$(p + 1)$$ was included in the conditions above just to make $$F(p, x)$$ nicely defined and finite at $$p = 1$$, whereas these zeta functions will have a pole at their corresponding $$s = - 1$$.
+
+Our conditions on $$F(p, x)$$ straightforwardly yield corresponding conditions on $$\zeta(s, x)$$. (TODO)
+
+To be pedantically unambiguous, in the above definition of $$F$$, we interpret $$x^p = \exp(p \log(x))$$ by taking $$\log$$ as the natural logarithm assuming real values on positive inputs and then analytically continued to $$\Re(x) \geq 0$$, $$x \neq 0$$. (We could continue it even further, but will have no need for this. This punctured closed half-plane is the domain of $$x$$ for our purposes.)
+
+For those not interested in reading the previous link (or thinking in any abstraction beyond this specific difference equation, though that abstraction makes things cleaner), the unique existence argument for $$F$$ is like so:
+
+Suppose we weaken condition (3) to the condition (3') only demanding this hold at a particular value of $$\beta$$ (call this particular value $$\beta_0$$). Then, for any constant $$\alpha$$ (fix any choice of $$\alpha$$ you like, it doesn't matter), the conjunction of conditions (2) and (3) is equivalent to demanding that $$F(p, x) = F^*(p, x)$$, where $$F^*(p, x)$$ is defined as $$G(p, x) + \beta_0^{p + 1} - \int_{t = \beta_0 + 1}^{\beta_0} G(p, t) \; dt$$, with $$G(p, x)$$ defined as $$\int_{t = \alpha}^{x} (p + 1) F(p - 1, t) \; dt$$. Note furthermore that this definition of $$x \mapsto F^*(p, x)$$ is defined at all choices of $$p$$ such that the function $$x \mapsto F(p - 1, x)$$ is defined.
+
+Thus, starting with a function $$F(p, x)$$ defined for $$\Re(p) < p_0$$ which satisfies conditions (2) and (3') throughout this domain, we may use this definition of $$F^*$$ to uniquely extend $$F$$ in such a way as to satisfy conditions (2) and (3') for all $$p$$ with $$\Re(p) < p_0 + 1$$.
+
+Note also that the explicit definition of $F^*$$ yields an explicit definition of $$\frac{d}{dp} F^*(p, x)$$ in terms of $$\frac{d}{dp} F(p - 1, x)$$. Thus, this unique extension process preserves differentiability in the first argument.
+
+By repeatedly applying this unique extension process to the function described in condition (1) \[which by termwise consideration manifestly satisfies conditions (2) and (3), while furthermore being complex-differentiable in its first argument\], we find a unique function $$F(p, x)$$ defined over all complex $$p$$ satisfying conditions (1), (2), and (3').
+
+Finally, let $$H(p, \beta)$$ be the difference between the two sides of condition (3). By invoking condition (2), we soon find that $$\frac{d}{dx} H(p, \beta) = (p + 1) H(p - 1, \beta)$$. So if condition (3) [which says that $$H$$ vanishes at all $\beta$] holds for exponent $$p - 1$$, and condition (3') [which says that $$H$$ vanishes at $$\beta_0$$] holds for exponent $$p$$, then condition (3) holds for exponent $$p$$. Thus, inductively, we may conclude that condition (3) holds for our $$F$$ at all exponents $$p$$.
