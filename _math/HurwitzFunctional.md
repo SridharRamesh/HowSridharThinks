@@ -25,21 +25,23 @@ Suppose we wish to find the Fourier series for the function $$\zeta(-p, x)$$ res
 
 The coefficients of the Fourier series are obtained in the usual way, by evaluating $$c_n = \int_0^1 \zeta(-p, x) e^{-2 \pi i n x} \; dx$$ at each integer $$n$$. We will then obtain the Fourier series $$f(x) = \sum_{n \in \mathbb{Z}} c_n e^{2 \pi i n x}$$. As $$\zeta(-p, x)$$ is differentiable with respect to $$x$$ throughout $$x \in (0, 1)$$, this $$f(x)$$ will converge to $$\zeta(-p, x)$$ for such $$x$$. If, furthermore, we have that $$\zeta(-p, 1) = \lim_{x \to 0} \zeta(-p, 0)$$ (as happens when $$\Re(p) > 0$$, because then their difference is $$0^p = 0$$), then $$f(x)$$ will furthermore match $$\zeta(-p, x)$$ at $$x = 0, 1$$ as well.
 
-(For $$\Re(p) < -1$$, expressing $$\zeta(-p, x) = \sum_{n \in \mathbb{N}} (x + n)^p$$ for $$x \in in (0, 1]$$ as a Fourier series can be seen also as applying Poisson summation to $$x \mapsto u(x) x^p$$, where $$u$$ is the Heaviside step function.)
+(For $$\Re(p) < -1$$, expressing $$\zeta(-p, x) = \sum_{n \in \mathbb{N}} (x + n)^p$$ for $$x \in (0, 1]$$ as a Fourier series can be seen also as applying Poisson summation to $$x \mapsto u(x) x^p$$, where $$u$$ is the Heaviside step function.)
 
-When $$\Re(p) \in (-1, 0)$$, we may reason as follows:
+When $$\Re(p) > -1$$, we may reason as follows to compute $$c_0$$
 
-The $$c_0$$ coefficient for $$\zeta(-p, x)$$ is easy: This is $$\int_{0}^{1} \zeta(-p, x) \; dx = \frac{\zeta(-(p + 1), 1) - \zeta(-(p + 1), 0)}{p + 1} = \frac{-0}{p + 1} = 0$$. But figuring out the $$c_n$$ for $$n \neq 0$$ will require a different approach.
+The $$c_0$$ coefficient for $$\zeta(-p, x)$$ is easy: This is $$\int_{0}^{1} \zeta(-p, x) \; dx = \frac{\zeta(-(p + 1), 1) - \zeta(-(p + 1), 0)}{p + 1} = \frac{-0^{p + 1}}{p + 1} = 0$$.
 
-For any natural numbers $$m$$, we may re-express $$\zeta(-p, x)$$ as $$x^p + (x + 1)^p + \ldots + (x + m - 1)^p + \zeta(-p, x + m)$$, and in this way find $$\int_{0}^{1} \zeta(-p, x) e^{-2 \pi i n x} \; dx = \left( \int_{0}^{m} x^p e^{-2 \pi i n x} \; dx \right) + \left(\int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i n x} \; dx \right)$$. Thus, if we can show that $$\lim_{m \to 0} \int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i n x} \; dx = 0$$, we may conclude that $$c_n = \int_{0}^{1} \zeta(-p, x) e^{-2 \pi i n x} \; dx = \int_{0}^{\infty} x^p e^{-2 \pi i n x} \; dx $$.
+When $$\Re(p) < 0$$, we may reason as follows to compute $$c_n$$ for $$n \neq 0$$:
+
+For any natural number $$m$$, we may re-express $$\zeta(-p, x)$$ as $$x^p + (x + 1)^p + \ldots + (x + m - 1)^p + \zeta(-p, x + m)$$, and in this way find $$\int_{0}^{1} \zeta(-p, x) e^{-2 \pi i n x} \; dx = \left( \int_{0}^{m} x^p e^{-2 \pi i n x} \; dx \right) + \left(\int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i n x} \; dx \right)$$. Thus, if we can show that $$\lim_{m \to \infty} \int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i n x} \; dx = 0$$, we may conclude that $$c_n = \int_{0}^{1} \zeta(-p, x) e^{-2 \pi i n x} \; dx = \int_{0}^{\infty} x^p e^{-2 \pi i n x} \; dx $$.
 
 We now take on this task. Note that, via integration by parts or equivalently the product rule for differentiation (specifically, as applied to $$\frac{d}{dx} \zeta(-p, x) e^{-2 \pi i n x}$$), we have that $$\int_{m}^{m + 1} -2 \pi i n \zeta(-p, x) e^{-2 \pi i n x} \; dx = -m^p + 2 \pi i n p \int_{m}^{m + 1} \zeta(-(p - 1), x) e^{-2 \pi i n x} \; dx$$. Recalling that $$\Re(p) < 0$$, we have that $$\lim_{m \to \infty} m^p = 0$$ and $$\lim_{m \to \infty} \zeta(-(p - 1), x + m) = 0$$. Together with the bounded magnitude of $$e^{-2 \pi i n x}$$, we may conclude that $$\lim_{m \to \infty} \int_{m}^{m + 1} -2 \pi i n \zeta(-p, x) e^{-2 \pi i n x} \; dx = 0$$. For $$n \neq 0$$, this lets us conclude $$\lim_{m \to \infty} \int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i n x} \; dx = 0$$ as desired.
 
-We have now successfully determined the Fourier coefficients for $$\zeta(-p, x)$$, construed as a function over $$x \in (0, 1]$$, with $$\Re(p) \in (-1, 0)$$: To recap, these are $$c_0 = 0$$ and $$c_n = \int_{0}^{\infty} x^p e^{-2 \pi i n x} \; dx$$ for $$n \neq 0$$.
+We have now successfully determined the Fourier coefficients for $$\zeta(-p, x)$$ construed as a function over $$x \in (0, 1]$$, for $$\Re(p) \in (-1, 0)$$: To recap, these are $$c_0 = 0$$ and $$c_n = \int_{0}^{\infty} x^p e^{-2 \pi i n x} \; dx$$ for $$n \neq 0$$.
 
-Let $$\Gamma(p + 1) = \int_{0}^{\infty} x^p e^(-x) \; dx$$. Note that by rescaling change of variables \[TODO: Invoking analyticity of the Laplace transform throughout its region of absolute convergence, as this a complex rescaling factor\], we have that $$c_n$$ is $$(2 \pi i n)^(-1 - p) c_1$$, for $$n \neq 0$$.
+Let $$\Gamma(p + 1) = \int_{0}^{\infty} x^p e^{-x} \; dx$$. Note that by rescaling change of variables \[TODO: Invoking analyticity of the Laplace transform throughout its region of absolute convergence, as this a complex rescaling factor\], we have that $$c_n$$ is $$(2 \pi i n)^{-1 - p} \Gamma(p + 1)$$, for $$n \neq 0$$.
 
-TODO: Extend now to the Fourier series for $$\Re(p) \in (0, 1)$$ [and indeed, $$\Re(p) > -1$$ in general]. Conclude by looking at any particular interval where $$\Re(p) > 0$$ (so that the Fourier series actually converges at the boundary of its interval) that we have the Hurwitz functional equation, of which the Riemann functional equation is a special case.
+TODO: Extend now to the Fourier series for $$\Re(p) \in (0, 1)$$ [and indeed, $$\Re(p) > -1$$ in general], via the differentiation rule for Fourier series or equivalently integration by parts (this gives us the Fourier series at $$\Re(p) > - 1$$ when $$\Re(p)$$ is not an integer; we presumably may use continuity arguments to handle the case where $$\Re(p)$$ is an integer). Conclude by looking at any particular interval where $$\Re(p) > 0$$ (so that the Fourier series actually converges at the boundary of its interval) that we have the Hurwitz functional equation, of which the Riemann functional equation is a special case.
 
 ***
 
