@@ -2,6 +2,8 @@
 title: "The Hurwitz and Riemann functional equations"
 date: 2024-1-29
 ---
+TODO: Ignore this post. It's gone live too early. I'm still editing it.
+
 Where the celebrated "functional equation" for the Riemann zeta function comes from, as well as for the Hurwitz zeta function more generally. I believe the approach here is cleaner and better motivated than either the contour integration or theta function approaches people usually give, which seem to me a long mess of magic calculation. I think the approach here should make the functional equation even obvious, in hindsight.
 
 ## Defining the zeta functions
@@ -23,10 +25,10 @@ For the Hurwitz zeta function, the above conditions entail:
 
 \[To be pedantically unambiguous, in our domain of interest, we interpret $$x^p$$ for arbitrary $$p$$ via $$\log(x^p) = p \log(x)$$, where $$\log$$ is a logarithm assuming real values on positive inputs and then analytically continued to $$\Re(x) \geq 0$$, $$x \neq 0$$. (We could continue it to even larger domains for $$x$$, but will have no need for this. This punctured closed half-plane is the domain of $$x$$ for our purposes). When $$\Re(p) > 0$$ or $$p = 0$$, we also define $$0^p$$ as $$\lim_{x \to 0} x^p$$ (which is $$0$$ when $$\Re(p) > 0$$ and $$1$$ when $$p = 0$$) and define $$\zeta(-p, 0)$$ as $$\lim_{x \to 0} \zeta(-p, x) = \zeta(-p, 1) + 0^p$$.\]
 
-## Defining the zeta functions
+## Defining the gamma functions
 Although we here at How Sridhar Thinks often prefer to define [the generalized factorial](./FactorialGeneralized.html) by other means, for our purposes here, the following will be the most relevant approach to take:
 
-Consider the integral $$\Gamma(p + 1, start, end, s) = \int_{start}^{end} t^p s^{p + 1} e^{s t} \; dt$$. Note how, for any positive rescaling factor $$k$$, by basic change of variables from $$t$$ to $$kt$$, we have that $$\Gamma(p + 1, start, end, sk) = \Gamma(p + 1, start/k, end/k, s)$$.
+TODO
 
 ## Fourier series for the Hurwitz zeta
 
