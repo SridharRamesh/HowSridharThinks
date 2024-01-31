@@ -25,6 +25,8 @@ For the Hurwitz zeta function, the above conditions entail:
 
 \[To be pedantically unambiguous, in our domain of interest, we interpret $$x^p$$ for arbitrary $$p$$ via $$\log(x^p) = p \log(x)$$, where $$\log$$ is a logarithm assuming real values on positive inputs and then analytically continued to $$\Re(x) \geq 0$$, $$x \neq 0$$. (We could continue it to even larger domains for $$x$$, but will have no need for this. This punctured closed half-plane is the domain of $$x$$ for our purposes). When $$\Re(p) > 0$$ or $$p = 0$$, we also define $$0^p$$ as $$\lim_{x \to 0} x^p$$ (which is $$0$$ when $$\Re(p) > 0$$ and $$1$$ when $$p = 0$$) and define $$\zeta(-p, 0)$$ as $$\lim_{x \to 0} \zeta(-p, x) = \zeta(-p, 1) + 0^p$$.\]
 
+Each of the conditions which together uniquely define $$F(p, x)$$ is such that $$n^p \sum_{k = 0^}^{n - 1} F(p, (x + k)/n)$$ inherits the same condition. Thus, these two are equal. This is the duplication/multiplication formula. Similarly, $$n^p \sum_{k = 0^}^{n - 1} \zeta(-p, (x + k)/n) = \zeta(-p, x)$$.
+
 ## Defining the gamma functions
 Although we here at How Sridhar Thinks often prefer to define [the generalized factorial](./FactorialGeneralized.html) by other means, for our purposes here, the following will be the most relevant approach to take:
 
@@ -34,17 +36,23 @@ TODO
 
 Suppose we wish to find the Fourier series for the function $$\zeta(-p, x)$$ restricted to $$x \in (0, 1)$$. That is, the Fourier series for the periodic function $$x \mapsto \zeta(-p, x')$$ where $$x'$$ is the unique value in $$(0, 1)$$ which differs from $$x$$ by an integer (we needn't for now define a value for this periodic function when $$x$$ is itself an integer, though we'll come back to this point later).
 
-The coefficients of the Fourier series are obtained in the usual way, by evaluating $$\int_{0}^{1} \zeta(-p, x + start) e^{-2 \pi i n x} \; dx$$ at each integer $$n$$.
+The coefficients of the Fourier series are obtained in the usual way, by evaluating $$c_n = \int_{0}^{1} \zeta(-p, x) e^{-2 \pi i n x} \; dx$$ at each integer $$n$$. [We will then obtain the Fourier series $$f(x) = \sum_{n \in \mathbb{Z}} c_n e^{2 \pi i n x}$$, whose properties in terms of convergence to $$\zeta(-p, x)$$ we will discuss later.]
 
-More generally, it will be useful to us to consider $$\int_I \zeta(-p, x + start) e^{-2 \pi i n x} \; dx$$ over a general interval $I = (start, start + 1)$. These will be proportional to 
-
-Let us call this $$c(n, start)$$. We will use $$c_n$$ as shorthand for $$c(n, 0)$$.
-
-We will then obtain the Fourier series $$f(x) = \sum_{n \in \mathbb{Z}} c_n e^{2 \pi i n x}$$. As $$\zeta(-p, x)$$ is differentiable with respect to $$x$$ throughout $$x \in (0, 1)$$, this $$f(x)$$ will converge to $$\zeta(-p, x)$$ for such $$x$$. If, furthermore, we have that $$\zeta(-p, 1) = \lim_{x \to 0} \zeta(-p, 0)$$ (as happens when $$\Re(p) > 0$$, because then their difference is $$0^p = 0$$), then $$f(x)$$ will furthermore match $$\zeta(-p, x)$$ at $$x = 0, 1$$ as well.
+[
+As $$\zeta(-p, x)$$ is differentiable with respect to $$x$$ throughout $$x \in (0, 1)$$, this $$f(x)$$ will converge to $$\zeta(-p, x)$$ for such $$x$$. If, furthermore, we have that $$\zeta(-p, 1) = \lim_{x \to 0} \zeta(-p, 0)$$ (as happens when $$\Re(p) > 0$$, because then their difference is $$0^p = 0$$), then $$f(x)$$ will furthermore match $$\zeta(-p, x)$$ at $$x = 0, 1$$ as well.
 
 (For $$\Re(p) < -1$$, expressing $$\zeta(-p, x) = \sum_{n \in \mathbb{N}} (x + n)^p$$ for $$x \in (0, 1)$$ as a Fourier series can be seen also as applying Poisson summation to $$x \mapsto u(x) x^p$$, where $$u$$ is the Heaviside step function.)
+]
 
-The computation of $$c(0, start)$$ is easy: This is $$\int_{0}^{1} \zeta(-p, x + start) \; dx = \frac{\zeta(-(p + 1), start + 1) - \zeta(-(p + 1), start)}{p + 1} = \frac{-start^{p + 1}}{p + 1}$$. In particular, when $$\Re(p) > -1$$, we get $$c(0, 0) = 0$$.
+More generally, it will be useful to us to consider $$\int_I \zeta(-p, x) e^{-2 \pi i n x} \; dx$$ over a general interval $I = (start, start + 1)$. Let us call this $$c(n, start)$$, with $$c_n$$ as $$c(n, 0)$$. Note that $$c(n, start) / e^{-2 \pi i n start}$$ is the $$n$$-th coefficient of the Fourier series for $$\zeta(-p, x)$$ over the interval $$I$$.
+
+The computation of $$c(0, start)$$ is easy: This is $$\int_{start}^{start + 1} \zeta(-p, x) \; dx = start^{p + 1)/(p + 1)$$. In particular, when $$\Re(p) > -1$$, we get $$c(0, 0) = 0$$.
+
+(The analogous $$c(0, start)$$ for $$F(p, x)$$ instead of $$\zeta(-p, x)$$ is of course $$start^{p + 1}$$ simpliciter by the exact same reasoning. In particular, in the $$p = -1$$ case, it comes out to $$1$$ regardless of $$start$$.)
+
+Also, by change of variables and the multiplication formula $$\zeta(-p, x) = n^p \sum_{k = 0^}^{n - 1} \zeta(-p, (x + k)/n)$$ for positive integer $$n$$, we have that $$\int_{start}^{start + 1} \zeta(-p, x) e^{\mp 2 \pi i n x} \; dx$$ $$= n^{-1} \int_{n * start}^{n * start + n} \zeta(-p, x/n) e^{\mp 2 \pi i x} \; dx$$ $$= n^{-1} \sum_{k = 0}^{n - 1} \int_{n * start + k}^{n * start + k + 1} \zeta(-p, x/n) e^{\mp 2 \pi i x} \; dx$$ $$= n^{-p - 1} \int_{n * start}^{n * start + 1} \zeta(-p, x) e^{\mp 2 \pi i x} \; dx$$. Thus, $$c(\pm n, start) = c(\pm 1, n * start) n^{-p - 1}$$. In particular, $$c_{\pm n} = c_{\pm 1} n^{-p - 1}$$.
+
+What remains is only to compute $$c(\pm 1, start}$$. Also, on conjugation-symmetry grounds (i.e., interchanging $$i$$ and $$-i$$ everywhere), it is clearly the case that $$c(-1, start)$$ for a particular power $$p$$ is the conjugate of $$c_1$$ for the conjugate power and conjugation of $$start$$. So really, we only need to figure out a formula for $$c(1, start)$$.
 
 When $$\Re(p) < 0$$, we may reason as follows to compute $$c(n, start)$$ for $$n \neq 0$$:
 
