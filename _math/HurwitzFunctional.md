@@ -32,58 +32,56 @@ For the Hurwitz zeta function, the corollaries of the above properties are:
 
 Each of the conditions which together uniquely define $$F(p, x)$$ is such that $$n^p \sum_{k = 0}^{n - 1} F(p, (x + k)/n)$$ inherits the same condition. Thus, these two are equal. This is the "duplication/multiplication formula". Similarly, $$\zeta(-p, x) = n^p \sum_{k = 0}^{n - 1} \zeta(-p, (x + k)/n)$$.
 
-## Fourier series for the Hurwitz zeta
+## Naive approach to the functional equation
+$$\zeta(-p, x)$$ naively equals $$\sum_{n \in \mathbb{N}} (x + n)^p$$. For $$x \in (0, 1)$$ (with some fuzziness about whether this includes the endpoints), this equals $$\sum_{n \in \mathbb{Z}} f(x + n)$$, where $$f(x) = u(x) x^p$$, where $$u$$ is the Heaviside step function. So by naive Poisson summation, we get that $$\zeta(-p, 0)$$ (or perhaps $$\zeta(-p, 1)$$, or perhaps the halfway value between them) is $$\sum_{n \in \mathbb{Z}} \int_{0}^{\infty} x^p e^{-2 \pi i n x} \; dx$$.
 
-In the following, when we write $$\int_{p}^{\infty} f(x) \; dx$$ for complex $$p$$, this means $$\int_{0}^{\infty} f(p + x) \; dx$$ where $$x$$ ranges over the real interval $$(0, \infty)$$. Similiarly, when we refer to a function being defined on an interval $$(p, p + 1)$$, this means the set $$\{p + x \mid x \in (0, 1)\}$$ where again $$(0, 1)$$ is interpreted as the familiar real interval.
+The difference between $$\zeta(-p, 0)$$ and $$\zeta(-p, 1)$$ is $$0^p)$$, which let's ignore as it would vanish when $$\Re(p) > 0$$. So we'll take our Fourier series to sum to $$\zeta(-p, 1) = \zeta(-p)$$.
+
+Similarly, the $$n = 0$$ term is $$\int_{0}^{\infty} x^p \; dx = \left( \infty^{p + 1} - 0^{p + 1} \right)/(p + 1)$$. When $$\Re(p) < - 1$$, the $$\infty^{p + 1}$$ vanishes. When $$\Re(p) > -1$$, the $$0^{p + 1}$$ vanishes. So let's just ignore both.
+
+Also, by naive rescaling of variables from $$x$$ to $$x/(-2 \pi i n)$$ (even though this change of variables by an imaginary factor actually changes the integration path, going out now to a different infinity so to speak), for nonzero $$n$$ we get that $$\int_{0}^{\infty} x^p e^{-2 \pi i n x} \; dx = (-2 \pi i n)^{-1 - p} \int_{0}^{\infty} x^p e^{-x} \; dx$$. For $$\Re(p) > -1$$, this converges to $$(-2 \pi i n)^{-1 - p} \Gamma(1 + p)$$. So let's just say that's what it is, regardless of other incompatible constraints we've used on $$p$$.
+
+So we have $$\zeta(-p) = \sum_{n \in \mathbb{Z}} (2 \pi n)^{-1 - p} \Gamma(1 + p) \sum_{i^2 = -1} (-i)^{-1 - p}$$. Naively taking $$i^{\theta} = \left( e^{i \pi/2} \right)^{\theta} = e^{i \pi \theta/2} = \cos(\pi \theta/2) + \sin(\pi \theta/2) i$$ (even though $$i$$ has multiple logarithms), then $$\sum_{i^2 = -1} (-i)^{-1 - p} = 2 \cos(\pi (1 + p)/2) = -2 \sin(\pi p/2)$$.
+
+Thus, $$\zeta(-p, x) = -2 \sin(\pi p/2) (2 \pi)^{-1 - p} \Gamma(1 + p) \zeta(-(-1 - p))$$.
+
+Can we make this naive derivation work? Yes, with a bit more care:
+
+## Proper derivation of Fourier series for the Hurwitz zeta
+Observe that, when $$\Re(p) > 0$$, we have that $$\zeta(-p, 0) = \zeta(-p, 1)$$. Thus, we can make a continuous periodic function $$x \mapsto \zeta(-p, x')$$ on real $$x$$, where $$x'$$ is the unique value in $$(0, 1]$$ which differs from $$x$$ by an integer. This function will furthermore be differentiable in both directions at every point (though these two derivatives won't match at integer inputs).
 $$\newcommand{\ZetaCoeff}[3]{c_{#2}^{#1}(#3)}$$
 $$\newcommand{\FCoeff}[3]{d_{#2}^{#1}(#3)}$$
 $$\newcommand{\start}{\mathrm{start}}$$
-
-Observe that, when $$\Re(p) > 0$$, we have that $$\zeta(-p, 0) = \zeta(-p, 1)$$. Thus, we can make a continuous periodic function $$x \mapsto \zeta(-p, x')$$ on real $$x$$, where $$x'$$ is the unique value in $$(0, 1]$$ which differs from $$x$$ by an integer. This function will furthermore be differentiable in both directions at every point (though these two derivatives won't match at integer inputs).
 
 Such bidifferentiable periodic functions admit Fourier series which converge everywhere to them. That is, extracting Fourier coefficients in the usual way as $$c_n = \int_{0}^{1} \zeta(-p, x) e^{-2 \pi i n x} \; dx$$ and then stringing them together as the Fourier series[^FourierConditional] $$f(x) = \sum_{n \in \mathbb{Z}} c_n e^{2 \pi i n x}$$, we will have that $$\zeta(-p, x) = f(x)$$.
 
 [^FourierConditional]: Where the infinite sum is interpreted in case of conditional convergence via partial sums extending equally into negative and positive indices.
 
-\[
-In a naive sense, $$\zeta(-p, x) \approx \sum_{m \in \mathbb{N}} (x + m)^p$$, and thus $$\int_{0}^{1} \zeta(-p, x) e^{-2 \pi i n x} \; dx \approx \sum_{m \in \mathbb{N}} \int_{m}^{m + 1} (x + m)^p e^{-2 \pi i n x} \; dx = \int_{0}^{\infty} x^p e^{-2 \pi i n x} \; dx $$. Taking these as the coefficients of the Fourier series for $$\zeta(-p, x)$$ over $$x \in (0, 1)$$ would amount to applying Poisson summation to $$x \mapsto u(x) x^p$$, where $$u$$ is the Heaviside step function. The Hurwitz zeta function is only actually this sum where $$\Re(p) < -1$$, and unfortunately, we will find that this integal and thus the Fourier coefficient computations over $$x \in (0, 1)$$ fail to converge for $$\Re(p) < -1$$. But this perhaps gives a useful perspective on what we are doing with our Fourier methods at other $$p$$ all the same, or on what is being done when we take the Fourier series for $$\zeta(-p, x)$$ over some other unit interval not starting at zero.
-\]
-
 The computation of $$c_0$$ is straightforward: $$\int_{0}^{1} \zeta(-p, x) dx = 0^p/(p + 1) = 0$$, given our presumption that $$\Re(p) > 0$$ (indeed, this holds even if $$\Re(p) > -1$$).
 
-Also, for positive integer $$n$$, by change of variables and the multiplication formula $$\zeta(-p, x) = n^p \sum_{k = 0}^{n - 1} \zeta(-p, (x + k)/n)$$, we have that $$\int_{0}^{1} \zeta(-p, x) e^{\mp 2 \pi i n x} \; dx$$ $$= n^{-1} \int_{0}^{n} \zeta(-p, x/n) e^{\mp 2 \pi i x} \; dx$$ $$= n^{-1} \sum_{k = 0}^{n - 1} \int_{k}^{k + 1} \zeta(-p, x/n) e^{\mp 2 \pi i x} \; dx$$ $$= n^{-1 - p} \int_{0}^{1} \zeta(-p, x) e^{\mp 2 \pi i x} \; dx$$. Thus, $$c_{\pm n} = c_{\pm 1} n^{-1 - p}$$. [The reasoning of this paragraph applies for arbitrary $$p$$, not just $$\Re(p) > 0$$. It also applies equally well to the analogous Fourier coefficients for $$F(p, x)$$ including at $$p = -1$$.]
-
-Thus, we have that $$\zeta(-p, x) = (c_1 + c_{-1}) \sum_{n \in \mathbb{N}} n^{-1 - p} e^{2 \pi i n x}$$ for $$x \in [0, 1]$$. In particular, at the endpoints, we have $$\zeta(-p) = (c_1 + c_{-1}) \zeta(-(-1 - p))$$. These are the Hurwitz and Riemann zeta functional equations. We've established this in the regime $$\Re(p) > 0$$, but presuming the expressions for $$c_1$$ and $$c_{-1}$$ extend meromorphically to all $$p$$, the Riemann functional equation will then extend by meromorphic continuation to hold for all $$p$$.
-
-What remains is only to find formulas for $$c_1$$ and $$c_{-1}$$, in terms of $$p$$. (By conjugation symmetry, the value of $$c_{-1}$$ for a given $$p$$ will just be the conjugate of $$c_1$$ for the conjugate of $$p$$, so our remaining task in establishing the functional equation is really just to find a formula for $$c_1$$ in terms of $$p$$, in the range where $$\Re(p) > 0$$ or even just any interval within that range.)
-
-Note also that, when $$\Re(p) > 0$$ so that $$0^p = 0$$, we have by integration by parts that $$-2 \pi i \int_{0}^{1} \zeta(-p, x) e^{-2 \pi i x} \; dx = -p \int_{0}^{1} \zeta(-p, x) e^{-2 \pi i x} \; dx$$. Thus, $$k (2 \pi i)^{-p} \ZetaCoeff{p}{1}{0}$$ satisfies the factorial recurrence, for any constant $$k$$.
-
-Let us determine an initial value for this too. What is $$\ZetaCoeff{0}{1}{0}$$? TODO.
-
-Thus, our goal now is to study $$\int_{0}^{1} \zeta(-p, x) e^{-2 \pi i x} \; dx$$ as a function of $$p$$.
-
-As noted above, this is naively something like $$\int_{0}^{\infty} x^p e^{-2 \pi i x} \; dx$$. But this doubly improper integral is a pain. For example, there are no $$p$$ for which it is absolutely convergent. This integral is absolutely convergent near $$x = 0$$ just in case $$\Re(p) > - 1$$, but absolutely convergent near $$x = \infty$$ just in case $$\Re(p) < -1$$.
-
-It is convenient therefore to split this $$\int_{0}^{\infty} x^p$$ into $$\int_{0}^{m} x^p + \int_{m}^{\infty} x^p$$ for some arbitrary $$0 < m < \infty$$, so that we could hope to use integration by parts in separate directions on these, to bring $$p$$ up or down into the range where it has good behavior.
-
-In keeping with this spirit, using the recurrence $$\zeta(-p, x) = x^p + \zeta(-p, x + 1)$$, let us reinterpret $$\int_{0}^{1} \zeta(-p, x) e^{-2 \pi i x} \; dx$$ as $$\left( \int_{0}^{1} x^p \; e^{-2 \pi i x} \; dx \right) + \left( \int_{1}^{2} \zeta(-p, x) e^{-2 \pi i x} \; dx \right)$$. This is a special case of $$\left( \int_{0}^{m} x^p \; e^{-2 \pi i x} \; dx \right) + \left( \int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i x} \; dx \right)$$, but by differentiating this last expression with respect to $$m$$, we find it is constant; that is, the choice of $$m$$ does not matter.
-
-Let us now write $$\gamma_m(p) = \int_{0}^{m} x^p e^{-2 \pi i x} \; dx$$ and $$\Gamma_m(p) = \int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i x} \; dx$$, for $$0 < m < \infty$$, and study the behavior of these two as functions of $$p$$, both separately and summed together.
-
 \[
-These are closely related to what are called the lower and upper incomplete gamma functions, but though their forms are clearly related, the simple equation relating them is not entirely straightforward to prove!
+For $$c_{\pm n}$$ for positive integer $$n$$, we can reason directly from the multiplication formula $$\zeta(-p, x) = n^p \sum_{k = 0}^{n - 1} \zeta(-p, (x + k)/n)$$ that $$c_{\pm n} = c_{\pm 1} n^{-1 - p}$$, for arbitrary $$p$$. This makes the shape of the functional equation relating $$\zeta(-p)$$ and $$\zeta(-1-p)$$ apparent, leaving only the computation of $$c_{\pm 1}$$. But we will not dwell on this way of looking at things, as the method by which $$c_{\pm 1}$$ is computed works just as well to directly compute $$c_{\pm n}$$ and observe the same scaling property.
 \]
 
-Observe that integration by parts gives us $$-2 \pi i \Gamma_m(p) = -m^p - p \Gamma_m(p - 1)$$. (This holds for all $$p \neq 0, -1$$. More generally, we have for all $$p$$ that $$-2 \pi i \int_{0}^{1} F(p, x) e^{-2 \pi i x} \; dx = -(p + 1)m^p - (p + 1) \int_{0}^{1} F(p - 1, x) e^{-2 \pi i x} \; dx$$.)
+Note that, when $$\Re(p) > 0$$ so that $$0^p = 0$$, we have by integration by parts that $$-2 \pi i \int_{0}^{1} \zeta(-p, x) e^{-2 \pi i x} \; dx = -p \int_{0}^{1} \zeta(-(p - 1), x) e^{-2 \pi i x} \; dx$$. (This integration by parts amounts to the differentiation rule for Fourier series applied to the fact $$\frac{d}{dx} \zeta(-p, x) = p \zeta(-(p - 1), x)$$.)
 
-Similarly, when $$\Re(p) > 0$$ so that $$0^p = 0$$, integration by parts gives us $$-2 \pi i \gamma_m(p) = m^p - p \gamma_m(p - 1)$$.
+So we just need to determine the Fourier series for $$\Re(p) \in (-1, 0)$$ and this will then extend by this recurrence to telling us the Fourier series for all $$\Re(p) > -1$$ with $$\Re(p)$$ not an integer. [We can presumably also get the values at $$\Re(p)$$ an integer by continuity/meromorphic continuation arguments.]
 
-This motivates defining $$G(p) = k (2 \pi i)^{-p} (\gamma_m(p) + \Gamma_m(p))$$ for an as yet unspecified constant $$k$$ and observing that, when $$\Re(p) > 0$$, we have that $$G(p) = p G(p - 1)$$. I.e., $$G$$ satisfies the factorial recurrence.
+Now, let us observe in the other direction that when $$\Re(p) < 0$$, we can evaluate $$c_1 = \int_{0}^{1} \zeta(-p, x) e^{-2 \pi i x} \; dx$$ like so: Defining the function $$G(m) = \left( \int_{0}^{m} x^p e^{-2 \pi i x} \; dx \right) + \left( \int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i x} \; dx \right)$$, we see by differentiating with respect to $$m$$ that $$G(m)$$ is constant across all values of $$m$$, while $$c_1 = G(0)$$. Integration by parts turns $$(-2 \pi i) \int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i x} \; dx$$ into $$-m^p + p \int_{m}^{m + 1} \zeta(-(p - 1), x) e^{-2 \pi i x} \; dx$$. When $$\Re(p) < 0$$, this vanishes in the limit as $$m \to \infty$$, keeping in mind how $$\zeta(-(p - 1), x)$$ vanishes in the limit and how it is being integrated against a function with bounded magnitude over a bounded region. Thus, we get that $$c_1 = G(0) = G(m) = \lim_{m \to \infty} G(m) = \int_{0}^{\infty} x^p e^{-2 \pi i x} \; dx$$. Furthermore, by choosing $$0 < m < \infty$$, we see this value $$G(m)$$ is convergent for $$\Re(p) > -1$$, as $$\int_{0}^{m} x^p e^{-2 \pi i x} \; dx$$ is absolutely convergent for $$m < \infty$$ and $$\Re(p) > -1$$, while $$\int_{m}^{m + 1} \zeta(-p, x) e^{-2 \pi i x} \; dx$$ is the integral of a continuous function on a closed interval for $$m > 0$$ and thus convergent for such $$m$$ regardless of $$p$$.
 
-Let us choose $$k$$ such that $$G(0) = 1$$ like the factorial too. Note that, for positive integer $$m$$, we have $$\gamma_m(0) = \int_{0}^{m} e^{-2 \pi i x} \; dx = 0$$. On the other hand, we can quickly establish that $$\zeta(-0, x) = -x + 1/2$$, and thus $$\Gamma_m(0) = \int_{0}^{1} (-x + 1/2) e^{-2 \pi i x) \; dx$$. By integration by parts differentiating TODO.
+***
 
-Finally, let us investigate the asymptotics of this $$G$$. TODO
+Our goal now is to study $$\int_{0}^{\infty} x^p e^{-2 \pi i x} \; dx$$ as a function of $$p$$.
+
+By Abel integration (the continuous analogue of Abelian summation, saying that if the Laplace transform of a function converges at 0, then its value there is the limit of its value at positive reals), where this is convergent (which we've seen occurs when $$\Re(p) > -1$$), this is equal to $$\lim_{s = 2 \pi i + \epsilon, \epsilon > 0, \epsilon \to 0} \int_{0}^{\infty} x^p e^{-sx} \; dx$$.
+
+By the rescaling properties of the Laplace transform (i.e., by the change of variables replacing $$x$$ with $$x/s$$), we have that $$\int_{0}^{\infty} x^p e^{-sx} dx = s^{-1 - p} \int_{0}^{1} x^p e^{-sx} dx$$ for positive $$s$$. When $$\Re(p) > 0$$, where this integral is absolutely convergent, this is $$s^{-1 - p} \Gamma(1 + p)$$ by the definition of $$\Gamma(1 + p)$$. By the analyticity of the Laplace transform through its region of absolute convergence, we get that $$\int_{0}^{\infty} x^p e^{-sx} dx = s^{-1 - p} \Gamma(1 + p)$$ even for complex $$s$$ with $$\Re(s) > 0$$, again with the condition that $$\Re(p) > 0$$. (Here, we interpret $$s^p = \exp(p \log(s))$$ using the analytic continuation of the natural logarithm taking real values on the real axis, to the half-plane $$\Re(s) > 0$$. In other words, $$s$$ is treated as having argument in $$(-\pi/2, \pi/2)$$ for the purposes of determining $$\log(s)$$.)
+
+By the famous integration by parts under which the Gamma function acquires its hallmark recurrence relation, we have for $$\Re(p) > 0$$ that $$\int_{0}^{\infty} x^p e^{-sx} dx = (p/s) \int_{0}^{\infty} x^p e^{-sx} dx$$. The $$s = 1$$ case of this is the recurrence $$\Gamma(1 + p) = p \Gamma(1 + (p  - 1))$$, which is used to analytically continue the definition of $$\Gamma(1 + p)$$ to all inputs other than negative integers $$p$$, such that we also get $$s^{-1 - p} \Gamma(1 + p) = (p/s) s^{-1 - (p - 1)} \Gamma(1 + p - 1)$$ for all $$s$$ and $$p$$.
+
+TODO
+
+***
 
 TODO: Also discuss the Hurwitz zeta function coefficients at all other $$p$$ or for all other $$\start$$ values.
 
