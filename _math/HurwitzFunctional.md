@@ -81,7 +81,7 @@ Thus, we can compute $$\lim_{s = 2 \pi i + \epsilon, \epsilon > 0, \epsilon \to 
 
 This gives us the Fourier series for $$\Re(p) \in (-1, 0)$$ but it then automatically extends by our previous recurrence to give us the Fourier series for general $$\Re(p) > -1$$ with $$\Re(p)$$ not an integer.
 
-In particular, as we noted before, where $$\Re(p) > 0$$, the Fourier series will indeed converge to $$\zeta(-p)$$ at the endpoints of the interval. Thus, in any interval with $$\Re(p) > 0$$ and $$\Re(p)$$ not an integer, we can now conclude that $$\zeta(-p) = -2 \sin(\pi p/2) (2 \pi)^{-1 - p} \Gamma(1 + p) \zeta(-(-1 - p))$$ as desired. As this is an equation beteween meromorphic functions which holds on an interval, it holds at all $$p$$ by continuation.
+In particular, as we noted before, where $$\Re(p) > 0$$, the Fourier series will indeed converge to $$\zeta(-p)$$ at the endpoints of the interval. Thus, in the region with $$\Re(p) > 0$$ and $$\Re(p)$$ not an integer, we can now conclude that $$\zeta(-p) = -2 \sin(\pi p/2) (2 \pi)^{-1 - p} \Gamma(1 + p) \zeta(-(-1 - p))$$ as desired. As this is an equation beteween meromorphic functions on a region with an accumulation point (indeed, on an inhabited open set), it holds at all $$p$$ by continuation.
 
 ***
 

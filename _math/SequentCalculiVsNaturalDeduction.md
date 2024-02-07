@@ -20,6 +20,8 @@ In sequent calculus, we encode all rules as composition actions, so that we neve
 
 A natural deduction system, on the other hand, in my mind, is one set up with no worry about rules satisfying the subformula property, but instead is set up with rules emphasizing postcomposition actions: in general, $$F \vdash G$$ is encoded via "From $$X \vdash F$$, conclude $$X \vdash G$$". That is, rules which for the most part don't involve interacting with/thinking too much about the left sides of sequents. The left sides stay unchanged or minimally changed throughout inferences as much as possible.
 
+(More specifically, perhaps we should say the conclusion of a natural deduction rule should always be of the form $$X \vdash G$$ for a completely arbitrary context $$X$$, while the premises are all of the form $$X' \wedge F$$ for various $$X'$$ extending $$X$$.)
+
 (Often, natural deduction is also presented in such a way that things aren't even written explicitly as sequents, and keeping track of what assumptions are around is notationally implicit rather than explicit, but that's irrelevant to the underlying concept.)
 
 Tl;dr: Natural deduction flavored systems are those designed to minimize explicitly thinking about left sides of sequents. Sequent calculus flavored systems are those designed to have the subformula property for their rules. Neither of these quite matches the explicit-composition-and-adjunction-emphasizing way I tend to formalize logical systems.
