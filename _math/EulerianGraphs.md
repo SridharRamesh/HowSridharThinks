@@ -60,14 +60,22 @@ Similarly, suppose the graph we are given is undirected, and each edge's weight 
 
 What happens if we have a finite connected directed multigraph with matching indegree and outdegree at each vertex, and an ordering of outgoing edges at each vertex, but these final outgoing edges at non-V vertices do not comprise an arborescence rooted at V?
 
-It's still the case that walking around in this manner, starting from V, we must end up first exhausting an outlist upon a revisit of V. That is, we get a path which starts and ends at V, containing every edge out of V and every edge into V precisely once, and containing any non-V node W at most deg(W) many times.
+It's still the case that walking around in this manner, starting with edge E, we must end up first exhausting an outlist upon a revisit of dom(E). That is, we trace out a cycle which starts with E, repeats no edges, and contains every edge into and out of the domain of E.
 
-Suppose we instead treat these orderings of outgoing edges as cyclic orderings: that is, rather than removing the first entry from an outlist as we cross it, we simply move it to the end of the outlist.
+Put another way, suppose we instead treat these orderings of outgoing edges as cyclic orderings: that is, rather than removing the first entry from an outlist as we cross it, we simply move it to the end of the outlist.
 
-Clearly, still, if we start from V, we will eventually trace out a path in which V appears deg(V) + 1 many times \[using every edge into and out of V precisely once\] and no other node W appears more than deg(W) many times. The first "cycling" of outlists will then occur as we continue from the node V that we started with.
+We now have that walking in this way, starting with any edge E, we trace out a cycle which starts with E, repeats no edges, and contains every edge into and out of the domain of E. Call this the initial loop of the walk. (It is then followed by a repeat occurrence of E.)
 
-Now suppose we follow these cycling instructions, starting from W and then coming to V (without loss of generality, not hitting W or V in the meanwhile), and then continuing on. At some point, we hit V for the (deg(V) + 1)st time and at some point, we hit W for the (deg(W) + 1)st time, by the above reasoning. And which of these occurs first? If we hit V for the (deg(V) + 1)st time before hitting W for the (deg(W) + 1)st time, then between the first and (deg(W) + 1)st occurrence of W, there are more than deg(V) occurrences of V, contradicting the above paragraph. Thus, we hit W for the (deg(W) + 1)st time before we hit V for the (deg(V) + 1)st time. This means between the first and (deg(V) + 1)st occurrence of V, there are at least deg(W) occurrences of W. Combined with the above paragraph, there are in fact precisely deg(W) occurrences of W between these two occurences of V.
+Let walk W = edge E followed by walk W'. Note that the initial loop of W contains a subset of the edges in the initial loop of W' \[since walk W starts with "E, F, other edges, E", of which the "E, F, other edges" is the initial loop of W, while the initial loop of F contains at least the "F, other edges, E"\]. (Note also that the new initial loop will be essentially unchanged (just rotated by one edge) from the old initial loop iff the old initial loop contained every edge in and out of cod(E) = dom(F))
 
-Thus, if we continue in this cycling-outlist, once we have hit every node at least once, we must settle into an Eulerian cycle: From any V, if we continue again till we revisit V again deg(V) many times after this occurrence, we will have also hit each other node W a total of deg(W) times in the meanwhile. All outlists will have cycled through exactly once, back to where they started, and we will continue tracing out this path over and over forever now.
+Thus, initial loops only increase as starting points move further into the walk, so to speak, and they stabilize forever just when they become Eulerian cycles.
 
 (This explains, for example, the phenomenon observed at https://twitter.com/AshtonSix/status/1753224084496740541, by applying this to a de Bruijn graph).
+
+Also, once the starting point has moved to any occurrence of vertex V, the initial loop contains every edge in and out of V, so once our walk has visited every node, it must thereafter settle into its Eulerian cycle. That is, the first time at which the walk has visited every node is somewhere between the start and the end of the first instance of the Eulerian cycle in the walk.
+
+***
+
+Let us say a "state" on one of these graphs is a choice of cyclic ordering of outgoing edges at every node, a choice of active outgoing edge at every node, and a choice of active node. Any state "evolves" into a successor state which has the same cyclic orderings, and almost all the same active outgoing edges, but the old active node's outgoing edge is shifted one further along in its cyclic ordering, while the new active node is the old active node's old active outgoing edge's codomain. This describes the kind of cyclic outgoing edge walks we were using above.
+
+Our reasoning from before shows us that evolving states in this way always eventually stabilizes into an Eulerian cycle. We can also make the following observation: A state S is such that there exists a state T with active node V which evolves into S iff there is a path from V to the active node of S using only "last outgoing edges" (that is, the edges which precede the active outgoing edges in their cyclic orderings).
