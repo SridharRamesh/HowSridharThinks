@@ -8,8 +8,13 @@ The proof is in three parts:
 
 ----
 
+The first part is the observation that every non-identity rotation in three dimensions is a planar rotation by some angle around some axis. (This was famously proven by Euler, but we will establish it by modern methods.)
 
-The first part is the observation that every non-identity rotation in three dimensions is a planar rotation by some angle around some axis. TODO
+The observation we wish to establish is equivalent to saying that every rotation in three dimensions has 1 as an eigenvalue (as then the rotation decomposes into identity on an axis in the eigenspace for eigenvalue 1, and then a rotation on the 2D plane orthogonal to that axis). Put another way, if R is our rotation, we need to establish that det(R - 1) = 0. But det(R - 1) = det(R (1 - R^{-1})) = det(R) det(1 - R^{-1}) = det(1 - R^T) = det(1 - R) = (-1)^3 det(R - 1), and thus det(R - 1) = 0.
+
+(The same proof of course applies in any odd number of dimensions. We could also phrase it in terms of properties of the characteristic polynomial.)
+
+\[TODO: Formatting\]
 
 ----
 
