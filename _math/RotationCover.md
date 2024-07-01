@@ -10,11 +10,9 @@ The proof is in three parts:
 
 The first part is the observation that every non-identity rotation in three dimensions is a planar rotation by some angle around some axis. (This was famously proven by Euler, but we will establish it by modern methods.)
 
-The observation we wish to establish is equivalent to saying that every rotation in three dimensions has 1 as an eigenvalue (as then the rotation decomposes into identity on an axis in the eigenspace for eigenvalue 1, and then a rotation on the 2D plane orthogonal to that axis). Put another way, if R is our rotation, we need to establish that det(R - 1) = 0. But det(R - 1) = det(R (1 - R^{-1})) = det(R) det(1 - R^{-1}) = det(1 - R^T) = det(1 - R) = (-1)^3 det(R - 1), and thus det(R - 1) = 0.
+The observation we wish to establish is equivalent to saying that every rotation in three dimensions has 1 as an eigenvalue (as then the rotation decomposes into identity on an axis in the eigenspace for eigenvalue 1, and then a rotation on the 2D plane orthogonal to that axis). Put another way, if $$R$$ is our rotation, we need to establish that $$\det(R - 1) = 0$$. But $$\det(R - 1) = \det(R (1 - R^{-1})) = \det(R) \det(1 - R^{-1})$$ $$= \det(1 - R^T) = \det(1 - R) = (-1)^3 \det(R - 1)$$, and thus $$\det(R - 1) = 0$$.
 
-(The same proof of course applies in any odd number of dimensions. We could also phrase it in terms of properties of the characteristic polynomial.)
-
-\[TODO: Formatting\]
+(The same proof of course applies in any odd number of dimensions. We could also phrase it in terms of properties of the characteristic polynomial: If $$p$$ is the characteristic polynomial for $$R$$ and $$q$$ is the characteristic polynomial for $$R^{-1}$$, we have that $$\det(R) q(x) = p(1/x) (-x)^n$$, in $$n$$ dimensions. Thus, when $$R$$ and $$R^{-1}$$ have the same characteristic polynomial (as happens when they are each other's transpose), and $$\det(R) = 1$$, we may conclude $$p(1) = p(1) (-1)^n$$. If $$n$$ is odd, this tells us $$2p(1) = 0$$. In a characteristic where we may divide by $$2$$, we can conclude $$p(1) = 0$$, and thus $$1$$ is an eigenvalue.)
 
 ----
 
