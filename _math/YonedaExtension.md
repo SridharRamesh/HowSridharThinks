@@ -44,6 +44,6 @@ We then just need to show that $$F$$ preserves the special colimits, so long as 
 
 ***
 
-TODO: Fill in the TODOs above morphisms using the observation that representables are tiny objects among presheaves, in the sense that Hom(r, -) for a representable r preserves small colimits of presheaves (this follows from the fact that small colimits of presheaves are computed pointwise, and the Yoneda lemma).
+TODO: Fill in the TODOs above about morphisms using the observation that representables are tiny objects among presheaves, in the sense that Hom(r, -) for a representable r preserves small colimits of presheaves (this follows from the fact that small colimits of presheaves are computed pointwise, and the Yoneda lemma).
 
 More generally, we see that if a category is such that every object within it is a small colimit of tiny objects, then the map from said category to small presheaves on those tiny objects is an equivalence, exhibiting this category as the free cocompletion of its full subcategory of tiny objects.
