@@ -18,7 +18,7 @@ Of course, just as well dually, we find that a terminal coalgebra for any full s
 
 ***
 
-Note that F-algebras and F-coalgebras comprise a category together (the morphisms from coalgebras to algebras being ["hylomorphisms"]({{site.baseurl}}{% link _math/Hylomorphism.md %})). Also, for any diagram of F-algebras, if its forgetful functor has a limit, then its inclusion functor into the diagram of F-algebras and F-coalgebras also has a limit, and the former limit is the forgetful functor applied to the latter limit. And dually of course for colimits of coalgebras.
+Note that F-algebras and F-coalgebras comprise a category together (the morphisms from coalgebras to algebras being ["hylomorphisms"]({{site.baseurl}}{% link _math/Hylomorphism.md %})). Also, for any diagram of F-algebras, if its forgetful functor has a limit, then its inclusion functor into the category of F-algebras and F-coalgebras also has a limit, and the former limit is the forgetful functor applied to the latter limit. And dually of course for colimits of coalgebras.
 
 We can consider the notion of an F-algebra-initial F-coalgebra: those F-coalgebras with unique homomorphisms into each F-algebra. This class is closed under the natural action of F (as a special case of the ["rolling rule"]({{site.baseurl}}{% link _math/Hylomorphism.md %})) and under colimits within the category of coalgebras together with algebras (insofar as the colimits exist).
 
