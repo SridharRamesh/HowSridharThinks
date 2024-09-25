@@ -1,0 +1,23 @@
+Piece sets:
+
+Consider a quiver where nodes and edges are assigned labels.
+
+Labels on nodes come in two types: Half pieces and pieces.
+
+Each piece label is associated with a particular half-piece label.
+
+We say label A extends label B if either they are equal, or A is a piece label and B is the associated half-piece label.
+
+A homomorphism between such quivers is a map between their nodes and edges which preserves the domain and codomain operations from edge to node, preserves the labels of edges, and such that the label of the image of a node extends the label of the node itself.
+
+We furthermore now say that each edge label is associated with a particular domain node label and codomain node label.
+
+Any edge in the quiver must be such that the labels of its domain and codomain extend, respectively, the domain and codomain labels associated to the edge label.
+
+Any node in the DAG must be such that it has a single outgoing edge with label L for each label L whose domain node label is extended by this node's label.
+
+Finally, to each node label, we associate such a quiver along with designated root node labeled by this node label. [Root in the sense that all other nodes in this quiver are reachable from this one]. And we demand that in a "well-formed" quiver, no node has a half-piece label, and at any node labeled N, which extends M, there is a (necessarily uniquely determined) homomorphism from the quiver associated with M to this well-formed quiver, which takes the root node of the former to the chosen node in the latter.
+
+(We may as well also demand that the quiver associated with a piece label is such that it admits a root-preserving homomorphism from the quiver associated with the corresponding half-piece label).
+
+The half-piece labels here correspond to types, and the labels out of these to projections. The full-piece labels extending a given half-piece label correspond to constructors for dependent types.
