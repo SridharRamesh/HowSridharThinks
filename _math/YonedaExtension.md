@@ -32,7 +32,7 @@ We can also consider free cocompletions which preserve specified colimits. This 
 
 That is, let us write $$\Rsh(A)$$ for the full subcategory of $$\Psh(A)$$ restricted to those presheaves respecting our special colimits (note that every representable presheaf is in $$\Rsh(A)$$, since these will always respect any existing colimits in $$A$$). Note that these special colimits thus remain colimits in $$\Rsh(A)$$, essentially by the defining condition on $$\Rsh(A)$$, as interpreted through the Yoneda lemma.
 
-[That $$\Rsh(A)$$ actually has all small colimits is by it being a reflective full subcategory of $$\Psh(A)$$. It is manifestly a full subcategory, and that the inclusion has a left adjoint is seen by how the inclusion is the forgetful functor for an extension of an essentially algebraic theory.]
+[That $$\Rsh(A)$$ actually has all small colimits is by it being a reflective full subcategory of $$\Psh(A)$$. It is manifestly a full subcategory, and that the inclusion has a left adjoint is seen by how the inclusion is the forgetful functor for an extension of an essentially algebraic theory. Put another way, this full subcategory of a complete category is reflective because it is closed under the ambient category's limits.]
 
 Let $$y : A \to \Psh(A)$$ be the Yoneda embedding and let $$B$$ be some arbitrary category with all small colimits, as above. We can also think of the codomain of $$y$$ as $$\Rsh(A)$$, as noted above.
 
