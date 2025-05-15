@@ -56,4 +56,4 @@ We can also show the curve is irreducible from the fact the gradient is never ze
 
 ---------
 
-Alternatively, we know that any two distinct points on the curve with gradient zero would define a plane on which the curve vanishes (since they give multiplicity 4 to the curve on this plane). So, once we know the curve is irreducible, there is at most one such point; but then, by symmetry, this point would have to be (1, 1, 1), and this doesn't lie on the curve.
+Alternatively, we know that any two distinct points on the curve with gradient zero would define a plane on which the curve vanishes (since they give multiplicity 4 to the curve on this plane). So, once we know the curve is irreducible, there is at most one such point; but then, by symmetry, this point would have to be (1, 1, 1), and this doesn't lie on the curve. \[Or the one nonsingular point would have to be (1, k, k^2) for k a third root of unity more generally; but actually, if this held for any such root of unity, it would also hold for its conjugate, which would be too many nonsingular points unless k is equal to its conjugate, which will force k = 1 (even in a mod 3 field...) \]

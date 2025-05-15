@@ -19,3 +19,8 @@ So why must there be at least one vector of nonzero form in a positive-dimension
 We've now shown that any finite-dimensional non-degenerate quadratic form admits some decomposition as orthogonal directions, each with nonzero form. Some number of "positive" and "negative" directions, called its signature. But how do we know this signature is unique? Might not another decomposition (our decomposition process here involved some arbitrary choice) produce a different signature?
 
 TODO
+
+----
+
+Another observation about quadratic forms, unrelated to the above, which is sometimes of interest:
+
