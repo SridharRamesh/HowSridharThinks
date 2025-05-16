@@ -1,3 +1,8 @@
+---
+title: "Fruit Puzzle"
+date: 2025-05-15
+---
+
 Consider the fruit puzzle, where we try to solve a/(b + c) + b/(a + c) + c/(a + b) = 4. After moving everything to one side and clearing the denominators, this becomes f(a, b, c) = 0 where f(a, b, c) = a^3 + b^3 + c^3 - 3(a^2 b + a b^2 + a^2 c + a c^2 + b^2 c + b c^2) - 5 a b c.
 
 This will define an elliptic curve, once we know there are no singularities (i.e., f and its gradient are never simultaneously zero except at (a, b, c) = (0, 0, 0)), which further implies irreducibility (i.e., no entire plane is a solution).

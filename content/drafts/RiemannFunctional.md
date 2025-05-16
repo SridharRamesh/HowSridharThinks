@@ -1,3 +1,7 @@
+---
+title: "Riemann Functional"
+date: 2025-05-15
+---
 [TODO: Markup]
 
 Recall that there is a one-dimensional space of even homogenous distributions of degree -s, for each complex s. (Similarly for odd homogenous distributions, but we will not be concerned with these). When s is not a positive odd integer, these are the constants times |x|^-s. (When s is a positive odd integer, these are the constants times the s-th derivative of the signum function. But we will not be concerned with these either.)

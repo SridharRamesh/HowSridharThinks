@@ -1,3 +1,8 @@
+---
+title: "Newcomb"
+date: 2025-05-15
+---
+
 I'm surrounded by people talking about this all the time. I feel it turns on what one considers "infallible predictor" to amount to.
 
 At any rate, the problem as given above poses that the predictor is infallible, but we can quibble with what that amounts to and what sense it makes, and of course we can imagine related problems where we relax the infallibility. If the predictor really truly was infallible, then you would make 1.1 million taking one box but would only make 1000 taking one box, as tautological consequence of infallibility in this setup.
