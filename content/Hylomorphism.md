@@ -7,7 +7,7 @@ Here I record some simple thoughts on hylomorphism correspondences.
 Let $$F$$ be an endofunctor on some category, let $$W : w \to F(w)$$ be an $$F$$-coalgebra, and let $$M : m \to F(m)$$ be an $$F$$-algebra. Then by an $$F$$-hylomorphism, we mean a commutative square of the following form:
 
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwxLCJ3Il0sWzAsMCwiRih3KSJdLFsxLDAsIkYobSkiXSxbMSwxLCJtIl0sWzAsMSwiVyJdLFsxLDIsIkYoeCkiXSxbMiwzLCJNIl0sWzAsMywieCIsMl1d&embed" width="325" height="304" style="border-radius: 8px; border: none;"></iframe>
-{% comment %}
+<!--
 \[\begin{tikzcd}
     {F(w)} & {F(m)} \\
     w & m
@@ -16,7 +16,7 @@ Let $$F$$ be an endofunctor on some category, let $$W : w \to F(w)$$ be an $$F$$
     \arrow["M", from=1-2, to=2-2]
     \arrow["x"', from=2-1, to=2-2]
 \end{tikzcd}\]
-{% endcomment %}
+-->
 
 In other words, a fixed point for the map $$x \mapsto M \circ F(x) \circ W$$.
 
@@ -25,7 +25,7 @@ Recall that, when dealing with two functions $$f$$ and $$g$$ in opposite directi
 Thus, when $$F$$ and $$G$$ are functors in opposite direction between two categories, we have a bijective correspondence between $$FG$$-hylomorphisms $$F(V) \circ W \to M \circ F(N)$$ and $$GF$$-hylomorphisms $$G(W) \circ V \to N \circ G(M)$$, as illustrated below:
 
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsMTIsWzMsMiwidiJdLFs0LDIsIm4iXSxbMywwLCJHKEYodikpIl0sWzQsMCwiRyhGKG4pKSJdLFszLDEsIkcodykiXSxbNCwxLCJHKG0pIl0sWzAsMSwiRih2KSJdLFswLDAsIkYoRyh3KSkiXSxbMSwwLCJGKEcobSkpIl0sWzEsMSwiRihuKSJdLFswLDIsInciXSxbMSwyLCJtIl0sWzAsMSwieSIsMl0sWzIsMywiRyhGKHkpKSJdLFs0LDIsIkcoVykiXSxbMyw1LCJHKE0pIl0sWzAsNCwiViJdLFs1LDEsIk4iXSxbNiw3LCJGKFYpIl0sWzgsOSwiRihOKSJdLFs3LDgsIkYoRyh4KSkiXSxbMTAsMTEsIngiLDJdLFsxMCw2LCJXIl0sWzksMTEsIk0iXV0=&embed" width="912" height="432" style="border-radius: 8px; border: none;"></iframe>
-{% comment %}
+<!--
 \[\begin{tikzcd}
     {F(G(w))} & {F(G(m))} && {G(F(v))} & {G(F(n))} \\
     {F(v)} & {F(n)} && {G(w)} & {G(m)} \\
@@ -43,7 +43,7 @@ Thus, when $$F$$ and $$G$$ are functors in opposite direction between two catego
     \arrow["W", from=3-1, to=2-1]
     \arrow["M", from=2-2, to=3-2]
 \end{tikzcd}\]
-{% endcomment %}
+-->
 
 This is by considering the two operations $$x \mapsto N \circ G(x) \circ V$$ and $$y \mapsto M \circ F(y) \circ W$$, and the fixed points of their compositions in either order.
 

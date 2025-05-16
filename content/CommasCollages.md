@@ -131,7 +131,7 @@ As mentioned above, a better perspective on comma, cocommas, etc, is available b
 In the following diagram, squiggly arrows represent profunctors (and we follow the usual, though arbitrary, convention for the direction in which these point). The indicated 2-cells are the universal ones provided by the Kan extensions/lifts.
 
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwyLCJcXGJ1bGxldCJdLFswLDEsIkwiLDJdLFswLDIsIlQiXSxbMiwzLCJSIl0sWzEsMywiQiIsMl0sWzEsMiwiXFxtYXRocm17TGFufV9MKFQpIiwwLHsib2Zmc2V0IjotMiwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMSwyLCJcXG1hdGhybXtSaWZ0fV9SKEIpIiwyLHsib2Zmc2V0IjoyLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9fX1dLFs1LDEsIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMH19XSxbMiw3LCIiLDAseyJzaG9ydGVuIjp7InRhcmdldCI6MjB9fV1d&embed" width="944" height="432" style="border-radius: 8px; border: none;"></iframe>
-{% comment %}
+<!--
 \[\begin{tikzcd}
   \bullet &&&& \bullet \\
   \\
@@ -145,7 +145,7 @@ In the following diagram, squiggly arrows represent profunctors (and we follow t
   \arrow[shorten <=7pt, Rightarrow, from=0, to=3-3]
   \arrow[shorten >=7pt, Rightarrow, from=1-5, to=1]
 \end{tikzcd}\]
-{% endcomment %}
+-->
 
 Note that Cat embeds into Prof in a way which is surjective on 0-cells, 2-cells, and 3-cells, just not on 1-cells. Prof introduces new 1-cells, but no new 0-cells, no new 2-cells between existing 1-cells, and no new 3-cells between existing 2-cells.
 
