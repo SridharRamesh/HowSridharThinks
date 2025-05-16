@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>{{ page.title }}</title>
+{% endblock title %}
+
+{% block content %}
+
+{#
+  For MathJax settings, see https://docs.mathjax.org/en/latest/web/configuration.html
+  We make sure to remove double dollar signs from displayMath and add it to inlineMath, as we've been 
+  using it in this way on all our old posts.
+  The physics package has been used on some posts as well (e.g., for \abs).
+#}
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<h1 class="title">
+  {{ page.title }}
+</h1>
+{{ page.content | safe }}
+{% endblock content %}
