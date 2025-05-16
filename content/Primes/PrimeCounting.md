@@ -32,7 +32,7 @@ And should anyone ever prove the Riemann Hypothesis, that would give us even tig
 
 ***
 
-For a much more advanced continuation of the story in this post, counting the number of primes much more exactly, see [here](./ZetaPrimeCounting.html).
+For a much more advanced continuation of the story in this post, counting the number of primes much more exactly, see [here](@/Primes/ZetaPrimeCounting.md).
 
 ****
 

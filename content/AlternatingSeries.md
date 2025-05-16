@@ -18,7 +18,7 @@ In particular, with $$f(x) = x^p$$, the alternating series converges only when $
 
 (Note that this establishes the Dirichlet eta function as Abel summable, by establishing it as suitably generalized/iterated Cesaro summable. We see that the Dirichlet eta function's summability is quite easy to handle!)
 
-This is another simple approach to the analytic continuation of the Riemann zeta function. Perhaps simpler than the one we've seen before for [difference equations in general]({{ site.baseurl }}{% link _math/DifferenceEquationZeta.md %}))], though I like that as well. Actually, perhaps there is some connection between this and that method? There is a similar fixation on an iterated differential which vanishes asymptotically. But there, the differentials are over arbitrary intervals, and used to sum f straight, while here, they are all over unit intervals, and used to sum f alternating. Hm... (TODO: Work this out!)
+This is another simple approach to the analytic continuation of the Riemann zeta function. Perhaps simpler than the one we've seen before for [difference equations in general](@/DifferenceEquationZeta.md), though I like that as well. Actually, perhaps there is some connection between this and that method? There is a similar fixation on an iterated differential which vanishes asymptotically. But there, the differentials are over arbitrary intervals, and used to sum f straight, while here, they are all over unit intervals, and used to sum f alternating. Hm... (TODO: Work this out!)
 
 ***
 

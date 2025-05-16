@@ -4,7 +4,7 @@ date: 2022-6-19
 ---
 Here, we give a manifestly self-dual presentation of the concept of abelian categories.
 
-(We previously discussed abelian categories in terms of their relationship to [regular categories](./InternalLogicRegular.html).)
+(We previously discussed abelian categories in terms of their relationship to [regular categories](@/InternalLogicRegular.md).)
 
 Consider the following properties a category may have:
 
@@ -89,7 +89,7 @@ Note that in an abelian category, there is a 1 : 1 correspondence between ways i
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNixbMSwxLCJMIl0sWzIsMiwiWSJdLFszLDEsIlIiXSxbMiwwLCJYIl0sWzQsMCwiUSJdLFswLDAsIlMiXSxbMCwxLCJpX3tMUX0iLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzEsMiwiXFxwaV97U1J9IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMywiXFxwaV97U1h9IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzMsMiwiaV97WFF9IiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFswLDIsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFsyLDAsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFsyLDQsIlxccGlfe1hRfSIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDQsIlxccGlfe0xRfSIsMSx7ImN1cnZlIjo0LCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNSwxLCJpX3tTUn0iLDEseyJjdXJ2ZSI6NCwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFs1LDAsImlfe1NYfSIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XV0=&embed" width="688" height="300" style="border-radius: 8px; border: none;"></iframe>
 
 
-Clearly, the rest of the diagram is uniquely determined by the pullback/pushout square. Furthermore, once we know either the span or the cospan of the pullback/pushout square, this uniquely determines the rest. In an abelian category, any monic-epic span is the pushout of its pullback, and dually for monic-epic cospans as the pullback of their pushout (TODO: This sentence may be completely wrong, I should check it). (This has some relation to [commas and cocommas](./CommasCollages.html)).
+Clearly, the rest of the diagram is uniquely determined by the pullback/pushout square. Furthermore, once we know either the span or the cospan of the pullback/pushout square, this uniquely determines the rest. In an abelian category, any monic-epic span is the pushout of its pullback, and dually for monic-epic cospans as the pullback of their pushout (TODO: This sentence may be completely wrong, I should check it). (This has some relation to [commas and cocommas](@/CommasCollages.md)).
 
 We may consider such a diagram as indicating how SXQ = Y, and thus providing an associative law. That is, if we know that XQ = R and SR = Y, we obtain from this also some SX = L and LQ = Y. And dually, we obtain from the latter, the former, and the back and forth in either direction is identity (up to the appropriate notion of isomorphism). Thus, of the expressions S(XQ) and (SX)Q, the possible values for one (which may be undefined or multiply defined) are the same as the possible values of the other. In this way, our partial or multivalued monoid does indeed satisfy the associativity law. Thus allows us to say more generally that any n-ary composition for n ≥ 1 makes sense and can be rebracketed arbitrarily.
 

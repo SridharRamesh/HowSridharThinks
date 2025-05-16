@@ -20,7 +20,7 @@ It is easy to show that, for any two inductive sets, one is an initial segment o
 
 Furthermore, applying $$F$$ to any inductive set yields a value at least as large as all the elements of the inductive set (since each element within the inductive set is $$F$$ applied to some subset of the inductive set). Thus, for any inductive set $$S$$, we have that $$S \cup \{F(S)\}$$ is also an inductive set. When $$S$$ is the maximum inductive set, we must therefore have that $$S = S \cup \{F(S)\}$$, and thus that $$F(S)$$ is itself the maximum element of $$S$$. But then $$F(S)$$ must equal $$F(S - F(S))$$, which is the violation of strict monotonicity that we sought.
 
-[This is related to [the proof of Knaster-Tarski]({{site.baseurl}}{% link _math/LambekKnasterTarski.md %})]
+[This is related to [the proof of Knaster-Tarski](@/LambekKnasterTarski.md)]
 
 ***
 

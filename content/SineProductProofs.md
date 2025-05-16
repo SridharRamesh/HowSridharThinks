@@ -10,7 +10,7 @@ Ok, now on to the proofs:
 
 # Calc 101 Proof. Aka, Fourier series proof. Aka, the best proof.
 
-This is the Calc 101 proof, proceeding along the exact same lines as [Solving the Basel Problem With Calc 101]({{ site.baseurl }}{% link _math/BaselProblemCalc101.md %}), but for now I will word it as though the reader is familiar with the theory of Fourier transforms. (The reader is always presumed to be me, at whatever stage of my previous self I prefer to be talking to)
+This is the Calc 101 proof, proceeding along the exact same lines as [Solving the Basel Problem With Calc 101](@/BaselProblemCalc101.md), but for now I will word it as though the reader is familiar with the theory of Fourier transforms. (The reader is always presumed to be me, at whatever stage of my previous self I prefer to be talking to)
 
 Recall that the Fourier transform of the function $$x \mapsto 1/x$$ is essentially the signum function (this is by considering how both sides react under rescaling the input by positive factors or -1).
 
@@ -30,7 +30,7 @@ Of course, this is just the previous argument carried out integrated, in that $$
 
 # Sridhar's 3blue1brown proof (the Sailor and the Keeper). Aka, the best proof.
 
-I am fond of this proof as well, because I discovered it and it is nice. Maybe it's the best proof also, I don't know. I will write this up in text form eventually, but [here's the video](https://www.youtube.com/watch?v=8GPy_UMV-08). See further details [here](./3b1bSineProduct.html).
+I am fond of this proof as well, because I discovered it and it is nice. Maybe it's the best proof also, I don't know. I will write this up in text form eventually, but [here's the video](https://www.youtube.com/watch?v=8GPy_UMV-08). See further details [here](@/3b1bSineProduct.md).
 
 In short, we analyze the function $$f_N(x, y) = x^N - y^N$$ for natural number $$N$$, noting that this is $$\prod_{r^N = 1} (x - ry)$$ as $$r$$ ranges over all the $$N$$-th roots of unity. The $$N$$th roots of unity can be expressed as $$R^{k/N}$$ for integer $$k$$ where $$R = e^{2 \pi i}$$, so, restricting to odd $$N$$ for convenience, this is $$\prod_{k \in (-N/2, N/2)} (x - R^{k/N}y)$$.
 
@@ -46,7 +46,7 @@ After having chosen such a $$g$$, we consider $$f_N(g(\frac{x}{2N}), g(-\frac{x}
 
 Technically, the claim in the end is that $$\frac{\sin(\pi x)}{\sin(\pi y)} = \lim_{M \to \infty} \prod_{k \in (-M, M)} \frac{x + k}{y + k}$$.
 
-To commute limits (in taking the limit of an infinite product to be equal to the product of an infinite limit), we make use of dominated convergence. TODO, see [here](./3b1bSineProduct.html).
+To commute limits (in taking the limit of an infinite product to be equal to the product of an infinite limit), we make use of dominated convergence. TODO, see [here](@/3b1bSineProduct.md).
 
 For what it's worth, note that the exact equation we get with $$g(x) = R^x$$ is $$h(x) = \prod_{k \in (-N/2, N/2)} h((x + k)/N)$$, where $$h(x) = g(x/2) - g(-x/2) = R^{x/2} - R^{-x/2}$$. Since $$h(x) = 2 i \sin(\pi x)$$, we may also frame this as the observation that $$\sin(\pi x) \propto \prod_{k \in (-N/2, N/2)} \sin(\pi (x + k)/N)$$. Those are written following our odd $$N$$ convention, but an interesting curiosity is that we also have the particularly clean equation $$2 \sin(x) = \prod_{k \in [0, N)} 2 \sin((x + \pi k)/N)$$, which is an exact equality regardless of the parity of $$N$$, by taking our original $$\prod_{k} (x - R^{k/N}y)$$, multiplying by suitable powers of $$R$$ at each factor, and noting overall that $$\sum_{k \in [0, N)} \frac{K}{2N} - \frac{1}{4} = - \frac{1}{4}$$.
 

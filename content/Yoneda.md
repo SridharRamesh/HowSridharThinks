@@ -4,7 +4,7 @@ date: 2021-1-26
 ---
 The Yoneda Lemma is considered one of the most important observations of category theory. Well, I don't know who decides what things are to be considered important, but it is certainly good to understand. There are multiple perspectives worth understanding it from, even.
 
-We already outlined one perspective at ["Total Limits Are Empty Colimits"]({{site.baseurl}}{% link _math/TotalLimits.md %}). Here, I will outline another.
+We already outlined one perspective at ["Total Limits Are Empty Colimits"](@/TotalLimits.md). Here, I will outline another.
 
 ***
 

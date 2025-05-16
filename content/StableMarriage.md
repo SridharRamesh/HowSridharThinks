@@ -24,7 +24,7 @@ Just as well, it'd work the other way, cooperatively rather than competitively, 
 
 ***
 
-[To be expanded upon into a post talking about Knaster-Tarski, observation that it can be carried out from bottom up or from top down, initial algebras, coalgebras, Lambek's lemma, Adamek construction of initial algebras, initial objects as limits of entire categories (see [Total Limits Are Empty Colimits]({{ site.baseurl }}{% link _math/TotalLimits.md %}))]
+[To be expanded upon into a post talking about Knaster-Tarski, observation that it can be carried out from bottom up or from top down, initial algebras, coalgebras, Lambek's lemma, Adamek construction of initial algebras, initial objects as limits of entire categories (see [Total Limits Are Empty Colimits](@/TotalLimits.md))]
 
 [TODO: Talk about how stable matchings are preserved under pointwise inhabited meets, so to speak.]
 

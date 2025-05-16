@@ -78,11 +78,11 @@ By equating coefficients at higher powers of $$f$$ between these two series, we 
 
 # Alternative proof of the Wallis product:
 
-Check out another beautifully simple geometric proof of the Wallis product directly in terms of circles and spheres (and higher-dimensional spheres...) in [this post]({{ site.baseurl }}{% link _math/WallisProductGeometric.md %})! No complex numbers or tricky polynomial algebra required!
+Check out another beautifully simple geometric proof of the Wallis product directly in terms of circles and spheres (and higher-dimensional spheres...) in [this post](@/WallisProductGeometric.md)! No complex numbers or tricky polynomial algebra required!
 
 # Alternative proofs of the sine product:
 
-See [here]({{ site.baseurl }}{% link _math/SineProductProofs.md %}), for many other proofs, including the one that's actually my favorite.
+See [here](@/SineProductProofs.md), for many other proofs, including the one that's actually my favorite.
 
 # Much more to come:
 

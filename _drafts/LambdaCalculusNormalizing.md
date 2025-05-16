@@ -4,7 +4,7 @@ date: 2022-7-11
 ---
 UNPOLISHED: Some proofs of some facts about normalization in the typed lambda calculus (terms in the simply typed lambda calculus with products, possibly with NNO as well, are normalizing, or possibly strongly normalizing, with unique normal form):
 
-A) We can use [confluence](./Confluence.html) with "parallel reduction", to prove the Church-Rosser property. See https://en.wikipedia.org/wiki/Church%E2%80%93Rosser_theorem. It seems Martin-Loef and Tait used this approach? But I wonder how it differs from Church and Rosser's own argument?
+A) We can use [confluence](@/Confluence.md) with "parallel reduction", to prove the Church-Rosser property. See https://en.wikipedia.org/wiki/Church%E2%80%93Rosser_theorem. It seems Martin-Loef and Tait used this approach? But I wonder how it differs from Church and Rosser's own argument?
 
 B) We can do the following to prove normalization (a categorical account of Tait's method to proven normalization; i.e., the method of "logical relations"):
 

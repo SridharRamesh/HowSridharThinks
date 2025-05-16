@@ -70,4 +70,4 @@ I'm not sure this second approach to Heron's formula, using the higher-order Pyt
 
 ***
 
-A property Wikipedia notes: "Let one n-gon be inscribed in a circle, and let another n-gon be tangential to that circle at the vertices of the first n-gon. Then from any point P on the circle, the product of the perpendicular distances from P to the sides of the first n-gon equals the product of the perpendicular distances from P to the sides of the second n-gon.". TODO: Think about this. Does this relate to our distance-product formula at [3blue1brown: The Wallis Product and the Sine Product]({{ site.baseurl }}{% link _math/3b1bSineProduct.md %})?
+A property Wikipedia notes: "Let one n-gon be inscribed in a circle, and let another n-gon be tangential to that circle at the vertices of the first n-gon. Then from any point P on the circle, the product of the perpendicular distances from P to the sides of the first n-gon equals the product of the perpendicular distances from P to the sides of the second n-gon.". TODO: Think about this. Does this relate to our distance-product formula at [3blue1brown: The Wallis Product and the Sine Product](@/3b1bSineProduct.md)?

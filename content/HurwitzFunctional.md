@@ -6,7 +6,7 @@ Where the celebrated "functional equation" for the Riemann zeta function comes f
 
 ## Defining the zeta functions
 
-Recall from our previous discussion of [difference equations](./DifferenceEquationZeta.html) that there is a unique function $$F(p, x)$$ such that we have: $$\newcommand{\nat}{\mathbb{N}}$$
+Recall from our previous discussion of [difference equations](@/DifferenceEquationZeta.md) that there is a unique function $$F(p, x)$$ such that we have: $$\newcommand{\nat}{\mathbb{N}}$$
 * $$\displaystyle \lim_{n \to +\infty} F(p, x + n) = 0$$ whenever $$\Re(p) < -1$$.
 * $$\frac{d}{dx} F(p, x) = (p + 1)F(p - 1, x)$$.
 * $$\int_{x}^{x + 1} F(p, x) \; dx = x^{p + 1}$$.

@@ -103,7 +103,7 @@ https://www.jstor.org/stable/2032062?read-now=1&seq=1#page_scan_tab_contents
 
 ## Defining the zeta functions
 
-Recall from our previous discussion of [difference equations](./DifferenceEquationZeta.html) that there is a unique function $$F(p, x)$$ such that we have:
+Recall from our previous discussion of [difference equations](@/DifferenceEquationZeta.md) that there is a unique function $$F(p, x)$$ such that we have:
 1. $$F(p, x) = (p + 1) \sum_{n \in \nat} x^p$$ whenever $$\Re(p) < -1$$
 2. $$\frac{d}{dx} F(p, x) = (p + 1) F(p - 1, x)$$
 3. $$\int_{x = \beta + 1}^{\beta} F(p, x) \; dx = \beta^(p + 1)$$, for all values of $$\beta$$.
