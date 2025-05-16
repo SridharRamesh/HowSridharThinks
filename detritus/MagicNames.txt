@@ -1,0 +1,14 @@
+Magic names used by Zola:
+
+Always used or replaced with default:
+404.html (Displayed on 404 errors, in templates).
+robots.txt (Used to generate robots.txt, in templates)
+
+Can be overridden:
+index.html (The homepage, in templates. But overridden if there is an _index.md in the root of content which specifies a different section template. Presumably also overridden if there is an index.md in the root of content.)
+page.html (Default page template, in templates)
+section.html (Default section template, in templates)
+
+Special function:
+_index.md (Creates sections, in folders under content)
+index.md (Generates a page with the name of its directory; in general, [name].md is equivalent to name/about.md, as long as name is neither "_index" nor "index". Note that page names cannot contain "_index" anywhere within them.)

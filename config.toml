@@ -8,17 +8,43 @@ compile_sass = true
 build_search_index = false
 
 # When set to "true", a feed is automatically generated.
-generate_feeds = true
+# But we can also set this on a section-by-section manner, in the 
+# section's _index.md frontmatter.
+# Note that, if we have a section in /content itself, not in any 
+# subdirectory, then we cannot have both a site-wide and a section-specific
+# feed for it, as both would output to the same location.
+# At any rate, for my purposes, it's fine, since I don't care to have a 
+# site-wide feed anyway, just section-specific ones.
+generate_feeds = false
 
 # The filenames to use for the feeds. Used as the template filenames, too.
 # Defaults to ["atom.xml"], which has a built-in template that renders an Atom 1.0 feed.
 # There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
 feed_filenames = ["atom.xml"]
 
+# Data used in feeds. The title is also used in the Pickles theme.
+title = "How Sridhar Thinks"
+description = "Math posts by Sridhar Ramesh"
+default_language = "en"
+
+# See https://www.getzola.org/documentation/themes/overview/
+theme = "zola-pickles"
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
 
+# Enables footnotes with back references. See https://github.com/getzola/zola/pull/2480
+bottom_footnotes = true
+
 [extra]
 # Put all your custom variables here
+
+# The following are specific to the Pickles theme
+
+# A line to display underneath the main title
+subtitle = ""
+
+# Text to display in the footer of the page
+copyright = ""

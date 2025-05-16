@@ -1,6 +1,6 @@
 +++
 title = "List of math posts"
 sort_by = "date"
-template = "math-section.html"
-page_template = "math-page.html"
+paginate_by = 50
+generate_feeds = true
 +++
