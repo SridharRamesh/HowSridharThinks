@@ -2,7 +2,9 @@
 title: "Non-Elementary Prime Counting with the Riemann Zeta Function"
 date: 2021-10-10
 ---
-This is a much more advanced follow-up to our post on [elementary prime counting](@/PrimeCounting.md). \[Beware, for dumb reasons, this relative link will not work correctly on the index page, only when you click through to this post.\]
+This is a much more advanced follow-up to our post on [elementary prime counting](@/PrimeCounting.md).
+
+<!-- more -->
 
 I will define $$Z(s)$$ to be $$1^s + 2^s + 3^s + 4^s + \ldots = \sum_{n \in \mathbb{N}^+} n^s$$. This is missing a negation sign from the usual convention for the Riemann zeta function (which is $$\zeta(s) = Z(-s)$$), but I find it easier sometimes to think without that arbitrary negation sign, and this is How Sridhar Thinks.
 

@@ -26,3 +26,10 @@ MathJax = {
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 {% endblock js %}
+
+{% block content -%}
+You've come to the right place to see how Sridhar thinks about math.
+
+Keep in mind, nothing here is polished, it's full of TODOs, you shouldn't be reading this site, who told you it even exists? {{ "([Atom feed](atom.xml))" | markdown(inline=true) | safe}}
+{{ super() }}
+{% endblock content -%}
