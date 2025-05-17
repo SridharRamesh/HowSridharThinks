@@ -34,9 +34,9 @@ Perhaps a simpler example, which is similar but more continuous rather than disc
 
 ***
 
-We could instead think of the Fourier transform as a particular bilinear functional on two spaces: It sends $$f$$ and $$g$$ to $$\int f(x) g(y) R^{xy} \; dx \; dy$$. This makes translation on either side correspond to multiplication by a corresponding exponential on the other side. This is probably the better way to think of it.
+We could instead think of the Fourier transform as a particular bilinear functional on two spaces: It sends $$f$$ and $$g$$ to $$\int f(x) g(y) R^{xy} \\; dx \\; dy$$. This makes translation on either side correspond to multiplication by a corresponding exponential on the other side. This is probably the better way to think of it.
 
-Note that even though the Dirac delta is not a proper function, it still acts like a functional in a straightforward way in this framework. E.g., $$\int_{y = -\infty}^{\infty} \int_{x = -\infty}^{\infty} e^{2 \pi i x y} g(y) \; dx \; dy = g(0)$$ for sufficiently nice (e.g., smooth fast-decaying) $$g$$.
+Note that even though the Dirac delta is not a proper function, it still acts like a functional in a straightforward way in this framework. E.g., $$\int_{y = -\infty}^{\infty} \int_{x = -\infty}^{\infty} e^{2 \pi i x y} g(y) \\; dx \\; dy = g(0)$$ for sufficiently nice (e.g., smooth fast-decaying) $$g$$.
 
 ***
 
@@ -44,7 +44,7 @@ When a function is Fourier transformed, and then Fourier transformed back, the u
 
 The specific product of these widths by which it multiplies is (in the case of a Fourier transform in any of the familiar 1D senses using periodic exponentials on domains modulo the period) the period of the exponential.
 
-We can also think of this constant as $$\int R^{xy} \; dx \; dy$$ where this $$R^{xy}$$ is the kernel of the transform. Note that this comes out straightforwardly to N in a typical discrete Fourier transform of order N. Even in the case of $$\int e^{2 \pi i x y} \; dx \; dy$$, which is not convergent in the standard sense, we can make this convergent by Abel summation (that is, looking at $$\lim_{a \to \infty} \int m(x/a, y/a) e^{2 \pi i x y} \; dx \; dy$$ for sufficiently smooth $$m(x, y)$$ with $$m(0, 0) = 1$$, such as $$m(x, y) = e^{-x^2 - y^2}$$. Presumably some sort of Cesaro summation also works already.
+We can also think of this constant as $$\int R^{xy} \\; dx \\; dy$$ where this $$R^{xy}$$ is the kernel of the transform. Note that this comes out straightforwardly to N in a typical discrete Fourier transform of order N. Even in the case of $$\int e^{2 \pi i x y} \\; dx \\; dy$$, which is not convergent in the standard sense, we can make this convergent by Abel summation (that is, looking at $$\lim_{a \to \infty} \int m(x/a, y/a) e^{2 \pi i x y} \\; dx \\; dy$$ for sufficiently smooth $$m(x, y)$$ with $$m(0, 0) = 1$$, such as $$m(x, y) = e^{-x^2 - y^2}$$. Presumably some sort of Cesaro summation also works already.
 
 We can also re-parametrize this as a Gauss sum.
 
@@ -52,7 +52,7 @@ We can also re-parametrize this as a Gauss sum.
 
 Gauss sums: Let $$\mathbb{Z}_n = \mathbb{Z}/(n \mathbb{Z})$$ and let $$R = e^{2 \pi i}$$.
 
-Suppose we want to compute $$\sum_{index \in \mathbb{Z}_n} R^{index^2/n}$$. We can do this by Poisson summation, letting $$f(x) = R^{x^2/n}$$ on the interval $$[0, n]$$ and zero elsewhere. Omitting some details, the Fourier transfom of $$f$$ summed at integer points becomes $$(1 + R^{-n/4}) \sqrt{n} \int_{-\infty}^{\infty} R^{x^2} \; dx$$. The last integrand here is the Fresnel integral. By considering $$n = 1$$, we see that this integral is $$\frac{1}{1 - i}$$. Thus, the sum in general comes out to $$\frac{1 + R^{-n/4}}{1 - i} \sqrt{n}$$.
+Suppose we want to compute $$\sum_{index \in \mathbb{Z}_n} R^{index^2/n}$$. We can do this by Poisson summation, letting $$f(x) = R^{x^2/n}$$ on the interval $$[0, n]$$ and zero elsewhere. Omitting some details, the Fourier transfom of $$f$$ summed at integer points becomes $$(1 + R^{-n/4}) \sqrt{n} \int_{-\infty}^{\infty} R^{x^2} \\; dx$$. The last integrand here is the Fresnel integral. By considering $$n = 1$$, we see that this integral is $$\frac{1}{1 - i}$$. Thus, the sum in general comes out to $$\frac{1 + R^{-n/4}}{1 - i} \sqrt{n}$$.
 
 There is also a purely algebraic proof that works to establish the square of the Gauss sum (thus, the Gauss sum up to sign) in favorable circumstances (e.g., in $$\mathbb{Z}_n$$ for odd $$n$$). Consider the sum of $$R^{xy/n}$$ over all $$x, y \in \mathbb{Z}_n$$. By doing an order 2 DFT, we have $$x' = (x + y)/2, y' = (x - y)/2, xy = x'^2 - y'^2$$. So we are looking at the sum of $$R^{x'^2/n} R^{-y'^2/n}$$, and the two factors can be separately summed and then multiplied together by Fubini's theorem.
 
@@ -64,7 +64,7 @@ We can also establish algebraically that when $$n = 2 \pmod{4}$$, the Gauss sum 
 
 ***
 
-We can decompose $$\int R^{xy} \; dx \; dy$$ as $$2(\int R^{x'^2} \; dx')(\int R^{-y'^2} \; dy')$$ in the same way over the full real plane and real lines. The factor of 2 is because in this continuous context (as opposed to a counting measure context), we have that $$2 dx' dy' = dx dy$$. As we already saw, the Fresnel integral comes out to $$\frac{1}{1 - i}$$, so its conjugate is $$\frac{1}{1 + i}$$, and twice the product of these is $$1$$.
+We can decompose $$\int R^{xy} \\; dx \\; dy$$ as $$2(\int R^{x'^2} \\; dx')(\int R^{-y'^2} \\; dy')$$ in the same way over the full real plane and real lines. The factor of 2 is because in this continuous context (as opposed to a counting measure context), we have that $$2 dx' dy' = dx dy$$. As we already saw, the Fresnel integral comes out to $$\frac{1}{1 - i}$$, so its conjugate is $$\frac{1}{1 + i}$$, and twice the product of these is $$1$$.
 
 We can also find this same constant for the scaling factor in double-applying the Fourier transform on the real line by considering the action on a Poisson comb (and how this relates to Fourier series for periodic functions).
 

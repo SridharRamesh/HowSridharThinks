@@ -110,7 +110,7 @@ https://www.jstor.org/stable/2032062?read-now=1&seq=1#page_scan_tab_contents
 Recall from our previous discussion of [difference equations](@/DifferenceEquationZeta.md) that there is a unique function $$F(p, x)$$ such that we have:
 1. $$F(p, x) = (p + 1) \sum_{n \in \nat} x^p$$ whenever $$\Re(p) < -1$$
 2. $$\frac{d}{dx} F(p, x) = (p + 1) F(p - 1, x)$$
-3. $$\int_{x = \beta + 1}^{\beta} F(p, x) \; dx = \beta^(p + 1)$$, for all values of $$\beta$$.
+3. $$\int_{x = \beta + 1}^{\beta} F(p, x) \\; dx = \beta^(p + 1)$$, for all values of $$\beta$$.
 
 Furthermore, this unique function $$F(p, x)$$ is complex-differentiable with respect to $$p$$ as well.
 
@@ -124,7 +124,7 @@ To be pedantically unambiguous, in the above definition of $$F$$, we interpret $
 
 For those not interested in reading the previous link (or thinking in any abstraction beyond this specific difference equation, though that abstraction makes things cleaner), the unique existence argument for $$F$$ is like so:
 
-Suppose we weaken condition (3) to the condition (3') only demanding this hold at a particular value of $$\beta$$ (call this particular value $$\beta_0$$). Then, for any constant $$\alpha$$ (fix any choice of $$\alpha$$ you like, it doesn't matter), the conjunction of conditions (2) and (3) is equivalent to demanding that $$F(p, x) = F^*(p, x)$$, where $$F^*(p, x)$$ is defined as $$G(p, x) + \beta_0^{p + 1} - \int_{t = \beta_0 + 1}^{\beta_0} G(p, t) \; dt$$, with $$G(p, x)$$ defined as $$\int_{t = \alpha}^{x} (p + 1) F(p - 1, t) \; dt$$. Note furthermore that this definition of $$x \mapsto F^*(p, x)$$ is defined at all choices of $$p$$ such that the function $$x \mapsto F(p - 1, x)$$ is defined.
+Suppose we weaken condition (3) to the condition (3') only demanding this hold at a particular value of $$\beta$$ (call this particular value $$\beta_0$$). Then, for any constant $$\alpha$$ (fix any choice of $$\alpha$$ you like, it doesn't matter), the conjunction of conditions (2) and (3) is equivalent to demanding that $$F(p, x) = F^*(p, x)$$, where $$F^*(p, x)$$ is defined as $$G(p, x) + \beta_0^{p + 1} - \int_{t = \beta_0 + 1}^{\beta_0} G(p, t) \\; dt$$, with $$G(p, x)$$ defined as $$\int_{t = \alpha}^{x} (p + 1) F(p - 1, t) \\; dt$$. Note furthermore that this definition of $$x \mapsto F^*(p, x)$$ is defined at all choices of $$p$$ such that the function $$x \mapsto F(p - 1, x)$$ is defined.
 
 Thus, starting with a function $$F(p, x)$$ defined for $$\Re(p) < p_0$$ which satisfies conditions (2) and (3') throughout this domain, we may use this definition of $$F^*$$ to uniquely extend $$F$$ in such a way as to satisfy conditions (2) and (3') for all $$p$$ with $$\Re(p) < p_0 + 1$$.
 

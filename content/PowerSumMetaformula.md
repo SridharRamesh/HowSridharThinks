@@ -46,7 +46,7 @@ Now it’s easy enough to solve. Factoring a $$\Delta$$ out, we see that it suff
 
 Actually, because $$\delta^n$$ is easier to compute for polynomials in standard representation than $$\Delta^n$$ (since $$\delta$$ takes monomials to monomials), it is often more convenient to rewrite $$\frac{\ln(1 + \Delta)}{\Delta}$$ as $$\frac{\delta}{e^{\delta} - 1} = 1 - \frac{\delta}{2} + \frac{\delta^2}{12} - \frac{\delta^4}{720} + \ldots$$. The Taylor series expansion here, as for any such symbolic expression, can be evaluated to any desired length by straightforward calculus, although there are cleverer ways as well. [The coefficients so produced happen to have been studied in their own right, in the theory of the closely related “Bernoulli numbers”, in case you care to read up more on these.]
 
-So we have that $$Q = \frac{\delta}{e^{\delta} - 1} \int P \; = \left(1 - \frac{\delta}{2} + \frac{\delta^2}{12} - \frac{\delta^4}{720} + \ldots\right) \int P$$ $$= \left(\int - \frac{1}{2} + \frac{\delta}{12} - \frac{\delta^3}{720} + \ldots\right) P$$. And, remember, we can use this to calculate $$P(b) + P(b + 1) + P(b + 2) + \ldots + P(a - 1)$$ as $$Q(a) - Q(b)$$.
+So we have that $$Q = \frac{\delta}{e^{\delta} - 1} \int P \\; = \left(1 - \frac{\delta}{2} + \frac{\delta^2}{12} - \frac{\delta^4}{720} + \ldots\right) \int P$$ $$= \left(\int - \frac{1}{2} + \frac{\delta}{12} - \frac{\delta^3}{720} + \ldots\right) P$$. And, remember, we can use this to calculate $$P(b) + P(b + 1) + P(b + 2) + \ldots + P(a - 1)$$ as $$Q(a) - Q(b)$$.
 
 This completes our general technique. Let’s apply it to, for example, the particular question of a formula for $$1^2 + 2^2 + 3^2 + \ldots + x^2$$.
 

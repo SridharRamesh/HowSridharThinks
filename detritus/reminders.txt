@@ -40,3 +40,7 @@ Testing text
 </script>
 
 See also https://github.com/artisticat1/obsidian-tikzjax
+
+-----
+
+Note that \; which is sometimes used in LaTeX for spacing is treated as an escape sequence for ; simpliciter in CommonMark (see https://spec.commonmark.org/0.13/#backslash-escapes). Thus, we must use \\; in its place.
