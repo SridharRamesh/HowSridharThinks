@@ -4,7 +4,12 @@ date: 2025-06-21
 ---
 Hamming codes are well-understood in binary, but here I describe how they generalize to arbitrary fields. (This was apparently first described by Golay in passing in his short article on Golay codes, but I find his description there quite difficult to read.)
 
-Let $$V$$ be some vector space over some field. Define an equivalence relation on the nonzero elements of $$V$$, under which two vectors are equivalent just in case they are each scalar multiples of the other. Let us say a "word" is a finite set of nonzero vectors of $$V$$, no two of which are equivalent. In other, er, words, a "word" is a choice function which assigns to each line through the origin of $$V$$ some vector on that line, and which furthermore has finite support (only finitely many lines are assigned nonzero values).
+Let $$V$$ be some vector space over some field. Let $$W$$ be the coproduct of all the one-dimensional subspaces of $$V$$. The inclusion of each of these subspaces into $$V$$ gives a linear map from $$W$$ into $$V$$. We take the kernel of this map to be the "codewords" among the vectors of $$W$$.
+
+
+In other words:
+
+Define an equivalence relation on the nonzero elements of $$V$$, under which two vectors are equivalent just in case they are each scalar multiples of the other. Let us say a "word" is a finite set of nonzero vectors of $$V$$, no two of which are equivalent. In other, er, words, a "word" is a choice function which assigns to each line through the origin of $$V$$ some vector on that line, and which furthermore has finite support (only finitely many lines are assigned nonzero values).
 
 When $$V$$ is finite-dimensional over a finite field, these words can be thought of as strings of a particular finite length (the number of equivalence classes of nonzero vectors) over an alphabet of a particular finite size (the number of vectors on a line; i.e., the size of the field).
 

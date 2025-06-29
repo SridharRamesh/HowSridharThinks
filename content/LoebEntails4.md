@@ -28,6 +28,6 @@ Conversely, given external Löb's theorem and 4, we can derive internal Löb's t
 
 ****
 
-It is worth noting that our argument deriving 4 from Löb's theorem doesn't actually depend on $$\Box$$ distributing over conjunctions, and thus holds in even greater generality. For example, it tells us this more general fact: Let $$f$$ be an operator on a meet-semilattice such that, whenever any $$x$$ and $$y$$ are such that $$x \wedge f(y) \leq y$$, then furthermore $$f(x) \leq f(y)$$. Then furthermore $$f \leq f^2$$.
+It is worth noting that our argument deriving 4 from Löb's theorem doesn't actually depend on $$\Box$$ distributing over conjunctions, and thus holds in even greater generality. For example, it tells us this more general fact: Let $$f$$ be an operator on a meet-semilattice such that, whenever any $$x$$ and $$y$$ are such that $$x \wedge f(y) \leq y$$, then furthermore $$f(x) \leq f(y)$$. Then $$f \leq f^2$$.
 
 Or even more generally: Let $$f$$ and $$g$$ be endofunctors of a meet-semilattice such that whenever $$x \wedge f(y) \leq y$$, then furthermore $$g(x) \leq g(y)$$. Then $$g \leq gf$$. Because we can consider $$y = x \wedge f(x)$$, for which we have $$x \wedge f(y) \leq y$$, to derive $$g(x) \leq g(y) = g(x \wedge f(x)) \leq g(f(x))$$.
