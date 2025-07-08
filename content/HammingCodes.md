@@ -6,8 +6,7 @@ Hamming codes are well-understood in binary, but here I describe how they genera
 
 Let $$V$$ be some vector space over some field. Let $$W$$ be the coproduct of all the one-dimensional subspaces of $$V$$. The inclusion of each of these subspaces into $$V$$ gives a linear map from $$W$$ into $$V$$. We take the kernel of this map to be the "codewords" among the vectors of $$W$$.
 
-
-In other words:
+In other, er, words:
 
 Define an equivalence relation on the nonzero elements of $$V$$, under which two vectors are equivalent just in case they are each scalar multiples of the other. Let us say a "word" is a finite set of nonzero vectors of $$V$$, no two of which are equivalent. In other, er, words, a "word" is a choice function which assigns to each line through the origin of $$V$$ some vector on that line, and which furthermore has finite support (only finitely many lines are assigned nonzero values).
 
