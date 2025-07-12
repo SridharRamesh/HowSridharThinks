@@ -33,3 +33,9 @@ The above describes a "linear" scheme for constructing perfect single error corr
 ----
 
 Does the above extend to anything interesting over the "field with one element"? The appearance of the [q-analog](https://en.wikipedia.org/wiki/Q-analog) $$\ell = \[n\]_q$$ is suggestive, but I'm not sure what to say along these lines.
+
+----
+
+The extended binary Hamming code, with an additional parity bit, can be thought of like so: Words are finite subsets of vector space $$V$$ over $$GF(2)$$ (including allowing the subset to contain 0), and codewords are words containing an even number of vectors summing to 0. These codewords are closed under symmetric difference, and for any odd size word, there is a unique codeword at distance 1 from it, obtained by simply summing up the odd size word and then toggling its value at that sum.
+
+Note that this has a 3-transitive automorphism group, since the codewords are essentially parallelograms, and thus preserved by any affine transformation.
