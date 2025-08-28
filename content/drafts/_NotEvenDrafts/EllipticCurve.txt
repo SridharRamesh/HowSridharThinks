@@ -138,3 +138,5 @@ Intersection multiplicity of C with D at any point clearly only depends on the v
 [To be continued...]
 
 Define a symmetric relation "T intersects C1 more than C2 intersects C1 at point P" by "There is a multiple of T which is a linear combination of C1 and C2, and the value T is multiplied by is a homogenous polynomial which is nonzero at P".
+
+-----------------

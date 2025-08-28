@@ -158,7 +158,7 @@ We can turn this into a 11 x 11 matrix, such that the entry at (m, n) is TRUE if
 We can construct the ternary Golay code from this as follows: Turn all TRUEs into 1s, and all FALSEs into -1s. Add on an extra column all -1s and an extra row of all -1s. The row space of the resulting matrix in Z_3^12 is the extended ternary Golay code (TODO: Proof).
 
 Alternatively, we can construct the extended binary Golay code from this as follows: 
-We saw above that we have an 11x11 matrix with 6 TRUEs in each row, and any two rows intersecting in precisely 3 TRUEs. If we add on an extra column and extra row of all TRUEs each, except for the intersection of the extra column and extra row beign FALSE, then we now have a 12x12 matrix with 7 TRUEs in all but one row, 11 TRUEs in the final row, and the intersection of any two rows with the same weight will be 4. Furthermore, the transpose of this matrix is just a permutation of this matrix (since -(x - y) = (-x) - (-y)). This satisfies the conditions given in the previous section to give us the extended binary Golay code.
+We saw above that we have an 11x11 matrix with 6 TRUEs in each row, and any two rows intersecting in precisely 3 TRUEs. If we add on an extra column and extra row of all TRUEs each, except for the intersection of the extra column and extra row beign FALSE, then we now have a 12x12 matrix with 7 TRUEs in all but one row, 11 TRUEs in the final row, and the intersection of any two rows with the same weight will be 4. (Furthermore, the transpose of this matrix is just a permutation of this matrix (since -(x - y) = (-x) - (-y)), so the column conditions are equivalent to the row conditions). This satisfies the conditions given in the previous section to give us the extended binary Golay code.
 
 ***
 
