@@ -1,5 +1,8 @@
 {# See https://www.getzola.org/documentation/templates/404/ #}
 
+{# Without this, Chrome seems to screw up on detecting the charset encoding when using `zola serve` (thus screwing up the em dash, emoji, etc), though things seem fine regardless with `zola build` or deployed to GitHub Pages. #}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
@@ -17,7 +20,7 @@
 <div class="container">
   <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found. Perhaps someday I will write it</p>
+  <p><strong>Page not found 😢</strong></p>
+  <p>The requested page could not be found. Perhaps someday I will write it.</p>
   <p>—Sridhar</p>
 </div>

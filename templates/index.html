@@ -25,6 +25,7 @@ MathJax = {
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
+{{ super() }}
 {% endblock js %}
 
 {% block content -%}
@@ -33,3 +34,15 @@ You've come to the right place to see how Sridhar thinks about math.
 Keep in mind, nothing here is polished, it's full of TODOs, you shouldn't be reading this site, who told you it even exists? {{ "([Atom feed](atom.xml))" | markdown(inline=true) | safe}}
 {{ super() }}
 {% endblock content -%}
+
+{% block css -%}
+{# Deliberately not calling super() to disable the Pickle theme's fonts. Otherwise copied from the Pickle theme. #}
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="{{ get_url(path="base.css") }}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{# The Pickle theme's font, which we wish to disable <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> #}
+<link href="{{ get_url(path="fontawesome/fontawesome.css") }}" rel="stylesheet">
+<link href="{{ get_url(path="fontawesome/brands.css") }}" rel="stylesheet">
+<link href="{{ get_url(path="fontawesome/solid.css") }}" rel="stylesheet">
+{%- endblock css %}

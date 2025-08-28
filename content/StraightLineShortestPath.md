@@ -2,7 +2,7 @@
 title: "A straight line is the shortest path"
 date: 2020-12-17
 ---
-A straight line is the shortest path between two points. Why is that?
+A straight line is the shortest path between two points. Why is that? <!-- more -->
 
 Well, for any path between points $$A$$ and $$B$$ we can consider projecting it onto the line through $$A$$ and $$B$$. That is, each infinitesimal movement $$dv$$ along our path can be decomposed into $$dx + dy$$, where $$dx$$ is its component parallel to the relevant line and $$dy$$ is its component perpendicular to the relevant line. (Don't let my use of this notation fool you, this works just as well in three or higher dimensions, $$dy$$ can be anything perpendicular to the relevant line). When we project this to just $$dx$$ we make it smaller (if changed at all), as any leg of a right triangle is smaller than the hypotenuse (if different at all).
 

@@ -44,3 +44,7 @@ See also https://github.com/artisticat1/obsidian-tikzjax
 -----
 
 Note that \; which is sometimes used in LaTeX for spacing is treated as an escape sequence for ; simpliciter in CommonMark (see https://spec.commonmark.org/0.13/#backslash-escapes). Thus, we must use \\; in its place.
+
+-----
+
+Note that Tera comments (as in {# comment #}) on their own line turn into blank lines in the output HTML (or rather, the newline from after the comment still makes it into the output HTML). This doesn't really matter, but is slightly annoying. On the other hand, this is also clearly correct (the newline is outside the comment) in some sense. So, I don't know what to make of it.

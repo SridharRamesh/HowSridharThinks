@@ -2,7 +2,7 @@
 title: "Yoneda Extension"
 date: 2022-7-26
 ---
-Why is the Yoneda embedding the free cocompletion?
+Why is the Yoneda embedding the free cocompletion? <!-- more -->
 
 Let $$\newcommand{\Set}{\mathrm{Set}} \newcommand{\Hom}{\mathrm{Hom}} \newcommand{\Psh}{\mathrm{Psh}} \newcommand{\Rsh}{\mathrm{Rsh}} A$$ and $$B$$ be arbitrary categories, with $$y : A \to \Set^{A^{op}}$$ and $$Y : B \to (\Set^B)^{op}$$ as the Yoneda embeddings of the indicated type. By the Yoneda embedding lemma, these can be thought of as inclusions of full subcategories. Note that $$y$$ preserves any limits which exist in $$A$$, while $$Y$$ preserves any colimits which exist in $$B$$.
 

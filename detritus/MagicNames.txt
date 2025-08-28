@@ -3,6 +3,8 @@ Magic names used by Zola:
 Always used or replaced with default:
 404.html (Displayed on 404 errors, in templates).
 robots.txt (Used to generate robots.txt, in templates)
+summary-cutoff.text (Used to generate ellipses or other suffixes or lack thereof at the end of page summaries explicitly demarcated by <!-- more -->, in templates)
+More are found at https://github.com/getzola/zola/blob/master/components/templates/src/lib.rs
 
 Can be overridden:
 index.html (The homepage, in templates. But overridden if there is an _index.md in the root of content which specifies a different section template. Presumably also overridden if there is an index.md in the root of content.)

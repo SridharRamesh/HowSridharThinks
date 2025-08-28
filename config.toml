@@ -1,3 +1,6 @@
+# All variables below, and others, are noted in https://www.getzola.org/documentation/getting-started/configuration/
+# With the exception of those in the [extra] section
+
 # The URL the site will be built for
 base_url = "https://sridharramesh.github.io/HowSridharThinks/"
 

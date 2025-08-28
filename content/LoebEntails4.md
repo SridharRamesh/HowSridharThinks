@@ -2,7 +2,7 @@
 title: "Löb's Theorem Entails 4"
 date: 2021-7-31
 ---
-A curious fact about modal logic is that any normal (in the Kripke sense) modal logic containing Löb's theorem ($$\Box (\Box A \Rightarrow A) \vdash \Box A$$) as an axiom also contains 4 ($$\Box A \vdash \Box \Box A$$) as an axiom.
+A curious fact about modal logic is that any normal (in the Kripke sense) modal logic containing Löb's theorem ($$\Box (\Box A \Rightarrow A) \vdash \Box A$$) as an axiom also contains 4 ($$\Box A \vdash \Box \Box A$$) as an axiom. <!-- more -->
 
 Proof:
 $$A \vdash \Box(A \wedge \Box A) \Rightarrow A \wedge \Box A$$, fairly straightforwardly.

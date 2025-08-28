@@ -2,7 +2,7 @@
 title: "Fixed Points of Cycled Compositions"
 date: 2024-3-29
 ---
-Suppose given 1-cells $$F : C \to D$$ and $$G : D \to C$$ in some 2-category. $$\newcommand{\id}{\mathrm{id}}$$
+Suppose given 1-cells $$F : C \to D$$ and $$G : D \to C$$ in some 2-category. $$\newcommand{\id}{\mathrm{id}}$$ <!-- more -->
 
 [^2Cat]: Everything in this post will generalize just as well to working in an arbitrary 2-category rather than specifically $$\mathrm{Cat}$$, but for convenience, I will use the language of "functors" rather than 1-cells and "natural transformations" rather than 2-cells, etc, regardless.
 

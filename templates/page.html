@@ -1,0 +1,74 @@
+{% extends "zola-pickles/templates/page.html" %}
+
+{# Taken from Pickles theme and modified to remove reading time. #}
+{% block content %}
+<article class="p-article">
+  <header>
+    <h1>{{ page.title | markdown | striptags }}</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime="{{ page.date | date(format=" %F") | safe }}">
+          {{ page.date | date(format="%F") }}
+        </time>
+        {% if page.extra.author -%}
+        by {{ page.extra.author}}
+        {%- endif %}
+      </div>
+    </div>
+  </header>
+  {% if page.toc and page.extra.toc -%}
+  <div class="toc">
+    <strong>Contents</strong>
+    <div>
+      <nav id="TableOfContents">
+        <ul>
+          {% for h1 in page.toc %}
+          <li>
+            <a href="{{h1.permalink | safe}}">{{ h1.title }}</a>
+            {% if h1.children %}
+            <ul>
+              {% for h2 in h1.children %}
+              <li>
+                <a href="{{h2.permalink | safe}}">{{ h2.title }}</a>
+                {% if h2.children %}
+                <ul>
+                  {% for h3 in h2.children %}
+                  <li>
+                    <a href="{{h3.permalink | safe}}">{{ h3.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+  {%- endif %}
+  <section id="js-article" class="p-article__body">
+    {{ page.content | safe }}
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          {% if page.later -%}
+          <a href="{{ page.later.permalink }}">{{ page.later.title }}</a>
+          {%- endif %}
+        </div>
+        <div class="c-pagination__older">
+          {% if page.earlier -%}
+          <a href="{{ page.earlier.permalink }}">{{ page.earlier.title }}</a>
+          {%- endif %}
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+{%- endblock content %}
