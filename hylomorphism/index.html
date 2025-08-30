@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Hylomorphisms | How Sridhar Thinks</title>
+<meta property="og:title" content="Hylomorphisms | How Sridhar Thinks" />
+<meta name="twitter:title" content="Hylomorphisms | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Here I record some simple thoughts on hylomorphism correspondences. Let $$F$$ be an endofunctor on some category, let $$W : w \to F(w)$$ be an $$F$$-coalgebra, and let $$M : m \to F(m)$$ be an $$F$$-algebra. Then by an $$F$$-hylomorphism, we mean a commutative square of the follo…">
+<meta property="og:description" content="Here I record some simple thoughts on hylomorphism correspondences. Let $$F$$ be an endofunctor on some category, let $$W : w \to F(w)$$ be an $$F$$-coalgebra, and let $$M : m \to F(m)$$ be an $$F$$-algebra. Then by an $$F$$-hylomorphism, we mean a commutative square of the follo…">
+<meta name="twitter:description" content="Here I record some simple thoughts on hylomorphism correspondences. Let $$F$$ be an endofunctor on some category, let $$W : w \to F(w)$$ be an $$F$$-coalgebra, and let $$M : m \to F(m)$$ be an $$F$$-algebra. Then by an $$F$$-hylomorphism, we mean a commutative square of the follo…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Hylomorphisms
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2022-12-03">
+          2022-12-03
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Here I record some simple thoughts on hylomorphism correspondences.</p>
+<p>Let $$F$$ be an endofunctor on some category, let $$W : w \to F(w)$$ be an $$F$$-coalgebra, and let $$M : m \to F(m)$$ be an $$F$$-algebra. Then by an $$F$$-hylomorphism, we mean a commutative square of the following form:</p>
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwxLCJ3Il0sWzAsMCwiRih3KSJdLFsxLDAsIkYobSkiXSxbMSwxLCJtIl0sWzAsMSwiVyJdLFsxLDIsIkYoeCkiXSxbMiwzLCJNIl0sWzAsMywieCIsMl1d&embed" width="325" height="304" style="border-radius: 8px; border: none;"></iframe>
+<!--
+\[\begin{tikzcd}
+    {F(w)} & {F(m)} \\
+    w & m
+    \arrow["W", from=2-1, to=1-1]
+    \arrow["{F(x)}", from=1-1, to=1-2]
+    \arrow["M", from=1-2, to=2-2]
+    \arrow["x"', from=2-1, to=2-2]
+\end{tikzcd}\]
+-->
+<p>In other words, a fixed point for the map $$x \mapsto M \circ F(x) \circ W$$.</p>
+<p>Recall that, when dealing with two functions $$f$$ and $$g$$ in opposite direction between two sets, the fixed points of $$f \circ g$$ and of $$g \circ f$$ are in bijection, as induced by $$g$$ and $$f$$.</p>
+<p>Thus, when $$F$$ and $$G$$ are functors in opposite direction between two categories, we have a bijective correspondence between $$FG$$-hylomorphisms $$F(V) \circ W \to M \circ F(N)$$ and $$GF$$-hylomorphisms $$G(W) \circ V \to N \circ G(M)$$, as illustrated below:</p>
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsMTIsWzMsMiwidiJdLFs0LDIsIm4iXSxbMywwLCJHKEYodikpIl0sWzQsMCwiRyhGKG4pKSJdLFszLDEsIkcodykiXSxbNCwxLCJHKG0pIl0sWzAsMSwiRih2KSJdLFswLDAsIkYoRyh3KSkiXSxbMSwwLCJGKEcobSkpIl0sWzEsMSwiRihuKSJdLFswLDIsInciXSxbMSwyLCJtIl0sWzAsMSwieSIsMl0sWzIsMywiRyhGKHkpKSJdLFs0LDIsIkcoVykiXSxbMyw1LCJHKE0pIl0sWzAsNCwiViJdLFs1LDEsIk4iXSxbNiw3LCJGKFYpIl0sWzgsOSwiRihOKSJdLFs3LDgsIkYoRyh4KSkiXSxbMTAsMTEsIngiLDJdLFsxMCw2LCJXIl0sWzksMTEsIk0iXV0=&embed" width="912" height="432" style="border-radius: 8px; border: none;"></iframe>
+<!--
+\[\begin{tikzcd}
+    {F(G(w))} & {F(G(m))} && {G(F(v))} & {G(F(n))} \\
+    {F(v)} & {F(n)} && {G(w)} & {G(m)} \\
+    w & m && v & n
+    \arrow["y"', from=3-4, to=3-5]
+    \arrow["{G(F(y))}", from=1-4, to=1-5]
+    \arrow["{G(W)}", from=2-4, to=1-4]
+    \arrow["{G(M)}", from=1-5, to=2-5]
+    \arrow["V", from=3-4, to=2-4]
+    \arrow["N", from=2-5, to=3-5]
+    \arrow["{F(V)}", from=2-1, to=1-1]
+    \arrow["{F(N)}", from=1-2, to=2-2]
+    \arrow["{F(G(x))}", from=1-1, to=1-2]
+    \arrow["x"', from=3-1, to=3-2]
+    \arrow["W", from=3-1, to=2-1]
+    \arrow["M", from=2-2, to=3-2]
+\end{tikzcd}\]
+-->
+<p>This is by considering the two operations $$x \mapsto N \circ G(x) \circ V$$ and $$y \mapsto M \circ F(y) \circ W$$, and the fixed points of their compositions in either order.</p>
+<p>For example, if we take $$V$$ and $$N$$ to be identities, then this tells us that the $$FG$$-hylomorphisms from $$W$$ to $$M$$ are in bijection (via applying $$G$$) with the $$GF$$-hylomorphisms from $$G(W)$$ to $$G(M)$$.</p>
+<p>Or if we take $$W$$ and $$N$$ to be identities, then this tells us that the $$FG$$-hylomorphisms from $$F(V)$$ to $$M$$ are in bijection with the $$GF$$-hylomorphisms from $$V$$ to $$G(M)$$. [This special adjunction-like case is discussed in "Conjugate Hylomorphisms" by Hinze et al, under the name "rolling rule", and attributed to Eppendahl. Indeed, it is lemma 3.1 in Eppendahl's "Coalgebra-to-Algebra Morphisms". Neither author discusses our more general observation or even our first special case. There is some interesting discussion by Eppendahl at the end of his paper on Freyd's iterated square and Lambek's lemma, as concerns initial algebras for squared endofunctors.]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

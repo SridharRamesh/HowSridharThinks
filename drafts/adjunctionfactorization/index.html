@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Adjunction Factorization | How Sridhar Thinks</title>
+<meta property="og:title" content="Adjunction Factorization | How Sridhar Thinks" />
+<meta name="twitter:title" content="Adjunction Factorization | How Sridhar Thinks" />
+
+        
+<meta name="description" content="[There are a million things to write about adjunctions. For now, I’m just writing some motley scratch notes for myself and will shape this up into an introductory post later.] Much like every monad can be seen as coming from an adjunction in multiple ways, with Kleisli and Eilenb…">
+<meta property="og:description" content="[There are a million things to write about adjunctions. For now, I’m just writing some motley scratch notes for myself and will shape this up into an introductory post later.] Much like every monad can be seen as coming from an adjunction in multiple ways, with Kleisli and Eilenb…">
+<meta name="twitter:description" content="[There are a million things to write about adjunctions. For now, I’m just writing some motley scratch notes for myself and will shape this up into an introductory post later.] Much like every monad can be seen as coming from an adjunction in multiple ways, with Kleisli and Eilenb…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Adjunction Factorization
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-01-19">
+          2020-01-19
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>[There are a million things to write about adjunctions. For now, I’m just writing some motley scratch notes for myself and will shape this up into an introductory post later.]</p>
+<p>Much like every monad can be seen as coming from an adjunction in multiple ways, with Kleisli and Eilenberg-Moore as extremes, we also have that every adjunction can be seen as factoring through reflections and coreflections in multiple ways, with two extremes, I believe.</p>
+<p>I don’t mean in the sense of an idempotent adjunction, where the left adjoint factors as a reflection followed by an inclusion and the right adjoint as a coreflection followed by an inclusion. I mean in the opposite sense: factorizations where the left adjoint factors as an inclusion followed by a reflection, and the right adjoint as an inclusion followed by a coreflection. [I also mean throughout here for “reflective subcategory” to always mean a full subcategory, and similarly for coreflection; I should just adopt this convention in general]</p>
+<p>Specifically, as in the comma-cocomma discussions of commas and collages, I believe that when we have an adjunction thought of as a bifunctor, the corresponding collage is the minimal factorization in the sense of the previous paragraph (the left adjoint is an inclusion of the domain category into the collage followed by a reflection of the collage into the codomain category, and symmetrically for the right adjoint) and the corresponding comma category/two-sided fibration is the maximal factorization (the domain category is included as a coreflective subcategory of the comma category by sending each A to its unit A -&gt; FA, and symmetrically for the codomain category’s inclusion as a reflective subcategory by sending each B to its counit GB -&gt; B).</p>
+<p>The notion of morphism between such factorizations is as functors between the intermediary categories making everything commute, in the sense of making commutative triangles out of the inclusions of the domain category, out of the inclusions of the codomain category, out of the reflections into the codomain category, and out of the coreflections from the domain category. We will then find that the collage representation is indeed an initial factorization and the comma representation is indeed a terminal factorization (I believe this is even just a consequence of the universal properties of the collage representation as an initial object of a certain kind by virtue of its cocomma definition, and symmetrically for the comma as a terminal object). In particular, there is a unique functor from the collage to the comma making everything commute.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+
