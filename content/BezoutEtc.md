@@ -14,6 +14,8 @@ There are a number of results which are all essentially the same:
 
 3.3. The Euclidean algorithm for calculating GCDs
 
+<!-- more -->
+
 It seems to me that everyone who is familiar with the topics recognizes 3.2 as the same as 3.3, and most recognize 3.1 as the same as well. Tons of undergrads use 2 without recognizing that it is the same as 3, but at least occasionally mathematicians acknowledge this. I've never seen anyone acknowledge that 1 is the same as the rest, which is a shame.
 
 Anyway, enough about what others do or don't recognize. Here's what you should understand:
