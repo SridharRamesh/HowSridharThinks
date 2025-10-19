@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>3blue1brown: The Wallis Product and the Sine Product | How Sridhar Thinks</title>
+<meta property="og:title" content="3blue1brown: The Wallis Product and the Sine Product | How Sridhar Thinks" />
+<meta name="twitter:title" content="3blue1brown: The Wallis Product and the Sine Product | How Sridhar Thinks" />
+
+        
+<meta name="description" content="In a past life, I worked for 3blue1brown, and I discovered and made a video for them on a simple new proof of the Wallis product and the sine product more generally. Alas, I no longer work for 3blue1brown. But I had a post on a number of supplements to that video, which I will ke…">
+<meta property="og:description" content="In a past life, I worked for 3blue1brown, and I discovered and made a video for them on a simple new proof of the Wallis product and the sine product more generally. Alas, I no longer work for 3blue1brown. But I had a post on a number of supplements to that video, which I will ke…">
+<meta name="twitter:description" content="In a past life, I worked for 3blue1brown, and I discovered and made a video for them on a simple new proof of the Wallis product and the sine product more generally. Alas, I no longer work for 3blue1brown. But I had a post on a number of supplements to that video, which I will ke…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>3blue1brown: The Wallis Product and the Sine Product
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2018-06-26">
+          2018-06-26
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>In a past life, I worked for 3blue1brown, and I discovered and made a video for them on a simple new proof of the Wallis product and the sine product more generally. Alas, I no longer work for 3blue1brown. But I had a post on a number of supplements to that video, which I will keep archived for my own purposes here, as well transcribing the full argument from the video for this blog at some point as well:</p>
+<h1 id="recap-of-the-argument-from-the-video">Recap of the argument from the video:</h1>
+<p><a href="https://www.youtube.com/watch?v=8GPy_UMV-08">The video</a></p>
+<p>Recap: [TODO, phrase the following in terms of lighthouses and a Sailor and Keeper, as in the video, and reconcile it to the phrasing in the following section.]</p>
+<p>The gist is like so: For each natural $n$, let $$P_n(x) = x^n - 1$$ be the $$n$$-th cyclotomic polynomial. This is the product of $$(x - \zeta)$$ over all $$n$$-th roots of unity $$\zeta$$. In other words, restricting attention to the case of odd $$n = 2m + 1$$ for convenience, this is $$\prod_{k = -m}^{k = m} (x - R^{k/n})$$, where $$R = e^{\tau i}$$.</p>
+<p>Let $$$Q_n(x) = P_n(x)/(x - 1) = 1 + x + x^2 + \ldots + x^{n - 1}$$ be the same product dropping the $$k = 0$$ factor. For convenience, let us reparametrize this as $$H_n(f) = Q_n(R^{f/n})$$. Note that $$H_n(0) = Q_n(1) = n$$.</p>
+<p>Now consider $$H_n(f) / H_n(0)$$. On the one hand, this is clearly $$(R^{1/f} - 1) / ((R^{f/n} - 1) n)$$. In the limit as $$n \to \infty$$, the denominator here approaches $$f \tau i$$, thus having magnitude $$f \tau$$.</p>
+<p>On the other hand, this is the product of $$\frac{R^{f/n} - R^{k/n}} {1 - R^{k/n}}$$ over $$k \in [-m, m], k \neq 0$$. The $$k$$-th such factor approaches $$\frac{f - k}{- k} = 1 - \frac{f}{k}$$ in magnitude as $$n \to \infty$$.</p>
+<p>Thus, with use of Dominated Convergence as below, we may conclude that the product of $$1 - \frac{f}{k}$$ over all nonzero integers $$k$$, suitably construed, approaches $$\frac{R^f - 1}{f \tau}$$ in magnitude. Put another way, $$f \tau$$ times the product of $$1 - \frac{f}{k}$$ over all nonzero integers $$k$$ approaches $$R^f - 1$$ in magnitude.</p>
+<p>In the following, we write $$\mathrm{Chord}(f)$$ for the magnitude $$\abs{R^{1/f} - 1}$$. This can also be expressed as $$2 \sin(f \pi)$$.</p>
+<h1 id="commuting-limits-using-dominated-convergence">Commuting limits using Dominated Convergence:</h1>
+<p>This kind of interchanging of limits and infinitary arithmetic isn't actually always true, for arbitrary sequences. It often holds, but sometimes fails. Luckily, mathematicians have spent a lot of time thinking about these phenomena, and developing tools for quickly seeing certain conditions under which this interchanging of limits works. In this case, a particular standard result known as “Dominated Convergence” quickly assures us that we are indeed allowed to use this sleight-of-hand here. Let's see the details of how to use that for this argument:</p>
+<p>Although Dominated Convergence is normally phrased entirely in terms of addition, we will use a form of it tailored to multiplication: specifically, the Dominated Convergence result we will use states that if you have a multiplicative series whose $$k$$-th factor at time $$N$$ is $$S_k(N)$$, and you want to show that $$\displaystyle \lim_{N \to \infty} \prod_{k} S_k(N) = \prod_{k} \lim_{N \to \infty} S_k(N)$$, it suffices to find an additive series of positive terms $$B_k$$ such that $$\sum_{k} B_k$$ converges, and such that $$\abs{S_k(N) - 1} \leq B_k$$ for each $$k$$ regardless of $$N$$. (The “for each $$k$$” can even be relaxed to “for all but finitely many $$k$$”).</p>
+<p>To apply this to our situation, recall that at the time when we have $$N$$ lighthouses, the contribution from the $$k$$-th lighthouse to the Sailor : Keeper distance-product ratio is $$\mathrm{Chord}((k - f)/N) : \mathrm{Chord}(k/N)$$, if the $$k$$-th lighthouse is present. And, presuming $$N$$ always odd for convenience, we can take the lighthouses which are present to correspond to those nonzero integers $$k$$ for which $$N &gt; \abs{2k}$$. (When $$N$$ is even, there is also the question of whether to use $$+N/2$$ or $$-N/2$$ to index the lighthouse diametrically opposite “the Keeper”, but we will ignore this wart; it makes no difference to anything to restrict attention to the behavior for odd $$N$$). Another way of saying that the $$k$$-th factor only enters once $$N &gt; \abs{2k}$$ is to say that the $$k$$-th factor is $$1$$ when this condition is not satisfied.</p>
+<p>So this gives us our $$S_k(N) = \frac{\mathrm{Chord}((k - f)/N)}{\mathrm{Chord}(k/N)}$$ (when $$N &gt; \abs{2k}$$, and $$1$$ otherwise).</p>
+<p>We also already know that $$\displaystyle \lim_{N \to \infty} S_k(N) = 1 - \frac{f}{k}$$, and we also have just seen that the product over all nonzero integers $$k$$ of $$S_k(N)$$ is equal to $$\frac{\mathrm{Chord}(f)}{N \times \mathrm{Chord}(f/N)}$$, whose limiting value for large $$N$$ is $$\frac{\mathrm{Chord}(f)}{f \times 2\pi} = \frac{\sin(f\pi)}{f\pi}$$.</p>
+<p>So to complete the proof of our sine product result, we just need to be able to commute the limits here. In order to use our Dominated Convergence tool to commute these limits, we need to find a series of positive values $$B_k$$, such that the sum of the $$B_k$$ converges, and $$\abs{S_k(N) - 1}$$ is bounded by $$B_k$$.</p>
+<p>Alas... this is impossible: Note that the limiting value of (and thus the minimal size of any potential bound on) $$\abs{S_k(N) - 1}$$ is on the order of $$\abs{k}^{-1}$$, and this famously diverges (as the harmonic series) rather than converges.</p>
+<p>BUT! If we bundle our factors together, bundling the $$k$$-th and $$-k$$-th factor together as $$S'<em>k(N) = S_k(N) \times S</em>{-k}(N)$$, and then consider this series (now indexed only by positive integers) instead, now we have a shot, as the limiting value of $$\abs{S'_k(N) - 1}$$ is now on the order of $$k^{-2}$$, which converges. Let's see if we can get an actual bound, irrespective of $$N$$, of this same quadratic order in $$k$$, which will allow us to use Dominated Convergence on the product with factors bundled in this way.</p>
+<p>Expanding out $$S'_k(N)$$, it is $$\frac{\mathrm{Chord}((k - f)/N)}{\mathrm{Chord}(k/N)} \times \frac{\mathrm{Chord}((-k - f)/N)}{\mathrm{Chord}(-k/N)}$$, where $$N &gt; 2k$$ (or $$1$$ otherwise). With a little trig identity elbow-grease, and keeping in mind that $$\mathrm{Chord}$$ is basically the same thing as $$\sin$$ (just with its inputs and outputs re-scaled by constant factors), we get that $$S'_k(N)$$ equals $$1 - \left( \frac{\mathrm{Chord}(f/N)}{\mathrm{Chord}(k/N)} \right) ^2$$ (under, as always, the condition that $$N &gt; 2k$$, and being simply $$1$$ otherwise).</p>
+<p>Our goal now is to bound $$\left( \frac{\mathrm{Chord}(f/N)}{\mathrm{Chord}(k/N)} \right) ^2$$ for $$N &gt; 2k$$ by some function of $$k$$ on the order of $$k^{-2}$$ for large $$k$$, which is to say, we want to bound $$\frac{\mathrm{Chord}(f/N)}{\mathrm{Chord}(k/N)}$$ by a function of $$k$$ on the order of $$k^{-1}$$.</p>
+<p>To show that such a bound holds, we begin by rewriting $$\frac{\mathrm{Chord}(f/N)}{\mathrm{Chord}(k/N)}$$ as $$\frac{\mathrm{Chord}(r x)} {\mathrm{Chord}(x)}$$ where $$x = k/N &lt; \frac{1}{2}$$ and $$r = f/k$$.</p>
+<p>Letting $$D(x) = \mathrm{Chord}(x)/x$$, we can furthermore rewrite this as $$\frac{D(r x)}{D(x)} \times r$$. As $$r$$ itself is proportional to $$k^{-1}$$, what remains is to show that $$\frac{D(r x)}{D(x)}$$ is bounded by a constant, for sufficiently large $$k$$. Since $$x \in [0, \frac{1}{2}]$$ and $$D(x)$$ is a continuous function which never takes the value $$0$$ in this range (including at $$x = 0$$, where $$D(x)$$ equals the nonzero derivative of $$\mathrm{Chord}(x)$$), we have that $$\frac{1}{D(x)}$$ is bounded by a constant.</p>
+<p>Furthermore, since $$x$$ itself is bounded by a constant, and $$r$$ is bounded by a value proportional to $$k^{-1}$$, we have that for sufficiently large $$k$$, that $$rx$$ is arbitrarily close to $$0$$, and thus $$D(rx)$$ is arbitrarily close to the constant $$D(0)$$.</p>
+<p>This completes the proof that $$\frac{D(r x)}{D(x)}$$ is bounded by a constant for sufficiently large $$k$$, and indeed, retracing back through what has taken us here, completes the proof that $$\abs{S'_k(N) - 1}$$ is bounded by some function of $$k$$ which is additively convergent over all $$k$$, thus allowing us to apply Dominated Convergence to $$S'_k$$, filling in the final rigor on our proof of the sine product formula in general and the Wallis product in particular.</p>
+<p>You may be wondering why our particular trick of bundling positive and negative index factors into a single factor was helpful and indeed necessary for us to get around the initial obstruction to using Dominated Convergence here. One way of looking at this is as so: The fact that we could not use Dominated Convergence with our pre-bundled product corresponds to how our pre-bundled product is only conditionally convergent, not absolutely convergent; re-ordering its factors wildly could give different limiting values. But the bundling we engaged in turned our product absolutely convergent, obviating these issues and in so doing also yielding a series to which we could apply our Dominated Convergence tool.</p>
+<h1 id="the-relationship-to-the-basel-problem">The relationship to the Basel problem:</h1>
+<p>Not only is our sine product cool in its own right, but we can also use it to solve the Basel problem (and indeed, this was the way that the Basel problem was first solved by Euler, though he discovered the sine product in a different way than we've shown here):</p>
+<p>Remember, the Basel problem is to understand what the sum of the reciprocal squares comes out to, $$\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \dots$$. How does this relate to our sine product?</p>
+<p>Well, as we've just seen, we know that $$\sin(f \pi)$$ is $$f \pi$$ times the product of $$\left(1 - \frac{f}{k} \right) \times \left(1 - \frac{f}{-k} \right) = 1 - \frac{f^2}{k^2}$$ over all positive integers $$k$$. But we also know, from the fact that $$\sin$$ is the negation of its own second derivative, and from the values at $$0$$ of $$\sin$$ and its derivative, that we have the Taylor series expansion $$\sin(f \pi) = f \pi - \frac{(f \pi)^3}{3!} + \frac{(f \pi)^5}{5!} - \frac{(f \pi)^7}{7!} + \dots$$.</p>
+<p>So the coefficients of $$f$$ in both of these series must be the same. In particular, let's look at the coefficient of $$f^3$$:</p>
+<p>In the Taylor series $$\sin(f \pi) = f \pi - \frac{(f \pi)^3}{3!} + \frac{(f \pi)^5}{5!} - \frac{(f \pi)^7}{7!} + \dots$$, the coefficient of $$f^3$$ is $$-\frac{\pi^3}{3!}$$.</p>
+<p>In our sine product $$\sin(f \pi) = f \pi \displaystyle \prod_{k \geq 1} \left(1 - \frac{f^2}{k^2} \right)$$, on the other hand, if we were to rewrite this as a "power series" by distributing out the giant multiplication, we would, among other terms, obtain the terms $$f \pi \times \left(-\frac{f^2}{1^2} -\frac{f^2}{2^2} - \frac{f^2}{3^2} + \dots \right)$$; these are the terms in our giant multiplication that come from choosing the "$$-\frac{f^2}{k^2}$$" from one factor and the "$$1$$" from all other factors. These are the terms which are multiples of $$f^3$$; all the other terms would correspond to higher or lower degree in $$f$$. So the coefficient of $$f^3$$ in our sine product series is $$-\pi$$ times the Basel sum $$\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \dots$$.</p>
+<p>And thus, equating the results of the two last paragraphs, $$-\pi$$ times the Basel sum must equal $$-\frac{\pi^3}{3!}$$. This means the Basel sum must equal $$\frac{\pi^2}{3!} = \frac{\pi^2}{6}$$. Ta-da!</p>
+<p>By equating coefficients at higher powers of $$f$$ between these two series, we can also go further and discover the sum of $$\frac{1}{1^n} + \frac{1}{2^n} + \frac{1}{3^n} + \dots$$ for each even $$n \geq 2$$, in each case finding it to be some rational multiple of $$\pi^n$$.</p>
+<p>(But for a much simpler way of calculating these results, which does not require our sine product, or much anything beyond Calc 101 integration, see this other post [TODO: link to be inserted]!)</p>
+<h1 id="alternative-proof-of-the-wallis-product">Alternative proof of the Wallis product:</h1>
+<p>Check out another beautifully simple geometric proof of the Wallis product directly in terms of circles and spheres (and higher-dimensional spheres...) in <a href="https://sridharramesh.github.io/HowSridharThinks/wallisproductgeometric/">this post</a>! No complex numbers or tricky polynomial algebra required!</p>
+<h1 id="alternative-proofs-of-the-sine-product">Alternative proofs of the sine product:</h1>
+<p>See <a href="https://sridharramesh.github.io/HowSridharThinks/sineproductproofs/">here</a>, for many other proofs, including the one that's actually my favorite.</p>
+<h1 id="much-more-to-come">Much more to come:</h1>
+<p>[There's much more material to come on Euler's original method of discovery of the sine product, other methods of establishing it as well, what happens when we re-order our Wallis product to interleave its two halves at different speeds, other nice series for trig functions which follow from the sine product, further connections between these and the Basel problem, and more! This post will be updated continuously over time. Stay tuned!]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

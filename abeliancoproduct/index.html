@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Coproducts of Abelian Monoids | How Sridhar Thinks</title>
+<meta property="og:title" content="Coproducts of Abelian Monoids | How Sridhar Thinks" />
+<meta name="twitter:title" content="Coproducts of Abelian Monoids | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Two classic facts are:   For symmetric (aka commutative, or abelian, or whatever term you like) monoids, finitary coproducts and finitary products coincide (thus, the underlying set of the finitary coproduct is the Cartesian product of the underlying sets of the individual monoid…">
+<meta property="og:description" content="Two classic facts are:   For symmetric (aka commutative, or abelian, or whatever term you like) monoids, finitary coproducts and finitary products coincide (thus, the underlying set of the finitary coproduct is the Cartesian product of the underlying sets of the individual monoid…">
+<meta name="twitter:description" content="Two classic facts are:   For symmetric (aka commutative, or abelian, or whatever term you like) monoids, finitary coproducts and finitary products coincide (thus, the underlying set of the finitary coproduct is the Cartesian product of the underlying sets of the individual monoid…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Coproducts of Abelian Monoids
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-02-01">
+          2020-02-01
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Two classic facts are:</p>
+<ol>
+<li>
+<p>For symmetric (aka commutative, or abelian, or whatever term you like) monoids, finitary coproducts and finitary products coincide (thus, the underlying set of the finitary coproduct is the Cartesian product of the underlying sets of the individual monoids), but this correspondence does not hold infinitarily. <em>[This is often phrased as the finitary coincidence and infinitary distinction between "free" and "direct" products.]</em></p>
+</li>
+<li>
+<p>For commutative associative algebras with unit over a semiring R [henceforth, "symmetric R-monoids"], the underlying R-module of a finitary coproduct is the tensor product of the underlying R-modules of the individual symmetric R-monoids, but this correspondence does not hold infinitarily.</p>
+</li>
+</ol>
+<p>These (or at least, the observations about underlying structures, ignoring the further observation of being a categorical product in the first case) are both instances of the same very general fact: Coproducts of symmetric monoids enriched over a symmetric monoidal category have, as their underlying object, the tensor product of the individual monoids' underlying objects.</p>
+<p>Specifically, a monoid enriched over a symmetric monoidal category is an object $$M$$ in that category, along with maps $$M \otimes M \otimes \ldots \to M$$ satisfying the obvious properties.</p>
+<p>Given finitely many monoids $$M_1, M_2, \ldots$$ [in usual abuse of language, I'm naming just the underlying objects of the monoids here], we can combine them into a new monoid with underlying object $$M_1 \otimes M_2 \otimes \ldots$$, where the multiplication maps $$(M_1 \otimes M_2 \otimes \ldots) \otimes (M_1 \otimes M_2 \otimes \ldots ) \otimes \ldots \to M_1 \otimes M_2 \otimes \ldots$$ are given by using the symmetry of the tensor product to rewrite the domain as $$(M_1 \otimes M_1 \otimes \ldots) \otimes (M_2 \otimes M_2 \otimes \ldots) \otimes \ldots$$ (preserving the ordering of $$M_i$$ factors for any fixed $$i$$), and then applying the monoid multiplication on each top-level factor to bring this down into $$M_1 \otimes M_2 \otimes \ldots$$.</p>
+<p>There's a notion of homomorphism between such monoids, which is a morphism between their underlying object making the appropriate diagrams commute.</p>
+<p>There's also a notion of when such monoids are symmetric (aka, commutative, abelian, etc), which of course just means that the multiplication morphisms are invariant under first permuting arguments using the symmetry of the tensor product.</p>
+<p>And we can observe that the above construction of the monoid $$M_1 \otimes M_2 \otimes \ldots$$ is symmetric whenever each factor monoid is symmetric.</p>
+<p>We can then observe that, within the category of symmetric monoids, this construction yields the coproduct, by noting that given homomorphisms $${f_i : M_i \to N}_i$$, we can take the tensor product of all the $$f_i$$ to get a morphism from the object $$M_1 \otimes M_2 \otimes \ldots$$ to $$N \otimes N \otimes \ldots$$; we can then postcompose the multiplication on $$N$$ to turn the codomain into $$N$$ simpliciter, and this result is a homomorphism between the relevant monoids. Conversely, we have injections from each $$M_i$$ into $$M_1 \otimes M_2 \otimes \ldots$$ by tensoring with the unit maps $$: 1 \to M_j$$ for each other $$M_j$$; this gives us a way take a homomorphism from $$M_1 \otimes M_2 \otimes \ldots$$ to $$N$$, and turn it into homomorphisms from each individual $$M_i$$ to $$N$$. It's straightforward to now verify that these two processes are inverses, establishing the coproduct universal property.</p>
+<p>[In less categorical language, we are noting that homomorphisms $$f_1, f_2, \ldots$$ on factor monoids can be combined into $$F(m_1, m_2, \ldots) = f_1(m_1) f_2(m_2) \ldots$$ on the tensor product monoid, and conversely, given an arbitrary homomorphism $$F$$ defined on the tensor product monoid, we have the decomposition $$F(m_1, m_2, \ldots) = F(m_1, 1, \ldots) \cdot F(1, m_2, \ldots) \cdot \ldots$$, with these two processes inverse to each other].</p>
+<p>Note that this correspondence fails infinitarily because monoids do not have in their definition an infinite product, to force an equation $$F(m_1, m_2, \ldots) = F(m_1, 1, \ldots) \cdot F(1, m_2, \ldots) \cdot \ldots$$ in the infinitary case.</p>
+<hr />
+<p>Incidentally, observe this bonus fact: Our general theorem dualizes to tell us that products of symmetric comonoids enriched over a symmetric monoidal category also have underlying objects which are tensor products. A special case of this is the dual of our second fact above: in the context of modules over semirings, this tells us that coalgebras correspond to tensor product as well.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

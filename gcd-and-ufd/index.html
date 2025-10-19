@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Greatest Common Divisors and Unique Prime Factorization | How Sridhar Thinks</title>
+<meta property="og:title" content="Greatest Common Divisors and Unique Prime Factorization | How Sridhar Thinks" />
+<meta name="twitter:title" content="Greatest Common Divisors and Unique Prime Factorization | How Sridhar Thinks" />
+
+        
+<meta name="description" content="A general discussion of jewels of math concerning GCDs in various contexts. [TODO: Rewrite throughout for general audience, not just people who know math jargon] One of the jewels of mathematics is that a commutative monoid is freely generated on a set (thus, has unique prime fac…">
+<meta property="og:description" content="A general discussion of jewels of math concerning GCDs in various contexts. [TODO: Rewrite throughout for general audience, not just people who know math jargon] One of the jewels of mathematics is that a commutative monoid is freely generated on a set (thus, has unique prime fac…">
+<meta name="twitter:description" content="A general discussion of jewels of math concerning GCDs in various contexts. [TODO: Rewrite throughout for general audience, not just people who know math jargon] One of the jewels of mathematics is that a commutative monoid is freely generated on a set (thus, has unique prime fac…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Greatest Common Divisors and Unique Prime Factorization
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-06-29">
+          2020-06-29
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>A general discussion of jewels of math concerning GCDs in various contexts.</p>
+<p>[TODO: Rewrite throughout for general audience, not just people who know math jargon]</p>
+<p>One of the jewels of mathematics is that a commutative monoid is freely generated on a set (thus, has unique prime factorization, so to speak) just in case it is "unit-free" (i.e., the identity is the only invertible element), cancellative, and the divisibility preorder has meets and no infinite descending chain.</p>
+<p>(Keep in mind, any commutative monoid can be quotiented out by its submonoid of invertible elements, reflecting arbitrary commutative monoids into unit-free ones. In the following, we will occasionally drop explicit mention of the unit-free condition, instead taking it as implicit that we are speaking of values up to multiplication by a unit.)</p>
+<p>Proof: TODO</p>
+<p>Note that a cancellative commutative monoid embeds injectively into its free group (its group of fractions; sometimes called “the Grothendieck construction”, though this also refers to a different categorical construction), and we can define divisibility in this group via those ratios that come from the monoid. The group inversion operation is then an involution which acts contravariantly with respect to divisibility (and also the equivalence relation with respect to the preorder matches equality just in case we are unit-free). Thus, a cancellative commutative monoid has GCDs iff it has LCMs.</p>
+<p>Actually, we should be a bit more careful here. We have to make sure GCD/LCMs in the monoid of whole values are the same as those in its group of fractions. For LCMs of an inhabited set, this is the case: Any common multiple of an inhabited set of whole values must itself be a whole value, and so it does not matter if we are taking the LCM within the whole values or within the ostensibly large context of fractions. (For LCMs of the empty set, however, we get a disagreement: the empty LCM is 1 within the whole values, but does not exist within the fractions in any nontrivial case). As for GCDs, if a set of whole values has a GCD within the fractions, then that GCD will itself be a whole value (as it will be divisible by the common divisor 1), and thus will also be the GCD within the whole values. However, it is conceivable that a set of whole values may have a GCD within the whole values, but lacks a GCD within the fractions. [TODO: Blah blah, talk more about how GCDs within the fractions come from scaling-stable GCDs within the whole values, and how GCDs are automatically scaling-stable if they exist for each scaling]. So, the conclusoin is, a cancellative commutative monoid has GCDs of size so-and-so iff it has LCMs if the same size, for any given positive size.</p>
+<p>In the following, assume always we are working within the context of an integral domain (a ring in which the non-zero values are closed under multiplication; that is, the non-zero values under multiplication form a cancellative commutative monoid).</p>
+<p>From the above, it follows that an integral domain has GCDs iff it has LCMs, and is a unique factorization domain (every value has a unique representation as a product of irreducibles) iff it has GCDs and no infinite descending divisibility chain.</p>
+<hr />
+<p>Another jewel of mathematics is that, whenever the ideal generated by a set of values is also generated by some single value, the latter value is the GCD of the former set of values.</p>
+<p>Another jewel of mathematics is that the following are equivalent:
+A) There is a well-founded size function on the ring, such that whenever A does not divide B, some linear combination of A and B is smaller than A.
+B) Every ideal is principal.
+C) Every finitely-generated idea is principal (we are in a “Bezout domain”) and there is no infinite descending chain of proper factors (i.e., every ideal generated by a series of generators each dividing the previous one, is itself principal).
+D) We are in a unique factorization domain which is also a Bezout domain.</p>
+<p>Proofs:
+A entails B by considering the smallest value in the ideal, according to the size function. Any other value in the ideal would have to be divisible by this one.</p>
+<p>B entails C obviously.</p>
+<p>C entails D by the previous jewel.</p>
+<p>D entails A by taking the size function to be the number of prime factors.</p>
+<p>[It’s also easy enough to see directly, rather than in this roundabout fashion, that D entails C which entails B]</p>
+<hr />
+<p>There are some other facts about GCDs that we might as well record somewhere. For example, a GCD domain is integrally closed: any rational root of a monic polynomial can be expressed with denominator $$1$$. Why is this? Suppose $$p/q$$ is a root of monic polynomial $$x^n + ax^{n - 1} + bx^{n - 2} + \ldots + z$$, with $$p$$ and $$q$$ coprime (as can be arranged by dividing through by their GCD). Then by plugging in $$p/q$$ and multiplying through by q^n, we get $$p^n + ap^{n - 1}q + bp^{n - 2}q^2 + \ldots + zq^n = 0$$. All the terms other than the initial $$p^n$$ term are divisible by $$q$$, so $$p^n$$ is divisible by $$q$$. But if $$p$$ and $$q$$ are coprime, so are $$p^n$$ and $$q$$. Since $$p^n$$ is divisible by $$q$$ but also coprime to $$q$$, it follows that $$q$$ is a unit, and thus $$p/q$$ can be expressed with denominator $$1$$.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

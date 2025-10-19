@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Adjunctions | How Sridhar Thinks</title>
+<meta property="og:title" content="Adjunctions | How Sridhar Thinks" />
+<meta name="twitter:title" content="Adjunctions | How Sridhar Thinks" />
+
+        
+<meta name="description" content="[TODO: Equivalence between hom-set definition of adjunctions (including as abstracted to any 2-category) and unit/counit/triangle identities definition. Automatic equivalence also to the “backwards” definition: An adjunction between functors F : C → D (the left adjoint) and G : D…">
+<meta property="og:description" content="[TODO: Equivalence between hom-set definition of adjunctions (including as abstracted to any 2-category) and unit/counit/triangle identities definition. Automatic equivalence also to the “backwards” definition: An adjunction between functors F : C → D (the left adjoint) and G : D…">
+<meta name="twitter:description" content="[TODO: Equivalence between hom-set definition of adjunctions (including as abstracted to any 2-category) and unit/counit/triangle identities definition. Automatic equivalence also to the “backwards” definition: An adjunction between functors F : C → D (the left adjoint) and G : D…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Adjunctions
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-04-26">
+          2020-04-26
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>[TODO: Equivalence between hom-set definition of adjunctions (including as abstracted to any 2-category) and unit/counit/triangle identities definition. Automatic equivalence also to the “backwards” definition: An adjunction between functors F : C → D (the left adjoint) and G : D → C (the right adjoint) is a bijective correspondence between Hom(xG, y) and Hom(x, yF), natural in x and y. Automatic because the unit/counit/triangle identities definition is symmetric. Note also the concept of an adjunction up to adjunction, aka “quasi-adjunction”, where we don’t get a bijection but only an adjoint correspondence in a higher category. Note how adjunction are like half-inverses, just enough to make the proof of unique inverses still go through.]</p>
+<hr />
+<p>Backwards adjunction:</p>
+<p>Define an adjunction F ⊣ R in a 2-category C as two 0-cells X and Y, two 1-cells F : X → Y and R : Y → X, two 2-cells η: 1_X → RF and ϵ: FR → 1_Y, and the triangle identities (moving from F to FRF with η then back to F with ϵ is equal to identity on F; moving from R to RFR with η then back to R with ϵ is equal to identity on R).</p>
+<p>It is manifest in the very syntax of these data and axioms that reversing all 2-cells in an adjunction yields still an adjunction with "left" and "right" adjoint role swapped. Similarly, reversing all 1-cells in an adjunction yields still an adjunction with "left" and "right" adjoint role swapped.</p>
+<p>It's also intuitive and straightforward that F ⊣ R leads to F ∘ -  ⊣ R ∘ -, where in the latter adjunction, the adjoints are not 1-cells between X and Y within the 2-category C, but rather, 1-cells between Hom(A, X) and Hom(A, Y) within the 2-category Cat, for any 0-cell A in C [indeed, we have this structure naturally in A]. This is just the idea of treating each object in C as a category in itself, and a walking category at that, which can be probed by maps into it. (And conversely, by Yoneda lemma, any adjunction between Hom(A, X) and Hom(A, Y) in this sense, natural in A, arises uniquely from an adjunction between X and Y in our original sense.)</p>
+<p>Now, by looking at the last paragraph's in C^{op}, meaning C with 1-cells reversed, we get that F^{op} ⊣ R^{op} is equivalent to F^{op} ∘ -  ⊣ R^{op} ∘ -. But F^{op} ⊣ R^{op} is equivalent to R ⊣ F (this is what it means to say reversing 1-cells just swaps the two sides of an adjunction). And F^{op} ∘ -  ⊣ R^{op} ∘ - is equivalent to - ∘ F ⊣ - ∘ R (the composition order swaps when we move from C^{op} back to C, but the adjunction here does no swapping of left and right sides because it is an adjunction in Cat, and we've not swapped 1-cells or 2-cells in Cat, we've just replaced categories like Hom_{C^{op}}(A^{op}, X^{op}) with equivalent categories like Hom_C(X, A).)</p>
+<p>So R ⊣ F is equivalent to - ∘ F ⊣ - ∘ R. Or renaming R into L for convenience, we have that L ⊣ F leads to - ∘ F ⊣ - ∘ L. This seems backwards, with the the left adjoint on the right and the right adjoint on the left in the conclusion, but it is indeed true. We can phrase this as a correspondence between Hom(xF, y) and Hom(x, yL).</p>
+<h2 id="todo-rename-standardized-to-l-and-r-or-standardized-to-f-and-g">[TODO: Rename standardized to L and R, or standardized to F and G]</h2>
+<p>F -| R reverses into L -| F because reversing 1-arrows, just like reversing 2-arrows, swaps left and right in an adjunction (seen from the very symmetric unit/counit/triangle identities definition).</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

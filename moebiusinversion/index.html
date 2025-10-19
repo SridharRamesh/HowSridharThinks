@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Möbius Inversion | How Sridhar Thinks</title>
+<meta property="og:title" content="Möbius Inversion | How Sridhar Thinks" />
+<meta name="twitter:title" content="Möbius Inversion | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Let $$\leq$$ be an arbitrary binary relation (not necessarily transitive or reflexive, despite the notation). We will impose one condition: $${y \mid y \leq x}$$ should be finite for every $$x$$ (this finiteness condition can maybe be relaxed in some form for what we're doing her…">
+<meta property="og:description" content="Let $$\leq$$ be an arbitrary binary relation (not necessarily transitive or reflexive, despite the notation). We will impose one condition: $${y \mid y \leq x}$$ should be finite for every $$x$$ (this finiteness condition can maybe be relaxed in some form for what we're doing her…">
+<meta name="twitter:description" content="Let $$\leq$$ be an arbitrary binary relation (not necessarily transitive or reflexive, despite the notation). We will impose one condition: $${y \mid y \leq x}$$ should be finite for every $$x$$ (this finiteness condition can maybe be relaxed in some form for what we're doing her…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Möbius Inversion
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2019-11-25">
+          2019-11-25
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Let $$\leq$$ be an arbitrary binary relation (not necessarily transitive or reflexive, despite the notation). We will impose one condition: $${y \mid y \leq x}$$ should be finite for every $$x$$ (this finiteness condition can maybe be relaxed in some form for what we're doing here, but for now we'll impose it).</p>
+<p>Let $$f$$ be an arbitrary function whose domain is this same set and whose codomain is some abelian monoid (it may as well be the mapping into the free abelian monoid upon this set), which we will describe using additive language.</p>
+<p>We can take such $$f$$ to a corresponding "summatory function" $$F(x) = \sum_{y \leq x} f(y)$$.</p>
+<p>Conversely, given an arbitrary such function $$F$$ (which is to say, we could now take $$F$$ to be the free abelian monoid mapping), we may seek some $$f$$ from which it arises in this way.</p>
+<p>In general, there may be none or multiple such $$f$$. However, if we now suppose that $$\leq$$ is the reflexive closure of an irreflexive relation $$&lt;$$, we can decompose our summatory relation as $$F(x) = f(x) + \sum_{y &lt; x} f(y)$$. If now suppose our abelian monoid is an abelian group, we can re-arrange this as $$f(x) = F(x) - \sum_{y &lt; x} f(y)$$. If we now suppose the $$&lt;$$ relation is well-founded, this gives us a recursive definition of the unique $$f$$ from which $$F$$ arises as its summatory function.</p>
+<p>This is called Moebius inversion.</p>
+<p>[TODO: Discuss special cases of linear orders, products of orders, inclusion-exclusion, the divisibility relation on positive integers/Dirichlet series, chromatic polynomials, and necklace polynomials (including with respect to arbitrary groups).]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

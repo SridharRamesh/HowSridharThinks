@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Löb&#x27;s Theorem Entails 4 | How Sridhar Thinks</title>
+<meta property="og:title" content="Löb&#x27;s Theorem Entails 4 | How Sridhar Thinks" />
+<meta name="twitter:title" content="Löb&#x27;s Theorem Entails 4 | How Sridhar Thinks" />
+
+        <meta name="description" content="A curious fact about modal logic is that any normal (in the Kripke sense) modal logic containing Löb's theorem ($$\Box (\Box A \Rightarrow A) \vdash \Box A$$) as an axiom also contains 4 ($$\Box A \vdash \Box \Box A$$) as an axiom.">
+<meta property="og:description" content="A curious fact about modal logic is that any normal (in the Kripke sense) modal logic containing Löb's theorem ($$\Box (\Box A \Rightarrow A) \vdash \Box A$$) as an axiom also contains 4 ($$\Box A \vdash \Box \Box A$$) as an axiom.">
+<meta name="twitter:description" content="A curious fact about modal logic is that any normal (in the Kripke sense) modal logic containing Löb's theorem ($$\Box (\Box A \Rightarrow A) \vdash \Box A$$) as an axiom also contains 4 ($$\Box A \vd…">
+
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Löb&#x27;s Theorem Entails 4
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2021-07-31">
+          2021-07-31
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>A curious fact about modal logic is that any normal (in the Kripke sense) modal logic containing Löb's theorem ($$\Box (\Box A \Rightarrow A) \vdash \Box A$$) as an axiom also contains 4 ($$\Box A \vdash \Box \Box A$$) as an axiom. <span id="continue-reading"></span></p>
+<p>Proof:
+$$A \vdash \Box(A \wedge \Box A) \Rightarrow A \wedge \Box A$$, fairly straightforwardly.</p>
+<p>Thus,</p>
+<p>$$\Box A \vdash \Box( \Box(A \wedge \Box A) \Rightarrow A \wedge \Box A)$$. But this in turn, via Löb's theorem, entails $$\Box(A \wedge \Box A)$$, which of course entails $$\Box \Box A$$.</p>
+<p>Thus, $$\Box A \vdash \Box \Box A$$.</p>
+<hr />
+<p>[In the above, $$\Box$$ and $$\wedge$$ are to be read with tightest possible scope, while $$\Rightarrow$$ is read with loosest possible scope]</p>
+<hr />
+<p>Note that containing $$\Box (\Box A \Rightarrow A) \vdash \Box A$$ as an axiom is different than containing the inference rule that you can conclude $$ \vdash A$$ from $$\Box A \vdash A$$. The latter (external Löb's theorem) corresponds to having a well-founded accessibility relation. The former (internal Löb's theorem) corresponds to being both well-founded and transitive.</p>
+<p>Accordingly, we can derive the external Löb's theorem from the internal Löb's theorem. Like so: Suppose we have internal Löb's theorem in play. Then from $$\Box A \vdash A$$ we derive $$\vdash \Box A \Rightarrow A$$ and thus $$\vdash \Box(\Box A \Rightarrow A)$$. Applying our internal version of Löb's theorem, we get $$\vdash \Box A$$. But now we can combine this with our starting presumption of $$\Box A \vdash A$$, and conclude $$\vdash A$$, as desired.</p>
+<p>Conversely, given external Löb's theorem and 4, we can derive internal Löb's theorem, like so: Suppose given $$\Box(\Box (\Box A \Rightarrow A) \Rightarrow \Box A)$$ and $$\Box (\Box A \Rightarrow A)$$ as hypotheses. Using 4 on the latter, we obtain $$\Box \Box (\Box A \Rightarrow A)$$. Combining this with the former, we get $$\Box \Box A$$. Combining this with $$\Box (\Box A \Rightarrow A)$$ again, we get $$\Box A$$. Thus, discharging our hypotheses, we are able to derive $$\Box(\Box (\Box A \Rightarrow A) \Rightarrow \Box A) \vdash  (\Box (\Box A \Rightarrow A)) \Rightarrow \Box A$$. Applying external Löb's theorem to this, we obtain $$\vdash (\Box (\Box A \Rightarrow A)) \Rightarrow \Box A$$, or just as well, $$\Box (\Box A \Rightarrow A) \vdash \Box A$$, which is internal Löb's theorem.</p>
+<hr />
+<p>It is worth noting that our argument deriving 4 from Löb's theorem doesn't actually depend on $$\Box$$ distributing over conjunctions, and thus holds in even greater generality. For example, it tells us this more general fact: Let $$f$$ be an operator on a meet-semilattice such that, whenever any $$x$$ and $$y$$ are such that $$x \wedge f(y) \leq y$$, then furthermore $$f(x) \leq f(y)$$. Then $$f \leq f^2$$.</p>
+<p>Or even more generally: Let $$f$$ and $$g$$ be endofunctors of a meet-semilattice such that whenever $$x \wedge f(y) \leq y$$, then furthermore $$g(x) \leq g(y)$$. Then $$g \leq gf$$. Because we can consider $$y = x \wedge f(x)$$, for which we have $$x \wedge f(y) \leq y$$, to derive $$g(x) \leq g(y) = g(x \wedge f(x)) \leq g(f(x))$$.<sup class="footnote-reference" id="fr-Functoriality-1"><a href="#fn-Functoriality">1</a></sup></p>
+<p>Curiously, there is another approach we can take in the context of a complete lattice. The above just depends on the existence of some value t such that $$x \wedge f(t) \leq t \leq f(x)$$. The particular $$t$$ used was $$x \wedge f(x)$$, but any other choice will suffice. Note that, for the endofunctor $$t \mapsto x \wedge f(t)$$, any coalgebra will be $$\leq f(x)$$, so it would also suffice to have any pair of an algebra $$\leq$$ a coalgebra. In particular, it would suffice for this endofunctor to have a fixed point, and the Knaster-Tarski theorem assures us (in complete lattices) that it does. (However, I do not see that this approach could be made to cover general meet-semilattices.)</p>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-Functoriality">
+<p>We can even drop the precondition that $$g$$ is functorial/order-preserving, as this is recoverable anyway from the Löb condition. <a href="#fr-Functoriality-1">↩</a></p>
+</li>
+</ol>
+</section>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+
