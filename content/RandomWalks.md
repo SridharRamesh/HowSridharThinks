@@ -46,4 +46,14 @@ QED. This kind of relationship of probability to least fixed points, allowing di
 
 ****
 
-TODO: Add more on random walks, as there is much more to say on various kinds of random walks.
+Incidentally, we may be interested in the question "What is the probability of eventually being down a dollar, and never being up by n dollars?". Call this $$f(n)$$. By the decomposition above, we have the recurrence that $$f(n) = q + p f(n - 1) f(n)$$.
+
+Note that this is not quite the same as $$f(n) = T(f(n - 1)) = T^n(0)$$ with $$T(x) = q + px^2$$, the recurrence we were able to use for our previous definiton of "rank". Rather, we now have that $$f(n) = U(f(n - 1)) = U^n(0)$$ with $$U(x) = q / (1 - p x)$$. Still, this $$U$$ remains a continuous order-preserving function from $$\[0, q/p\]$$ to itself, and so we could again reason that the the limiting value of $$f(n)$$ (which again is the probability of ever being down a dollar) is the least fixed point of $$U$$.
+
+This $$U$$ has dynamics which are easy to understand also, since it sends a fraction $$x = n/d$$ to the fraction $$U(x) = qd / (d - pn)$$. Thus, $$U$$ can be represented as a 2x2 matrix \[\[0, q\], \[-p, 1\]\], thought of as acting on the projective line. This matrix is easily diagonalized with eigenvalues p and q.
+
+(But a more general way of thinking about this is in terms of random walks with two absorbing states. See https://bsky.app/profile/radishharmers.bsky.social/post/3m4mah776uk27)
+
+****
+
+TODO: Add more on random walks, as there is much more to say on various kinds of random walks. Note that the above also relates to Catalan numbers, as we may think of these up and down moves as left and right parentheses balanced right before the final dollar loss.
