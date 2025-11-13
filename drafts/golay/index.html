@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Golay codes | How Sridhar Thinks</title>
+<meta property="og:title" content="Golay codes | How Sridhar Thinks" />
+<meta name="twitter:title" content="Golay codes | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Assorted results about Golay codes:  Given two points in 2^N (i.e., two functions from an N-element set to the 2-element field), their Hamming distance is the number of coordinates (i.e., inputs) on which they differ. By weight, I mean Hamming distance from the zero vector. By th…">
+<meta property="og:description" content="Assorted results about Golay codes:  Given two points in 2^N (i.e., two functions from an N-element set to the 2-element field), their Hamming distance is the number of coordinates (i.e., inputs) on which they differ. By weight, I mean Hamming distance from the zero vector. By th…">
+<meta name="twitter:description" content="Assorted results about Golay codes:  Given two points in 2^N (i.e., two functions from an N-element set to the 2-element field), their Hamming distance is the number of coordinates (i.e., inputs) on which they differ. By weight, I mean Hamming distance from the zero vector. By th…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Golay codes
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2024-06-09">
+          2024-06-09
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Assorted results about Golay codes:</p>
+<hr />
+<p>Given two points in 2^N (i.e., two functions from an N-element set to the 2-element field), their Hamming distance is the number of coordinates (i.e., inputs) on which they differ. By weight, I mean Hamming distance from the zero vector.</p>
+<p>By the perfect Golay code, I mean a subset S of 2^23 such that for every point P in 2^23, there is a unique Q in S at Hamming distance ≤ 3 from P.</p>
+<p>By an extended Golay code, I mean a subset S of 2^24 containing only points of even Hamming distance from each other (that is, whose weights are all the same parity), such that for every point P in 2^24 at odd Hamming distance from S (that is, whose weight is the opposite parity), there is a unique Q in S at Hamming distance ≤ 3 from P.</p>
+<p>Golay codes (of whichever type) containing point $$P_1$$ and Golay codes (of the same type) containing point $$P_2$$ are in 1:1 correspondence, through the map $$x \mapsto x - P_1 + P_2$$. For convenience, we therefore from hereon assume our Golay codes contain the zero vector.</p>
+<p>Perfect Golay codes and extended Golay codes are in 1:1 correspondence, like so: Given a perfect Golay code, we may add a parity check bit at the end to obtain an extended Golay code. Conversely, given an extended Golay code, we may drop its last bit to obtain a perfect Golay code. TODO: Describe this less tersely.</p>
+<p>We say an extended Golay code is doubly even if all its vectors have weight divisible by 4.</p>
+<hr />
+<p>Proof that any two perfect Golay codes containing the zero vector have the same number of codewords of each particular weight (and thus the same is true for extended Golay codes): By induction on weight, we can calculate the number of codewords there must be of each particular weight. TODO.</p>
+<p>It follows that we also have the same result for extended Golay codes.</p>
+<p>In particular, once we know there is ANY doubly even extended Golay code, it follows that EVERY extended Golay code is doubly even. Actually, we can go ahead and calculate the unique potential weight distribution by the method of this proof without first knowing of the actual existence of a Golay code, and by examination we see that it is doubly even.</p>
+<hr />
+<p>Proof that any extended Golay code is a linear subspace of 2^24:</p>
+<p>Double-evenness of all Golay codes, and the ability to rebase our Golay code around any particular point reinterpreted as zero, tells us that all Hamming distances between codewords are doubly even; i.e., the dot product (v - w)^2 is always doubly even. But (v - w)^2 = v^2 + w^2 - 2vw, and since v^2 and w^2 are also doubly even, we may conclude the dot product vw is always even. Thus, any extended Golay code is "self-dual" (i.e., orthogonal to itself over the 2-element field). A counting argument shows we have 4096 = 2^12 codewords in the extended Golay code; these are contained in the subspace it generates, so said subspace must be at least 12 dimensional, making its orthogonal space at most 12 dimensional. Self-duality tells us the latter contains the former, and thus both are equal and exactly 12 dimensional. Our 2^12 codewords therefore comprise the entirety of this subspace, making the Golay code linear.</p>
+<p>The relationship between perfect and extended Golay codes allows us to conclude now that perfect Golay codes are also linear.</p>
+<hr />
+<p>Construction of a cyclic perfect Golay code:</p>
+<p>Note that, as long as the automorphism group of the extended Golay code has order divisible by prime 23 (which is a consequence of it being doubly transitive, which it certainly is at it is furthermore 5-transitive, though I don't know how to prove these multiple transitivities yet), it must contain an element of order 23, which acting on 24 elements must be a cycle of length 23 with one additional fixed point. Puncturing the code by dropping this fixed point, we thus obtain a cyclic perfect Golay code.</p>
+<p>We can also obtain the cyclic perfect Golay code directly: Any linear cyclic code is given by taking a suitable factor of x^n - 1 (n = 23 in this case) as generator. Factoring this (over the field with two elements), we see that there are precisely two linear cyclic codes of dimension 12 in 23 dimensional space, and they are equivalent under reflection of coordinates. What remains is to prove the minimum distance property. This is via the infamous "square root bound" on quadratic residue codes; see below.</p>
+<hr />
+<p>Uniqueness of the Golay code (up to permutation of coordinates):</p>
+<p>TODO</p>
+<hr />
+<p>5-transitivity of the Mathieu group:</p>
+<p>TODO</p>
+<hr />
+<p>Discussion of ternary Golay codes:</p>
+<p>TODO</p>
+<p>This can be constructed as the quadratic residue code of length 11 over Z_3.</p>
+<p>(Also can be constructed from the (11, 5, 2) biplane; see below)</p>
+<hr />
+<p>Lack of existence of other perfect codes over prime power alphabets:</p>
+<p>TODO</p>
+<hr />
+<p>Proof of uniqueness of Hadamard codes:</p>
+<p>TODO</p>
+<hr />
+<p>For square root bound on quadratic codes, see https://sci-hub.ru/https://www.jstor.org/stable/2100534 ("A New Form of the Square Root Bound" by Assmus et al). This is explained also below.</p>
+<hr />
+<p>Let p be a prime which is -1 mod 8. We consider the two polynomials in mod 2 land given by Q(x) = sum of x^j over all j which are (nonzero) quadratic residues mod p and N(x) = sum of x^j over all j which are (nonzero) quadratic nonresidues mod p [where representatives of mod p classes are taken in the range [0, p)]. Clearly, 1 + N(x) + Q(x) = 1 + x + x^2 + ... + x^(p - 1) = (x^p - 1)/(x - 1). [Let's use the name U(x) for (x^p - 1)/(x - 1) ]. Also, since p is -1 mod 4, we have that N(x) and Q(x) are each other's reverses, in the sense that N(x) = Q(1/x) x^p.</p>
+<p>Finally, observe that Q(x) N(x) mod (x^p - 1) = sum of x^(q + n) where q is a quadratic residue and n is a quadratic nonresidue. The constant term here is (p - 1)/2 = -1 mod 4 = 1 mod 2, as this is the number of quadratic residues paired with their negation, a quadratic nonresidue. For each other term x^d with nonzero d, we get a coefficient corresponding to the number of ways to express d as a sum of a quadratic residue and nonresidue (equivalently, a difference between quadratic residues) in mod p land. This is 1/4 the number of expressions of d as a^2 - b^2 = (a + b)(a - b) for nonzero a, b. Since p is odd, this is just 1/4 * (the number of expressions of d as a product of two values, minus the 2 ways to express d as either a square [if d is a residue] or a negated square [if d is a nonresidue]). Since mod p land is a field, the number of expressions of d as a product of two values is p - 1. So we get 1/4 * (p - 1 - 2) = (p - 3)/4 = (-4 mod 8)/4 = -1 mod 2 = 1 mod 2. Thus, Q(x) N(x) mod x^p - 1 = U(x). (Actually, there's an easier proof of this available: Neither Q nor N is divisible by (x + 1), but between the two of them, they are divisible by (x + every other p-th root of unity)).</p>
+<p>(The argument above about numbers of ways to express values as a difference of quadratic residues tells us more generally that when p is a prime which is -1 mod 4, then the (p - 1)/2 nonzero quadratic residues of p are such that each of the (p - 1) nonzero values mod p has exactly (p - 3)/4 expressions as a difference of these nonzero quadratic residues. It follows that the p many translations of the nonzero quadratic residues comprise the blocks of a 2-(p, (p - 1)/2, (p - 3)/4) symmetric design.)</p>
+<p>Consider also A(x) = product of (x - z^j) over all quadratic residues j mod p, where z is a primitive p-th root of unity, and B(x) = product of (x - z^j) over all quadratic nonresidues j mod p, using the same z. Replacing z with z^t either preserves A and B or swaps them, depending on whether t is a quadratic residue or nonresidue. Clearly, A(x) B(x) = U(x) as well (straight up), and A(x) and B(x) are each other's reverses in the sense that A(x) = B(1/x) x^((p - 1)/2).</p>
+<p>What's more, {GCD(Q(x), x^p - 1), GCD(N(x), x^p - 1)} = {A, B}. Why is this? To compute gcds with x^p - 1, it suffices to see which p-th roots of unity are roots of a polynomial. 1 is clearly not a root of Q nor of N [as both send 1 to (p - 1)/2, which is -1 mod 4 since p is -1 mod 8, and thus nonzero in mod 2 land]. Recalling that Q(x) = Q(x^quadratic residue) and similarly for N, while Q(x) + N(x) = -1 for roots of U(x), and finally observing that x^p - 1 doesn't divide Q or N [as their degrees are too small], we have that the roots of GCD(Q(x), x^p - 1) must comprise one equivalence class of powers of nontrivial p-th roots of unity and the roots of GCD(N(x), x^p - 1) must comprise the other, where two p-th roots of unity are considered equivalent if either is given by raising the other to a quadratic residue.</p>
+<p>(Somewhere above, we probably need to prove that Q(x) and N(x) come out to elements of the base field when x is a p-th root of unity. I.e., Q(x)^2 = Q(x). By Frobenius, this is equivalent to Q(x^2) = Q(x). So this happens just in case 2 is a quadratic residue mod p; thus, ensured by p = -1 mod 8. Note that this fails when p = 3 mod 8.)</p>
+<p>Thus, the cyclic codes (of cycle length p) generated by A or B are the same as those generated by Q or N [in one way of pairing these up or the other], and also, either of these codes is just obtained from the other by reversing all codewords. Since A and B have degree (p - 1)/2 and divide x^p - 1, we see that the dimension of the space of codewords is in any case (p + 1)/2.</p>
+<p>The polynomials in mod x^p - 1 land which are multiples of these generators are closed under multiplication by powers of x (obviously) and also are closed under sending any P(x) to P(x^quadratic residue) (as A or B are themselves fixed by this action). Thus, the automorphism group of any of these codes (in the sense of permutations of coordinates that take codewords to codewords) includes the cyclic group and includes multiplication by any quadratic residue.</p>
+<p>Under the cyclic group, any set of size 2 is equivalent to {0, x} for some nonzero x, and also just as well equivalent to {0, -x}; thus, between the two of these, it is equivalent to something of the form {0, x} for a quadratic residue x. And any two sets of the for {0, x} for a quadratic residue x are equivalent under multiplication by some quadratic residue. Thus, the automorphism group of this code is 2-transitive.</p>
+<p>In particular, this means that for any set of size 2, there is the same number of Hamming weight w codewords containing it as for any other set of size 2. Call this number λ. [λ of course depends on w, but we will take w as fixed for the following discussion for a second]. We will come back to this in a second, let us generalize our discussion now.</p>
+<p>Suppose given a t-(v,k,λ) design (https://en.wikipedia.org/wiki/Block_design#General_balanced_designs_(t-designs)), in the sense of a collection of subsets (of a universe of size v), called "blocks", with each block having size k, such that any subset of size t (presumed ≤ k) is contained in precisely λ blocks. (It follows that for each t' &lt; t, the number of blocks containing a subset of size t' is fixed as well, but this is not important for us). Let B be some block, and let x0, x1, x2, …, be the number of blocks of which intersect B in precisely 0, 1, 2, …, locations.</p>
+<p>The number of ways to choose a set of size s and a block whose intersection with B contains s, is given by the sum of x_j * (j choose s), of course. But when s ≤ t, it is also given by (k choose s) * (v - s choose t - s) * λ / (k - s choose t - s).</p>
+<p>In particular, since (j choose 2) ≥ (j choose 1)/2 for j ≠ 1 (with strict inequality for j &gt; 2), if x1 = 0, then we have that the value of this for s = 2 is at least half the value of this for s = 1. Presuming λ and k nonzero, this means (k - 1) (v - 2 choose t - 2) / (k - 2 choose t - 2) ≥ (v - 1 choose t - 1) / (k - 1 choose t - 1).</p>
+<p>If we now take t as 2, we get (k - 1) ≥ (v - 1) / (k - 1); in other words, the square root bound (k - 1)^2 ≥ v - 1 (with strict inequality whenever k &gt; 2).</p>
+<hr />
+<p>By the Hamming code of length 7, we mean the the classic Hamming code of length 7. By the reverse, we mean the same thing with all codewords reversed (so their first bit becomes their last and their last bit becomes their first). By extending either of these, we mean adding a new parity bit at the end so that all codewords have even Hamming weight. (Note that the extended reverse Hamming code is NOT the reverse of the extended Hamming code, because we don't reverse the parity bit at the end. Our interest is in the extended Hamming code and the extended reverse Hamming code.)</p>
+<p>Note that the intersection of the Hamming code and the reverse Hamming code contains just the all zero and all ones words (this follows by the observation that these are cyclic codes generated by the two coprime reverse factors of (x^7 - 1)/(x - 1) in mod 2 land). Thus, the same holds for their extended counterparts.</p>
+<p>(We can alternatively think of the nontrivial (i.e., size 4) codewords of the extended Hamming code as those subsets of 3-dimensional space over Z_2 which amount to planes. The fact that we can find two Hamming codes whose intersection is only the trivial codewords arises from the fact that there is a bijection from 2^3 to itself which does not send any plane to a plane. Such a bijection can be constructed as, for example, sending 000 and 111 to themselves, swapping 100 and 110, and commuting with cyclic rotation. That this does not send any plane to a plane is seen by the fact that the difference between the original point and transformed point includes the first bit only if the original point is one of 100 and 110; similarly for the cyclic rotations of these. Thus, for the differences to sum to zero over some set, the set must contain both of 100 and 110 if it contains either, and similarly for their cyclic rotations. This means our set must be some union of two among {100, 110}, its cyclic rotations, and the leftover points {000, 111}. But no two of these pairs have the same sum. Thus, no plane is sent to a plane.)</p>
+<p>Note that the minimum Hamming weight of a nonzero codeword in an original Hamming code is 3 (by the property of correcting single errors) and thus in an extended Hamming code is 4.</p>
+<p>Consider triples (A, B, C) where each value is of length 8, any two values sum to something in the extended Hamming code, and all three values sum to something in the extended reverse Hamming code.</p>
+<p>We will show that every nonzero such (A, B, C) has weight at least 8.</p>
+<p>If, e.g., A is zero, we must have that B and C are both in the (extended) Hamming code, and B + C is in the intersection of the extended Hamming code and extended reverse Hamming code. Thus, either B and C are equal Hamming codewords or complements. If they are equal and nonzero, they each have weight at least 4, so (A, B, C) has weight at least 8. If they are complements, their combined weight is exactly 8.</p>
+<p>Thus, we can restrict our attention to the case where all of A, B, C are nonzero. As they each have even weight, the only way the total weight can be less than 8 is if all have weight 2. Since any two must sum to a value in the Hamming code, each pair must be either disjoint or equal. But if two are equal, then the sum of all three has weight 2. And if all three are disjoint, then the sum of all three has weight 6. Either of these is incompatible with the sum of all three being in the extended reverse Hamming code, contradicting that the sum of all three is in the extended reverse Hamming code.</p>
+<p>Thus, we have a linear binary code of codeword length 24 with minimum weight at least 8. Finally, let us observe that the space of codewords is 12 dimensional: It can be alternatively described as the range of the map (a + x, b + x, a + b + x) where a and b come from the extended Hamming code (whose codewords comprise a 4-dimensional space) and x from the extended reverse Hamming code (again 4-dimensional). This map is readily seen to be injective (we can recover a, b, and x as suitable combinations of components of the output), and thus its range is 12 dimensional.</p>
+<p>So we have a 12 dimensional subspace of 24-dimensional binary space, with minimum Hamming weight at least 8, and in which each value has even weight. Accordingly, dropping any one bit, we get a 12 dimensional subspace of 23-dimensional binary space, with minimum Hamming weight at least 7. By the standard calculation (23 choose 0) + (23 choose 1) + (23 choose 2) + (23 choose 3) = 2^(23 - 12), we see that this is a perfect code, correcting up to three errors.</p>
+<hr />
+<p>Let M be a d by d square matrix in mod 2 land which is unitary/orthogonal in the sense that M's inverse is its transpose. (This is equivalent to the assertion that every two rows have an even intersection, and every single row has an even Hamming weight). Let us furthermore suppose that each row and each column has Hamming weight 3 mod 4 but not equal to exactly 3 (i.e., each row has Hamming weight among 7, 11, 15…).</p>
+<p>Then we may consider pairs (v, M(v)) of d-dimensional vectors, comprising a d-dimensional subspace of 2d-dimensional space. This space is self-dual (as the dot product (v, M(v)) with (w, M(w)) is v.w + M(v).M(w) = 2v.w = 0). Since each generating row is doubly even, the self-duality ensures that the code is overall doubly even.</p>
+<p>Note that each pair (v, M(v)) is equivalently a pair (M^t(w), w) for w = M(v), with M^t satisfying the same conditions as M. So if a codeword with weights (a, b) among its two halves exists, so does one with weights (b, a) among the two halves. By explicit requirement, no codeword exists with weights (1, 3) among the two halves. And weight 0 in the first half entails weight 0 in the second half. So the only way to get a codeword of weight exactly four would be if a codeword existed with weights 2 in each half. This would mean two distinct rows of M (or rows of M^t; i.e., columns of M) who sum to weight 2. These two rows (or columns) would have to have the same weight w among 7, 11, 15, …, and overlap in precisely w - 1 positions out of those.</p>
+<p>So let us now add an extra condition that this doesn't happen: No two rows or columns of M with the same weight intersect in all but one of their 1s each. That is, our conditons on M are that each row and column has Hamming weight 3 mod 4 but not exactly 3, every two distinct rows have an even intersection, and no two rows with the same Hamming weight intersect in one less than that weight (in other words, for any two rows, at least one of them has at least two values outside the other one). And same for columns. (Note that all rows having odd weight and any two rows having even intersection implies the same properties for columns.)</p>
+<p>Then we get in this way a d-dimensional self-dual doubly even code in 2d-dimensional ambient space with minimum weight at least 8.</p>
+<p>This will apply to both the dodecahedral and the (11, 5, 2) biplane constructions of the Golay code, like so:</p>
+<p>(Actually, the above describes any Golay code permuted such that its first twelve bits can be independently chosen (i.e., they comprise a "dodecad" of the Golay code; note that the symmetry group of the Golay code is transitive on dodecad sets). For any such code, we may express it in reduced row echelon form and will get a matrix consisting of an identity matrix next to a 12x12 matrix satisfying the above conditions. But such matrix conditions are easy to see directly in our (11, 5, 2) and dodecahedron constructions (as these are directly concerned with this 12x12 submatrix or something close to it), and not particularly easy to see directly in our other constructions.)</p>
+<hr />
+<p>Construction of Golay code via (11, 5, 2) biplane (following "The Fabulous (11, 5, 2) Biplane" by Ezra Brown):</p>
+<p>Observed above, we saw that when p = -1 mod 4 is prime, then the translations of the quadratic residues mod p form a 2-(p, (p - 1)/2, (p - 3)/4) symmetric design. In particular, taking p = 11, we get a design with 11 points, blocks of size 5, each pair of distinct points is contained in precisely two blocks, and each pair of distinct blocks intersects in precisely two points.</p>
+<p>We can turn this into a 11 x 11 matrix, such that the entry at (m, n) is TRUE if m - n is a nonzero quadratic residue OR m = n, and FALSE otherwise. This matrix will have 6 TRUES in each row, and the bitwise conjunction of any two rows will be 3 (the two points that the two blocks have in common, along with the commonality between (m, n) and (n, n) or between (n, m) and (m, m), according as to which of (m, n) or (n, m) is TRUE, where the rows we are intersecting are the m-th and n-th ones).</p>
+<p>[TODO: Here, we are describing the 11 x 11 matrix explicitly in terms of quadratic residues, which were used to construct the (11, 5, 2) biplane. But it may readily abstractly be the case that any 11 x 11 matrix which has TRUES on its diagonal and elsewhere describes the relationship "Block B contains point P" for some (11, 5, 2) biplane where the i-th block does not contain the i-th point gets the job done. And perhaps it is also readily apparent that any (11, 5, 2) biplane admits a bijection from blocks to points where no corresponding block and point are incident (and indeed, such that for distinct i and j, precisely one of "the i-th block contains the j-th point" or vice versa holds). At any rate, these are nice properties our (11, 5, 2) biplane has. It also anyway happens to be the case that the 2-(11, 5, 2) design is unique, so any 2-(11, 5, 2) design has these properties.]</p>
+<p>We can construct the ternary Golay code from this as follows: Turn all TRUEs into 1s, and all FALSEs into -1s. Add on an extra column all -1s and an extra row of all -1s. The row space of the resulting matrix in Z_3^12 is the extended ternary Golay code (TODO: Proof).</p>
+<p>Alternatively, we can construct the extended binary Golay code from this as follows:
+We saw above that we have an 11x11 matrix with 6 TRUEs in each row, and any two rows intersecting in precisely 3 TRUEs. If we add on an extra column and extra row of all TRUEs each, except for the intersection of the extra column and extra row being FALSE, then we now have a 12x12 matrix with 7 TRUEs in all but one row, 11 TRUEs in the final row, and the intersection of any two rows with the same weight will be 4. (Furthermore, the transpose of this matrix is just a permutation of this matrix (since -(x - y) = (-x) - (-y)), so the column conditions are equivalent to the row conditions). This satisfies the conditions given in the previous section to give us the extended binary Golay code.</p>
+<p>[TODO: So the (11, 5, 2) biplane yields both the binary and the ternary Golay codes. Do either of the binary or ternary Golay codes yield each other, or yield the (11, 5, 2) biplane?]</p>
+<p>[Note also that the perfect ternary Golay code is such that its codewords of Hamming weight 5 apparently yield a Steiner system S(4, 5, 11); i.e., a 4-(11, 5, 1) design. Is there a natural direct relation between this and our 2-(11, 5, 2) design?]</p>
+<hr />
+<p>Construction of Golay code from dodecahedron:</p>
+<p>Consider the binary relation on the 12 faces of a dodecahedron such that d1 and d2 are related iff they are NOT distinct adjacent faces. As a matrix, this has 7 TRUEs in each row. To show that no two rows intersect in precisely six TRUEs is the same as saying there are no two faces F1 and F2 such that precisely one face is distinctly-adjacent to F1 but not to F2.</p>
+<p>Up to symmetries of the dodecahedron, we can consider pairs of faces as all the same up to whether they are at distance 0, 1, 2, or 3. If faces are at distance 1, then there are 3 faces distinctly-adjacent to one but not the other. At distance 2, there are 3 as well. At distance 3, there are 5. At any rate, there is never just 1.</p>
+<p>Thus, our binary relation, construed as a matrix, satisfies the conditions noted above to give us the extended binary Golay code (keep in mind this is a symmetric matrix, so the column conditions are equivalent to the row conditions for it).</p>
+<p>[TODO: So the dodecahedron yields the binary Golay code. Does the binary Golay code yield the dodecahedron?]</p>
+<hr />
+<p>See also "Constructions of the Golay Codes: A Survey" by Robin Chapman (https://empslocal.ex.ac.uk/people/staff/rjchapma/etc/golay11.pdf)</p>
+<hr />
+<p>[TODO: Note that we can construct structures above using fields modulo prime 11 (as in the quadratic residue construction of the 2-(11, 5, 2) biplane) or prime 23 (as in the quadratic residue construction of the perfect binary Golay code). That 2 * 11 + 1 = 23 is thus notable. Is there a connection more generally to the sequence 2, 5, 11, 23, 47 of primes generated by n |-&gt; 2n + 1? Note that there is also a Steiner S(4, 5, 47) system, though this is perhaps just a coincidence. But what may be relevant is our observations above about quadratic residues and the corresponding cyclic codes for primes p which are -1 mod 4 or mod 8.]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+
