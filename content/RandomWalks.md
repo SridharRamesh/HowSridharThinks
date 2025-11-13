@@ -22,9 +22,9 @@ Clearly, the events "losing a dollar by rank < 0", "losing a dollar by rank < 1"
 
 As $$T$$ is an order-preserving continuous function from \[0, 1\] to itself, this must be the least fixed point of $$T$$. Thus, when $$q/p < 1$$, the answer is $$x = q/p$$, not $$x = 1$$.
 
-The fact that the limit of this sequence is the least fixed point of $$T$$ is essentially [the Knaster-Tarski theorem](@/LambekKnasterTarski.md).
+The fact that the limit of this sequence is the least fixed point of $$T$$ is essentially [the Knaster-Tarski-Adamek theorem](@/LambekKnasterTarski.md).
 
-Recapping Knaster-Tarski in this context, we have:
+Recapping Knaster-Tarski-Adamek in this context, we have:
 
 If $$T$$ is an order-preserving continuous operator on a space with a least element $$0$$ and containing limits of all increasing sequences, then
 
@@ -46,7 +46,7 @@ QED. This kind of relationship of probability to least fixed points, allowing di
 
 ****
 
-Incidentally, we may be interested in the question "What is the probability of eventually being down a dollar, and never being up by n dollars?". Call this $$f(n)$$. By the decomposition above, we have the recurrence that $$f(n) = q + p f(n - 1) f(n)$$.
+Incidentally, we may be interested in the question "What is the probability of eventually being down a dollar, and never prior being up by n dollars?". Call this $$f(n)$$. By the decomposition above, we have the recurrence that $$f(n) = q + p f(n - 1) f(n)$$.
 
 Note that this is not quite the same as $$f(n) = T(f(n - 1)) = T^n(0)$$ with $$T(x) = q + px^2$$, the recurrence we were able to use for our previous definiton of "rank". Rather, we now have that $$f(n) = U(f(n - 1)) = U^n(0)$$ with $$U(x) = q / (1 - p x)$$. Still, this $$U$$ remains a continuous order-preserving function from $$\[0, q/p\]$$ to itself, and so we could again reason that the the limiting value of $$f(n)$$ (which again is the probability of ever being down a dollar) is the least fixed point of $$U$$.
 

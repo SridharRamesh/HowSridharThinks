@@ -40,7 +40,7 @@ Construction of a cyclic perfect Golay code:
 
 Note that, as long as the automorphism group of the extended Golay code has order divisible by prime 23 (which is a consequence of it being doubly transitive, which it certainly is at it is furthermore 5-transitive, though I don't know how to prove these multiple transitivities yet), it must contain an element of order 23, which acting on 24 elements must be a cycle of length 23 with one additional fixed point. Puncturing the code by dropping this fixed point, we thus obtain a cyclic perfect Golay code.
 
-We can also obtain the cyclic perfect Golay code directly: Any linear cyclic code is given by taking a suitable factor of x^n - 1 (n = 23 in this case) as generator. Factoring this (over the field with two elements), we see that there are precisely two linear cyclic codes of dimension 12 in 23 dimensional space, and they are equivalent under reflection of coordinates. What remains is to prove the minimum distance this property. I don't yet know how to do this but it involves some infamous "square root bound" on quadratic residue codes. TODO
+We can also obtain the cyclic perfect Golay code directly: Any linear cyclic code is given by taking a suitable factor of x^n - 1 (n = 23 in this case) as generator. Factoring this (over the field with two elements), we see that there are precisely two linear cyclic codes of dimension 12 in 23 dimensional space, and they are equivalent under reflection of coordinates. What remains is to prove the minimum distance property. This is via the infamous "square root bound" on quadratic residue codes; see below.
 
 ***
 
@@ -77,7 +77,7 @@ TODO
 
 ***
 
-For square root bound on quadratic codes, see https://sci-hub.ru/https://www.jstor.org/stable/2100534 ("A New Form of the Square Root Bound" by Assmus et al)
+For square root bound on quadratic codes, see https://sci-hub.ru/https://www.jstor.org/stable/2100534 ("A New Form of the Square Root Bound" by Assmus et al). This is explained also below.
 
 ***
 
@@ -105,9 +105,9 @@ Suppose given a t-(v,k,λ) design (https://en.wikipedia.org/wiki/Block_design#Ge
 
 The number of ways to choose a set of size s and a block whose intersection with B contains s, is given by the sum of x_j * (j choose s), of course. But when s ≤ t, it is also given by (k choose s) * (v - s choose t - s) * λ / (k - s choose t - s).
 
-In particular, since (j choose 2) ≥ (j choose 1)/2 for j ≠ 1, if x1 = 0, then we have that the value of this for s = 2 is at least half the value of this for s = 1. This means (k choose 2) (v - 2 choose t - 2) / (k - 2 choose t - 2)
+In particular, since (j choose 2) ≥ (j choose 1)/2 for j ≠ 1 (with strict inequality for j > 2), if x1 = 0, then we have that the value of this for s = 2 is at least half the value of this for s = 1. Presuming λ and k nonzero, this means (k - 1) (v - 2 choose t - 2) / (k - 2 choose t - 2) ≥ (v - 1 choose t - 1) / (k - 1 choose t - 1).
 
-\[To be continued...\]
+If we now take t as 2, we get (k - 1) ≥ (v - 1) / (k - 1); in other words, the square root bound (k - 1)^2 ≥ v - 1 (with strict inequality whenever k > 2).
 
 ***
 
@@ -151,15 +151,20 @@ This will apply to both the dodecahedral and the (11, 5, 2) biplane construction
 
 Construction of Golay code via (11, 5, 2) biplane (following "The Fabulous (11, 5, 2) Biplane" by Ezra Brown):
 
-Observed above, we saw that when p = -3 mod 4 is prime, then the translations of the quadratic residues mod p form a 2-(p, (p - 1)/2, (p - 3)/4) symmetric design. In particular, taking p = 11, we get a design with 11 points, blocks of size 5, each pair of distinct points is contained in precisely two blocks, and each pair of distinct blocks intersects in precisely two points.
+Observed above, we saw that when p = -1 mod 4 is prime, then the translations of the quadratic residues mod p form a 2-(p, (p - 1)/2, (p - 3)/4) symmetric design. In particular, taking p = 11, we get a design with 11 points, blocks of size 5, each pair of distinct points is contained in precisely two blocks, and each pair of distinct blocks intersects in precisely two points.
 
 We can turn this into a 11 x 11 matrix, such that the entry at (m, n) is TRUE if m - n is a nonzero quadratic residue OR m = n, and FALSE otherwise. This matrix will have 6 TRUES in each row, and the bitwise conjunction of any two rows will be 3 (the two points that the two blocks have in common, along with the commonality between (m, n) and (n, n) or between (n, m) and (m, m), according as to which of (m, n) or (n, m) is TRUE, where the rows we are intersecting are the m-th and n-th ones).
+
+\[TODO: Here, we are describing the 11 x 11 matrix explicitly in terms of quadratic residues, which were used to construct the (11, 5, 2) biplane. But it may readily abstractly be the case that any 11 x 11 matrix which has TRUES on its diagonal and elsewhere describes the relationship "Block B contains point P" for some (11, 5, 2) biplane where the i-th block does not contain the i-th point gets the job done. And perhaps it is also readily apparent that any (11, 5, 2) biplane admits a bijection from blocks to points where no corresponding block and point are incident (and indeed, such that for distinct i and j, precisely one of "the i-th block contains the j-th point" or vice versa holds). At any rate, these are nice properties our (11, 5, 2) biplane has. It also anyway happens to be the case that the 2-(11, 5, 2) design is unique, so any 2-(11, 5, 2) design has these properties.\]
 
 We can construct the ternary Golay code from this as follows: Turn all TRUEs into 1s, and all FALSEs into -1s. Add on an extra column all -1s and an extra row of all -1s. The row space of the resulting matrix in Z_3^12 is the extended ternary Golay code (TODO: Proof).
 
 Alternatively, we can construct the extended binary Golay code from this as follows: 
-We saw above that we have an 11x11 matrix with 6 TRUEs in each row, and any two rows intersecting in precisely 3 TRUEs. If we add on an extra column and extra row of all TRUEs each, except for the intersection of the extra column and extra row beign FALSE, then we now have a 12x12 matrix with 7 TRUEs in all but one row, 11 TRUEs in the final row, and the intersection of any two rows with the same weight will be 4. (Furthermore, the transpose of this matrix is just a permutation of this matrix (since -(x - y) = (-x) - (-y)), so the column conditions are equivalent to the row conditions). This satisfies the conditions given in the previous section to give us the extended binary Golay code.
+We saw above that we have an 11x11 matrix with 6 TRUEs in each row, and any two rows intersecting in precisely 3 TRUEs. If we add on an extra column and extra row of all TRUEs each, except for the intersection of the extra column and extra row being FALSE, then we now have a 12x12 matrix with 7 TRUEs in all but one row, 11 TRUEs in the final row, and the intersection of any two rows with the same weight will be 4. (Furthermore, the transpose of this matrix is just a permutation of this matrix (since -(x - y) = (-x) - (-y)), so the column conditions are equivalent to the row conditions). This satisfies the conditions given in the previous section to give us the extended binary Golay code.
 
+\[TODO: So the (11, 5, 2) biplane yields both the binary and the ternary Golay codes. Do either of the binary or ternary Golay codes yield each other, or yield the (11, 5, 2) biplane?\]
+
+\[Note also that the perfect ternary Golay code is such that its codewords of Hamming weight 5 apparently yield a Steiner system S(4, 5, 11); i.e., a 4-(11, 5, 1) design. Is there a natural direct relation between this and our 2-(11, 5, 2) design?\]
 ***
 
 Construction of Golay code from dodecahedron:
@@ -169,3 +174,13 @@ Consider the binary relation on the 12 faces of a dodecahedron such that d1 and 
 Up to symmetries of the dodecahedron, we can consider pairs of faces as all the same up to whether they are at distance 0, 1, 2, or 3. If faces are at distance 1, then there are 3 faces distinctly-adjacent to one but not the other. At distance 2, there are 3 as well. At distance 3, there are 5. At any rate, there is never just 1.
 
 Thus, our binary relation, construed as a matrix, satisfies the conditions noted above to give us the extended binary Golay code (keep in mind this is a symmetric matrix, so the column conditions are equivalent to the row conditions for it).
+
+\[TODO: So the dodecahedron yields the binary Golay code. Does the binary Golay code yield the dodecahedron?\]
+
+***
+
+See also "Constructions of the Golay Codes: A Survey" by Robin Chapman (https://empslocal.ex.ac.uk/people/staff/rjchapma/etc/golay11.pdf)
+
+***
+
+\[TODO: Note that we can construct structures above using fields modulo prime 11 (as in the quadratic residue construction of the 2-(11, 5, 2) biplane) or prime 23 (as in the quadratic residue construction of the perfect binary Golay code). That 2 * 11 + 1 = 23 is thus notable. Is there a connection more generally to the sequence 2, 5, 11, 23, 47 of primes generated by n |-> 2n + 1? Note that there is also a Steiner S(4, 5, 47) system, though this is perhaps just a coincidence. But what may be relevant is our observations above about quadratic residues and the corresponding cyclic codes for primes p which are -1 mod 4 or mod 8.\]
