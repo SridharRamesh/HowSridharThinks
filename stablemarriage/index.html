@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Transfinite Stable Marriage | How Sridhar Thinks</title>
+<meta property="og:title" content="Transfinite Stable Marriage | How Sridhar Thinks" />
+<meta name="twitter:title" content="Transfinite Stable Marriage | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Suppose you have a set of men $$M$$ and women $$W$$, and every man comes with a well-order on the women (where we take the smallest woman in a set to be the man's favorite among that set; a well-order amounts to the same thing as a way of assigning to each inhabited set a favorit…">
+<meta property="og:description" content="Suppose you have a set of men $$M$$ and women $$W$$, and every man comes with a well-order on the women (where we take the smallest woman in a set to be the man's favorite among that set; a well-order amounts to the same thing as a way of assigning to each inhabited set a favorit…">
+<meta name="twitter:description" content="Suppose you have a set of men $$M$$ and women $$W$$, and every man comes with a well-order on the women (where we take the smallest woman in a set to be the man's favorite among that set; a well-order amounts to the same thing as a way of assigning to each inhabited set a favorit…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Transfinite Stable Marriage
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2019-11-17">
+          2019-11-17
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Suppose you have a set of men $$M$$ and women $$W$$, and every man comes with a well-order on the women (where we take the smallest woman in a set to be the man's favorite among that set; a well-order amounts to the same thing as a way of assigning to each inhabited set a favorite, such that the favorite is stable under constraining to any subset of options still containing the former favorite) and vice versa. Actually, we'll say each man $$m$$ comes with a well-order on some $$W_m = W' \cup {Nobody}$$, where $$W'$$ is some subset of $$W$$ and $$Nobody$$ is the maximal (i.e., least favored) element in this ordering. And symmetrically for the women having well-ordered preferences among the men. (This amounts to having favorites within any set that also includes a $$Nobody$$ option)</p>
+<p>Given a function that assigns to each $$m \in M$$ an element of $$W_m$$ [and whenever I make a statement like this, it of course applies mathematically just as well with genders flipped], we may order these point-wise by the product of the preference orders among each person in the domain. These orderings on such functions comprise complete lattices (since any well-ordering with a maximum element is a complete lattice, and this is a property inherited by products). Call this sort of thing a "choice function for men".</p>
+<p>We can turn a choice function $$f$$ for men into a choice function $$g$$ for women like so: say a man $$m$$ is eligible for a woman $$w$$ if $$m$$ favors $$w$$ over $$f(m)$$. Let $$g(w)$$ be $$w$$'s favorite man out of all those who are eligible for her (or $$Nobody$$).</p>
+<p>This operation turning any choice function for one gender into a choice function for the other gender is order-reversing.</p>
+<p>Invoking Knaster-Tarski, it now follows that there is a complete lattice of "stable" assignments; that is, choice functions for both genders, each of which is the other's image under this transformation. The lattice of these is complete with respect to the ordering on either gender's choice functions, which are precisely opposite orders.</p>
+<p>In particular, there exists at least one stable assignment.</p>
+<p>Note that in any stable assignment, $$m$$ is assigned $$w$$ if and only if $$w$$ is assigned $$m$$. Thus, a stable assignment is the same thing as a partial bijection between the men and the women, such that no man and woman each strictly prefer each other to their current assignment.</p>
+<hr />
+<p>Much more generally, this works if each person has some complete lattice of options [of whatever sort; what dinner to have, which relative to visit for Christmas, whatever], with the available options for any person becoming narrower as people of the opposite gender get more favorable assignments [including restrictions triggered not by any individual's assignment but by coalitions' assignments], but the available options always having a most favorable value.</p>
+<p>Just as well, it'd work the other way, cooperatively rather than competitively, if the available options for any person expanded as the other gender got more favorable assignments.</p>
+<hr />
+<p>[To be expanded upon into a post talking about Knaster-Tarski, observation that it can be carried out from bottom up or from top down, initial algebras, coalgebras, Lambek's lemma, Adamek construction of initial algebras, initial objects as limits of entire categories (see <a href="https://sridharramesh.github.io/HowSridharThinks/totallimits/">Total Limits Are Empty Colimits</a>)]</p>
+<p>[TODO: Talk about how stable matchings are preserved under pointwise inhabited meets, so to speak.]</p>
+<p>[TODO: Perhaps also consider what happens when we allow ties? Perhaps also consider if there is some relation to voting systems here. For that matter, perhaps there is some relation to forcing. I don't know. These are vague thoughts.]</p>
+<p>[TODO: Observe that the same Knaster-Tarski style argument gives us a much more general result along the lines of stable marriage; to wit, if every person has a well-ordered set of options available to them (not necessarily options among the other gender, just options of some sort), with various exclusion rules such that options are taken off the table when someone of the other gender selects at or better than some choice, but with last choice options always on the table, we get still a "stable" way of selecting options for each person; that is, a way of selecting options where everyone's selection is their favorite permitted given the other gender's selections]</p>
+<p>[TODO: This framing in terms of best choices given the other gender's selections suggest a connection with the Nash equilibrium existence theorem, which is also proven using a fixed point theorem (though usually Brouwer's or Kakutani's). Is there a connection here?]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Free Theory With An Internal X | How Sridhar Thinks</title>
+<meta property="og:title" content="Free Theory With An Internal X | How Sridhar Thinks" />
+<meta name="twitter:title" content="Free Theory With An Internal X | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Consider the free theory with an internal X extending x. When we externalize its internal X, we get some X extending x. But is it x on the dot, or might it be changed from x to have more in it? It seems obvious but not obviously obvious that, when Set itself is an X, we should ge…">
+<meta property="og:description" content="Consider the free theory with an internal X extending x. When we externalize its internal X, we get some X extending x. But is it x on the dot, or might it be changed from x to have more in it? It seems obvious but not obviously obvious that, when Set itself is an X, we should ge…">
+<meta name="twitter:description" content="Consider the free theory with an internal X extending x. When we externalize its internal X, we get some X extending x. But is it x on the dot, or might it be changed from x to have more in it? It seems obvious but not obviously obvious that, when Set itself is an X, we should ge…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Free Theory With An Internal X
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2021-01-12">
+          2021-01-12
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Consider the free theory with an internal X extending x. When we externalize its internal X, we get some X extending x. But is it x on the dot, or might it be changed from x to have more in it? It seems obvious but not obviously obvious that, when Set itself is an X, we should get back x on the dot. Here, I want to write out the reasoning, to make it obviously obvoius.</p>
+<p>I'm phrasing this very abstractly, because I mean for it to apply very broadly. Whatever Xes are, they should form a category. And whatever theories with an internal X are, they should form a category. From the latter to the former, we should have a functor G which sends any theory with an internal X to the externalization of its designated internal X. To say that we have, for any given x : X, a free theory with internal X extending x, is to say that this functor we just noted has a left adjoint F. And to ask for the externalization of this free structure's internal X to be x again, in the desired way, is to ask for the unit of this adjunction to be an isomorphism.</p>
+<p>By abstract nonsense, the unit of an adjunction is an isomorphism just in case its left adjoint is fully faithful (because the condition for y to be isomorphic to GFy via the unit is by Yoneda the same as the condition that maps from x to y are in isomorphism with maps from x to GFy via the unit, which is by the adjunction the condition that maps from x to y are in isomorphism with maps from Fx to Fy via applying F, which is what it is for F to be fully faithful).</p>
+<p>So how do we see that F is fully faithful?</p>
+<p>First of all, note that for any x : X, there is the particular theory Set with internal x : X. Call this theory Kx. Though K may not be a functor as such, we know that GKx = x for any object x. Thus, G is essentially surjective on objects.</p>
+<p>From G to GFG by unit, then back to G by counit, is identity, by the zig-zag law for an adjunction. Thus, the unit is at least a split monomorphism at each object in the range of G. But every object is in the range of G by the previous paragraph, so the unit is a split monomorphism at every object.</p>
+<p>If we can now show that the monad is idempotent, we are done, by https://ncatlab.org/nlab/show/idempotent+monad#Properties.</p>
+<p>TODO</p>
+<hr />
+<p>This goes off the rails with scratch notes now:</p>
+<p>GFGK to GK back up to GFGK.</p>
+<p>GFx to x back up to GFx.</p>
+<p>From GFx, we map to x, because the free theory introduces whatever crap, but all that crap maps into the Set model, which is me. And then from me I map back up into the free theory.</p>
+<p>Anyone with a value in it gets a shadow value. In Set, we have the particular rule that shadow values collapse.</p>
+<p>Free theory where all sets have a designated involution.</p>
+<p>In Set, the designated involution is always identity.</p>
+<p>GFx to GKx should be identity?</p>
+<p>G(Fx to Kx)</p>
+<p>Ok, suppose we have theories T, and a functor from Ts to Cat taking each T to its category of internal Xes. An X internal to T is any map into T from some designated free T on the initial X, call this R.</p>
+<p>And there's a particular theory T called Set, and the claim is that we have an adjunction between T-with-an-internal-X</p>
+<p>So maps from R to t induce maps from R to Set.</p>
+<p>unit at Kx, taken through adjunction, then G applied.</p>
+<p>Kx to GFKx</p>
+<p>x -&gt; GKx
+FGKx -&gt; Kx is such that G applied to me is a monic.
+GFx -&gt; GKx</p>
+<p>G(counit)K is monic</p>
+<p>Fx = FGKx</p>
+<p>G x to GFG x</p>
+<p>Gx = GFy.</p>
+<p>Maybe something about sconing will help here.</p>
+<p>Given a T with internal X, we (X, T, function from X to G(T))</p>
+<p>An X internal to T is a T-indexed X. A functor from T to (Theory of X) lexly to Set. A lex functor from Theory of X to Set^T. The free lex theory with an internal T</p>
+<hr />
+<p>The salient thing is actually how Hom(1, -) produces free models of lex theories.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

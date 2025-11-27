@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>GL Fixed Points | How Sridhar Thinks</title>
+<meta property="og:title" content="GL Fixed Points | How Sridhar Thinks" />
+<meta name="twitter:title" content="GL Fixed Points | How Sridhar Thinks" />
+
+        
+<meta name="description" content="A curious fact about GL modal logic is that, even without any special arrangements, we have guarded fixed points: For any formula $$\phi(p, X)$$ (where $$p$$ is a propositional variable and $$X$$ represents any number of other propositional variables taken as fixed parameters), s…">
+<meta property="og:description" content="A curious fact about GL modal logic is that, even without any special arrangements, we have guarded fixed points: For any formula $$\phi(p, X)$$ (where $$p$$ is a propositional variable and $$X$$ represents any number of other propositional variables taken as fixed parameters), s…">
+<meta name="twitter:description" content="A curious fact about GL modal logic is that, even without any special arrangements, we have guarded fixed points: For any formula $$\phi(p, X)$$ (where $$p$$ is a propositional variable and $$X$$ represents any number of other propositional variables taken as fixed parameters), s…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>GL Fixed Points
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2025-11-25">
+          2025-11-25
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>A curious fact about GL modal logic is that, even without any special arrangements, we have guarded fixed points:</p>
+<p>For any formula $$\phi(p, X)$$ (where $$p$$ is a propositional variable and $$X$$ represents any number of other propositional variables taken as fixed parameters), such that $$p$$ is guarded in the sense that each occurrence of $$p$$ is under the scope of a modal operator $$\Box$$, there is a formula $$f(X)$$ such that $$f(X)$$ is provably equivalent to $$\phi(f(X), X)$$. In particular, in the case where $$X$$ is empty, we have that for any $$\phi(p)$$, there is a sentence $$f$$ such that $$f$$ is provably equivalent to $$\phi(f)$$.</p>
+<p>How is this proven? Like so:</p>
+<p>First of all, there is the observation that GL has the uniform Craig interpolation property: That is, from any formula $$\phi(p, X)$$, there is another formula $$\exists p . \phi(p, X)$$, satisfying the adjunction: $$\exists p . \phi(p, X) \vdash \psi(X)$$ if and only if $$\phi(p, X) \vdash \psi(X)$$, for any formula $$\psi(X)$$ whose free variables are entirely among those in $$X$$. [I believe there also will be the mirror image property that there is a formula $$\forall p . \phi(p, X)$$ such that $$\psi(X) \vdash \forall p . \phi(p, X)$$ iff $$\psi(p, X) \vdash \phi(X)$$. At any rate, the existential version of this was proven by Shavrukov; originally in their dissertation, which is hard to find a copy of, but also explained in their paper <a href="https://eudml.org/doc/219353">"Subalgebras of diagonalizable algebras of theories containing arithmetic"</a>.].</p>
+<p>From this, we obviously get Craig interpolation: For any two formulas $$\phi(X, Y)$$ and $$\psi(Y, Z)$$ in the indicated sets of free variables, if we have the entailment $$\phi(X, Y) \vdash \psi(Y, Z)$$ over the union of their free variables, then we also have an interpolant formula $$F(Y)$$ in just the common free variables, such that $$\phi(X, Y) \vdash F(Y)$$ and $$F(Y) \vdash \psi(Y, Z)$$. Here, $$F$$ can be taken to be $$\exists X . \phi(X, Y)$$ (meaning the repeated quantification over each propositional variable in $$X$$), or just as well, $$\forall Z . \psi(Y, Z)$$ if this is available.</p>
+<p>From Craig interpolation, we get Beth definability: If $$\phi(p, X) \wedge \phi(q, X) \vdash p \leftrightarrow q$$, then there is a particular formula $$F(X)$$ such that $$\phi(p, X) \vdash p \leftrightarrow F(X)$$. For our presumption tells us that $$\phi(p, X) \wedge p \vdash \phi(q, x) \rightarrow q$$, and thus by Craig interpolation, we have some $$F(X)$$ for which $$\phi(p, X) \wedge p \vdash F(X)$$ and $$F(X) \vdash \phi(q, X) \rightarrow q$$. Substituting $$q$$ for $$p$$ in the latter and combining the two, we have $$\phi(p, X) \vdash p \leftrightarrow F(X)$$ as desired.</p>
+<p>Now, observe that for formulas $$\phi(p, X)$$ where $$p$$ is guarded, we have $$\Box(p \leftrightarrow q) \vdash \phi(p, X) \leftrightarrow \phi(q, X)$$.</p>
+<p>This tells us fixed points are unique, like so: Suppose $$p \leftrightarrow \phi(p, X)$$ and similarly for $$q$$. Then the previous observation tells us that from $$\Box(p \leftrightarrow q)$$ we can conclude $$p \leftrightarrow q$$. Applying Löb's theorem, we conclude $$\Box (p \leftrightarrow \phi(p, X)) \wedge \Box (q \leftrightarrow \phi(q, X)) \vdash \Box(p \leftrightarrow q)$$. But we also have $$\Box(p \leftrightarrow q) \vdash \phi(p, X) \leftrightarrow \phi(q, X)$$. Thus, $$\Box (p \leftrightarrow \phi(p, X)) \wedge \Box (q \leftrightarrow \phi(q, X)) \vdash \phi(p, X) \leftrightarrow \phi(q, X)$$. Thus, defining $$m(y)$$ as $$y \wedge \Box y$$, and defining $$n(p)$$ as $$m(p \leftrightarrow \phi(p, X))$$ (so that $$n(p)$$ asserts that $$p$$ both actually and provably is a fixed point), we straightforwardly have $$n(p) \wedge n(q) \vdash p \leftrightarrow q$$. [TODO: Use better notation than $$n(p)$$, to make clear this depends on $$\phi$$ and has $$X$$ as free variables]</p>
+<p>So applying Beth definability, there is some $$F(X)$$ such that $$n(p) \vdash p \leftrightarrow F(X)$$. That is, $$F(X)$$ is the only thing that a fixed point of $$\phi$$ can be.</p>
+<p>This is enough to conclude that $$F(X)$$ actually is a fixed point of $$\phi$$, using Löb's theorem like so: Note that $$\Box (F(X) \leftrightarrow \phi(F(X, X))) \vdash \phi(F(X), X) \leftrightarrow \phi(\phi(F(X), X), X)$$ and thus $$\Box (F(X) \leftrightarrow \phi(F(X, X))) \wedge n(\phi(F(X), X)) \vdash \phi(F(X), X) \leftrightarrow F(X)$$, and so by Löb's theorem, we can conclude $$\vdash \phi(F(X), X) \leftrightarrow F(X)$$. [TODO: Check that everything here is correct.]</p>
+<p>Furthermore, this fixed point is unique, because for any $$F_1(X)$$ and $$F_2(X)$$ which each satisfy $$\vdash F(X) \leftrightarrow \phi(F(X), X)$$, we have $$\Box(F_1(X) \leftrightarrow F_2(X)) \vdash F_1(X) \leftrightarrow F_2(X)$$ and thus have by Lôb's theorem $$\vdash F_1(X) \leftrightarrow F_2(X)$$.</p>
+<hr />
+<p>The above argument is given in Boolos' "The Logic of Provability" as "Third proof of the fixed point theorem", except with Craig's interpolation theorem for GL proven directly rather than from uniform Craig's interpolation theorem.</p>
+<hr />
+<p>TODO: Rewrite the above to use $\Box$ throughout rather than $n$, and then invoke the reflection rule at the end.</p>
+<p>Rewrite the above to use coalgebra-to-algebra hylomorphisms where appropriate, instead of just maps between fixed points.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+
