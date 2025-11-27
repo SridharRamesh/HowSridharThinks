@@ -27,3 +27,9 @@ Furthermore, this fixed point is unique, because for any $$F_1(X)$$ and $$F_2(X)
 ****
 
 The above argument is given in Boolos' "The Logic of Provability" as "Third proof of the fixed point theorem", except with Craig's interpolation theorem for GL proven directly rather than from uniform Craig's interpolation theorem.
+
+****
+
+TODO: Rewrite the above to use $\Box$ throughout rather than $n$, and then invoke the reflection rule at the end.
+
+Rewrite the above to use coalgebra-to-algebra hylomorphisms where appropriate, instead of just maps between fixed points.
