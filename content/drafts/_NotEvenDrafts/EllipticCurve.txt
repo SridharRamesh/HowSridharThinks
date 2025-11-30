@@ -140,3 +140,9 @@ Intersection multiplicity of C with D at any point clearly only depends on the v
 Define a symmetric relation "T intersects C1 more than C2 intersects C1 at point P" by "There is a multiple of T which is a linear combination of C1 and C2, and the value T is multiplied by is a homogenous polynomial which is nonzero at P".
 
 -----------------
+
+Trying to reconstruct what I was getting at with the end above: Let E be our elliptic curve, N another polynomial, and D a plane corresponding to a triple for E. Note that E is a product of three planes in mod D land. If N intersects E more than D intersects E at point P, then N intersects D more than E intersects D at point P. Since D is a plane, if this happens for all points P, then we get that N is a multiple of E in mod D land. That is, N = something * E + something * D. So equivalently, N is a multiple of D in mod E land.
+
+(The fact about "Since D is a plane…" is that, if polynomial N intersects plane D with multiplicity at least m at point P, then N is divisible by P^m, so to speak. Furthermore, distinct P and P' are "coprime" in that divisibility by P^m and P'^m' entails divisibility by P^m P'^m'. So if N intersects D at least as much at every point as E (where E is a product of planes), then N is divisible by E, in mod D land.)
+
+Thus, given triples T_1, ..., T_{n + 1} of elliptic curve E which contain each point P with multiplicity at least as large as in triples S_1, ..., S_n, we can take N = T_1 * ... * T_{n + 1} and D = S_1, and reduce N/D mod E to some other polynomial. Then we can take this other polynomial / S_2 and reduce mod E. And so on, iteratively, ultimately reducing T_1 * ... * T_{n + 1} / (S_1 * ... * S_n) to a single polynomial of degree 1 mod E, yielding the desired quotient triple.
