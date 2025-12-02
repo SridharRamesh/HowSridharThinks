@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Yoneda Extension | How Sridhar Thinks</title>
+<meta property="og:title" content="Yoneda Extension | How Sridhar Thinks" />
+<meta name="twitter:title" content="Yoneda Extension | How Sridhar Thinks" />
+
+        <meta name="description" content="Why is the Yoneda embedding the free cocompletion?">
+<meta property="og:description" content="Why is the Yoneda embedding the free cocompletion?">
+<meta name="twitter:description" content="Why is the Yoneda embedding the free cocompletion?">
+
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Yoneda Extension
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2022-07-26">
+          2022-07-26
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Why is the Yoneda embedding the free cocompletion? <span id="continue-reading"></span></p>
+<p>Let $$\newcommand{\Set}{\mathrm{Set}} \newcommand{\Hom}{\mathrm{Hom}} \newcommand{\Psh}{\mathrm{Psh}} \newcommand{\Rsh}{\mathrm{Rsh}} A$$ and $$B$$ be arbitrary categories, with $$y : A \to \Set^{A^{op}}$$ and $$Y : B \to (\Set^B)^{op}$$ as the Yoneda embeddings of the indicated type. By the Yoneda embedding lemma, these can be thought of as inclusions of full subcategories. Note that $$y$$ preserves any limits which exist in $$A$$, while $$Y$$ preserves any colimits which exist in $$B$$.</p>
+<p>Recall that every functor $$f : A \to B$$ is the left $$y$$-relative adjoint of a profunctor $$g : B \to \Set^{A^{op}}$$. Specifically, if we define $$g(b)(a) = \Hom_B(f(a), b)$$, then we have a correspondence $$\Hom_B(f(a), b) = \Hom_{\Set^{A^{op}}}(y(a), g(b))$$ by the Yoneda lemma. Note that such $$g$$ preserves all limits, as would be expected from its right adjoint nature.</p>
+<p>Dually, every functor $$g : B \to A$$ is the right $$Y$$-relative adjoint of an "indfunctor" $$h : A \to (\Set^B)^{op}$$. Specifically, if we define $$h(a)(b) = \Hom_A(a, g(b))$$, then we have a correspondence $$\Hom_A(a, g(b)) = \Hom_{(\Set^B)^{op}}(h(a), Y(b))$$ by the Yoneda lemma. Note that such $$h$$ preserves all colimits, as would be expected from its left adjoint nature.</p>
+<p>In this last paragraph, the category $$A$$ is arbitrary, so we can just as well replace $$A$$ throughout it by $$\Set^{A^{op}}$$.</p>
+<p>Thus, let arbitrary $$f : A \to B$$ be given, define $$g : B \to \Set^{A^{op}}$$ as above so as to make $$f$$ the left $$y$$-relative adjoint of $$g$$, and define $$h : \Set^{A^{op}} \to (\Set^B)^{op}$$ as above so as to make $$g$$ the right $$Y$$-relative adjoint of $$h$$.</p>
+<p>Now let us show that $$h \circ y = Y \circ f$$. That is, we will show that $$h(y(a))(b) = Y(f(a))(b)$$ for $$a \in A, b \in B$$. By definition, $$h(y(a))(b)$$ is $$\Hom_{\Set^{A^{op}}}(y(a), g(b))$$, which by the Yoneda lemma is $$g(b)(a)$$, which by definition is $$\Hom_B(f(a), b)$$, which is the definition of $$Y(f(a))(b)$$.</p>
+<p>Let us now write $$\Psh(A)$$ for the full subcategory of $$\Set^{A^{op}}$$ which is generated from $$y(A)$$ by small colimits. (Note that, by <a href="https://sridharramesh.github.io/HowSridharThinks/totallimits/">the co-Yoneda lemma</a>, we will have that $$\Psh(A)$$ is all of $$\Set^{A^{op}}$$ when $$A$$ is itself small). We can now observe that $$h$$ applied to an arbitrary object in $$\Psh(A)$$ (that is, $$h$$ applied to an arbitrary colimit of a small diagram in the range of $$y : A \to \Psh(A)$$) is a colimit of a small diagram in the range of $$h \circ y$$, which by the previous paragraph is a small colimit of a diagram in the range of $$Y \circ f$$.</p>
+<p>Let us now presume that $$B$$ has all small colimits. Recalling that $$Y$$ preserves any colimits that exist in $$B$$, this last diagram turns into $$Y$$ applied to a colimit of a small diagram in the range of $$f$$. Thus, the range of $$h$$ acting on domain $$\Psh(A)$$ is included in the range of $$Y$$.</p>
+<p>We can thus now reinterpret $$h$$ as having domain $$\Psh(A)$$ and codomain $$B$$. As small colimits in $$B$$ match those in $$(\Set^B)^{op}$$ (which is just to say, $$Y$$ preserves small colimits), while small colimits in $$\Psh(A)$$ are inherited from $$\Set^{A^{op}}$$, our $$h : \Psh(A) \to B$$ continues to preserve small colimits under this reinterpretation.</p>
+<p>Thus, when $$B$$ has all small colimits, we are able to find, for arbitrary $$f : A \to B$$, a corresponding $$h : \Psh(A) \to B$$ such that $$h \circ y = f$$ and such that $$h$$ preserves all small colimits. Such an $$h$$ is unique, as well, since every object in its domain is a colimit of a small diagram in the range of $$y$$, on which its action is prescribed. [TODO: What about morphisms?]</p>
+<p>Thus, composition with the Yoneda embedding $$y : A \to \Psh(A)$$ gives us a 1:1 correspondence between arbitrary functors $$: A \to B$$ and small colimit preserving functors $$: \Psh(A) \to B$$. This exhibits the Yoneda embedding as the free cocompletion.</p>
+<hr />
+<p>We can also consider free cocompletions which preserve specified colimits. This is just the full subcategory of $$\Psh(A)$$ respecting those colimits, with this following quickly from the above result.</p>
+<p>That is, let us write $$\Rsh(A)$$ for the full subcategory of $$\Psh(A)$$ restricted to those presheaves respecting our special colimits (note that every representable presheaf is in $$\Rsh(A)$$, since these will always respect any existing colimits in $$A$$). Note that these special colimits thus remain colimits in $$\Rsh(A)$$, essentially by the defining condition on $$\Rsh(A)$$, as interpreted through the Yoneda lemma.</p>
+<p>[That $$\Rsh(A)$$ actually has all small colimits is by it being a reflective full subcategory of $$\Psh(A)$$. It is manifestly a full subcategory, and that the inclusion has a left adjoint is seen by how the inclusion is the forgetful functor for an extension of an essentially algebraic theory. Put another way, this full subcategory of a complete category is reflective because it is closed under the ambient category's limits.]</p>
+<p>Let $$y : A \to \Psh(A)$$ be the Yoneda embedding and let $$B$$ be some arbitrary category with all small colimits, as above. We can also think of the codomain of $$y$$ as $$\Rsh(A)$$, as noted above.</p>
+<p>We already know that composition with the Yoneda embedding induces a 1:1 correspondence between small colimit preserving functors from $$\Psh(A)$$ to $$B$$, and arbitrary functors from $$A$$ to $$B$$. For every arbitrary functor $$f: A \to B$$, there is one and only one small colimit preserving $$F : \Psh(A) \to B$$ such that $$F \circ y = f$$.</p>
+<p>There is also at most one small colimit preserving $$\phi : \Rsh(A) \to B$$ such that $$\phi \circ y = f$$, for the exact same reason (every object in $$\Rsh(A)$$ is a small colimit of representable presheaves [TODO: Morphisms?]).</p>
+<p>We want to show, when $$f$$ preserves the special colimits, there is a unique choice of such $$\phi$$ that preserves the special colimits as well, and then we are done in establishing $$\Rsh(A)$$ as the free cocompletion of $$A$$ preserving the chosen colimits. We've already established uniqueness of $$\phi$$ so we just need existence. The obvious choice is to take $$\phi$$ to be $$F$$ restricted to $$\Rsh(A)$$.</p>
+<p>We then just need to show that $$F$$ preserves the special colimits, so long as $$f$$ does. But of course it does, because $$F$$ takes the special colimits to the same thing $$f$$ does, because $$F$$ and $$f$$ agree on diagrams in $$A$$.</p>
+<hr />
+<p>TODO: Fill in the TODOs above about morphisms using the observation that representables are tiny objects among presheaves, in the sense that Hom(r, -) for a representable r preserves small colimits of presheaves (this follows from the fact that small colimits of presheaves are computed pointwise, and the Yoneda lemma).</p>
+<p>More generally, we see that if a category is such that every object within it is a small colimit of tiny objects, then the map from said category to small presheaves on those tiny objects is an equivalence, exhibiting this category as the free cocompletion of its full subcategory of tiny objects.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Type Derivatives | How Sridhar Thinks</title>
+<meta property="og:title" content="Type Derivatives | How Sridhar Thinks" />
+<meta name="twitter:title" content="Type Derivatives | How Sridhar Thinks" />
+
+        
+<meta name="description" content="An often observed fact in type theory/functional programming/etc is that that, given a type constructor T(X) [a type T parametrized by an input type X], the corresponding type with one "hole" acts like the derivative of T(X). (See "The Derivative of a Regular Type is its Type of …">
+<meta property="og:description" content="An often observed fact in type theory/functional programming/etc is that that, given a type constructor T(X) [a type T parametrized by an input type X], the corresponding type with one "hole" acts like the derivative of T(X). (See "The Derivative of a Regular Type is its Type of …">
+<meta name="twitter:description" content="An often observed fact in type theory/functional programming/etc is that that, given a type constructor T(X) [a type T parametrized by an input type X], the corresponding type with one "hole" acts like the derivative of T(X). (See "The Derivative of a Regular Type is its Type of …">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Type Derivatives
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2019-01-03">
+          2019-01-03
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>An often observed fact in type theory/functional programming/etc is that that, given a type constructor T(X) [a type T parametrized by an input type X], the corresponding type with one "hole" acts like the derivative of T(X). (See "The Derivative of a Regular Type is its Type of One-Hole Contexts", discussions of "zippers", etc.)</p>
+<p>For example, X^3 is the type of triples of Xs. And then 3X^2 is the type of triples of Xs with one X replaced by a hole: either an X on the left and right and a hole in the middle, or an X on the left and middle and a hole on the right, or an X on the middle and right and a hole on the left.</p>
+<p>This is just a baby example, but the same is true even with much more complicated recursively defined types; for example, with Tree(X) = 1 + X * Tree(X)^2 [a binary tree with internal nodes labelled and leaf nodes unlabelled], we can differentiate both sides and get Tree' (X) = Tree(X)^2 + X * 2 * Tree(X) * Tree' (X) [thus, a one-hole context for such a tree a is either a pair of left and right child trees (the case where we've put our hole at the root) or a root X, a child tree, a child one-hole context, and a Boolean specifying which of these is the left and which is the right child].</p>
+<p>It may seem a magic coincidence that the rules of differentiation should line up with the rules of one-hole contexts. Well, it's not such a coincidence. You can get a fair way to understanding it just by thinking about why particular differentiation rules like the product rule and sum rule should work, but this is still slightly ad hoc; it doesn't quite explain why they should ALL line up the right way. Instead, this is how I think of it, as a unified phenomenon:</p>
+<p>A good way to think about this (or, at least, what I consider a good way to think about this) is that often, but not always, for a type constructor [i.e., function from types to types] T(X), we have an equation of the form T(X + Y) = T(X) + Y * Secant(X, Y), for some other type constructor Secant(X, Y).</p>
+<p>Here, T(X + Y) on the left-hand side is like instances of T where the "points" can be either Xs or Ys, and on the right-hand side, T(X) is those instances using only Xs, while Y * Secant(X, Y) is those instances using at least one Y.</p>
+<p>Furthermore, the latter is broken down so that Secant(X, Y) is those instances using at least one Y, with the "first" (or some canonically selected one, canonically selected in a way which doesn't depends on its own contents) replaced by a hole, so that Y * Secant(X, Y) plugs the hole.</p>
+<p>Then the derivative of T(X) is Secant(X, 0).<sup class="footnote-reference" id="fr-continuity-1"><a href="#fn-continuity">1</a></sup> And this is the same as the instances of T(X) using at least one Y, the first replaced by a hole, the rest unfillable; i.e., the instances of T(X) using precisely one hole, and no other stray Ys.</p>
+<p>All of this falls apart if we cannot make the equation T(X + Y) = T(X) + Y * Secant(X, Y) for some Secant(X, Y); thus, it falls apart for, for instance, T(X) = 2^X.</p>
+<p>And indeed, I don't know of any sense in which there is some type ln(2) * 2^X acting like "the type of functions from X to Booleans with one hole where the datum of an X would normally go".</p>
+<p>So by thinking about the correspondence of type differentiation the way I like, not only do we understand the correspondence with one-hole contexts in nice cases, but we also understand clearly the limitations of this phenomenon!</p>
+<p>[Note to self: 2^X is a contravariant endofunctor, while the other examples given so far are covariant endofunctors. Are there natural examples of type derivatives on things which are not covariant? Perhaps not. What happens for covariant 2^(2^X)?</p>
+<p>What we're really interested in is endofunctors on the category of coproduct injections (in the context of Booleanness, these are precisely the monics). This let us decompose T(X + Y) into T(X) + Something(X, Y), where Something(X, 0) = 0.</p>
+<p>The fundamental further principle that lets us do differentiation is that if F(0) = 0, then F(X) = X * G(X) for some G (and then F'(0) = G(0)). This isn't always true even for injection-preserving endofunctors, though; consider, e.g., the functor which reflects sets into propositions (so it sends 0 to 0 and everything else to 1). Thus, just as in analysis class, not everything is differentiable.]</p>
+<hr />
+<p>TODO: Rewrite all this. Consider F(Y) to be o(Y) just in case every instance of F(Y) uses more than one instance of an Y. Then T(X + Y) = T(X) + Y * T'(X) + o(Y), with a unique decomposition, and this of course lines up with how we think of derivatives. The key thing about o(Y) is that it's closed under linear combinations and contains Y * o(1) [where o(1) means F(0) = 0].</p>
+<p>[TODO: See https://en.wikipedia.org/wiki/Combinatorial_species#Differentiation ]</p>
+<hr />
+<p>Footnotes:</p>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-continuity">
+<p>One needs some principle that tells us Secant is uniquely determined even at Y = 0, once Y * Secant is determined, for this to work. In analysis, this principle is continuity; at most one continuous selection can be made. But in lots of contexts, there is some analogous principle constraining the avaiable functions that has nothing to do with infinitesimal limits per se. <a href="#fr-continuity-1">↩</a></p>
+</li>
+</ol>
+</section>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

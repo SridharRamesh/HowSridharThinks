@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Presheaf Categories Are Toposes | How Sridhar Thinks</title>
+<meta property="og:title" content="Presheaf Categories Are Toposes | How Sridhar Thinks" />
+<meta name="twitter:title" content="Presheaf Categories Are Toposes | How Sridhar Thinks" />
+
+        
+<meta name="description" content="The category Psh(C) of presheaves on a small category C is a topos (presuming Set itself is one). Why is this? I keep forgetting the cleanest proofs of these facts. I record them here for myself for posterity. For our purposes here, a topos is a category with finite limits, carte…">
+<meta property="og:description" content="The category Psh(C) of presheaves on a small category C is a topos (presuming Set itself is one). Why is this? I keep forgetting the cleanest proofs of these facts. I record them here for myself for posterity. For our purposes here, a topos is a category with finite limits, carte…">
+<meta name="twitter:description" content="The category Psh(C) of presheaves on a small category C is a topos (presuming Set itself is one). Why is this? I keep forgetting the cleanest proofs of these facts. I record them here for myself for posterity. For our purposes here, a topos is a category with finite limits, carte…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Presheaf Categories Are Toposes
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2022-05-19">
+          2022-05-19
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>The category Psh(C) of presheaves on a small category C is a topos (presuming Set itself is one). Why is this? I keep forgetting the cleanest proofs of these facts. I record them here for myself for posterity.</p>
+<p>For our purposes here, a topos is a category with finite limits, cartesian closure, and a subobject classifier. Sometimes people add to the definition finite colimits, though this can be deduced already from the former structure by Pare's theorem (that is, from the fact that the self-adjunction of the contravariant powerset endofunctor can be shown to be monadic, thus creating colimits from limits). We can conclude also that all this structure is pullback stable, that pullbacks have right adjoints (thus we have local cartesian closure as well), etc, but nevermind all that.</p>
+<p>The question is, why does this structure transfer to presheaf categories? The existence of finite limits in presheaf categories is obvious: these are computed componentwise, as in any functor category whose codomain has such limits. Indeed, in the same way, we see that the category Set^C for any C (whether or not C is small) in fact has componentwise set-sized limits and set-sized colimits (and because these are componentwise, these set-sized colimits will be pullback-stable, disjoint, etc, just as in Set itself). So what we need to see beyond this is why the presheaf categories have exponentials and why they have a subobject classifier.</p>
+<p>Both of these occur for the same reason: For small C, using the Yoneda lemma and the fact that each object in Psh(C) is a set-sized colimit of representables, a contravariant functor from Psh(C) to Set is representable just in case it turns set-sized colimits into limits. [When C is large but locally small, we still have a Yoneda embedding of C into Psh(C), but what goes awry is that Psh(C) is no longer comprised only of set-sized colimits of representables]</p>
+<p>Thus, exponentials exist because any set-sized colimit-preserving functor F out of C has a right adjoint: Hom(F(-), d) will necessarily take set-sized coimits to limits. And we know that for any object p in Psh(C), the functor p x - is set-sized colimit-preserving because this is true componentwise, because of the existence of the existence of exponentials in Set itself.</p>
+<p>Similarly, the subobject functor is representable because being a subobject is a limit-definable condition (a map is monic in case its kernel pair is trivial), and thus can be checked componentwise in Psh(C). Thus, subobject functor on Psh(C) turns set-sized colimits into limits, and thus is representable.</p>
+<p>[TODO: It's fairly straightforward to show with the Yoneda lemma that the Yoneda embedding preserves cartesian exponentials. What about the fact that the presheaf category on a monoidal category also is monoidal closed (via Day convolution)? Does the Yoneda embedding preserve those exponentials?]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

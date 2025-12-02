@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Thoughts on what calculus is about | How Sridhar Thinks</title>
+<meta property="og:title" content="Thoughts on what calculus is about | How Sridhar Thinks" />
+<meta name="twitter:title" content="Thoughts on what calculus is about | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Calculus is about certain kinds of weighted sums. An easy kind of weighted sum against a function f is to extract the value f(x) for a specific x. This is like integrating against a Dirac delta. We might also consider the integral of f along some interval (or across some region m…">
+<meta property="og:description" content="Calculus is about certain kinds of weighted sums. An easy kind of weighted sum against a function f is to extract the value f(x) for a specific x. This is like integrating against a Dirac delta. We might also consider the integral of f along some interval (or across some region m…">
+<meta name="twitter:description" content="Calculus is about certain kinds of weighted sums. An easy kind of weighted sum against a function f is to extract the value f(x) for a specific x. This is like integrating against a Dirac delta. We might also consider the integral of f along some interval (or across some region m…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Thoughts on what calculus is about
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2022-07-25">
+          2022-07-25
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Calculus is about certain kinds of weighted sums.</p>
+<p>An easy kind of weighted sum against a function f is to extract the value f(x) for a specific x. This is like integrating against a Dirac delta.</p>
+<p>We might also consider the integral of f along some interval (or across some region more generally/higher dimensionally). This is like integrating against a rectangle function. (Thus, the weights here are infinitesimal in comparison to the Dirac delta case). Note that a Dirac delta is like the limiting case of a rectangle function of height inversely proportional to its width, as the width goes to zero around a point.</p>
+<p>We might also consider the derivative of f at some point. This is like integrating against the derivative of a Dirac delta. Note that f'(x) is like (f(a) - f(b))/(a - b) in the limit as a, b -&gt; x. Thus, we have two weights of equal magnitude but opposite sign right up against each other, and that magnitude is 1/(a - b) times that of a Dirac delta; thus, the weights here are infinite in comparison to the Dirac delta case.</p>
+<p>Any linear operator from a space of functions to a space of outputs can be thought of as a kind of weighted sum of the function's values [in the same way that any linear operator can be thought of as represented by a matrix]; a kind of general "distribution" (and we can consider ones even more general than Schwarz space distributions or tempered distributions or whatever). Actually, what we really mean here is a natural family of linear operators, going from -^domain (where these are arbitrary set functions) to weight tensor -, natural in linear maps on -. This naturality ensures that our weights are scalar like, not arbitrary linear operators on the values of our functions (so conjugation, for example, is not counted as a weighted sum acting on single complex numbers. Though we could always imagine applying some linear operation to the result of the weighted sum anyway, like an evaluation map of pairings of vectors and matrices. So maybe this kind of distinction isn't worth worrying about. Perhaps it would be better to think of weights as arbitrary linear maps.).</p>
+<p>In particular, even things like "The limit of the function at x" (which can be distinct from the value of the function at x) can be thought of as certain kinds of weighted sums, albeit we do not normally think of these this way. A kind of weighted sum where all the weight is right up against but not actually at x.</p>
+<p>When the linear functional sends positive functions to positive outputs and sends the constantly 1 function to 1, it is a kind of average. Thus, in particular, limits are a kind of average, in addition to extracting values (Dirac delta; average at a point) or taking the average across an interval in the usual sense.</p>
+<p>The fundamental theorems of calculus, in the punctile-to-extensive and extensive-to-punctile forms from https://sridharramesh.github.io/HowSridharThinks/math/FundamentalTheoremsCalculus.html, are the observation that, in suitable contexts, average across a region is an average of Dirac delta functions at points, and conversely, a Dirac delta at a point is a limit of averages across regions. (This is sure convergence of distributions)</p>
+<p>Thus, the fundamental concepts of calculus are these:</p>
+<p>Totals (can be weighted)
+Averages (can be weighted). (Normally, we think of totals and averages as just rescaled versions of each other, but the difference between the two can be an infinite factor. E.g., summing an infinite series versus taking its average value.)
+Limits, but these are just a special case of weighted averages, as said above.
+Rates of change. We can think of these as given by limits of secant functions, but we can also think of these as primitive concepts in themselves, acting on tangent vectors.</p>
+<p>All of these are certain kinds of weighted sums.</p>
+<p>Some kinds of distributions have behavior that is in some sense thoroughly well-described just by their induced measure (their behavior on indicator functions for regions). But things like the derivative of the Dirac delta do not have this kind of behavior (they act best on differentiable, etc, smooth functions). [Similarly for extracting limits or taking asymptotic density averages? Similarly for "average value around point", as opposed to the Dirac delta itself]. This is perhaps related to the idea of absolute continuity vs. singularity of distributions/measures?</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

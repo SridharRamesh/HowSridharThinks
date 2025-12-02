@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Lambek&#x27;s lemma, Knaster-Tarski, Adamek | How Sridhar Thinks</title>
+<meta property="og:title" content="Lambek&#x27;s lemma, Knaster-Tarski, Adamek | How Sridhar Thinks" />
+<meta name="twitter:title" content="Lambek&#x27;s lemma, Knaster-Tarski, Adamek | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Let $$F$$ be an endofunctor and let $$A : FX \to X$$ be an algebra for that endofunctor. $$A$$ gives rise to another F-algebra $$FA : FFX \to FX$$, and this has a "tautological" F-algebra homomorphism back into $$A$$ with underlying map $$A$$ itself (the relevant commutative squa…">
+<meta property="og:description" content="Let $$F$$ be an endofunctor and let $$A : FX \to X$$ be an algebra for that endofunctor. $$A$$ gives rise to another F-algebra $$FA : FFX \to FX$$, and this has a "tautological" F-algebra homomorphism back into $$A$$ with underlying map $$A$$ itself (the relevant commutative squa…">
+<meta name="twitter:description" content="Let $$F$$ be an endofunctor and let $$A : FX \to X$$ be an algebra for that endofunctor. $$A$$ gives rise to another F-algebra $$FA : FFX \to FX$$, and this has a "tautological" F-algebra homomorphism back into $$A$$ with underlying map $$A$$ itself (the relevant commutative squa…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Lambek&#x27;s lemma, Knaster-Tarski, Adamek
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2019-11-28">
+          2019-11-28
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Let $$F$$ be an endofunctor and let $$A : FX \to X$$ be an algebra for that endofunctor. $$A$$ gives rise to another F-algebra $$FA : FFX \to FX$$, and this has a "tautological" F-algebra homomorphism back into $$A$$ with underlying map $$A$$ itself (the relevant commutative square is just $$A \circ FA = A \circ FA$$).</p>
+<p>Now suppose there is some F-algebra homomorphism $$: A \to FA$$ which is a section of the tautological homomorphism $$: FA \to A$$.</p>
+<p>Lambek's lemma (although not usually phrased in such generality) tells us that this section is actually an isomorphism; that is, even in the other order of composition, the tautological homomorphism followed by its section comes out to identity.</p>
+<p>Why is this? Let $$m : X \to F X$$ be the underlying morphism of this section. Then we have $$m \circ A = F(A) \circ F(m) = F(A \circ m) = F(1) = 1$$, establishing the lemma.</p>
+<p>In particular, if $$A$$ is an initial object in some full subcategory of the F-algebras closed under $$F$$, then this category will contain the tautological morphism into $$A$$, and also a section for it (as an initial object readily provides a section of every map into it), allowing us to apply this lemma to conclude that $$A$$ is in fact an isomorphism.</p>
+<p>This is closer to the way Lambek's lemma is usually presented (while still general enough for our purposes below!).</p>
+<p>Of course, just as well dually, we find that a terminal coalgebra for any full subcategory of F-coalgebras closed under F must also be an isomorphism.</p>
+<hr />
+<p>Note that F-algebras and F-coalgebras comprise a category together (the morphisms from coalgebras to algebras being <a href="https://sridharramesh.github.io/HowSridharThinks/hylomorphism/">"hylomorphisms"</a>). Also, for any diagram of F-algebras, if its forgetful functor has a limit, then its inclusion functor into the category of F-algebras and F-coalgebras also has a limit, and the former limit is the forgetful functor applied to the latter limit. And dually of course for colimits of coalgebras.</p>
+<p>We can consider the notion of an F-algebra-initial F-coalgebra: those F-coalgebras with unique homomorphisms into each F-algebra. This class is closed under the natural action of F (as a special case of the <a href="https://sridharramesh.github.io/HowSridharThinks/hylomorphism/">"rolling rule"</a>) and under colimits within the category of coalgebras together with algebras (insofar as the colimits exist).</p>
+<p>[Apparently, many use the term "recursive coalegbra" rather than "algebra-initial coalgebra" here. Or in the same way, they speak of "corecursive algebra" rather than "coalgebra-terminal algebra".]</p>
+<p>By Lambek's lemma above, an initial algebra is the same thing as a terminal algebra-initial coalgebra (since any terminal such coalgebra will have to be an isomorphism). A sufficient (though not necessary) condition for this to exist is for the forgetful functor from algebra-initial coalgebras into the underlying category to have a colimit (because then this colimit must itself comprise a colimit within the algebra-initial coalgebras, and thus be a total colimit, which is to say, terminal; see <a href="https://sridharramesh.github.io/HowSridharThinks/totallimits/">"Total Limits Are Empty Colimits"</a>).</p>
+<p>This is the bottoms up approach to the initial algebra given by Knaster-Tarski.</p>
+<p>The top down approach to the initial algebra given by Knaster-Tarski is more straightforward, but less computational: the initial object for the F-algebras is their total limit [again by <a href="https://sridharramesh.github.io/HowSridharThinks/totallimits/">"Total Limits Are Empty Colimits"</a>]. And again, if the forgetful functor from the the F-algebras to the underlying category has a limit, then it creates a corresponding limit in the F-algebras (and indeed, in the category of algebras together with coalgebras), giving us the desired object.</p>
+<p>The bottoms up approach doesn't actually require us to use the full subcategory of all algebra-initial coalgebras. In general, suppose we want to find a coalgebra which satisfies some specialness property preserved by applying F and by some special kind of colimits, and which also happens to be an isomorphism. It suffices to find some subcategory of special coalgebras which is closed under the tautological maps and which contains a total colimit. In particular, we can inductively build a subcategory of special coalgebras closed under the tautological maps, and closed under special colimits, and hope it happens to contain a total colimit (this will work just in case the object we wish to build is "well-founded" in some sense).</p>
+<p>For the purposes of building a initial algebra this way, the specialness property for coalgebras is being algebra-initial, and a suitably special kind of colimit preserving this property is one induced from colimits in the underlying category. So we can consider the full subcategory of coalgebras inductively buildable via tautological maps and all colimits induced from the underlying category that happen to exist. (This is sort of like the cumulative hierarchy, which is inductively built from singleton and union operators, except instead of just union, we have all kinds of non-posetal colimits in play as well)</p>
+<p>We can be even more narrow than this. No one is forcing us to use a full subcategory. We can inductively build a subcategory of coalgebras buildable via tautological maps and very particular colimits induced from the underlying category. We can think of the stages of this construction as indexed by ordinals. At successor ordinal stages, we add in F(the last coalgebra we added) and the tautological map between them. At limit ordinal stages, we add in a colimit for everything produced in previous stages.</p>
+<p>At every point, there will be a unique map from coalgebras at lower stages to coalgebras to higher stages ...except it may at some point be that the next new coalgebra we add is isomorphic to a coalgebra already included at some lower stage (perhaps isomorphic via the map we've added between those two stages, but perhaps isomorphic in some completely different way). That's alright, this doesn't matter. If this ever happens, though, to keep things actually a subcategory per se (which we wish to do for size reasons I'll explain in a second), we must choose an arbitrary such isomorphism and add it in as well, identifying the coalgebras at those two stages.</p>
+<p>(Incidentally, if two different stages happen to be not accidentally isomorphic but isomorphic through the ordinary morphisms of our diagram itself, then there's no problem, the coalgebra of such a stage is already an isomorphism and thus the terminal object we're looking for. For having stage $$\alpha$$ be isomorphic in this way to some later stage means that the tautological map on stage $$\alpha$$ is followed by a coalgebra map resulting in identity, which by our initial version of Lambek's lemma means that the tautological map was itself an isomorphism. So it's only isomorphic coalgebras at different stages whose isomorphisms don't arise in this natural way which should bother us.)</p>
+<p>This ordinal-indexed bottoms-up approach is called Adamek's construction, although people usually do not do it paying such attention to the last detail about accidental isomorphisms (instead, they cross their fingers and hope for F to preserve the big colimit in the end, making things work out anyway).</p>
+<p>Basically, the free category with an endofunctor and directed colimits is the poset of all ordinals, and we could map it into our underlying category in a directed colimit-preserving way (to the extent the colimits exist) such that successor becomes F. The result's image is almost a subcategory of our category, but there may be accidentally isomorphic objects at different stages, which isn't allowed for a subcategory as such. So we modify the construction along the way to take care of this as well (though this has the effect that now, some of the colimits we take may not be directed colimits as such, because they have parallel morphisms in the diagram).</p>
+<p>Zorn's lemma then tells us that we can get a maximal such subcategory of the algebra-initial coalgebras; some subcategory which is closed under tautological maps and these colimits-of-everything-so-far insofar as they exist, and thus whose only obstacle to having a terminal object could be the failure of such a colimit to exist. If said colimit exists, then we get a terminal object within this category, which will be an initial algebra.</p>
+<p>The reason we had to restrict ourselves to using subcategories (i.e., diagrams D on some domain such that whenever D(x) and D(y) are isomorphic, x and y were already equal or at least isomorphic objects in the domain) is for formal issues around "size" and the antinomies that can arise in naively invoking Zorn's lemma (consider how it would be paradoxical to use Zorn's lemma to produce a maximal ordinal; the Burali-Forti paradox). We might wish to apply Zorn's lemma to the collection of <em>all</em> well-ordered diagrams into our category, but in standard set theories, there is no such collection; there is a large collection of small well-ordered diagrams, and a superlarge collection of large well-ordered diagrams, and so on, but no one collection of all well-orderings including those it itself "impredicatively" introduces. However, standard set theory <em>does</em> allow us to consider the collection of all subcategories of a given category, so we can apply Zorn's lemma to that poset without problem.</p>
+<p>We COULD use an inductively built non-subcategory diagram as well, closed under tautological maps and colimits, without bothering to toss in any "accidental isomorphisms". In some sense, this is the most natural thing to do. In this case, the diagram has shape corresponding to all ordinals. This is "paradoxically large", so we cannot actually conclude this diagram has a total colimit (that is, we can only inductively build such a diagram with closure under colimits of shape not defined with reference to this diagram itself); after all, we cannot conclude there is a largest ordinal, equal to its successor. But if we luck out, the ordinal-indexed diagram still stabilizes at some well-defined point; this will happen if the functor F we are dealing with preserves the colimit at some limit ordinal stage. This often follows from arity considerations in the definition of F (e.g., finitary functors will preserve the colimit at $$\omega$$). But I don't know of a guarantee that <em>every</em> functor will stabilize in this way.</p>
+<p>[TODO: The ordinal-indexed part of the above ended up becoming a bit of a confusing mess in the rewrite paying attention to subcategory status/accidental isomorphisms. See if this can be cleaned up.]</p>
+<p>[TODO: Can these accidental isomorphisms ever actually happen? Construct an example or clean everything up by proving it impossible.]</p>
+<p>[TODO: Relate Knaster-Tarski proved from below by Adamek to the Banach and Caristi fixed point theorems. Perhaps this involves thinking about Cauchy completeness of categories?]</p>
+<hr />
+<p>See also: "On Well-Founded and Recursive Coalgebras" by Adamek et al, and the related work mentioned therein (such as by Paul Taylor). Also "Initial Algebras, Terminal Coalgebras, and the Theory of Fixed Points of Functors" by the same authors.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

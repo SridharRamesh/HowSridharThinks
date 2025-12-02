@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Permutation Parity | How Sridhar Thinks</title>
+<meta property="og:title" content="Permutation Parity | How Sridhar Thinks" />
+<meta name="twitter:title" content="Permutation Parity | How Sridhar Thinks" />
+
+        
+<meta name="description" content="I am fond of saying that the two theorems that laypeople do not know because curricula arbitrarily do not bother to show them, yet which are about phenomena of ubiquitous generality in down-to-Earth grade school mathematics, are Bezout's theorem and the fact that permutations car…">
+<meta property="og:description" content="I am fond of saying that the two theorems that laypeople do not know because curricula arbitrarily do not bother to show them, yet which are about phenomena of ubiquitous generality in down-to-Earth grade school mathematics, are Bezout's theorem and the fact that permutations car…">
+<meta name="twitter:description" content="I am fond of saying that the two theorems that laypeople do not know because curricula arbitrarily do not bother to show them, yet which are about phenomena of ubiquitous generality in down-to-Earth grade school mathematics, are Bezout's theorem and the fact that permutations car…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Permutation Parity
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-05-02">
+          2020-05-02
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>I am fond of saying that the two theorems that laypeople do not know because curricula arbitrarily do not bother to show them, yet which are about phenomena of ubiquitous generality in down-to-Earth grade school mathematics, are Bezout's theorem and the fact that permutations carry parity. I know of two traditional proofs for this fact, but perhaps they are the same in the end. Let's see.</p>
+<p>First, consider a simple graph on N nodes; that is, an undirected graph without bothering to allow reflexive or multiple edges. We can take this as specifying a set of transpositions on the set of nodes; each edge says we are given the transposition which exchanges the two nodes it connects and acts as identity elsewhere.</p>
+<p>The graph is split into connected components, and the transpositions it corresponds to generate all and only those permutations which leave each node within the same connected component it started in.</p>
+<p>Proof: That each node is left within the same connected component it started in is obvious, as no transposition moves anyone out of their connected component. That all transpositions within a connected component can be generated follows once we establish transitivity: if you can generate the transposition (a b) and the transposition (b c), then you can generate the transposition (a c), as the composition (a b) (b c) (a b).</p>
+<p>From now on, let's presume our graph has a single connected component.</p>
+<p>We furthermore get from it a simple graph on the symmetric group on N nodes, where two elements are connected by an edge just in case some edge in the original graph gives a transposition which takes them to each other. [Note that this is a much larger graph than the one we started with; it has N! nodes]. We can also look just as well at torsors of the symmetric group, which is sometimes more convenient, but I'll phrase things this way for now.</p>
+<p>Often, it'll be the case that we can define a function f from the nodes of this large graph to natural numbers such that:
+A) Identity is the unique value taken to 0 by f.
+B) Any value which is not the identity is such that it has a neighbor on which the value of f is one less.
+C) Neighbors always have values of f which differ by no more than 1.
+D) Neighbors always have values of f which differ by no less than 1.</p>
+<p>A, B, and C ensure that f is the distance from identity function. Adding in D tells us that furthermore this is a bipartite graph; thus we get our notion of parity for permutations.</p>
+<p>Note that we get the same notion of parity no matter what graph we start with, noting that our composition law above for paths in a transposition graph preserves oddity and thus makes all transpositions odd. [More specifically, a path of length n of basic transpositions can be turned into a composition of 2n - 1 basic transpositions]</p>
+<p>One case of interest is when the graph we start with is the complete graph on N nodes. This is the proof of permutation parity by cycle counting. (This gives another way to see that no matter what choice of initial graph we make, we get the same parity concept in the end, since any path of even or odd length in some subgraph is subsumed as a path of the same length in this one.)</p>
+<p>Another case of interest is when the graph we start with is an N node linear path. This is the proof of permutation parity by inversion counting.</p>
+<p>Are other cases such that we can make f in a convenient way as well? E.g., the graph on 4 nodes with one hub and three spokes? We can always make the f which satisfies the desired properties, but can we actually see that it satisfies the desired properties beforehand, without already knowing the parity theorem? Can we read the distance off quickly in some fashion?</p>
+<p>TODO!</p>
+<p>[TODO: Rewrite everything for readability. Expand on cycle counting and inversion counting proofs in detail.]</p>
+<p>[TODO: We needn't only talk about distances in terms of transpositions. We could take odd involutions or odd permutations more generally in our basis]</p>
+<p>[TODO: This all relates to a more general phenomenon about distance functions in Coxeter groups. The linear graph representation is directly a Coxeter group. The complete graph representation isn't directly a Coxeter group, it's just a group generated by involutions but also containing further relations than the Coxeter ones, but perhaps there's something to say there in Coxeter style too?]</p>
+<p>TODO:</p>
+<p>Re: https://mathoverflow.net/a/417732/3902 on permutation parity ("Let X be a finite set of size at least 2. Let E be the set of edges of the complete graph on X. The set D of ways of directing those edges is a torsor under {±1}E. Let G be the kernel of the product homomorphism {±1}E→{±1}. Since ({±1}E:G)=2, the set D/G of G-orbits in D has size 2. The symmetric group Sym(X) acts on X, D, and D/G, so we get a homomorphism Sym(X)→Sym(D/G)≃{±1}. Each transposition (ij) maps to −1 because if d∈D has all edges at i and j outward except for the edge from i to j, then (ij)d equals d except for the direction of the edge between i and j.")</p>
+<p>It's interesting this proof relates to both the inversion-counting/polynomial proof and to the cycle-counting proof. The relation to inversion-counting is clear (consider directing edges linearly) and that this is the same as the polynomial proof is also straightforward (think of a directed edge as negating when reversed, and an element of D as the product of all its directed edges. The polynomial setup is where we specifically describe an edge as a difference of variables corresponding to its endpoints). But the relation to cycle-counting is perhaps less obvious. –
+Sridhar Ramesh
+2 hours ago<br />
+I will write it out a bit tersely, because of character constraints. Hopefully it will still be understandable. Instead of just considering the effect (as in, $\pm 1$) of $p \in Sym(X)$ on D/G = (orientations of all of E)/G, we can also consider p's effect on (orientations of E')/G for any subset $E' \subseteq E$ closed under the action of p. And the combined effect of p on a union of disjoint such E' is the product of its effects on the individual E'. In particular, we can break down E into its individual orbits under p, and consider the effect of p on each of these orbits separately. –
+Sridhar Ramesh
+2 hours ago   Delete
+Any cycle of X under p of even length 2n gives rise to an orbit of E under p of size n, this orbit comprising the diameters of the cycle. It is readily seen that these are all and only the orbits of E on which p's effect is -1. Thus, the overall effect of p on D/G is equal to (-1)^(the number of even length cycles of X under p). –
+Sridhar Ramesh
+2 hours ago</p>
+<p>Permutation parity is something we can calculate by thinking about these two different group actions (permutations acting on themselves and counting cycles, or acting on orderings and counting inversions). These are sort of isomorphic group actions (both are torsors), and yet sort of non-isomorphic (the cycle count goes from 1 to n, but the distance between orderings or edge-orientations goes from 0 to (n choose 2)).</p>
+<p>Perhaps the unification idea here could help us finally unify the two ways of thinking about Fermat's little theorem via two different group actions (Lagrange's theorem vs. necklace-counting), especially as the polynomial and cycle-counting approach unification above is related to the proof of Lagrange's theorem in the context of abelian groups by a big product and division and how this relates to counting cycles.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

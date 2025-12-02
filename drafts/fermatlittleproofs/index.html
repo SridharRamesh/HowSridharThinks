@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Proofs of Fermat&#x27;s Little Theorem | How Sridhar Thinks</title>
+<meta property="og:title" content="Proofs of Fermat&#x27;s Little Theorem | How Sridhar Thinks" />
+<meta name="twitter:title" content="Proofs of Fermat&#x27;s Little Theorem | How Sridhar Thinks" />
+
+        
+<meta name="description" content="What I'd like to say about proofs of Fermat's little theorem (or the Euler-Fermat theorem more generally) is going to be annoying to write on Twitter with its character count restrictions, lack of editing, etc, but here is the gist of it: I've been interested for a long time in c…">
+<meta property="og:description" content="What I'd like to say about proofs of Fermat's little theorem (or the Euler-Fermat theorem more generally) is going to be annoying to write on Twitter with its character count restrictions, lack of editing, etc, but here is the gist of it: I've been interested for a long time in c…">
+<meta name="twitter:description" content="What I'd like to say about proofs of Fermat's little theorem (or the Euler-Fermat theorem more generally) is going to be annoying to write on Twitter with its character count restrictions, lack of editing, etc, but here is the gist of it: I've been interested for a long time in c…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Proofs of Fermat&#x27;s Little Theorem
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2024-01-14">
+          2024-01-14
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>What I'd like to say about proofs of Fermat's little theorem (or the Euler-Fermat theorem more generally) is going to be annoying to write on Twitter with its character count restrictions, lack of editing, etc, but here is the gist of it:</p>
+<p>I've been interested for a long time in cataloguing the sense in which various proofs of this theorem are or are not related to each other. It seems to me every proof I am aware of can be seen as one of the following:</p>
+<p>A1) For prime p and natural number x, construct a permutation of a set with x^p many elements, with x fixed points, with every other orbit having size p. Thus, p divides x^p - x. Which is to say, x^p = x mod p.</p>
+<p>A2) For prime p and positive integer x, construct a permutation of a set with x^p - 1 many elements, with x - 1 fixed points, with every other orbit having size p. Thus, p divides (x^p - 1) - (x - 1) = x^p - x. Which is to say, x^p = x mod p.</p>
+<p>B) For prime p and integer x co-prime to p, construct a permutation of a set with p many elements, with 1 fixed point, with every other orbit having size ord_p(x) = the smallest e such that x^e = 1 mod p. Thus, ord_p(x) divides p - 1. Which is to say, x^(p - 1) = 1 mod p.</p>
+<p>A typical example of an A1 proof is "necklace counting": Take the structure of interest to comprise the cyclic rotation operator on the x^p many strings of length p over an alphabet of size x (equivalently, the shift operator on the x^p many bidirectionally infinite strings over an alphabet of size x which are periodic with period dividing p; equivalently, the shift-and-drop operator on the unidirectionally infinite periodic strings).</p>
+<p>A typical example of an A2 proof: Take the structure of interest to comprise the "multiplication by x" operator acting on the integers mod x^p - 1 (equivalently, acting on the rationals of the form n/(x^p - 1), modulo its additive subgroup of integers).</p>
+<p>A typical example of a B proof [really, the only example anyone considers]: Take the structure of interest to comprise the "multiplication by x" operator acting on the integers mod p.</p>
+<p>Note that in each case, the structure by which we carry out the proof is uniquely determined up to isomorphism (within the category of sets equipped with an endofunction, by the information about the number of orbits of various sizes). Thus, any two proofs of type A1 (or of type A2, or of type B) are in some sense equivalent, though just how natural their equivalence is depends on how natural an isomorphism can be chosen between their differing presentations of isomorphic structures.</p>
+<p>That proofs along the lines of A1) or A2) are also closely related to each other is straightforward to see [one can straightforwardly modify the number of fixed points by identifying, removing, or adding some].</p>
+<p>Indeed, once we become aware that the multiplicative group of the integers modulo p is cyclic (which of course is a stronger statement than Fermat's little theorem), we can quite naturally relate our archetypal A1 proof to our archetypal A2 proof like so: By interpreting unidirectionally infinite strings over an alphabet of size x as base x representations of numbers, we see that the x^p many such strings which are periodic with period p describe the x^p - 1 many rationals of the form n/(x^p - 1) modulo integers. This mapping gives a homomorphism from the shift operator on the unidirectionally infinite strings, to the multiplication by x operator on the rationals n/(x^p - 1) modulo integers. This homomorphism is surjective and almost injective, except for that it identifies the all zero digit string with the all highest digit string. Thus, we see these two structures are almost the same, except for this identification of two fixed points into one.</p>
+<p>An unusual example of an A1 proof would be where we take the structure of interest to be the x^p many solutions in y to y^(x^p) = y in an algebraically closed field where x^p ≠ 1 (this is the condition characterizing there being no repeated roots). By dropping the zero solution and considering only the x^p - 1 many (x^p - 1)th roots of unity, we get an unusual example of an A2 proof. That this is equivalent to our previous example of an A2 proof amounts to the fact that the multiplicative group of these roots of unity is cyclic.</p>
+<p>But as far as I can tell, there is no close relationship between A1/A2 proofs and B proofs, except for that these happen to prove the same thing.</p>
+<p>In this sense, I say there are precisely two distinct proofs of Fermat's little theorem, as best I am aware.</p>
+<p>Incidentally, all of these proofs (A1/A2 and B) generalize easily to showing that x^(p^n) = x mod p^n, and from there we can derive the Euler-Fermat theorem more generally.</p>
+<p>The A1 necklace counting proof generalizes to showing that, given any function f : D^p -&gt; M where M is an abelian monoid, such that the sum of f over all p cyclic shifts of an argument vector always vanishes (as happens for example if f is invariant under cyclic shifts of its arguments and its codomain has characteristic p, so to speak), we have that the equivalence relation induced by f on the p-th tensor power of the free abelian monoid on D is such that (a + b + c + …)^p = a^p + b^p + c^p + …. [TODO: Reword this]. Aka, "freshman's dream".</p>
+<p>The B proof generalizes to showing that the order of any group element divides the order of the group. More generally, the order of any subgroup divides the order of the group. Aka, Lagrange's theorem.</p>
+<p>See also https://twitter.com/RadishHarmers/status/1746692047069704262</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

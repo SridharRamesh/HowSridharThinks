@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>The Fundamental Theorem of Equal Temperament Arithmetic | How Sridhar Thinks</title>
+<meta property="og:title" content="The Fundamental Theorem of Equal Temperament Arithmetic | How Sridhar Thinks" />
+<meta name="twitter:title" content="The Fundamental Theorem of Equal Temperament Arithmetic | How Sridhar Thinks" />
+
+        
+<meta name="description" content="The Fundamental Theorem of Equal Temperament Arithmetic is that log(2) : log(3) : log(5) is 12 : 19 : 28. What do I mean by this? This is a statement about music theory.  Consonant intervals are generally characterized by nice frequency ratios. In particular, n + 1 : n ratios are…">
+<meta property="og:description" content="The Fundamental Theorem of Equal Temperament Arithmetic is that log(2) : log(3) : log(5) is 12 : 19 : 28. What do I mean by this? This is a statement about music theory.  Consonant intervals are generally characterized by nice frequency ratios. In particular, n + 1 : n ratios are…">
+<meta name="twitter:description" content="The Fundamental Theorem of Equal Temperament Arithmetic is that log(2) : log(3) : log(5) is 12 : 19 : 28. What do I mean by this? This is a statement about music theory.  Consonant intervals are generally characterized by nice frequency ratios. In particular, n + 1 : n ratios are…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>The Fundamental Theorem of Equal Temperament Arithmetic
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-09-29">
+          2020-09-29
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>The Fundamental Theorem of Equal Temperament Arithmetic is that log(2) : log(3) : log(5) is 12 : 19 : 28.</p>
+<p>What do I mean by this? This is a statement about music theory.</p>
+<hr />
+<p>Consonant intervals are generally characterized by nice frequency ratios. In particular, n + 1 : n ratios are of note, as every other rational ratio can be built out of these short intervals. The smaller the n here, the more consonant the ratio, in some sense.</p>
+<p>The most important such interval is the octave (called "octave" after 8 for stupid fencepost reasons I won't get into right now, but a better name would be 7-based; all the intervals have names that are off by one from what they should be). Two notes separated by an octave are in a frequency ratio of 2 : 1.</p>
+<p>In the familiar chromatic scale, this interval is considered to be twelve notes each a "semitone" apart; in equal temperament tuning, each semitone is taken to have the same frequency ratio, so each semitone has frequency ratio 2^(1/12).</p>
+<p>The next most important intervals are the perfect fifth, which in just intonation has a frequency ratio of 3 : 2, the perfect fourth, which in just intonation has a frequency ratio of 4 : 3, the major third, which in just intonation has a frequency ratio of 5 : 4, and the minor third, which in just intonation has a frequency ratio of 6 : 5.</p>
+<p>None of these can be represented exactly in our equal temperament tuning system, though, which can only represent ratios of the form 2^(n/12). So instead, best approximations are taken.</p>
+<p>A perfect fifth (3 : 2 frequency ratio) is taken to be 7 semitones. Thus, 2^(7/12) is taken to approximate 3/2. This amounts to approximating log(2) : log(3) as 12 : 19.</p>
+<p>[Specifically, for variables Two and Three, we have that Two^(7/12) = Three/Two is equivalent to log(Two) : log(Three) = 12 : 19]</p>
+<p>A perfect fourth (4 : 3 frequency ratio) is taken to be 5 semitones. Thus, 2^(5/12) is taken to approximate 4/3 = 2^2/3. This again amounts to approximating log(2) : log(3) as 12 : 19.</p>
+<p>[Specifically, for variables Two and Three, we have that Two^(7/12) = Two^2/Three is equivalent to log(Two) : log(Three) = 12 : 19]</p>
+<p>A major third (5 : 4 frequency ratio) is taken to be 4 semitones. Thus, 2^(4/12) is taken to approximate 5/4. This amounts to approximating log(2) : log(5) as 12 : 28.</p>
+<p>[Specifically, for variables Two and Five, we have that Two^(4/12) = Five/Two^2 is equivalent to log(Two) : log(Five) = 12 : 28]</p>
+<p>A minor third (6 : 5 frequency ratio) is taken to be 3 semitones. Thus, 2^(3/12) is taken to approximate 6/5. This fits coherently with all the above, as again approximating log(2) : log(3) : log(5) as 12 : 19 : 28.</p>
+<p>[Specifically, for variables Two, Three, and Five, if log(2) : log(3) : log(5) is 12 : 19 : 28, then Two^(3/12) = Two * Three / Five]</p>
+<p>So all of these equal temperament approximations of just intonation's simple rational n + 1 : n frequency ratios, using powers of irrational 2^(1/12) instead, up through n = 5, fit together in this simple way, following just from the rule that log(2) : log(3) : log(5) is approximated as 12 : 19 : 28.</p>
+<p>We can keep going in this same way and, using equal temperament approximations for finer intervals, also deduce rational ratio approximations between logarithms of further primes such as 7. So, there is a similarity to the Fundamental Theorem of Arithmetic here. And thus I call this the Fundamental Theorem of Equal Temperament Arithmetic.</p>
+<hr />
+<p>[TODO: Nicer formatting, discussion of other music theory, in general make the discussion friendlier-paced]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

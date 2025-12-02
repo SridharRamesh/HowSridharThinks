@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Arrow&#x27;s Impossibility Theorem | How Sridhar Thinks</title>
+<meta property="og:title" content="Arrow&#x27;s Impossibility Theorem | How Sridhar Thinks" />
+<meta name="twitter:title" content="Arrow&#x27;s Impossibility Theorem | How Sridhar Thinks" />
+
+        
+<meta name="description" content="The content of Arrow's Impossibility theorem is actually extremely closely related to ultrafilters, and, in fact, the eponymous “impossibility” is essentially the same as a very basic fact about ultrafilters on finite sets. Yet, for some reason, I have rarely (if ever) seen the t…">
+<meta property="og:description" content="The content of Arrow's Impossibility theorem is actually extremely closely related to ultrafilters, and, in fact, the eponymous “impossibility” is essentially the same as a very basic fact about ultrafilters on finite sets. Yet, for some reason, I have rarely (if ever) seen the t…">
+<meta name="twitter:description" content="The content of Arrow's Impossibility theorem is actually extremely closely related to ultrafilters, and, in fact, the eponymous “impossibility” is essentially the same as a very basic fact about ultrafilters on finite sets. Yet, for some reason, I have rarely (if ever) seen the t…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Arrow&#x27;s Impossibility Theorem
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-10-16">
+          2020-10-16
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>The content of Arrow's Impossibility theorem is actually extremely closely related to ultrafilters, and, in fact, the eponymous “impossibility” is essentially the same as a very basic fact about ultrafilters on finite sets. Yet, for some reason, I have rarely (if ever) seen the theorem presented in such a way as even mentions this connection (e.g., the word “filter” appears not once in the relevant Wikipedia article, nor in any of the references within it). A shame, which I shall rectify in this post.</p>
+<p>[I originally wrote all this on April 19, 2009 (see https://pleasantfeeling.wordpress.com/2009/04/19/arrowstheorem/). But now I copy it over here and slightly edit it.]</p>
+<p>Current requirements to understand this post: Basic knowledge of what filters and ultrafilters are [I shall probably come back and expand this post to actually kick off an introduction to the concepts for those who don’t already know]</p>
+<hr />
+<p>Suppose you have a fixed set of voters and a set of ballot options (aka, candidates) for them to choose between. By a (deterministic) voting system on these voters and ballot options, we mean some function which takes as input any assignment from voters to their preferences (expressed as a linear ordering upon the ballot options) and produces as output some cumulative ranking of the ballot options (again, expressed as a linear ordering upon the ballot options). What Arrow’s Impossibility Theorem shows is that, if there are at least 3 ballot options, the voting systems satisfying some basic desirable criteria come only in one very particular (in some cases, rather undesirable) form.</p>
+<p>What criteria exactly? Well, the first is “Pareto efficiency”, aka “unanimity”: if all voters have the exact same preferences, then the cumulative ranking should be the same as this. Surely, this is the most natural, basic voting system property one could ask for.</p>
+<p>The second criterion is “independence of irrelevant alternatives” (IIA): in the cumulative ranking, the relative position of any two ballot options depends only on the voters’ relative preferences between them (i.e., to figure out if option A beats option B in the cumulative ranking, one only needs to ask which voters ranked A higher than B and which ranked B higher than A; one doesn’t need to know anything about how voters felt about any other, “irrelevant” options). This is one way of formalizing that there should be no “spoiler” effect (Nader shouldn’t be able to steal votes away from Gore to win the election for Bush).</p>
+<p>Let’s start exploring the effects of these criteria on the design of a voting system. First, for simplicity’s sake, we’ll act as though there are exactly 3 ballot options (we’ll use A, B, and C to denote arbitrary ballot options, with different letters being distinct options), and we’ll restrict voters to turning in preferences without ties, but we’ll not explicitly restrict the cumulative ranking from having ties. All of these assumptions could be dropped/changed, but as they only make things easier for the voting system designer, our impossibility results will immediately generalize even to these other cases.</p>
+<p>Ok, so what can we conclude from these criteria? Well, by independence of irrelevant alternatives, we know that whether A beats B in the final ranking or not just depends on which set of voters choose A over B [and which set chooses the opposite, but as voters’ preferences have no ties, these two sets are complements and so the latter is redundant data on top of the former]; so, we’ll say that a set of voters M wins for A over B if the cumulative ranking has A beating B when the voters who prefer A to B are precisely those in M. The Pareto efficiency condition then becomes just that the set of all voters wins for every candidate over every other candidate. The voting system is entirely determined by this ternary relation, so let’s see what kind of properties it has.</p>
+<p>Suppose M wins for A over B. Then consider the situation where voters vote as follows:</p>
+<ul>
+<li>In M: A &gt; B &gt; C</li>
+<li>Outside M: B &gt; C &gt; A</li>
+</ul>
+<p>Since the voters who choose A over B are precisely those in M, A will beat B. Furthermore, since everyone chooses B over C, B will beat C; thus, transitively, A will beat C. Since the voters who chose A over C are precisely those in M, we see that M wins for A over C as well.</p>
+<p>So we’ve proven that if M wins for A over one candidate, then it also wins for A over any other candidate; thus, we can speak just of “winning set for A over others” rather than “winning set for A over B” and such.</p>
+<p>But, everything here is symmetric; just reversing all the orders above, we see that if a set wins for some other candidate over A, then it wins for any candidate over A, and so we can speak generally of “winning set for others over A”. [And, of course, instead of A in these, we could use any other candidate]</p>
+<p>And so we have that winning set for A over others = winning set for A over B = winning set for others over B = winning set for C over B = winning set for C over others. Thus, any two candidates have the same winning sets over others, and so we can just speak of winning sets in absolute terms, without having to specify which candidates are involved. Now we just have to see what kind of properties the system of winning sets is constrained to have.</p>
+<p>By the unanimity condition, the set of all voters is a winning set. Furthermore, suppose M and N are winning sets and consider the situation where voters vote as follows:</p>
+<ul>
+<li>In M and N: A &gt; B &gt; C</li>
+<li>In M but not N:  C &gt; A &gt; B</li>
+<li>In N but not M: B &gt; C &gt; A</li>
+<li>In neither M nor N: C &gt; B &gt; A</li>
+</ul>
+<p>In this case, the voters who choose A over B are precisely the ones in M, and the voters who choose B over C are precisely the ones in N; thus, the result must be that A wins over B and B wins over C. But this means that A wins over C; since the voters who choose A over C are precisely the ones in both M and N, we see that the intersection of M and N must win for A over C. So, the winning sets are closed under intersection as well.</p>
+<p>Now, let us demonstrate that the winning sets are upwards closed. Suppose M is a winning set, N is a superset of M, and voters vote as follows:</p>
+<ul>
+<li>In M: A &gt; B &gt; C</li>
+<li>In N but not M: B &gt; A &gt; C</li>
+<li>Outside N: B &gt; C &gt; A</li>
+</ul>
+<p>Then the voters who choose A over B are those from M, so A beats B. And everyone chooses B over C, so B beats C. Thus, transitively, A beats C; as the voters who choose A over C are precisely those in N, we have that N is a winning set as well.</p>
+<p>So we see that winning sets are closed under finite intersection and upwards closed, which makes them a filter. Finally, let’s show that they actually form an ultrafilter: this means of every set of voters, either it or its complement wins, but not both. The not both part is automatic (two candidates can’t both beat each other), and the first part is nearly as automatic; we just have to show that there can’t be any ties. Well, suppose there existed some tying set M (i.e., such that neither M nor its complement were winning sets). Then consider the voting situation</p>
+<ul>
+<li>In M: A &gt; B &gt; C</li>
+<li>Outside M: B &gt; C &gt; A</li>
+</ul>
+<p>In this case, A ties with B and A ties with C, so transitively, we should have that B ties with C. However, by unanimity, we also have that B beats C, which is a contradiction. Thus, we can conclude, there cannot actually exist any tying sets; no one ever actually ties.</p>
+<p>Thus, the winning sets necessarily form an ultrafilter. Conversely, it is readily seen that any ultrafilter gives a suitable system of winning sets (you can verify this directly, but those in the know should recognize this as just an instance of Łoś‘s Theorem, the voting system being naught but an ultraproduct). And so we have that (with at least 3 candidates), the Pareto efficient voting systems satisfying IIA are precisely those given by ultrafilters. This is Arrow’s Impossibility Theorem (albeit phrased in a more general form than than it is usually given in).</p>
+<p>Why “Impossibility”, you ask? Well, in particular, the ultrafilters on finite sets are precisely the principal ones; thus, on a finite set of voters, the only Pareto efficient IIA voting systems are “dictatorships”; there is a fixed voter whose preferences are always taken verbatim as the overall result. Which is to say, on a finite set of voters, it is impossible to construct a voting system satisfying the above criteria as well as that of non-dictatorship (this, of course, being the way AIT is usually stated).</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

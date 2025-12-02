@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Prime-Generating Polynomial | How Sridhar Thinks</title>
+<meta property="og:title" content="Prime-Generating Polynomial | How Sridhar Thinks" />
+<meta name="twitter:title" content="Prime-Generating Polynomial | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Some numbers p have the property that multiplying two consecutive integers and then adding p generates only prime number outputs, so long as both consecutive integers are less than p in size. (By symmetry of multiplication under negation, it suffices to consider just consecutive …">
+<meta property="og:description" content="Some numbers p have the property that multiplying two consecutive integers and then adding p generates only prime number outputs, so long as both consecutive integers are less than p in size. (By symmetry of multiplication under negation, it suffices to consider just consecutive …">
+<meta name="twitter:description" content="Some numbers p have the property that multiplying two consecutive integers and then adding p generates only prime number outputs, so long as both consecutive integers are less than p in size. (By symmetry of multiplication under negation, it suffices to consider just consecutive …">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Prime-Generating Polynomial
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-01-19">
+          2020-01-19
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Some numbers p have the property that multiplying two consecutive integers and then adding p generates only prime number outputs, so long as both consecutive integers are less than p in size. (By symmetry of multiplication under negation, it suffices to consider just consecutive natural numbers less than p)</p>
+<p>In particular, by considering the case of zero times one, we need p itself to be prime (unless p is one or smaller, a trivial loophole in the wording above).</p>
+<p>When $$p = 2$$, we satisfy the condition, but this can be seen as another kind of too small triviality. Beyond this, any prime $$p$$ must be odd, and as we will see below, this brings us into a realm of nicer theory.</p>
+<p>The relevant range of this monotonic polynomial $$G(n) = n(n + 1) + p = n^2 + n + p$$ then stretches from $$G(0) = p$$ up through $$G(p - 2)$$, after which we hit $$G(p - 1) = p^2$$. In particular, within the relevant range, all the outputs have size less than $$p^2$$; if any value of such size had any nontrivial factor, it would have a nontrivial factor less than $$\sqrt{p^2} = p$$.</p>
+<p>Thus, to establish that $$p$$ has the relevant property, it suffices to establish that $$G(n)$$ is never divisible by any prime less than $$p$$ [if it were divisible by such a value at any point, it would have to be divisible by such a value at some point in the relevant range, by the fact that G(n) mod x = G(n mod x) mod x].</p>
+<p>So long as $$p$$ is odd, we will always have that $$G(n) = n(n + 1) + p$$ is odd as well [the product of two consecutive values is always even], ensuring that $$G(n)$$ is never divisible by $$2$$. So what remains is to ensure that $$G(n)$$ is never divisible by any odd prime $$q &lt; p$$.</p>
+<p>For this consideration, we can apply the quadratic formula, to see that $$n^2 + n + p = 0$$ has solutions in mod $$q$$ land just in case there is a square root of the discriminant $$1 - 4p$$ in mod $$q$$ land.</p>
+<p>TODO: Finish writing this out.</p>
+<p>It turns out this all also happens just in case the ring of integers over $$Q(\sqrt{1 - 4p})$$ has unique factorization (i.e., class number one). And it turns out the largest $$p$$ with this property is $$41$$ (though this was only proven in the mid-20th century, and thus is probably a difficult result).</p>
+<p>TODO: Speak of j-invariant as well.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+
