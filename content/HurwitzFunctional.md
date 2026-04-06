@@ -60,7 +60,7 @@ The computation of $$c_0$$ is straightforward: $$\int_{0}^{1} \zeta(-p, x) dx = 
 \[
 For $$c_{\pm n}$$ for positive integer $$n$$, we can reason directly from the multiplication formula $$\zeta(-p, x) = n^p \sum_{k = 0}^{n - 1} \zeta(-p, (x + k)/n)$$ that $$c_{\pm n} = c_{\pm 1} n^{-1 - p}$$, for arbitrary $$p$$. This makes the shape of the functional equation relating $$\zeta(-p)$$ and $$\zeta(-(-1-p))$$ apparent, leaving only the computation of $$c_{\pm 1}$$. Similarly, the value $$c_{-1}$$ for a given $$p$$ is automatically the complex conjugate of the value for $$c_1$$ for the complex conjugate of $$p$$, by conjugation symmetry, so we only need to establish the value of $$c_1$$. 
 
-we need not dwell on these ways of looking at them, as the method by which $$c_{1}$$ is computed works just as well to directly compute $$c_{\pm n}$$ and observe the same scaling/conjugation properties. But for now, the rest of this is written in terms of calculating $$c_1$$.
+We need not dwell on these ways of looking at them, as the method by which $$c_{1}$$ is computed works just as well to directly compute $$c_{\pm n}$$ and observe the same scaling/conjugation properties. But for now, the rest of this is written in terms of calculating $$c_1$$.
 \]
 
 Note that, when $$\Re(p) > 0$$ so that $$0^p = 0$$, we have by integration by parts that $$-2 \pi i \int_{0}^{1} \zeta(-p, x) e^{-2 \pi i x} \\; dx = -p \int_{0}^{1} \zeta(-(p - 1), x) e^{-2 \pi i x} \\; dx$$. (This integration by parts amounts to the differentiation rule for Fourier series applied to the fact $$\frac{d}{dx} \zeta(-p, x) = p \zeta(-(p - 1), x)$$.)
