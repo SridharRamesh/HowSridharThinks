@@ -34,10 +34,6 @@ default_language = "en"
 theme = "zola-pickles"
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
-
 # Enables footnotes with back references. See https://github.com/getzola/zola/pull/2480
 bottom_footnotes = true
 
