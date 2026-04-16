@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Borwein Integrals | How Sridhar Thinks</title>
+<meta property="og:title" content="Borwein Integrals | How Sridhar Thinks" />
+<meta name="twitter:title" content="Borwein Integrals | How Sridhar Thinks" />
+
+        
+<meta name="description" content="A result sometimes observed as surprising, shocking, etc, is that $$\int_{0}^{\infty} \mathrm{sinc}(x) dx = \pi/2$$, and indeed $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) dx = \pi/2$$ and $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) \mathrm{sinc}(x/5) dx =…">
+<meta property="og:description" content="A result sometimes observed as surprising, shocking, etc, is that $$\int_{0}^{\infty} \mathrm{sinc}(x) dx = \pi/2$$, and indeed $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) dx = \pi/2$$ and $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) \mathrm{sinc}(x/5) dx =…">
+<meta name="twitter:description" content="A result sometimes observed as surprising, shocking, etc, is that $$\int_{0}^{\infty} \mathrm{sinc}(x) dx = \pi/2$$, and indeed $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) dx = \pi/2$$ and $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) \mathrm{sinc}(x/5) dx =…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Borwein Integrals
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2019-12-19">
+          2019-12-19
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>A result sometimes observed as surprising, shocking, etc, is that $$\int_{0}^{\infty} \mathrm{sinc}(x) dx = \pi/2$$, and indeed $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) dx = \pi/2$$ and $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) \mathrm{sinc}(x/5) dx = \pi/2$$ and $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) \mathrm{sinc}(x/5) \mathrm{sinc}(x/7) dx = \pi/2$$ and so on, but once we get up to $$\int_{0}^{\infty} \mathrm{sinc}(x) \mathrm{sinc}(x/3) \ldots \mathrm{sinc}(x/15) dx$$, the result is $$q \pi$$ for a rational $$q$$ strictly less than $$1/2$$.</p>
+<p>This has a simple explanation in terms of the fact that this is the point at which the sum of the series $$\frac{1}{3} + \frac{1}{5} + \ldots$$ first crosses past $$1$$.</p>
+<p>It will be cleaner to explain this with some reparametrizations.</p>
+<p>Observe that all of our integrands are even functions, so the bounds on all our integrals might as well be taken from $$-\infty$$ to $$\infty$$, only doubling the results up to $$\pi$$ rather than up to $$\frac{\pi}{2}$$.</p>
+<p>Simultaneously, let us actually replace $$\mathrm{sinc}(x)$$ with the rescaled $$f(x) = \mathrm{sinc}(\pi x)$$, which change of variable only shrinks the results by a factor of $$\pi$$, to $$1$$.</p>
+<p>Thus, the result to explain is that $$\int_{-\infty}^{\infty} f(x) dx = 1$$, $$\int_{-\infty}^{\infty} f(x) f(x/3) dx = 1$$, etc, but $$\int_{-\infty}^{\infty} f(x) f(x/3) \ldots f(x/15) dx &lt; 1$$.</p>
+<p>Next, note that $$\mathrm{sinc}$$, $$f$$, etc, are Fourier transforms of rectangle functions; specifically, $$f$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-1, 1]$$. And therefore each rescaled $$x \mapsto f(kx)$$ is the Fourier transform of the probability density function of a uniformly random variable in $$[-k, k]$$. (Fourier transforms of probability density functions are also called "characteristic functions", by the way, which is simply the "moment-generating function" turned on its side, so to speak. But this is all just jargon.)</p>
+<p>Multiplying these integrands together amounts to convolution on the other side of the Fourier transform, and convolution of probability density functions amounts to independent addition of random variables. And the integral over all inputs on one side of the Fourier transform amounts to evaluation at 0 on the other side of the Fourier transform.</p>
+<p>Thus, these integrals are the probability densities that the sum of independent uniform random variables with bounds corresponding to the rescaling factors comes out to precisely 0.</p>
+<p>This is the probability density that all the random variables other than the first one sum to the negation of the first one; since the first variable is uniformly random, this amounts to just the probability that all the other random variables sum to a value in the range for the first variable to cancel.</p>
+<p>In other words, the probability that uniformly random variables in the ranges [-1/3, 1/3], [-1/5, 1/5], etc, all sum to a value of magnitude at most 1.</p>
+<p>This is guaranteed when 1/3 + 1/5 + ... + our stopping point is itself at most 1. But it stops being guaranteed once we pass that. Hence, the results we've seen.</p>
+<p>Incidentally, there's absolutely nothing special about our using reciprocals of odd numbers in order here. Any values will display the same phenomenon: when the bounds on all the factors other than the first $$f$$ factor sum to $$\leq 1$$, our computation yields a guaranteed 1 probability, and otherwise it yields something smaller.</p>
+<p>That's all there is to it.</p>
+<p>[TODO: Word this in a way where it would be readable to layish-readers who don't know the Fourier transform, etc]</p>
+<p>[TODO: Add graphics displaying the convolutions of the relevant probability density functions?]</p>
+<p>[TODO: There's some kind of off by 2 thing I need to hunt down. The probability density on a uniformly random variable in [-1, 1] is constantly 1/2, not 1. No big deal, just something above needs rewording somewhere, in the details of exactly which Fourier transform we are using. Note also the distinction in standard terminology between the unnormalized and normalized sinc functions.]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>A straight line is the shortest path | How Sridhar Thinks</title>
+<meta property="og:title" content="A straight line is the shortest path | How Sridhar Thinks" />
+<meta name="twitter:title" content="A straight line is the shortest path | How Sridhar Thinks" />
+
+        <meta name="description" content="A straight line is the shortest path between two points. Why is that?">
+<meta property="og:description" content="A straight line is the shortest path between two points. Why is that?">
+<meta name="twitter:description" content="A straight line is the shortest path between two points. Why is that?">
+
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>A straight line is the shortest path
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-12-17">
+          2020-12-17
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>A straight line is the shortest path between two points. Why is that? <span id="continue-reading"></span></p>
+<p>Well, for any path between points $$A$$ and $$B$$ we can consider projecting it onto the line through $$A$$ and $$B$$. That is, each infinitesimal movement $$dv$$ along our path can be decomposed into $$dx + dy$$, where $$dx$$ is its component parallel to the relevant line and $$dy$$ is its component perpendicular to the relevant line. (Don't let my use of this notation fool you, this works just as well in three or higher dimensions, $$dy$$ can be anything perpendicular to the relevant line). When we project this to just $$dx$$ we make it smaller (if changed at all), as any leg of a right triangle is smaller than the hypotenuse (if different at all).</p>
+<p>So any path between two points can be constrained to lie on the line between those points, and in so doing becomes shorter (if changed at all).</p>
+<p>The next thing to note is fairly obvious, but let us note it all the same: Even among paths in one-dimension, the shortest one is the one which simply marches forwards directly from start to finish, while longer ones dither around making backwards motions that later must be cancelled out by further forwards motions. The shortest path is the direct straight path, not one that goes sometimes forwards and sometimes backwards.</p>
+<p>All of this can be summarized by noting, $$\int \sqrt{dx^2 + dy^2} \geq \int \sqrt{dx^2} = \int \vert dx \vert \geq \int dx$$, and the last of these (the difference in x coordinates, so to speak) is the direct distance along the straight line.</p>
+<p>Thus, the shortest path is the direct straight line path.</p>
+<p>[TODO: The projection aspect of this is in the context of a Euclidean space, with parallel-perpendicular decomposition and the Pythagorean theorem around. How much of this generalizes to other kinds of metrics?]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

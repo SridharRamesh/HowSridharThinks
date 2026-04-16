@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Octonions | How Sridhar Thinks</title>
+<meta property="og:title" content="Octonions | How Sridhar Thinks" />
+<meta name="twitter:title" content="Octonions | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Suppose we are intereted in constructing a magma with the following properties: There is an identity element 1, as well as another (distinct) element -1. -1 squares to 1, and its left and right multiplication action commute with every other left or right multiplication action. Ca…">
+<meta property="og:description" content="Suppose we are intereted in constructing a magma with the following properties: There is an identity element 1, as well as another (distinct) element -1. -1 squares to 1, and its left and right multiplication action commute with every other left or right multiplication action. Ca…">
+<meta name="twitter:description" content="Suppose we are intereted in constructing a magma with the following properties: There is an identity element 1, as well as another (distinct) element -1. -1 squares to 1, and its left and right multiplication action commute with every other left or right multiplication action. Ca…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Octonions
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2025-11-25">
+          2025-11-25
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Suppose we are intereted in constructing a magma with the following properties:</p>
+<p>There is an identity element 1, as well as another (distinct) element -1. -1 squares to 1, and its left and right multiplication action commute with every other left or right multiplication action. Call multiplication by -1 "negation".</p>
+<p>Every other element in the magma is called "imaginary". The left and right multiplication actions of any imaginary element square to negation.</p>
+<p>(Thus, any imaginary is in the sense of its multiplication actions inverse to its negation, while any non-imaginary is in the same sense self-inverse.)</p>
+<p>Imaginary elements which are neither the same nor each other's negations are called "disjoint". The left multiplication actions of disjoint imaginaries anticommute (in that the two composition orders are negations of each other), and similarly for right multiplication actions.</p>
+<p>There are precisely four such magmas: $$\mathbb{Z}_2$$ (i.e., {+1, -1}), $$\mathbb{Z}_4$$ (i.e., complex numbers with a single nonzero coordinate, which is either +1 or -1), the analogous eight-element "quaternion group", and the analogous sixteen-element octonion magma. This can be seen as follows:</p>
+<p>Suppose given some sub-magma $$M$$ of such a magma, with $$M$$ containing the non-imaginary values $${+1, -1}$$ (and thus also closed under "inverses"). For any $$m \in M$$ and any imaginary $$j$$ outside of $$M$$, we have that $$m j = m (j 1) = -j (m 1) = -j m$$. Thus, the orbits of $$M$$ acting on the magma are the same whether via its left action or its right action. Consider any of these orbits other than $$M$$ itself. This is a torsor for $$M$$, in the sense that it is a torsor for the group generated by multiplication actions of elements of $$M$$.</p>
+<p>Actually, for $$a, b \in M$$ and $$j$$ imaginary outside of $$M$$, we find that $$a (b j) = (b a) j$$. Thus, $$a (b (c j))$$ is both equal to $$(c (b a)) j$$ and $$((c b) a) j$$. Right multiplying by $$j$$'s inverse, we get that $$c (b a) = (c b) a$$, and thus $$M$$ is associative, and indeed a group. So torsors for $$M$$ are indeed in the ordinary sense of torsors for a group.</p>
+<p>Note that a torsor for $$M$$ comes with both a left action of $$M$$ on it and a right action of $$M$$ on it, such that the left action and right action of any element of $$M$$ acting on $$T$$ are inverse to each other. (Note that it is NOT presumed here that arbitrary left actions and right actions commute with each other.)</p>
+<p>We find that the magma structure on the union of group $$M$$ and any orbit of it is uniquely determined as the following magma structure on the union of $$M$$ and an $$M$$-torsor $$T$$:</p>
+<p>Multiplication from $$M \times M$$ to $$M$$ is as in $$M$$. Multiplication from $$M \times T$$ to $$T$$ is, perhaps surprisingly, the RIGHT action of $$M$$ on $$T$$. Similarly, in mirror image, multiplication from $$T \times M$$ to $$T$$ is given by the LEFT action of $$M$$ on $$T$$. Finally, we define multiplication from $$T \times T$$ to $$M$$ via the rule that $$t (t m) = -m$$ or equivalently $$(m t) t = -m$$ (these two are equivalent because $$t = m (t m)$$).</p>
+<p>Iteratively applying this construction starting from $$\mathbb{Z}_2 = {+1, -1}$$, we get the magmas noted above, eventually hitting the octonion magma which is no longer associative, at which point we cannot continue further. (Indeed, we can reason that the result of this construction applied to an arbitrary multiplicative-group-with-negation is associative just in case the group is abelian, and the result is abelian just in case the group is abelian with each element of order 2 [TODO: Check this], and the result has each element of order 2 just in case $$1 = -1$$ to begin with).</p>
+<hr />
+<p>TODO: Relate to linear algebraic view of these structures, motivating the magma conditions.</p>
+<p>In particular, this is why a linear magnitude-preserving map sending every value to an orthogonal value must square to -1:</p>
+<p>Magnitude-preserving means f's inverse and adjoint match; sending every value to an orthogonal value mean f's negation and adjoint match; thus, we also have that f's inverse and negation match, meaning f^2 = -1.</p>
+<p>Put another way, |(1 + f)x|^2 = 2|x|^2 universally, so (recovering the dot product via the polarization identity), we have that 1 + f doubles dot products in general. Thus, (1 + f)x . (1 + f) y = 2(x . y) = x . y + (f x) . (f y). Subtracting the RHS from the LHS, we find that (f x) . y and x . (f y) are negations (i.e., f's adjoint is its negation). Equipped with this general identity, we have that x . y = f x . f y = - f^2 x . y universally, so x = - f^2 x.</p>
+<p>That orthogonal imaginaries must anticommute follows from the combination of i^2 = -1, j^2 = -1, and (i + j)^2 = -2.</p>
+<p>Observe how our anticommutativity condition on a magma-with-negation is precisely the condition that both associativity and commutativity induce sign changes. Just making commutativity induce sign changes would be fine; this is possible because permutations have parity. Just making associativity induce sign changes would be fine at three or less "letters" (where the associahedra are trivial or nearly trivial; even adding in commutativity, it's easy to analyze as a combination of S_2 and S_3), but breaks at four "letters" because of the pentagon identity.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

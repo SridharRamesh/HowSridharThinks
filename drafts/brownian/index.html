@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Brownian | How Sridhar Thinks</title>
+<meta property="og:title" content="Brownian | How Sridhar Thinks" />
+<meta name="twitter:title" content="Brownian | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Extracted from Facebook comments: Chenyu Zhao Fun problem of the day: develop an algorithm that samples a Brownian Bridge (a Wiener process s.t. W(0) =W(1) = 0, i.e. the ends are fixed). Richard Starfield Simulate regular Wiener process. Subtract linear function to fix ends. Prof…">
+<meta property="og:description" content="Extracted from Facebook comments: Chenyu Zhao Fun problem of the day: develop an algorithm that samples a Brownian Bridge (a Wiener process s.t. W(0) =W(1) = 0, i.e. the ends are fixed). Richard Starfield Simulate regular Wiener process. Subtract linear function to fix ends. Prof…">
+<meta name="twitter:description" content="Extracted from Facebook comments: Chenyu Zhao Fun problem of the day: develop an algorithm that samples a Brownian Bridge (a Wiener process s.t. W(0) =W(1) = 0, i.e. the ends are fixed). Richard Starfield Simulate regular Wiener process. Subtract linear function to fix ends. Prof…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Brownian
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-12-15">
+          2020-12-15
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Extracted from Facebook comments:</p>
+<p>Chenyu Zhao
+Fun problem of the day: develop an algorithm that samples a Brownian Bridge (a Wiener process s.t. W(0) =W(1) = 0, i.e. the ends are fixed).</p>
+<p>Richard Starfield
+Simulate regular Wiener process. Subtract linear function to fix ends. Profit?</p>
+<p>Chenyu Zhao
+lol does that actually work? it makes sense, but it doesn't sit well with me... I'll need to think about it some more... my intuition is lacking...</p>
+<p>Sridhar Ramesh
+Think of it this way, Chenyu: A discrete Wiener process with N equally sized steps amounts to the same thing as N iid normal variables (representing the amount by which the function increases over each step). The corresponding Brownian bridge distribution is given by conditionalizing on the sum of these variables being zero. Richard’s claim is that this yields the same distribution as simply subtracting from each variable the average of all the variables.
+Why is that? Well, another way of looking at N iid normal variables is as a single N-dimensional normal variable, which is to say, as a random vector V with a probability density function given by an exponential function of its squared magnitude. Subtracting from each coordinate the average of all coordinates is the same as projecting onto the space S where the coordinates sum to zero. Richard’s claim is that the conditional distribution of V given that it lies in S is the same as the distribution of V’s projection onto S; in fact, V's projection onto S is independent of the component of V perpendicular to S, by the property noted of the probability density function: as an exponential function of the squared magnitude of V, it is proportional to the product of its values on the components of V parallel and perpendicular to S.
+Does that make any sense? I’ve phrased it in discrete terms, but nothing essential changes in the reasoning as applied to a continuous context (also, you can always think of a continuous Wiener process as a "tower" of discrete Wiener processes giving values on dyadic inputs, with values on other inputs determined from these by continuity).</p>
+<p>TODO: Ito's lemma, all that stochastic calculus stuff</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

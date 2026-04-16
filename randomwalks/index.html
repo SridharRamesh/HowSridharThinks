@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Random Walks (Probability and Least Fixed Points) | How Sridhar Thinks</title>
+<meta property="og:title" content="Random Walks (Probability and Least Fixed Points) | How Sridhar Thinks" />
+<meta name="twitter:title" content="Random Walks (Probability and Least Fixed Points) | How Sridhar Thinks" />
+
+        
+<meta name="description" content="There's a lot to say about random walks, but I mainly wanted to record for posterity one particular observation relating probability to least fixed points: Consider a biased random walk with probability p of moving up one position (call this gaining a dollar, say) and q of moving…">
+<meta property="og:description" content="There's a lot to say about random walks, but I mainly wanted to record for posterity one particular observation relating probability to least fixed points: Consider a biased random walk with probability p of moving up one position (call this gaining a dollar, say) and q of moving…">
+<meta name="twitter:description" content="There's a lot to say about random walks, but I mainly wanted to record for posterity one particular observation relating probability to least fixed points: Consider a biased random walk with probability p of moving up one position (call this gaining a dollar, say) and q of moving…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Random Walks (Probability and Least Fixed Points)
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2025-11-02">
+          2025-11-02
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>There's a lot to say about random walks, but I mainly wanted to record for posterity one particular observation relating probability to least fixed points:</p>
+<p>Consider a biased random walk with probability p of moving up one position (call this gaining a dollar, say) and q of moving down one position (losing a dollar). What is the probability of ever ending up down one position from the start (losing a dollar in total)?</p>
+<p>There are two ways one can eventually lose a dollar: One can immediately lose the dollar. Alternatively, one can first immediately gain a dollar, then through some complex of steps eventually lose a dollar in total, then again lose a dollar in total.</p>
+<p>This gives a recurrence: The probability $$x$$ of ever being down one dollar is equal to $$q + px^2$$. This quadratic equation has two solutions: $$x = 1$$ and $$x = q/p$$. If $$q/p &gt; 1$$, it is not a probability, so the answer is $$x = 1$$. But if $$q/p &lt; 1$$, how do we know whether $$x = 1$$ or $$x = q/p$$?</p>
+<p>Let us consider the situation in more detail:</p>
+<ul>
+<li>
+<p>One can immediately lose the dollar. Let us say this means of losing a dollar has "rank" 0.</p>
+</li>
+<li>
+<p>Alternatively, one can first gain a dollar, then eventually lose a dollar in total, then eventually lose a dollar in total again. Let's say this means of losing a dollar has "rank" equal to 1 + the maximum of the "ranks" of the two noted dollar losses within it.</p>
+</li>
+</ul>
+<p>Thus, the probability of losing a dollar by a means of rank less than $$n$$ is $$T^n(0)$$, where $$T(x) = q + px^2$$.</p>
+<p>Clearly, the events "losing a dollar by rank &lt; 0", "losing a dollar by rank &lt; 1", "losing a dollar by rank &lt; 2", etc, form a chain, each included in the next. The event we are interested in is the union of this chain. So we have that $$T^0(0) \leq T^1(0) \leq T^2(0) \leq \ldots$$, and the probability we are interested in the limit of this sequence.</p>
+<p>As $$T$$ is an order-preserving continuous function from [0, 1] to itself, this must be the least fixed point of $$T$$. Thus, when $$q/p &lt; 1$$, the answer is $$x = q/p$$, not $$x = 1$$.</p>
+<p>The fact that the limit of this sequence is the least fixed point of $$T$$ is essentially <a href="https://sridharramesh.github.io/HowSridharThinks/lambekknastertarski/">the Knaster-Tarski-Adamek theorem</a>.</p>
+<p>Recapping Knaster-Tarski-Adamek in this context, we have:</p>
+<p>If $$T$$ is an order-preserving continuous operator on a space with a least element $$0$$ and containing limits of all increasing sequences, then</p>
+<p>A) $$0 \leq T(0) \leq T(T(0)) \leq \ldots$$</p>
+<p>B) The limit $$L$$ of this sequence is a fixed point of $$T$$</p>
+<p>C) Every other fixed point of $$T$$ (indeed, every other solution to $$T(x) \leq x$$) is $$\geq L$$.</p>
+<p>Proof:</p>
+<p>A) is from $$T$$ being order-preserving and 0 being a least element.</p>
+<p>B) is because the limit of $$0, T(0), T(T(0)), \ldots$$ is the same as the limit of $$T(0), T(T(0)), T(T(T(0))), \ldots$$, and the latter sequence is $$T$$ applied to the former sequence, and $$T$$ is continuous.</p>
+<p>C) is by noting that $$0 \leq x$$ leads to $$T^n(0) \leq T^n(x) \leq x$$ for every $$x$$ such that $$T(x) \leq x$$</p>
+<p>QED. This kind of relationship of probability to least fixed points, allowing disambiguation of seemingly underdetermined solutions to recurrence equations, is frequently useful in probability (not just for random walks).</p>
+<hr />
+<p>Incidentally, we may be interested in the question "What is the probability of eventually being down a dollar, and never prior being up by n dollars?". Call this $$f(n)$$. By the decomposition above, we have the recurrence that $$f(n) = q + p f(n - 1) f(n)$$.</p>
+<p>Note that this is not quite the same as $$f(n) = T(f(n - 1)) = T^n(0)$$ with $$T(x) = q + px^2$$, the recurrence we were able to use for our previous definiton of "rank". Rather, we now have that $$f(n) = U(f(n - 1)) = U^n(0)$$ with $$U(x) = q / (1 - p x)$$. Still, this $$U$$ remains a continuous order-preserving function from $$[0, q/p]$$ to itself, and so we could again reason that the the limiting value of $$f(n)$$ (which again is the probability of ever being down a dollar) is the least fixed point of $$U$$.</p>
+<p>This $$U$$ has dynamics which are easy to understand also, since it sends a fraction $$x = n/d$$ to the fraction $$U(x) = qd / (d - pn)$$. Thus, $$U$$ can be represented as a 2x2 matrix [[0, q], [-p, 1]], thought of as acting on the projective line. This matrix is easily diagonalized with eigenvalues p and q.</p>
+<p>(But a more general way of thinking about this is in terms of random walks with two absorbing states. See https://bsky.app/profile/radishharmers.bsky.social/post/3m4mah776uk27)</p>
+<hr />
+<p>TODO: Add more on random walks, as there is much more to say on various kinds of random walks. Note that the above also relates to Catalan numbers, as we may think of these up and down moves as left and right parentheses balanced right before the final dollar loss.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+
