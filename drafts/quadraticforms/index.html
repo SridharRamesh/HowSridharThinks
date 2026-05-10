@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Quadratic Forms | How Sridhar Thinks</title>
+<meta property="og:title" content="Quadratic Forms | How Sridhar Thinks" />
+<meta name="twitter:title" content="Quadratic Forms | How Sridhar Thinks" />
+
+        
+<meta name="description" content="There are lots of things to say about quadratic forms (or equivalently when division by 2 is available, symmetric bilinear forms, or the symmetric component of arbitrary bilinear forms), a notion which comes up over and over in math. Particularly positive-definite ones (which are…">
+<meta property="og:description" content="There are lots of things to say about quadratic forms (or equivalently when division by 2 is available, symmetric bilinear forms, or the symmetric component of arbitrary bilinear forms), a notion which comes up over and over in math. Particularly positive-definite ones (which are…">
+<meta name="twitter:description" content="There are lots of things to say about quadratic forms (or equivalently when division by 2 is available, symmetric bilinear forms, or the symmetric component of arbitrary bilinear forms), a notion which comes up over and over in math. Particularly positive-definite ones (which are…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Quadratic Forms
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-12-29">
+          2020-12-29
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>There are lots of things to say about quadratic forms (or equivalently when division by 2 is available, symmetric bilinear forms, or the symmetric component of arbitrary bilinear forms), a notion which comes up over and over in math. Particularly positive-definite ones (which are often studied under the name "geometry", as this is what the theory of geometry amounts to; an inner product space is a positive-definite quadratic/bilinear form).</p>
+<p>But for now, I just want to note down one basic observation: Sylvester's law of inertia. Given an arbitrary finite-dimensional symmetric bilinear form valued in one linearly ordered dimension of scalars, the space it acts on decomposes uniquely into a fixed subspace of degenerate (i.e., orthogonal to everyone) vectors, and quotienting away by those, into a fixed number of dimensions each of orthogonal "positive" and "negative" vectors.</p>
+<p>The first part is easy, too easy to deserve comment. Degenerate vectors obviously comprise a subspace, and we can quotient out by it. This part doesn't even require the presumption of finite-dimensionality. [Though, if we have finite-dimensionality of the quotient, we can non-canonically split the quotient, so that the original space is viewed as as direct sum of the quotient and an orthogonal complement of degenerate vectors.]</p>
+<p>Anyway, looking at the quotient, now we are left with a non-degenerate form. Let us decompose this into orthogonal vectors, each of nonzero quadratic form.</p>
+<p>It suffices inductively just to note that any non-degenerate form on a positive-dimensional space has at least one vector of nonzero form. For then we can split the space into the direct sum of the one-dimensional space spanned by this vector, and its orthogonal complement.</p>
+<p>[This orthogonal complement direct sum business is just the classical argument that vectors decompose into parallel and orthogonal components: If $$v$$ has nonzero form, then for any vector $$w$$, we can consider $$(w - \lambda v) \dot v$$. Since $$v \dot v$$ is nonzero, we can uniquely adjust $$\lambda$$ to make this take on any particular value; in particular, there is a unique option to set $$\lambda$$ to $$\frac{w \dot v}{v \dot v}$$, to obtain $$w - \lambda v$$ which is orthogonal to $$v$$, and thus obtain $$w$$ as a unique linear combination of values parallel to and orthogonal to $$v$$.]</p>
+<p>So why must there be at least one vector of nonzero form in a positive-dimensional space with a non-degenerate form? Well, because the space is positive-dimensional, there is some nonzero vector $$v$$. Since the form is non-degenerate, there is thus also some nonzero vector $$w$$ such that $$v \dot w \neq 0$$. As our scalars are linearly ordered, any nonzero value doubles to a nonzero value of the same sign, so we can double this equation without difficulty (no worries about characteristic two, that is), to find that $$2 v \dot w \neq 0$$. And now we invoke the observation that $$2v\dot w = (v + w) \dot (v + w) - v \dot v - w \dot w$$, to conclude that out of $$v$$, $$w$$, and $$v + w$$, at least one of these must have nonzero quadratic form, as desired.</p>
+<p>We've now shown that any finite-dimensional non-degenerate quadratic form admits some decomposition as orthogonal directions, each with nonzero form. Some number of "positive" and "negative" directions, called its signature. But how do we know this signature is unique? Might not another decomposition (our decomposition process here involved some arbitrary choice) produce a different signature?</p>
+<p>TODO</p>
+<hr />
+<p>Another observation about quadratic forms, unrelated to the above, which is sometimes of interest:</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

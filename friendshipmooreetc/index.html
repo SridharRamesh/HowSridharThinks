@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Friendship graphs, Moore graphs, strongly regular graphs, etc | How Sridhar Thinks</title>
+<meta property="og:title" content="Friendship graphs, Moore graphs, strongly regular graphs, etc | How Sridhar Thinks" />
+<meta name="twitter:title" content="Friendship graphs, Moore graphs, strongly regular graphs, etc | How Sridhar Thinks" />
+
+        <meta name="description" content="Consider a simple undirected graph in which every pair of distinct non-adjacent vertices have precisely μ common neighbors, and every pair of adjacent vertices have precisely λ common neighbors. Examples of such graphs are friendship graphs (with μ = 1, λ = 1) and Moore graphs of diameter 2 (with μ = 1, λ = 0). Certain additional conditions force such a graph to be strongly regular, in the sense of all its nodes furthermore having the same degree. One such condition is μ = 0. Another such condition is that μ = 1 while no node is adjacent to all others. At any rate, any two non-adjacent nodes in such a graph have the same number of neighbors. We can see all this as follows:">
+<meta property="og:description" content="Consider a simple undirected graph in which every pair of distinct non-adjacent vertices have precisely μ common neighbors, and every pair of adjacent vertices have precisely λ common neighbors. Examples of such graphs are friendship graphs (with μ = 1, λ = 1) and Moore graphs of diameter 2 (with μ = 1, λ = 0). Certain additional conditions force such a graph to be strongly regular, in the sense of all its nodes furthermore having the same degree. One such condition is μ = 0. Another such condition is that μ = 1 while no node is adjacent to all others. At any rate, any two non-adjacent nodes in such a graph have the same number of neighbors. We can see all this as follows:">
+<meta name="twitter:description" content="Consider a simple undirected graph in which every pair of distinct non-adjacent vertices have precisely μ common neighbors, and every pair of adjacent vertices have precisely λ common neighbors. Examp…">
+
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Friendship graphs, Moore graphs, strongly regular graphs, etc
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2025-08-27">
+          2025-08-27
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Consider a simple undirected graph in which every pair of distinct non-adjacent vertices have precisely μ common neighbors, and every pair of adjacent vertices have precisely λ common neighbors. Examples of such graphs are friendship graphs (with μ = 1, λ = 1) and Moore graphs of diameter 2 (with μ = 1, λ = 0). Certain additional conditions force such a graph to be strongly regular, in the sense of all its nodes furthermore having the same degree. One such condition is μ = 0. Another such condition is that μ = 1 while no node is adjacent to all others. At any rate, any two non-adjacent nodes in such a graph have the same number of neighbors. We can see all this as follows: <span id="continue-reading"></span></p>
+<p>When μ = 0, the condition that every pair of distinct non-adjacent vertices have precisely zero common neighbors is equivalently the condition that the "x is adjacent to or equal to y" relation is transitive. This relation is also automatically reflexive and symmetric, so it becomes an equivalence relation. The condition that every pair of adjacent vertices have precisely λ common neighbors is then the assertion that the equivalence classes each contain precisely λ + 2 elements. That is to say, the graph is a union of disjoint complete graphs on λ + 2 nodes each. This is clearly strongly regular. (Note also that this covers the degenerate cases of a graph with no adjacent nodes or with no non-adjacent nodes, for which μ or λ are not unambiguously determined). From hereon out, we thus presume μ &gt; 0.</p>
+<p>Let A and B be non-adjacent nodes, and consider paths from A to B through two intermediate nodes. The μ neighbors of A which are also neighbors of B have λ ways of being the first intermediate node, and the remaining neighbors of A which are not neighbors of B have μ ways of being the first intermediate node. Thus, the number of neighbors of A is equal to the number of such paths divided by μ and then added to μ - λ. The same is symmetrically true for neighbors of B, and thus A and B have the same number of neighbors.</p>
+<p>Next, we note that there are two possibilities for such a graph. Either there is or there is not some node which is adjacent to all others.</p>
+<p>If there is such a node adjacent to all others, then the conditions on the subgraph with this node removed are that any two distinct non-adjacent nodes have precisely μ - 1 common neighbors, any two adjacent nodes have λ - 1 common neighbors, and any node at all has λ neighbors. Given either of the last two conditions, the other of the last two conditions is equivalent to the transitivity of the previously discussed "x is adjacent or equal to y" relation on the subgraph. Note that the first condition is also equivalent to this transitivity if μ = 1, while the first condition is incompatible with this transitivity for any other value of μ (except in the degenerate sense that μ is not unambiguously determined if the original graph has no non-adjacent nodes). Thus, the combination of all three conditions is equivalent to the assertion that μ = 1 and the subgraph is a union of disjoint complete graphs on λ + 1 nodes each. In other words, the original graph is the gluing together of complete graphs on λ + 2 nodes each, identifying together one node from each such graph (again, we note that this works precisely when μ = 1. For λ = 0, this is a hub and spokes. For λ = 1, this is a windmill graph).</p>
+<p>Finally, observe that in a graph with no cycles of four distinct nodes (such as when μ ≤ 1), the partial equivalence relation generated by non-adjacency relates all nodes that are non-adjacent to anyone. To see this, let A and B be two such nodes. There may be a "non-adjacency-path" from A to B through less than two intermediate nodes, in which case we are done. If not, then A and B are distinct, A is adjacent to B, and every node non-adjacent to one of A or B is adjacent to the other. Thus, letting A' be some node non-adjacent to A and B' be some node non-adjacent to B, we have a path (a normal path of adjacent nodes) from A' to B to A to B', with all four nodes distinct. If A' and B' were themselves adjacent, then this would be a cycle of four distinct nodes, which is forbidden. Thus, A is non-adjacent to A' which is non-adjacent to B' which is non-adjacent to B.</p>
+<p>Putting the above together, we find that for μ = 1, for any value of λ, if there is no node adjacent to all others, the graph is strongly regular.</p>
+<p>At this point, we can apply the theory of strongly regular graphs (in particular, investigation of eigenvalue multiplicity constraints) to further classify the possibilities, showing that there are no strongly regular graphs for μ = 1, λ = 1 (the "Friendship Graph Theorem"), and very limited possibilities for μ = 0, λ = 1 (the classification of Moore graphs of diameter 2).</p>
+<p>TODO: Describe the eigenvalue multiplicity properties of strongly regular graphs.</p>
+<p>TODO: Describe the uniqueness arguments for the Petersen graph and the Hoffman-Singleton graph (that is, they are the unique Moore graphs of diameter 2 of their sizes).</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

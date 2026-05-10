@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>The Irrationality of e | How Sridhar Thinks</title>
+<meta property="og:title" content="The Irrationality of e | How Sridhar Thinks" />
+<meta name="twitter:title" content="The Irrationality of e | How Sridhar Thinks" />
+
+        
+<meta name="description" content="This is actually quite easy to show. Let’s look at $$e^{-1} = \frac{1}{0!} - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \ldots$$. As an alternating series whose terms’ magnitudes keep diminishing (from the second term onward), its limiting value lies strictly inbetween any two …">
+<meta property="og:description" content="This is actually quite easy to show. Let’s look at $$e^{-1} = \frac{1}{0!} - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \ldots$$. As an alternating series whose terms’ magnitudes keep diminishing (from the second term onward), its limiting value lies strictly inbetween any two …">
+<meta name="twitter:description" content="This is actually quite easy to show. Let’s look at $$e^{-1} = \frac{1}{0!} - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \ldots$$. As an alternating series whose terms’ magnitudes keep diminishing (from the second term onward), its limiting value lies strictly inbetween any two …">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>The Irrationality of e
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-01-21">
+          2020-01-21
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>This is actually quite easy to show.</p>
+<p>Let’s look at $$e^{-1} = \frac{1}{0!} - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \ldots$$. As an alternating series whose terms’ magnitudes keep diminishing (from the second term onward), its limiting value lies strictly inbetween any two consecutive partial sums.</p>
+<p>But each term’s denominator divides the next, and thus any partial sum ending at or before a given term can be expressed as some rational value with the same denominator as that term. In particular, the partial sum up through and including $$\frac{1}{k!}$$, and the partial sum up till but excluding $$\frac{1}{k!}$$, can both be written as fractions with denominator $$k!$$.</p>
+<p>But their numerators will differ by one, and our limiting value must fall strictly between these. Therefore, our limiting value can’t be written with denominator $$k!$$ (for <em>any</em> $$k$$). But every possible denominator divides <em>some</em> $$k!$$, so this means our limiting value can’t be written as a rational with ANY denominator!</p>
+<p>This means $$e^{-1}$$ is irrational. And therefore so is its reciprocal, $$e$$.</p>
+<p>In the same way, for any eventually increasing sequence of positive integers with the property that each value divides the next, and the property that the sequence is eventually divisible by any value you like, the alternating sum of its reciprocals defines an irrational value. (Furthermore, we can just as well think of these values as the partial products of any sequence of positive integers eventually greater than 1 with the property that, for each prime, there are infinitely many multiples of that prime in the sequence. In the given case, this sequence is the simple $$1, 2, 3, 4, \ldots$$, which is then transformed into the factorials, and then into the alternating sum of the reciprocal factorials, but many other such possibilities are available, to which the exact same irrationality proof reasoning applies.)</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Associativity and the Associahedron | How Sridhar Thinks</title>
+<meta property="og:title" content="Associativity and the Associahedron | How Sridhar Thinks" />
+<meta name="twitter:title" content="Associativity and the Associahedron | How Sridhar Thinks" />
+
+        
+<meta name="description" content="The mean number of points in cycles of length 𝑘 over all permutations of an 𝑛-element set is 1. Why is this? Well, a point in a cycle of length k is specified by first choosing k many elements to be in the cycle (in one of (n choose k) many ways), then putting an ordering on thes…">
+<meta property="og:description" content="The mean number of points in cycles of length 𝑘 over all permutations of an 𝑛-element set is 1. Why is this? Well, a point in a cycle of length k is specified by first choosing k many elements to be in the cycle (in one of (n choose k) many ways), then putting an ordering on thes…">
+<meta name="twitter:description" content="The mean number of points in cycles of length 𝑘 over all permutations of an 𝑛-element set is 1. Why is this? Well, a point in a cycle of length k is specified by first choosing k many elements to be in the cycle (in one of (n choose k) many ways), then putting an ordering on thes…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Associativity and the Associahedron
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2022-07-16">
+          2022-07-16
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>The mean number of points in cycles of length 𝑘 over all permutations of an 𝑛-element set is 1. Why is this?</p>
+<p>Well, a point in a cycle of length k is specified by first choosing k many elements to be in the cycle (in one of (n choose k) many ways), then putting an ordering on these elements (in one of k! many ways), with the first point in the ordering taken as our point of interest. Fleshing out the full permutation now comprises simply permuting the remaining points among themselves (in one of (n − k)! many ways).</p>
+<p>So there are (n choose k) * k! * (n - k)! many points in cycles of length k overall, among all permutations of n elements. Finally, we divide by the number of permutations of n elements (which is n!) to compute the mean value, rather than the total value.</p>
+<p>This gives us (n choose k) * k! * (n - k)! / n!. And this is clearly 1.</p>
+<p>[Based off of my comment at https://golem.ph.utexas.edu/category/2019/12/random_permutations_part_6.html#c056936]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

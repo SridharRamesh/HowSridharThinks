@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>&quot;Sequent Calculi&quot; vs. &quot;Natural Deduction&quot; | How Sridhar Thinks</title>
+<meta property="og:title" content="&quot;Sequent Calculi&quot; vs. &quot;Natural Deduction&quot; | How Sridhar Thinks" />
+<meta name="twitter:title" content="&quot;Sequent Calculi&quot; vs. &quot;Natural Deduction&quot; | How Sridhar Thinks" />
+
+        
+<meta name="description" content="When asked what the difference between sequent calculus and natural deduction logical systems is, everyone (e.g., Wikipedia, but also everyone you meet in the world too) says a bunch of stuff that makes no sense. For example, as to whether sequents are involved, or whether sequen…">
+<meta property="og:description" content="When asked what the difference between sequent calculus and natural deduction logical systems is, everyone (e.g., Wikipedia, but also everyone you meet in the world too) says a bunch of stuff that makes no sense. For example, as to whether sequents are involved, or whether sequen…">
+<meta name="twitter:description" content="When asked what the difference between sequent calculus and natural deduction logical systems is, everyone (e.g., Wikipedia, but also everyone you meet in the world too) says a bunch of stuff that makes no sense. For example, as to whether sequents are involved, or whether sequen…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>&quot;Sequent Calculi&quot; vs. &quot;Natural Deduction&quot;
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2019-07-30">
+          2019-07-30
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>When asked what the difference between sequent calculus and natural deduction logical systems is, everyone (e.g., Wikipedia, but also everyone you meet in the world too) says a bunch of stuff that makes no sense. For example, as to whether sequents are involved, or whether sequents can have more than one disjunct on the right. None of this is relevant.</p>
+<p>The much more salient distinction has to do with things like the subformula property and the relation to cut elimination.</p>
+<p>In general, in logic, we have various rules which are trying to give us, from some prerequisites, as their conclusion, some morphism $$F \vdash G$$.</p>
+<p>And we can encode this in four ways: we can grant the morphism $$F \vdash G$$ directly, we can grant its precomposition action "If you furthermore know $$G \vdash Y$$, then you can conclude $$F \vdash Y$$", we can grant its postcomposition action instead as "If you furthermore know $$X \vdash F$$, then you can conclude $$X \vdash G$$", or we could even grant its inbetween-composition "If you furthermore know $$X \vdash F$$ and $$G \vdash Y$$, then you can conclude $$X \vdash Y$$".</p>
+<p>That is, we can choose for both of $$F$$ and $$G$$ whether we want to deal with them as things we map into or things we map out of, and grant the morphism at different kinds of directness or indirectness accordingly.</p>
+<p>From any of these, we can get any of the others, of course, by use of structural rules around binary composition (cut rule) and identity.</p>
+<p>A sequent calculus, in my mind, is a system set up so that you don't actually need to use any binary compositions (cut elimination) or any identities other than identity at atomic variables in order to prove tautologies, and such that each rule is set up to have the subformula property that all formulas in its prerequisite sequents are subformulas of those appearing in the granted sequent.</p>
+<p>In sequent calculus, we encode all rules as composition actions, so that we never need to invoke cut explicitly (in proving tautologies). We use whichever of post-composition or pre-composition encoding will, for that particular rule, give us the subformula property, based on whether F is a subformula of G or vice versa in the $$F \vdash G$$ we are trying to encode.</p>
+<p>A natural deduction system, on the other hand, in my mind, is one set up with no worry about rules satisfying the subformula property, but instead is set up with rules emphasizing postcomposition actions: in general, $$F \vdash G$$ is encoded via "From $$X \vdash F$$, conclude $$X \vdash G$$". That is, rules which for the most part don't involve interacting with/thinking too much about the left sides of sequents. The left sides stay unchanged or minimally changed throughout inferences as much as possible.</p>
+<p>(More specifically, perhaps we should say the conclusion of a natural deduction rule should always be of the form $$X \vdash G$$ for a completely arbitrary context $$X$$, while the premises are all of the form $$X' \wedge F$$ for various $$X'$$ extending $$X$$.)</p>
+<p>(Often, natural deduction is also presented in such a way that things aren't even written explicitly as sequents, and keeping track of what assumptions are around is notationally implicit rather than explicit, but that's irrelevant to the underlying concept.)</p>
+<p>Tl;dr: Natural deduction flavored systems are those designed to minimize explicitly thinking about left sides of sequents. Sequent calculus flavored systems are those designed to have the subformula property for their rules. Neither of these quite matches the explicit-composition-and-adjunction-emphasizing way I tend to formalize logical systems.</p>
+<p>I think the name "sequent calculus" has led many people awry. It's a bad name for emphasizing the salient difference; it draws attention to the wrong detail.</p>
+<p>[TODO: Speak about cut elimination as ways of reducing terms to normal forms (in the sense of maximally beta-reduced and eta-expanded); frame this 2-categorically for adjunctions in general (see the work of Kosta Dosen); do other posts on proofs of normalization and confluence for lambda calculus, on using scone categories, and so on]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

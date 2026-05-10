@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Sophomore&#x27;s Dream | How Sridhar Thinks</title>
+<meta property="og:title" content="Sophomore&#x27;s Dream | How Sridhar Thinks" />
+<meta name="twitter:title" content="Sophomore&#x27;s Dream | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Here are a couple little curiosities in calculus (known since at least 1697 by Johan Bernoulli). They are sometimes called "sophomore's dream", because they feel too good to be true, like the kind of glib substitution of one thing by another somewhat similar thing that a naive st…">
+<meta property="og:description" content="Here are a couple little curiosities in calculus (known since at least 1697 by Johan Bernoulli). They are sometimes called "sophomore's dream", because they feel too good to be true, like the kind of glib substitution of one thing by another somewhat similar thing that a naive st…">
+<meta name="twitter:description" content="Here are a couple little curiosities in calculus (known since at least 1697 by Johan Bernoulli). They are sometimes called "sophomore's dream", because they feel too good to be true, like the kind of glib substitution of one thing by another somewhat similar thing that a naive st…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Sophomore&#x27;s Dream
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-12-28">
+          2020-12-28
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Here are a couple little curiosities in calculus (known since at least 1697 by Johan Bernoulli). They are sometimes called "sophomore's dream", because they feel too good to be true, like the kind of glib substitution of one thing by another somewhat similar thing that a naive student might make, and because something else already took the name freshman's dream [TODO: Write about and link to freshman's dream].</p>
+<p>The two observations are that $$\int_{0}^{1} x^{-x} \dd{x} = \sum_{1}^{\infty} n^{-n}$$ and that $$\int_{0}^{1} x^x \dd{x} = -\sum_{1}^{\infty} (-n)^{-n}$$. In other words, the unified observation is that $$\int_{0}^{1} x^{\pm x} \dd{x} = \mp \sum_{1}^{\infty} (\mp n)^{-n}$$.</p>
+<p>The first step in seeing this is rewriting $$x^{\pm x}$$ as $$e^{\pm x \log(x)} = \sum_{n = 0}^{\infty} \frac{(\pm x \log(x))^n}{n!}$$. Now we wish to integrate from 0 to 1. This requires us to understand the integral of $$(x \log(x))^n$$ from 0 to 1.</p>
+<p>Well, it's easy to see that the integral of $$x^p \log^n(x)$$ in general, where $$p$$ is arbitrary and $$n$$ is a natural number, will be $$x^{p + 1}$$ and $$q$$ are natural numbers, is the sum of a bunch of similar terms where each term has the same power $$p$$ on $$x$$, but some power $$q \leq Q$$ [TODO. Write out a post on just integrating x^p log^q(x), since it comes up so often. See https://twitter.com/RadishHarmers/status/1330420725988139010 for a discussion of canonical antiderivatives.]</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

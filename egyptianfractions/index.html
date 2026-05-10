@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Egyptian Fractions | How Sridhar Thinks</title>
+<meta property="og:title" content="Egyptian Fractions | How Sridhar Thinks" />
+<meta name="twitter:title" content="Egyptian Fractions | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Any rational in $$[0, 1)$$ can be written as a finite sum of reciprocals of natural numbers. For zero, this is trivial, as an empty sum. As for other such values, specifically, if $$\frac{x}{y}$$ is the fraction to be represented (whether in lowest terms or not, we can apply this…">
+<meta property="og:description" content="Any rational in $$[0, 1)$$ can be written as a finite sum of reciprocals of natural numbers. For zero, this is trivial, as an empty sum. As for other such values, specifically, if $$\frac{x}{y}$$ is the fraction to be represented (whether in lowest terms or not, we can apply this…">
+<meta name="twitter:description" content="Any rational in $$[0, 1)$$ can be written as a finite sum of reciprocals of natural numbers. For zero, this is trivial, as an empty sum. As for other such values, specifically, if $$\frac{x}{y}$$ is the fraction to be represented (whether in lowest terms or not, we can apply this…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Egyptian Fractions
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-12-16">
+          2020-12-16
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Any rational in $$[0, 1)$$ can be written as a finite sum of reciprocals of natural numbers. For zero, this is trivial, as an empty sum. As for other such values, specifically, if $$\frac{x}{y}$$ is the fraction to be represented (whether in lowest terms or not, we can apply this same procedure), we let $$n$$ be the smallest whole number such that $$nx \geq y$$ (i.e., $$\frac{x}{y} \geq \frac{1}{n}$$), and then rewrite $$\frac{x}{y}$$ as $$\frac{1}{n} + \frac{nx - y}{ny}$$.</p>
+<p>Note that the numerator of $$\frac{nx - y}{ny}$$ is less than $$x$$. We now recursively expand it in the same way, and so on and so on. As the numerators keep shrinking, this must eventually terminate in a numerator of zero, at which point we are done.</p>
+<p>Note that $$0 \leq \frac{nx - y}{ny} &lt; \frac{x}{y} &lt; 1$$. This establishes that the new fraction to be recursively expanded is in the relevant range.</p>
+<p>Not only that, but this expansion produces a series $$\frac{1}{n_1} + \frac{1}{n_2} + \frac{1}{n_3} + \ldots$$ where the denominators are strictly increasing. To see this, take a second step of the expansion: What is the smallest $$m$$ such that $$\frac{nx - y}{ny} \geq \frac{1}{m}$$? Well, as $$\frac{nx - y}{ny} &lt; \frac{x}{y}$$, such an $$m$$ must be at least as large as $$n$$. Can $$m = n$$? This would mean $$n^2x - ny \geq ny$$, i.e., $$nx \geq 2y$$, i.e., the smallest multiple of $$x$$ which upper-bounds $$y$$ also upper-bounds $$2y$$, i.e., $$\lceil \frac{x}{y} \rceil \geq 2$$. But this can't happen by our presumption that our fractions lie in the range $$[0, 1)$$ to begin with.</p>
+<p>This is called an Egyptian fraction expansion. It's far from unique in general, mind you.</p>
+<p>Note now that ANY positive rational $$R$$ has an Egyptian fraction expansion using exclusively arbitrarily large denominators, by taking the harmonic series starting from whatever arbitrarily large denominator, and taking as many values as it takes to cross from below to above $$R$$. Consider this crossing point, such that the partial sums up through $$\frac{1}{n}$$ are below $$R$$ but up through $$\frac{1}{n + 1}$$ are above $$R$$. This means that the partial sum up through $$\frac{1}{n}$$ is less than $$\frac{1}{n + 1}$$ below $$R$$. Whatever that remaining error is, as a rational in $$[0, 1)$$, it has its own Egyptian fraction representation by the above, which must use denominators which are all strictly higher than $$n + 1$$ and thus distinct from those in our partial sum so far, completing what we want.</p>
+<hr />
+<p>This stuff really doesn't matter. Most of my posts are on stuff that matters more. Well, since I was made aware of it, I've recorded it, that's all.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

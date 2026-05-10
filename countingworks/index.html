@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Counting Works | How Sridhar Thinks</title>
+<meta property="og:title" content="Counting Works | How Sridhar Thinks" />
+<meta name="twitter:title" content="Counting Works | How Sridhar Thinks" />
+
+        
+<meta name="description" content="A basic fact, so perfectly figured out by ancient mathematicians and internalized by human society ever since that no one ever bothers to think about or question it anymore, is that any two orders in which to count the same finite set yield the same number. That is, each finite c…">
+<meta property="og:description" content="A basic fact, so perfectly figured out by ancient mathematicians and internalized by human society ever since that no one ever bothers to think about or question it anymore, is that any two orders in which to count the same finite set yield the same number. That is, each finite c…">
+<meta name="twitter:description" content="A basic fact, so perfectly figured out by ancient mathematicians and internalized by human society ever since that no one ever bothers to think about or question it anymore, is that any two orders in which to count the same finite set yield the same number. That is, each finite c…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Counting Works
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-05-05">
+          2020-05-05
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>A basic fact, so perfectly figured out by ancient mathematicians and internalized by human society ever since that no one ever bothers to think about or question it anymore, is that any two orders in which to count the same finite set yield the same number. That is, each finite cardinal has a unique associated ordinal.</p>
+<p>This is not true for infinite sets! For example, you can count the natural numbers like 0, 1, 2, 3, 4, ..., in the normal order, or you can count the natural numbers like 1, 2, 3, 4, ..., 0, with 0 at the very end, and these two orderings don't line up against each other.</p>
+<p>But with finite sets, however far you get in the song "One, two, three, four, ..." as you count in one order, that's precisely as far as you will get in another order.</p>
+<p>Why is this true? Well, there are two arguments for this given at our discussion of <a href="https://sridharramesh.github.io/HowSridharThinks/confluence/">confluence</a>. Another argument, and probably the simplest (though all three of these have the same underlying list-sorting content, I think, and are just different presentations of that content), is like so:</p>
+<p>Take your set and write it down twice, in two different orderings; e.g., bear, cat, dog on one line and cat, bear, dog on another line. Now, we'll move around the values in the first ordering to transform it into the second ordering, by just having everyone rush to the position where they need to be. In this rush, occasionally values will have to cross each other; we'll jigger with the timing so that no more than two values cross each other at a time. Whenever two values cross each other, we're replacing e.g. cat dog inside our ordering with dog cat, but these both have the same order type **, so the order type of this bit of the ordering doesn't change, and therefore the overall order type doesn't change. This is the only thing we do, over and over, and so the order type never changes, and eventually, we transform from the starting ordering to the final ordering, so the two have the same order type. QED.</p>
+<p>What goes wrong with this argument when we're talking about infinite sets? Well, implicitly, there is an induction here: we're supposing that a chain of finitely many of these swaps takes us from the first ordering to the second ordering, so that we can say "Since each swap preserves order type, the overall transformation preserves order type". This kind of reasoning fails if infinitely many moments of change occur, in just the same way that "Adding any item to a finite set keeps the result finite, so no matter how many items we add, it always stays finite" fails once the number of links in the reasoning chain becomes infinite. Indeed, even the very idea that we can break time down and say of each moment in time "Some last change occurred before this; determine the state now by looking at that last change" breaks down once infinitely many things occur.</p>
+<p>But how do we know that the number of swaps is finite in the relevant sense when dealing with a finite set? Well, perhaps because any two items only swap against each other once, and we invoke some argument that any subset of the number of pairs of items from a finite set is finite in the relevant sense (e.g., by doing a double induction over the number of items, to which we know we can assign some finite ordinal). Fully worked out, perhaps this becomes just as painful a Peano Arithmetic style induction as I always claim nothing need ever actually be understood as. Of course, a fully worked out account is, as ever, subject to what we take our background formal rules of reasoning to be. In particular, we will see the effects of whatever we take our definition of "finite" to be, though the most relevant definition is presumably something like "Ordinals within the reach of inductive argument".</p>
+<p>Instead of thinking in terms of swapping adjacent values against each other, we could transpose values directly to where they need to go; a selection sort rather than a kind of bubble sort, so to speak. Transposition, like applying any mere relabelling to an existing ordering, preserves order type. Again, we need to know there will be finitely many transpositions in a row, but there are much fewer transpositions to do, so perhaps this is easier to formally establish.</p>
+<p>Indeed, let's say a finite set is one which has been given to us with a standard ordering as a finite (i.e., subject to induction) ordinal. We wish to show that any other ordering is equivalent to this standard one. Well, the number of selection steps we must make directly corresponds to the standard ordering finite ordinal; thus, it is finite tautologically. At every stage in the process, we've created some initial segment which is standardly ordered, and have some remaining elements to put into standard order. So long as elements remain to be dealt with, one of them is the one which comes next in the standard order, and one of them is in the place where that next value needs to go, so we transpose those two (an order type preserving operation), and now we've extended by one the length of the initial segment that is in accordance with the standard ordering. After the standard ordinal number of steps of this, we've transformed into the standard order, and cannot have anything left unaccounted for. Thus, whatever order we started with has the same order type as the standard order.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

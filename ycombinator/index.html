@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>The Y Combinator (aka, diagonalization) | How Sridhar Thinks</title>
+<meta property="og:title" content="The Y Combinator (aka, diagonalization) | How Sridhar Thinks" />
+<meta name="twitter:title" content="The Y Combinator (aka, diagonalization) | How Sridhar Thinks" />
+
+        
+<meta name="description" content="TODO: Rewrite the following into the post I want it to be, about how diagonalization in the Cantor/Russell/Gödel/Lawvere/Yanofsky sense is the same as the Y combinator and also the Y combinator is obvious in retrospect. For now, this post is taken from an old Quora thing I once w…">
+<meta property="og:description" content="TODO: Rewrite the following into the post I want it to be, about how diagonalization in the Cantor/Russell/Gödel/Lawvere/Yanofsky sense is the same as the Y combinator and also the Y combinator is obvious in retrospect. For now, this post is taken from an old Quora thing I once w…">
+<meta name="twitter:description" content="TODO: Rewrite the following into the post I want it to be, about how diagonalization in the Cantor/Russell/Gödel/Lawvere/Yanofsky sense is the same as the Y combinator and also the Y combinator is obvious in retrospect. For now, this post is taken from an old Quora thing I once w…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>The Y Combinator (aka, diagonalization)
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-12-08">
+          2020-12-08
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>TODO: Rewrite the following into the post I want it to be, about how diagonalization in the Cantor/Russell/Gödel/Lawvere/Yanofsky sense is the same as the Y combinator and also the Y combinator is obvious in retrospect. For now, this post is taken from an old Quora thing I once wrote, in response to the prompt "What is the Y combinator?" or some such thing.</p>
+<hr />
+<p>Suppose you wanted to write a program that referred to its own source code at some point.</p>
+<p>You could try to write it in BASIC (or Java or Haskell or English or whatever your favorite programming language is <sup class="footnote-reference" id="fr-FavoriteLanguage-1"><a href="#fn-FavoriteLanguage">1</a></sup>). But, you might find that to be too tricky at first. So nevermind BASIC; you decide to instead simply invent a hypothetical new programming language BASIC++, which is just like BASIC, but augmented with built-in support for programs to be able to access their own source code: this language has a basic keyword "myOwnSourceCode" within it, which is to be interpreted as just what you'd think from the name.
+How does one actually run a BASIC++ program? Well, one thing you might do with a BASIC++ program (let's call it P) is compile it into an ordinary BASIC program, by going through its source code and replacing every instance of the keyword "myOwnSourceCode" with, of course, the expression of the actual source code for P.</p>
+<p>Great. So we know how to compile BASIC++ programs into ordinary BASIC programs. (Indeed, this compilation process is so simple, we can presumably go ahead and write such a compiler in BASIC). And we also know how to write BASIC++ programs which refer to their own source code (it's trivial by the design of the BASIC++ language).</p>
+<p>But perhaps now you'd like to return to the original quest of achieving such self-reference in ordinary BASIC instead of BASIC++. Well, BASIC++ can help us do this too, like so: By combining the two abilities in the last paragraph, you can write BASIC++ programs which refer to the compilation of their own source code into BASIC.</p>
+<p>And then, by actually compiling such a program into BASIC, you're left with, in fact, an ordinary BASIC program which refers to its own ordinary BASIC source code. Ta-da!</p>
+<p>In summary, we've outlined here a general technique for writing BASIC programs which refer to (which is to say, do whatever you as a programmer want them to do with) their own source code.</p>
+<p>(If you can furthermore write (or, even better, have primitively available) an interpreter in BASIC which executes whatever BASIC source code is passed to it as input, then this technique lets you write programs which refer to the result of interpreting/executing their own source code. That is, you would have the ability to write code which refers at various points to (i.e., does whatever you like with) its own return value, a phenomenon more familiarly known by the name "recursion". Even if you're working in a language which doesn't have built-in, primitive support for recursion, as long as you can carry all this out, it is still possible to implement recursion.)</p>
+<p>The structure of this whole technique can be mathematically formalized, and "the Y combinator" is the name given to that formalization in "the lambda calculus" (the abstract study of things like this <sup class="footnote-reference" id="fr-YLambda-1"><a href="#fn-YLambda">2</a></sup>). But nevermind the formalization; the above is the idea.</p>
+<hr />
+<p>Footnotes:</p>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-FavoriteLanguage">
+<p>In other words, there's nothing special about BASIC. All the times I say "BASIC", it's just a placeholder for any arbitrary language. <a href="#fr-FavoriteLanguage-1">↩</a></p>
+</li>
+<li id="fn-YLambda">
+<p>For those who are familiar with the notation of the lambda calculus, the Y combinator is defined by Y f = compile ($$\lambda$$ myOwnSourceCode. f (compile myOwnSourceCode)), where compile p = p(p). This just expresses the same idea as was given in words above. <a href="#fr-YLambda-1">↩</a></p>
+</li>
+</ol>
+</section>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

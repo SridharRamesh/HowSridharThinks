@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Gaussian Functions | How Sridhar Thinks</title>
+<meta property="og:title" content="Gaussian Functions | How Sridhar Thinks" />
+<meta name="twitter:title" content="Gaussian Functions | How Sridhar Thinks" />
+
+        
+<meta name="description" content="Some facts about Gaussian functions (exponentiated quadratics): Let g(x) = Exp(x^2) for some base of exponentiation. Note that g(ax) = g(x)^a^2. In other words, log(g(sqrt(x))) is a linear function of x. This is characteristic of g, in that any f such that f(ax) = f(x)^a^2 is suc…">
+<meta property="og:description" content="Some facts about Gaussian functions (exponentiated quadratics): Let g(x) = Exp(x^2) for some base of exponentiation. Note that g(ax) = g(x)^a^2. In other words, log(g(sqrt(x))) is a linear function of x. This is characteristic of g, in that any f such that f(ax) = f(x)^a^2 is suc…">
+<meta name="twitter:description" content="Some facts about Gaussian functions (exponentiated quadratics): Let g(x) = Exp(x^2) for some base of exponentiation. Note that g(ax) = g(x)^a^2. In other words, log(g(sqrt(x))) is a linear function of x. This is characteristic of g, in that any f such that f(ax) = f(x)^a^2 is suc…">
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Gaussian Functions
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2022-07-12">
+          2022-07-12
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Some facts about Gaussian functions (exponentiated quadratics):</p>
+<p>Let g(x) = Exp(x^2) for some base of exponentiation. Note that g(ax) = g(x)^a^2. In other words, log(g(sqrt(x))) is a linear function of x. This is characteristic of g, in that any f such that f(ax) = f(x)^a^2 is such that f(x) = g(kx) for some k [possibly a non-real k...]. Put another way, the characteristic property is that g(ax)g(bx) = g(x)^(a^2 + b^2) = g(sqrt(a^2 + b^2)x).</p>
+<p>Now consider the Gaussian in two dimensions, G(x, y) = g(x^2 + y^2) = g(x)g(y). That is, G(x, y) = Exp(q(x, y)) where q(x, y) is the quadratic form x^2 + y^2<sup class="footnote-reference" id="fr-QuadraticForm-1"><a href="#fn-QuadraticForm">1</a></sup>.</p>
+<p>Note that, if V and W are perpendicular vectors, we have that G(V + W) = G(V) G(W), since q(V + W) = q(V) + q(W) (this is essentially the definition of perpendicularity, relative to an arbitrary quadratic form).</p>
+<p>Indeed, G is manifestly rotation-invariant, since it is a function of q, which is tautologously rotation-invariant. Thus, the above is just a rotated version of the fact that G splits into independent factors multiplied along the x and y coordinates, each of these factors being 1 at the origin.</p>
+<p>Thus, any line through the origin is such that G restricted to this line looks like g, and such that the marginal distribution on this line after perpendicular projection also looks like g. From this, it follows that for any two independent standard Gaussian distributed variables X and Y, and any coefficients a and b, we have that aX + bY is also Gaussian distributed, rescaled from a standard Gaussian distribution by a factor of sqrt(a^2 + b^2).</p>
+<p>This is precisely to say that the Fourier transform of a Gaussian distribution also satisfies the characteristic property of our first paragraph. Thus, the Fourier transform of a Gaussian is a Gaussian.</p>
+<p>TODO: Word better, more clearly.</p>
+<hr />
+<p>Gauss sums:</p>
+<p>See https://sbseminar.wordpress.com/2008/10/11/the-sign-of-the-gauss-sum/ for one approach. Note that this makes use of the same distance product "Lemma 2" as in the Wallis Product 3blue1brown video.</p>
+<p>See https://web.williams.edu/Mathematics/lg5/GaussSum.pdf, https://mast.queensu.ca/~br66/421/gauss_sums_handout.pdf, and https://e.math.cornell.edu/people/belk/numbertheory/GaussSums.pdf. The basic idea is at https://math.stackexchange.com/questions/27489/the-discrete-fourier-transform-of-a-dirichlet-charachter, but when it says "the uniqueness/inversibility of the Fourier transform implies that the other values of 𝜒's Fourier transform must be 0", I don't follow that part.</p>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-QuadraticForm">
+<p>We could consider any positive-definite quadratic form q, but we can always reparametrize so q(x, y) = x'^2 + y'^2 for some basis x', y'. <a href="#fr-QuadraticForm-1">↩</a></p>
+</li>
+</ol>
+</section>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

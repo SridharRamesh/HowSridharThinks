@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Fixed Points of Cycled Compositions | How Sridhar Thinks</title>
+<meta property="og:title" content="Fixed Points of Cycled Compositions | How Sridhar Thinks" />
+<meta name="twitter:title" content="Fixed Points of Cycled Compositions | How Sridhar Thinks" />
+
+        <meta name="description" content="Suppose given 1-cells $$F : C \to D$$ and $$G : D \to C$$ in some 2-category. $$\newcommand{\id}{\mathrm{id}}$$">
+<meta property="og:description" content="Suppose given 1-cells $$F : C \to D$$ and $$G : D \to C$$ in some 2-category. $$\newcommand{\id}{\mathrm{id}}$$">
+<meta name="twitter:description" content="Suppose given 1-cells $$F : C \to D$$ and $$G : D \to C$$ in some 2-category. $$\newcommand{\id}{\mathrm{id}}$$">
+
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Fixed Points of Cycled Compositions
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2024-03-29">
+          2024-03-29
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>Suppose given 1-cells $$F : C \to D$$ and $$G : D \to C$$ in some 2-category. $$\newcommand{\id}{\mathrm{id}}$$ <span id="continue-reading"></span></p>
+<p>If we now have 2-cells $$\eta : \id_C \to GF$$ and $$\epsilon : FG \to \id_D$$ satisfying the triangle/zig-zag laws, this is an adjunction. In the further case where $$\eta$$ and $$\epsilon$$ are both isomorphisms, this is the definition of an adjoint equivalence (the appropriate notion of equivalence between objects in a 2-category).</p>
+<p>As a reminder, the zig-zag laws are the following two commutative diagrams, which are related to each other by reversing all 1- and 2-cells and swapping the roles of $$(C, D)$$, $$(F, G)$$, and $$(\eta, \epsilon)$$, respectively:</p>
+<!-- https://q.uiver.app/#q=WzAsNixbMCwxLCJGIl0sWzEsMCwiRkdGIl0sWzIsMSwiRiJdLFszLDEsIkciXSxbNCwwLCJHRkciXSxbNSwxLCJHIl0sWzAsMSwiRiBcXGV0YSJdLFsxLDIsIlxcZXBzaWxvbiBGIl0sWzAsMiwiXFxtYXRocm17aWR9X0YiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDQsIlxcZXRhIEciXSxbNCw1LCJHIFxcZXBzaWxvbiJdLFszLDUsIlxcbWF0aHJte2lkfV9HIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0= -->
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNixbMCwxLCJGIl0sWzEsMCwiRkdGIl0sWzIsMSwiRiJdLFszLDEsIkciXSxbNCwwLCJHRkciXSxbNSwxLCJHIl0sWzAsMSwiRiBcXGV0YSJdLFsxLDIsIlxcZXBzaWxvbiBGIl0sWzAsMiwiXFxtYXRocm17aWR9X0YiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDQsIlxcZXRhIEciXSxbNCw1LCJHIFxcZXBzaWxvbiJdLFszLDUsIlxcbWF0aHJte2lkfV9HIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=&embed" width="828" height="304" style="border-radius: 8px; border: none;"></iframe>
+<p>(We might say the first is the zig-zag law for $$F$$ and the second is the zig-zag law for $$G$$.)</p>
+<p>But now suppose instead of pointing in opposite directions from and towards identity, $$\eta$$ and $$\epsilon$$ were to point in the same direction. For example, if we had 2-cells $$\beta : GF \to \id_C$$ and $$\epsilon : FG \to \id_D$$.<sup class="footnote-reference" id="fr-Flip2Cells-1"><a href="#fn-Flip2Cells">1</a></sup></p>
+<p>We could make corresponding "zig-zig" laws for this setup as well, as the following commutative diagrams, where $$\beta$$ takes the place of $$\eta$$ with direction flipped:</p>
+<!-- https://q.uiver.app/#q=WzAsNixbMCwxLCJGIl0sWzEsMCwiRkdGIl0sWzIsMSwiRiJdLFszLDEsIkciXSxbNCwwLCJHRkciXSxbNSwxLCJHIl0sWzEsMCwiRiBcXGJldGEiLDJdLFsxLDIsIlxcZXBzaWxvbiBGIl0sWzAsMiwiXFxtYXRocm17aWR9X0YiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDMsIlxcYmV0YSBHIiwyXSxbNCw1LCJHIFxcZXBzaWxvbiJdLFszLDUsIlxcbWF0aHJte2lkfV9HIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0= -->
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNixbMCwxLCJGIl0sWzEsMCwiRkdGIl0sWzIsMSwiRiJdLFszLDEsIkciXSxbNCwwLCJHRkciXSxbNSwxLCJHIl0sWzEsMCwiRiBcXGJldGEiLDJdLFsxLDIsIlxcZXBzaWxvbiBGIl0sWzAsMiwiXFxtYXRocm17aWR9X0YiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDMsIlxcYmV0YSBHIiwyXSxbNCw1LCJHIFxcZXBzaWxvbiJdLFszLDUsIlxcbWF0aHJte2lkfV9HIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=&embed" width="828" height="304" style="border-radius: 8px; border: none;"></iframe>
+<p>(We might say the first is the zig-zig law for $$F$$ and the second is the zig-zig law for $$G$$.)</p>
+<p>In the case where $$\eta$$ and $$\beta$$ are inverses, the zig-zig law for $$X$$ and zig-zag law for $$X$$ are equivalent conditions (where $$X$$ may be either $$F$$ or $$G$$).</p>
+<p>Note also that any of these zig-zag or zig-zig laws has the property that if any one of the top arrows is an isomorphism, so is the other. (For the zig-zag laws, the top arrows are inverses, while for the zig-zig laws, they are equal). Call this "the isomorphism-to-isomorphism property".</p>
+<p>Let us now presume for convenience of language that we are working specifically in the 2-category $$\mathrm{Cat}$$, so $$C$$ and $$D$$ are actual categories. (Everything we say will extend suitably to arbitrary 2-categories via the Yoneda lemma.) We presume the existence of $$\epsilon$$ and one of either $$\eta$$ satisfying both zig-zag laws, or $$\beta$$ satisfying both zig-zig laws.</p>
+<p>Let $$c$$ be any object in $$C$$ such that $$X_c$$ is an isomorphism (where $$X$$ is either $$\eta$$ or $$\beta$$ depending on which we presume to exist in the first place). By the isomorphism-to-isomorphism property, we then have that $$\epsilon_{F(c)}$$ is also an isomorphism. Thus, defining $$C'$$ as the inverter of $$X$$ and $$D'$$ as the inverter of $$\epsilon$$ (i.e., these are the full subcategories restricted to objects on which the indicated natural transformations are invertible), we find that $$F$$ acts also as a functor from $$C'$$ to $$D'$$.</p>
+<p>Conversely, by the same isomorpism-to-isomorphism property in the same way, $$G$$ acts also as a functor from $$D'$$ to $$C'$$. Furthermore, $$\epsilon$$ and $$\eta$$ or $$\beta$$ continue to act on $$F$$ and $$G$$ when these are understood as going between $$C'$$ and $$D'$$, and continue to satisfy the zig-zag or zig-zig laws. But in this new context, $$\epsilon$$ and $$\eta$$ or $$\beta$$ will both be invertible. Thus, $$F$$, $$G$$, $$\epsilon$$, and $$\eta$$ or $$\beta$$ act as an adjoint equivalence between $$C'$$ and $$D'$$.</p>
+<p>This is well known and familiar in the $$\eta$$ case; restricting an adjunction to inverters of its unit and co-unit yields an adjoint equivalence. But it is interesting to see that it works in the $$\beta$$ case as well, where we do not start with an adjunction as such.</p>
+<p>A particular application of this which is of interest is like so: Consider some functors $$f$$ and $$g$$ in opposite direction. Let $$C$$ be the category of $$gf$$-algebras and let $$D$$ be the category of $$fg$$-algebras. The action of $$f$$ acts as a functor $$F : C \to D$$, and similarly $$g$$ acts as a functor $$G : D \to C$$. There are canonical maps $$\beta : GF \to \id_C$$ and, dually, $$\epsilon : FG \to \id_D$$, and these satisfy the zig-zig identities [TODO: Explain this out more]. Thus, restricting to $$C'$$ and $$D'$$ as the invertible $$gf$$- or $$fg-$$ algebras, respectively (i.e., the categories of fixed points of $$gf$$ and $$fg$$), we find that the actions of $$f$$ and $$g$$ on these, along with $$\beta$$ and $$\epsilon$$, comprise an adjoint equivalence.</p>
+<p>In the particular case where the original $$f$$ and $$g$$ go between discrete sets, this is the familiar fact that $$f$$ and $$g$$ act as inverse bijections between the fixed points of $$gf$$ and of $$fg$$.</p>
+<p>The whole purpose of this post was to show how this familiar fact extends to the case where $$f$$ and $$g$$ are functors rather than mere functions, and does so by an argument which can be unified with the familiar fact that adjunctions restrict to equivalences on fixed points of their units and co-units.</p>
+<hr />
+<p>Footnotes:</p>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-Flip2Cells">
+<p>Just as well, we could consider $$\eta : \id_C \to GF$$ and $$\epsilon : \id_D \to FG$$, but this would be just the same thing with 2-cells reversed. <a href="#fr-Flip2Cells-1">↩</a></p>
+</li>
+</ol>
+</section>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+

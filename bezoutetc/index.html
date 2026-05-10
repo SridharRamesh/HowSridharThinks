@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="referrer" content="no-referrer">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+        <title>Partial Fractions, Jordan, Bezout, Euclid, and the Chinese | How Sridhar Thinks</title>
+<meta property="og:title" content="Partial Fractions, Jordan, Bezout, Euclid, and the Chinese | How Sridhar Thinks" />
+<meta name="twitter:title" content="Partial Fractions, Jordan, Bezout, Euclid, and the Chinese | How Sridhar Thinks" />
+
+        <meta name="description" content="There are a number of results which are all essentially the same: 1. Jordan decomposition of linear operators. 2. Partial fraction decomposition. 3.1. The Chinese Remainder Theorem. 3.2. Bezout's theorem expressing GCDs as linear combinations 3.3. The Euclidean algorithm for calculating GCDs">
+<meta property="og:description" content="There are a number of results which are all essentially the same: 1. Jordan decomposition of linear operators. 2. Partial fraction decomposition. 3.1. The Chinese Remainder Theorem. 3.2. Bezout's theorem expressing GCDs as linear combinations 3.3. The Euclidean algorithm for calculating GCDs">
+<meta name="twitter:description" content="There are a number of results which are all essentially the same: 1. Jordan decomposition of linear operators. 2. Partial fraction decomposition. 3.1. The Chinese Remainder Theorem. 3.2. Bezout's theo…">
+
+
+        <meta property="og:site_name" content="How Sridhar Thinks" />
+        <meta property="og:url" content="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" />
+
+        
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\[']],
+    packages: {'[+]': ['physics']}
+  },
+  loader: {load: ['[tex]/physics']},
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+
+
+        
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/base.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/fontawesome.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/brands.css" rel="stylesheet">
+<link href="https://sridharramesh.github.io/HowSridharThinks/fontawesome/solid.css" rel="stylesheet">
+
+        <link rel='icon' type='image/x-icon' href="https://sridharramesh.github.io/HowSridharThinks/favicon.ico" />
+
+        
+
+        
+
+        
+
+    </head>
+    <body>
+        <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+        <header class="l-header">
+            <h1 class="c-title p-title"><a href="https:&#x2F;&#x2F;sridharramesh.github.io&#x2F;HowSridharThinks&#x2F;" class="p-title__link">How Sridhar Thinks</a></h1>
+            </header>
+
+        <main id="main" class="l-main">
+            
+<article class="p-article">
+  <header>
+    <h1>Partial Fractions, Jordan, Bezout, Euclid, and the Chinese
+</h1>
+    <div>
+      <div class="c-time">
+
+        <time datetime=" 2020-05-01">
+          2020-05-01
+        </time>
+        
+      </div>
+    </div>
+  </header>
+  
+  <section id="js-article" class="p-article__body">
+    <p>There are a number of results which are all essentially the same:</p>
+<p>1. Jordan decomposition of linear operators.</p>
+<p>2. Partial fraction decomposition.</p>
+<p>3.1. The Chinese Remainder Theorem.</p>
+<p>3.2. Bezout's theorem expressing GCDs as linear combinations</p>
+<p>3.3. The Euclidean algorithm for calculating GCDs</p>
+<span id="continue-reading"></span>
+<p>It seems to me that everyone who is familiar with the topics recognizes 3.2 as the same as 3.3, and most recognize 3.1 as the same as well. Tons of undergrads use 2 without recognizing that it is the same as 3, but at least occasionally mathematicians acknowledge this. I've never seen anyone acknowledge that 1 is the same as the rest, which is a shame.</p>
+<p>Anyway, enough about what others do or don't recognize. Here's what you should understand:</p>
+<p>[TODO]</p>
+<h1 id="jordan-decomposition">Jordan decomposition</h1>
+<p>Suppose you have a linear operator $$T$$ on a vector space over a field, which satisfies a polynomial equation $$P(T) = 0$$ [as, for example, every linear operator on a finite-dimensional space is forced to eventually do].</p>
+<p>As the polynomials over a field comprise a Euclidean domain (a fortiori, a principal ideal domain, equivalently, a unique factorization domain which happens to also be a Bezout domain), we can factorize $$P(T)$$ as a product of coprime factors, each of these factors in turn a power of an irreducible polynomial. If the field is algebraically closed, these irreducible polynomials will be linear, but there is no need for us to restrict our attention to this case.</p>
+<p>Letting these coprime factors be $$F_i$$ for various $$i$$, we have that the gcd of $$\frac{P}{F_i} = \prod_{j \neq i} F_j$$ over all $$i$$ is $$1$$. We can therefore write $$1$$ as a linear combination of the various $$\frac{P}{F_i} = \prod_{j \neq i} F_j$$. [This is the same as doing the partial fraction decomposition of $$\frac{1}{P}$$, then multiplying both sides through by $$P$$].</p>
+<p>We can now instantiate this polynomial equation at $$T$$. Each of these $$\frac{P(T)}{F_i(T)}$$ terms is such that it is annihilated by $$F_i(T)$$, since $$P(T) = 0$$. This means each such term has a range, as an operator on vectors, which is in the null space of $$F_i(T)$$. Thus, this demonstrates that every vector is a sum of "generalized eigenvectors", in the sense of vectors in the null space of $$F_i(T)$$ for the various $$i$$.</p>
+<p>On the other hand, if $$v$$ is a vector which is already in the null space of $$F_i(T)$$, then our factorization tells us that $$1v = \frac{P(T)}{F_i(T)} v$$, as all the other terms contain a factor of $$F_i(T)$$ already, which annihilates against our $$v$$. Thus, we see that each $$\frac{P(T)}{F_i(T)}$$ acts as a retraction onto the nullspace of $$F_i(T)$$, which sends all the other generaliezd eigenspaces to zero. Among other things, this tells us that the representation of a vector as a sum of generalized eigenvectors is unique; the entire vector space is the coproduct of the generalized eigenspaces corresponding to each of our prime power polynomial factors.</p>
+<p>This is the Jordan decomposition. If we were working over an algebraically closed field, the prime power polynomials would each be of the form $$(T - \lambda)^n$$, and so these generalized eigenspaces take the form of familiar Jordan blocks [TODO: here, it is worth getting into the form of nilpotent operations a bit more as well, perhaps; how they are characterized by the dimensions of the iterated preimages of 0]. But regardless, there is this form of Jordan decomposition over arbitrary fields as well.</p>
+<h1 id="partial-fraction-decomposition">Partial fraction decomposition</h1>
+<p>This is often phrased as being specifically about polynomials, but it applies to the elements of any Bezout domain. The observation is this: Suppose $$P$$ has a factorization as a product of $$F_i$$, where the $$F_i$$ are coprime. [In the case of a Euclidean domain or PID, which are automatically UFDs, we always have this factorization available into powers of distinct primes. And in particular, in the case of polynomials over an algebraically closed field, the primes will be linear factors. But regardless, this idea generalizes.]</p>
+<p>Then $$P$$ is the least common multiple of the various $$F_i$$, which is to say, $$\frac{1}{P}$$ is the gcd of the various $$\frac{1}{F_i}$$ [put another way, $$1$$ is the gcd of the various $$\frac{P}{F_i}$$. In general, we can interpret the divisibility relationship on "rationals" to mean their quotient is a "whole value", and will have gcds and lcms in the same way for "rationals" as we do for "whole values", in any GCD domain].</p>
+<p>This means, by Bezout's theorem, that we can express $$\frac{1}{P}$$ as a linear combination of the various $$\frac{1}{F_i}$$. And this is just what is called "partial fraction decomposition". For example, $$\frac{1}{2^2 \times 3} = -\frac{1}{2^2} + \frac{1}{3}$$.</p>
+<p>[TODO: Discuss 3.1, 3.2, and 3.3]</p>
+<p>[TODO: Discuss structure theorem for modules over a PID?]</p>
+<p>Part of the structure theorem for modules over a PID is showing that any torsion-free finitely generated module is free and of finite rank. Why does this hold? It suffices to show inductively that given free module R^(n + 1) and taking some quotient of it which leaves the first R^n component unquotiented and the last R component unquotiented [that is, adding one new non-torsion generator at a time to a free module], the result is itself a free module of finite rank.</p>
+<p>Here, let us observe that the kernel of our quotient of R^(n + 1) is in fact principal. This is because its projection onto the final R component is a principal ideal, thus generated by a single element r, for which there is some corresonding (a, b, c, ..., r) in this kernel. From any other value (x, y, z, ..., mr) in this kernel, we can produce (ma - x, mb - y, mc - z, ..., 0) in this kernel. But this kernel is supposed to leave the initial R^n unquotiented, so (ma - x, mb - y, mc - z, ..., 0) = 0, and thus m(a, b, c, ..., r) = (x, y, z, ..., mr), which is to say, (a, b, c, ..., r) is indeed a generator for this kernel.</p>
+<p>What's more, by torsion freeness, we can assume that either (a, b, c, ..., r) is (0, 0, 0, ..., 0) or gcd(a, b, c, ..., r) = 1. In the former case, we are done, we are just dealing with R^(n + 1). So what remains is to show that taking the quotient of R^(n + 1) by the ideal generated by some (a, b, c, ..., r) with gcd(a, b, c, ..., r) = 1 yields a free module of finite rank.</p>
+<p>Because gcd(a, b, c, ..., r) = 1, we can construct an (n + 1) x (n + 1) matrix with (a, b, c, ..., r) as one of the rows, with determinant 1. (TODO: See Lemma 15.119.10. at https://stacks.math.columbia.edu/tag/0ASL). Accordingly, there is a size (n + 1) basis for R^(n + 1) with (a, b, c, ..., r) as one of the basis vectors. Quotienting out by this basis vector, we of course get R^n.</p>
+<hr />
+<p>Actually, perhaps the more important fact is that we know that either (a, b, c, ..., r) = 0 and we are done, or r is nonzero. In the latter case, multiplication by r is an injective endomorphism of our quotient (injective because it is torsion-free), which can be seen as making our quotient isomorphic to a submodule of R^n. So we simply need to observe now that submodules of free modules over a PID are themselves free (of equal or lesser rank). Here we can appeal essentially to triangular matrix stuff. We consider a submodule of R^n, and its subspaces of vectors whose last (n - 1) coordinates are zero, whose last (n - 2) coordinates are zero, and so on. From each of these spaces, choose a vector whose coordinate in the last possibly-non-zero slot is minimal (that is, generates the appropriate ideal of possibilities), or omit such a vector if the ideal of possibilities is zero. These vectors will together span all of the submodule, but will be independent. (This is incidentally why any finitely generated module over a PID will be finitely presented as well; the ideal on the free space generated by the generators by which to quotient will, as a submodule of a free module of finite rank, itself be a free module of equal or lesser finite rank). This can be phrased as an inductive argument naturally.</p>
+<p>Or perhaps we should think of what we are doing as augmenting R^n with an r-th root for (a, b, c, ...). Using the prime factorization of r, this is a series of augmentations with p-th roots for prime p, and since the whole thing is coprime, each such p does not divide all of (a, b, c, ...); that is, these are augmentations with p-th roots that do not exist yet. A basis can then be chosen by using all the existing basis vectors except the one corresponding to some coefficient indivisible by p (coefficient b, say), and then also adding some value in this space whose coefficient in the b-slot is 1/p. We know we can achieve this because our p-th root has b/p in that slot, and gcd(b/p, 1) is 1/p. From this we can obviously re-achieve the original basis vector (0, 1, 0, 0, 0, ...), and we can also achieve the p-th root of (a, b, c, ...) by TODO.</p>
+
+  </section>
+  <footer>
+    <nav class="c-pagination p-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          
+        </div>
+        <div class="c-pagination__older">
+          
+        </div>
+      </div>
+    </nav>
+  </footer>
+</article>
+            
+        </main>
+
+
+      <footer class="l-footer">
+          <p class="p-copyright">
+              
+          </p>
+      </footer>
+
+      
+    </body>
+</html>
+
