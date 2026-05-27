@@ -40,7 +40,7 @@ So to complete the proof of our sine product result, we just need to be able to 
 
 Alas... this is impossible: Note that the limiting value of (and thus the minimal size of any potential bound on) $$\abs{S_k(N) - 1}$$ is on the order of $$\abs{k}^{-1}$$, and this famously diverges (as the harmonic series) rather than converges.
 
-<!-- I've had to escape some underscores in the next paragraph to prevent Markdown formatting from interfering with LaTeX formatting. Why has this not been an issue elsewhere? -->
+<!-- I've had to escape some underscores in the next paragraph to prevent Markdown formatting from interfering with LaTeX formatting. Why has this not been an issue elsewhere? It appears to have to do with the apostrophe and the curly braces allowing the underscores to count as coming not mid-word but after the completion of a word and before the start of a word.-->
 
 BUT! If we bundle our factors together, bundling the $$k$$-th and $$-k$$-th factor together as $$S'\_k(N) = S\_k(N) \times S\_{-k}(N)$$, and then consider this series (now indexed only by positive integers) instead, now we have a shot, as the limiting value of $$\abs{S'_k(N) - 1}$$ is now on the order of $$k^{-2}$$, which converges. Let's see if we can get an actual bound, irrespective of $$N$$, of this same quadratic order in $$k$$, which will allow us to use Dominated Convergence on the product with factors bundled in this way.
 
