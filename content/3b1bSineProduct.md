@@ -12,9 +12,9 @@ In a past life, I worked for 3blue1brown, and I discovered and made a video for 
 
 Recap: \[TODO, phrase the following in terms of lighthouses and a Sailor and Keeper, as in the video, and reconcile it to the phrasing in the following section.\]
 
-The gist is like so: For each natural $n$, let $$P_n(x) = x^n - 1$$ be the $$n$$-th cyclotomic polynomial. This is the product of $$(x - \zeta)$$ over all $$n$$-th roots of unity $$\zeta$$. In other words, restricting attention to the case of odd $$n = 2m + 1$$ for convenience, this is $$\prod_{k = -m}^{k = m} (x - R^{k/n})$$, where $$R = e^{\tau i}$$.
+The gist is like so: For each natural $$n$$, let $$P_n(x) = x^n - 1$$ be the $$n$$-th cyclotomic polynomial. This is the product of $$(x - \zeta)$$ over all $$n$$-th roots of unity $$\zeta$$. In other words, restricting attention to the case of odd $$n = 2m + 1$$ for convenience, this is $$\prod_{k = -m}^{k = m} (x - R^{k/n})$$, where $$R = e^{\tau i}$$.
 
-Let $$$Q_n(x) = P_n(x)/(x - 1) = 1 + x + x^2 + \ldots + x^{n - 1}$$ be the same product dropping the $$k = 0$$ factor. For convenience, let us reparametrize this as $$H_n(f) = Q_n(R^{f/n})$$. Note that $$H_n(0) = Q_n(1) = n$$. 
+Let $$Q_n(x) = P_n(x)/(x - 1) = 1 + x + x^2 + \ldots + x^{n - 1}$$ be the same product dropping the $$k = 0$$ factor. For convenience, let us reparametrize this as $$H_n(f) = Q_n(R^{f/n})$$. Note that $$H_n(0) = Q_n(1) = n$$. 
 
 Now consider $$H_n(f) / H_n(0)$$. On the one hand, this is clearly $$(R^{1/f} - 1) / ((R^{f/n} - 1) n)$$. In the limit as $$n \to \infty$$, the denominator here approaches $$f \tau i$$, thus having magnitude $$f \tau$$.
 
@@ -40,7 +40,9 @@ So to complete the proof of our sine product result, we just need to be able to 
 
 Alas... this is impossible: Note that the limiting value of (and thus the minimal size of any potential bound on) $$\abs{S_k(N) - 1}$$ is on the order of $$\abs{k}^{-1}$$, and this famously diverges (as the harmonic series) rather than converges.
 
-BUT! If we bundle our factors together, bundling the $$k$$-th and $$-k$$-th factor together as $$S'_k(N) = S_k(N) \times S_{-k}(N)$$, and then consider this series (now indexed only by positive integers) instead, now we have a shot, as the limiting value of $$\abs{S'_k(N) - 1}$$ is now on the order of $$k^{-2}$$, which converges. Let's see if we can get an actual bound, irrespective of $$N$$, of this same quadratic order in $$k$$, which will allow us to use Dominated Convergence on the product with factors bundled in this way.
+<!-- I've had to escape some underscores in the next paragraph to prevent Markdown formatting from interfering with LaTeX formatting. Why has this not been an issue elsewhere? -->
+
+BUT! If we bundle our factors together, bundling the $$k$$-th and $$-k$$-th factor together as $$S'\_k(N) = S\_k(N) \times S\_{-k}(N)$$, and then consider this series (now indexed only by positive integers) instead, now we have a shot, as the limiting value of $$\abs{S'_k(N) - 1}$$ is now on the order of $$k^{-2}$$, which converges. Let's see if we can get an actual bound, irrespective of $$N$$, of this same quadratic order in $$k$$, which will allow us to use Dominated Convergence on the product with factors bundled in this way.
 
 Expanding out $$S'_k(N)$$, it is $$\frac{\mathrm{Chord}((k - f)/N)}{\mathrm{Chord}(k/N)} \times \frac{\mathrm{Chord}((-k - f)/N)}{\mathrm{Chord}(-k/N)}$$, where $$N > 2k$$ (or $$1$$ otherwise). With a little trig identity elbow-grease, and keeping in mind that $$\mathrm{Chord}$$ is basically the same thing as $$\sin$$ (just with its inputs and outputs re-scaled by constant factors), we get that $$S'_k(N)$$ equals $$1 - \left( \frac{\mathrm{Chord}(f/N)}{\mathrm{Chord}(k/N)} \right) ^2$$ (under, as always, the condition that $$N > 2k$$, and being simply $$1$$ otherwise).
 
