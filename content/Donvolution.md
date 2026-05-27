@@ -12,7 +12,7 @@ Let us now consider the specific case where $$g_i(x) = x^{p_i}$$. Our goal, then
 
 Note also that convolving a function with the constantly $$1$$ function (restricted to nonnegative inputs) is as good as integrating it from a starting point of $$0$$; this means donvolving a function with the 1th power function, i.e. the identity function, is as good as integrating it (from a starting point of $$0$$).
 
-Thus, the $$n$$-fold donvolution of $$x$$ with itself is the result of integrating the constantly 1 function $$n$$ times, $$x^n/n!$$ [that this is the $$n$$-fold integral of the constantly 1 function corresponds to the basic power rule that $$x^n$$ integrates to $$x^{n + 1}/(n + 1)$$]. Which means $$x^n/n!$$ donvolved with $$x^m/m!$$ must be $$x^{n + m}/(n! m!)$$. And more generally, the donvolution of various $$x^{p_i}/p_i!$$ will be $$x^{\sum p_i}/(\sum p_i)!$$.
+Thus, the $$n$$-fold donvolution of $$x$$ with itself is the result of integrating the constantly 1 function $$n$$ times, $$x^n/n!$$ [that this is the $$n$$-fold integral of the constantly 1 function corresponds to the basic power rule that $$x^n$$ integrates to $$x^{n + 1}/(n + 1)$$]. Which means $$x^n/n!$$ donvolved with $$x^m/m!$$ must be $$x^{n + m}/((n + m)!)$$. And more generally, the donvolution of various $$x^{p_i}/p_i!$$ will be $$x^{\sum p_i}/(\sum p_i)!$$.
 
 Which, put another way, tells us that donvolution of various $$x^{p_i}$$ will be $$x^{\sum p_i}$$ divided by the multinomial coefficient $$(\sum p_i)!/(\prod (p_i!))$$. This gives us our $$v(x)$$, completing our desired result.
 
