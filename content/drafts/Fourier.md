@@ -52,7 +52,7 @@ We can also re-parametrize this as a Gauss sum.
 
 Gauss sums: Let $$\mathbb{Z}_n = \mathbb{Z}/(n \mathbb{Z})$$ and let $$R = e^{2 \pi i}$$.
 
-Suppose we want to compute $$\sum_{index \in \mathbb{Z}_n} R^{index^2/n}$$. We can do this by Poisson summation, letting $$f(x) = R^{x^2/n}$$ on the interval $$[0, n]$$ and zero elsewhere. Omitting some details, the Fourier transfom of $$f$$ summed at integer points becomes $$(1 + R^{-n/4}) \sqrt{n} \int_{-\infty}^{\infty} R^{x^2} \\; dx$$. The last integrand here is the Fresnel integral. By considering $$n = 1$$, we see that this integral is $$\frac{1}{1 - i}$$. Thus, the sum in general comes out to $$\frac{1 + R^{-n/4}}{1 - i} \sqrt{n}$$.
+Suppose we want to compute $$\sum\_{index \in \mathbb{Z}\_n} R^{index^2/n}$$. We can do this by Poisson summation, letting $$f(x) = R^{x^2/n}$$ on the interval $$[0, n]$$ and zero elsewhere. Omitting some details, the Fourier transfom of $$f$$ summed at integer points becomes $$(1 + R^{-n/4}) \sqrt{n} \int_{-\infty}^{\infty} R^{x^2} \\; dx$$. The last integrand here is the Fresnel integral. By considering $$n = 1$$, we see that this integral is $$\frac{1}{1 - i}$$. Thus, the sum in general comes out to $$\frac{1 + R^{-n/4}}{1 - i} \sqrt{n}$$.
 
 There is also a purely algebraic proof that works to establish the square of the Gauss sum (thus, the Gauss sum up to sign) in favorable circumstances (e.g., in $$\mathbb{Z}_n$$ for odd $$n$$). Consider the sum of $$R^{xy/n}$$ over all $$x, y \in \mathbb{Z}_n$$. By doing an order 2 DFT, we have $$x' = (x + y)/2, y' = (x - y)/2, xy = x'^2 - y'^2$$. So we are looking at the sum of $$R^{x'^2/n} R^{-y'^2/n}$$, and the two factors can be separately summed and then multiplied together by Fubini's theorem.
 
