@@ -1,16 +1,17 @@
 {% extends "zola-pickles/templates/page.html" %}
 
-{# Taken from Pickles theme and modified to remove reading time. #}
+{# Taken from Pickles theme and modified to remove reading time and make date optional. #}
 {% block content %}
 <article class="p-article">
   <header>
     <h1>{{ page.title | markdown | striptags }}</h1>
     <div>
       <div class="c-time">
-
-        <time datetime="{{ page.date | date(format=" %F") | safe }}">
-          {{ page.date | date(format="%F") }}
-        </time>
+        {% if page.date %}
+          <time datetime="{{ page.date | date(format=" %F") | safe }}">
+            {{ page.date | date(format="%F") }}
+          </time>
+        {% endif %}
         {% if page.extra.author -%}
         by {{ page.extra.author}}
         {%- endif %}
