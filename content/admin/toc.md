@@ -3,10 +3,10 @@ title: "Table of Contents"
 ---
 Some sections you may be interested in:
 
-[Main](/)
+[Main](@/_index.md)
 
-[Drafts](/drafts)
+[Drafts](@/drafts/_index.md)
 
-[Test](/test)
+[Test](@/test/_index.md)
 
-[Table of Contents](/admin/toc)
+[Table of Contents](@/admin/toc.md)
