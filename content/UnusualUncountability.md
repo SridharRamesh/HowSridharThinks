@@ -33,3 +33,7 @@ In the above argument, the only important fact about the naturals was that they 
 ***
 
 Note that one corollary of our lemma is that the powerset of $$X$$ can't inject into $$X$$. For then we could simply define on $$X$$ the partial ordering pushed forward from the ordering on its powerset, and then appeal to the lemma for a contradiction. (This amounts to the Burali-Forti paradox). This gives us another way to prove the uncountability of the reals, given that the powerset of the naturals injects into the reals, but this would not be very far from the traditional proof. Note that we do not actually use this embedding of the powerset of the naturals into the reals in the above argument.
+
+***
+
+Edited to add in 2026: Aah, there's nothing new under the sun. This proof seems to have been anticipated by Bourbaki. See https://arxiv.org/abs/0901.0446

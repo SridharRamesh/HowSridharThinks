@@ -25,7 +25,7 @@ generate_feeds = false
 # There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
 feed_filenames = ["atom.xml"]
 
-# Data used in feeds. The title is also used in the Pickles theme.
+# Data used in feeds. The title is also used in my base.html.
 title = "How Sridhar Thinks"
 description = "Math posts by Sridhar Ramesh"
 default_language = "en"
