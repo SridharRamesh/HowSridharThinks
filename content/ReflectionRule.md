@@ -36,9 +36,9 @@ Then, pedantically, the second part is concluding that, as M is indeed a normal 
 
 ****
 
-Another way of looking at things is that, fixing a set S of variables and taking a propositional theory (or modal logic) to be always a theory including S many particular propositions, K is precisely the propositional theory of a propositional theory extending K (thus, its models are in correspondence with a subset of the variables interpreted as true, along with some propositional theory to interpret the box as; in particular, it has a model in which its box operator is interpreted as provability in K itself). K4 is precisely the propositional theory of a normal modal logic extending K4. And GL is precisely the propositional theory of a normal modal logic extending GL.
+Another way of looking at things is that, fixing a set S of variables and taking a propositional theory (or modal logic) to be always a theory including S many particular propositions, K is precisely the propositional theory of a propositional theory extending K (thus, its models are in correspondence with a subset of the variables interpreted as true, along with some propositional extension of K to interpret the box as; in particular, it has a model in which its box operator is interpreted as provability in K itself). K4 is precisely the propositional theory of a normal modal logic extending K4. And GL is precisely the propositional theory of a normal modal logic extending GL.
 
-\[TODO: Expand on this, noting how the minimal normal modal logic extending K4 and axioms A is given by K4 + A + Box A, and similarly for the minimal modal logic extending K and A being given by K + Box^n A for each n ≥ 0.\]
+\[TODO: Expand on this, noting how the minimal normal modal logic extending K4 and axioms A is given by K + 4 + Box 4 + A + Box A, and similarly for the minimal normal modal logic extending K and A being given by K + Box^n A for each n ≥ 0. GL is interesting in that it admits axiomatization as either K4 + internal Löb or K4 + external Löb rule, the former of which is the theory of normal modal extensions of the latter.\]
 
 ****
 

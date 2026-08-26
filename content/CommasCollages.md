@@ -154,7 +154,7 @@ Every span induces a corresponding profunctor via left Kan extension, as indicat
 As a result, note that 2-cells from $$ \mathrm{Lan}_L(T) $$ to $$\mathrm{Rift}_R(B) $$ correspond (by the universal property of left Kan extension) to diagrams of the following form, where now the indicated 2-cell on the left is arbitrary, while the 2-cell on the right remains the designated one for the Kan lift:
 
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwyLCJcXGJ1bGxldCJdLFswLDEsIkwiLDJdLFswLDIsIlQiXSxbMiwzLCJSIl0sWzEsMywiQiIsMl0sWzEsMiwiXFxtYXRocm17UmlmdH1fUihCKSIsMix7Im9mZnNldCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbNSwxLCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjB9fV0sWzIsNywiIiwwLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfX1dXQ==&embed" width="944" height="432" style="border-radius: 8px; border: none;"></iframe>
-{% comment %}
+{#
 \[\begin{tikzcd}
     \bullet &&&& \bullet \\
     \\
@@ -167,12 +167,12 @@ As a result, note that 2-cells from $$ \mathrm{Lan}_L(T) $$ to $$\mathrm{Rift}_R
     \arrow[shorten <=7pt, Rightarrow, from=0, to=3-3]
     \arrow[shorten >=7pt, Rightarrow, from=1-5, to=1]
 \end{tikzcd}\]
-{% endcomment %}
+#}
 
 These in turn correspond, by the universal property of right Kan lifts and the fact that  $$ L ; \mathrm{Rift}_R(B) = \mathrm{Rift}_R(L ; B) $$, to diagrams of the following form, with an arbitrary 2-cell:
 
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwyLCJcXGJ1bGxldCJdLFswLDEsIkwiLDJdLFswLDIsIlQiXSxbMiwzLCJSIl0sWzEsMywiQiIsMl0sWzIsMSwiIiwwLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfSwibGV2ZWwiOjJ9XV0=&embed" width="944" height="432" style="border-radius: 8px; border: none;"></iframe>
-{% comment %}
+{#
 \[\begin{tikzcd}
     \bullet &&&& \bullet \\
     \\
@@ -183,7 +183,7 @@ These in turn correspond, by the universal property of right Kan lifts and the f
     \arrow["B"', from=3-3, to=3-7]
     \arrow[shorten >=11pt, Rightarrow, from=1-5, to=3-3]
 \end{tikzcd}\]
-{% endcomment %}
+#}
 
 In this way, we get our gamut from spans to profunctors to cospans, defining maps from each to each later thing as the suitable commutative diagrams. We also have functors from spans to profunctors representing that leg of the gamut (left Kan extension), and from cospans to profucntors representing that leg of the gamut (right Kan lift). And it turns out by our last argument that these also represent the full gamut; that is, a map from a span to a cospan is the same as a map of profunctors between the left Kan extension and right Kan lift.
 

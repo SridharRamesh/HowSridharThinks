@@ -30,20 +30,9 @@ title = "How Sridhar Thinks"
 description = "Math posts by Sridhar Ramesh"
 default_language = "en"
 
-# See https://www.getzola.org/documentation/themes/overview/
-theme = "zola-pickles"
-
 [markdown]
 # Enables footnotes with back references. See https://github.com/getzola/zola/pull/2480
 bottom_footnotes = true
 
 [extra]
 # Put all your custom variables here
-
-# The following are specific to the Pickles theme
-
-# A line to display underneath the main title
-subtitle = ""
-
-# Text to display in the footer of the page
-copyright = ""
