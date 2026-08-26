@@ -11,7 +11,7 @@
   </h2>
 
   {% if page.date %}
-  <p>
+  <p class="timestamp">
     <time datetime="{{ page.date | date(format='%F') }}">
       {{ page.date | date(format="%F") }}
     </time>

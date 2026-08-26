@@ -29,3 +29,12 @@ pre {
   display: flex;
   justify-content: space-between;
 }
+
+/* Just for removing the separation between post titles and timestmap on the index */
+article h2 {
+  margin-bottom: 0rem;
+}
+
+.timestamp {
+  margin-top: 0;
+}
