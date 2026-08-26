@@ -6,11 +6,15 @@ Similarly, the Pickles theme I am currently using seems to require posts in the 
 
 The themes are added as git submodules (e.g., Pickles currently). When I eventually get rid of any of them, I may wish to know how to fully remove a git submodule. See https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule
 
+[ETA: I have now stopped using the Pickles theme. Time to remove all this.]
+
 ----
 
 The Pickles page summaries can cut of in the middle of a LaTeX block, and the result will then be displayed with two dollar signs and no closing two dollar signs, thus not parsed as LaTeX by MathJax. This perhaps should be manually addressed in each instance using <!-- more --> to indicate the end of the summary section.
 
 The auto-generated Pickles page summaries also strip HTML tags; thus, e.g., links do not appear as links in them. But if the summary has explicitly been created using <!-- more --> indicator, this will not happen.
+
+[Can these still happen now that I no longer use Pickles specifically?]
 
 ----
 
