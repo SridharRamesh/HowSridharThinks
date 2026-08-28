@@ -4,9 +4,9 @@
 {% block content %}
 <article class="p-article">
   <header>
-    <h1>{{ page.title | markdown | striptags }}</h1>
+    <h1 class="pretimestamp">{{ page.title | markdown | striptags }}</h1>
     <div>
-      <div class="c-time">
+      <div class="timestamp">
         {% if page.date %}
           <time datetime="{{ page.date | date(format=" %F") | safe }}">
             {{ page.date | date(format="%F") }}

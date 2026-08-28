@@ -31,7 +31,7 @@ pre {
 }
 
 /* Just for removing the separation between post titles and timestmap on the index */
-article h2 {
+.pretimestamp {
   margin-bottom: 0rem;
 }
 
