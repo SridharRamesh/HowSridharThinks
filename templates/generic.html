@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{# Taken from Pickles theme and modified to remove reading time and make date optional. #}
+{% block content %}
+<article class="p-article">
+  <header>
+    <h1 class="pretimestamp">{{ item.title | markdown | striptags }}</h1>
+    <div>
+      <div class="timestamp">
+        {% if item.date %}
+          <time datetime="{{ item.date | date(format=" %F") | safe }}">
+            {{ item.date | date(format="%F") }}
+          </time>
+        {% endif %}
+        {% if item.extra.author -%}
+        by {{ item.extra.author}}
+        {%- endif %}
+      </div>
+    </div>
+  </header>
+  <section id="js-article" class="p-article__body">
+    {{ item.content | safe }}
+  </section>
+</article>
+{%- endblock content %}
