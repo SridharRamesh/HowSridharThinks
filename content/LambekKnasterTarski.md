@@ -6,7 +6,7 @@ Let $$F$$ be an endofunctor and let $$A : FX \to X$$ be an algebra for that endo
 
 Now suppose there is some F-algebra homomorphism $$: A \to FA$$ which is a section of the tautological homomorphism $$: FA \to A$$.
 
-Lambek's lemma (although not usually phrased in such generality) tells us that this section is actually an isomorphism; that is, even in the other order of composition, the tautological homomorphism followed by its section comes out to identity.
+Lambek's lemma (although not usually phrased in such generality) tells us that this section is actually an inverse; that is, even in the other order of composition, the tautological homomorphism followed by its section comes out to identity.
 
 Why is this? Let $$m : X \to F X$$ be the underlying morphism of this section. Then we have $$m \circ A = F(A) \circ F(m) = F(A \circ m) = F(1) = 1$$, establishing the lemma.
 

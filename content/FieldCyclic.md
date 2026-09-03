@@ -3,6 +3,7 @@ title: "Field Multiplication Cyclicity"
 date: 2019-12-2
 ---
 Let $$G$$ be a finite subgroup of the multiplicative group of a field. We shall show that it is cyclic.
+<!--more-->
 
 In fact, we will show something far stronger: if $$G$$ is a group with at most $$n$$ solutions to $$x^n = 1$$ (i.e., at most $$n$$ elements of order dividing $$n$$) for each $$n$$, then every finite subgroup of $$G$$ is cyclic. (Note that we do not even presume abelianness here, though we will get it as a consequence). A field's multiplicative group of course satisfies the stated property by the fact that a polynomial of degree $$n$$ can have at most $$n$$ distinct roots.
 

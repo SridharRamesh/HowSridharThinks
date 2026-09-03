@@ -13,4 +13,4 @@ section.html (Default section template, in templates)
 
 Special function:
 _index.md (Creates sections, in folders under content)
-index.md (Generates a page with the name of its directory; in general, [name].md is equivalent to name/about.md, as long as name is neither "_index" nor "index". Note that page names cannot contain "_index" anywhere within them.)
+index.md (Generates a page with the name of its directory; in general, [name].md is equivalent to name/index.md, as long as name is neither "_index" nor "index". Note that page names cannot contain "_index" anywhere within them.)
