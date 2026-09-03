@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>How Sridhar Thinks</title>
+  
+
+  <link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/site.css">
+
+  
+
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      packages: {'[+]': ['physics']}
+    },
+    loader: {load: ['[tex]/physics']},
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1><a href="https://sridharramesh.github.io/HowSridharThinks/">How Sridhar Thinks</a></h1>
+  </header>
+
+  <main>
+    
+  
+  
+<article class="p-article">
+  <header>
+    <h1 class="pretimestamp">Partitions
+</h1>
+    <div>
+      <div class="timestamp">
+        
+          <time datetime=" 2020-07-20">
+            2020-07-20
+          </time>
+        
+        
+      </div>
+    </div>
+  </header>
+  <section id="js-article" class="p-article__body">
+    <p>There’s lots to say about partitions. I’ll just write some things scattershot, most of which are due to Euler or from thinking about transposing Ferrers/Young diagrams:</p>
+<p>The number of partitions of N with distinct parts matches the number of partitions of N with odd parts:</p>
+<p>Proof: Let us focus just on those parts whose odd component, in the sense of prime factorization, is M. Thus, parts M, 2M, 4M, 8M, etc. There’s precisely one way to combine distinct such values to obtain any particular positive integer multiple of M [given by binary representation of the positive integer]. This is the same as the precisely one way to repeat M itself many times to get the same sum [unary representation]. Applying this over all odd M, this establishes the theorem.</p>
+<p>Put another way, consider these two inverse moves: taking a partition with two repeated parts X + X and combining it into a partition of the same value with one even part 2X, or vice versa. Each of these moves defines a system readily seen to be confluent (in the sense of <a href="https://sridharramesh.github.io/HowSridharThinks/confluence/">this post</a>) and for which termination is clear by how the number of parts changes monotonically. So we get two inverse functions between the terminal partitions: that is, between the partitions with no repeated parts and the partitions with no even parts. (This is the same as what was described above in terms of binary and unary representation, just presented in different terms.)</p>
+
+  </section>
+</article>
+  </main>
+</body>
+</html>

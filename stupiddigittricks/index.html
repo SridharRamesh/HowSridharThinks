@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>How Sridhar Thinks</title>
+  
+
+  <link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/site.css">
+
+  
+
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      packages: {'[+]': ['physics']}
+    },
+    loader: {load: ['[tex]/physics']},
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1><a href="https://sridharramesh.github.io/HowSridharThinks/">How Sridhar Thinks</a></h1>
+  </header>
+
+  <main>
+    
+  
+  
+<article class="p-article">
+  <header>
+    <h1 class="pretimestamp">Stupid Digit Tricks
+</h1>
+    <div>
+      <div class="timestamp">
+        
+          <time datetime=" 2020-08-25">
+            2020-08-25
+          </time>
+        
+        
+      </div>
+    </div>
+  </header>
+  <section id="js-article" class="p-article__body">
+    <p>One thing people are often amused by is observations like that $$\frac{1}{998001}$$ comes out to .000 001 002 003 004…, with every three digit string appearing in order except for 998, and then repeating back from 999 to 000.</p>
+<p>Why does this happen? Well, .000 001 002 003… times (10^3 - 1) equals 000.001 001 001 001…, since each 3 digit piece of .000 001 002 003… is 001 higher than the 3 digit piece before it.</p>
+<p>Multiplying by (10^3 - 1) again, we get 001 exactly, since each 3 digit piece of 000.001 001 001… exactly equals the piece before it.</p>
+<p>So .000 001 002 003… = $$\frac{1}{\left(10^3 - 1\right)^2} = \frac{1}{998001}$$.</p>
+<p>998 is missing because we can't actually make each piece 001 higher forever while staying 3 digits. By doing 997 999 000…, we get 002 followed by -999 for the differences here, which after "borrowing" is as good as 001 001, and then everything starts over and works the same way as before.</p>
+<hr />
+<p>[TODO: Discuss the less stupid digit trick of why cyclic decimals correspond to rationals. Do the tricks like Fibonacci sequences and the like too.]</p>
+
+  </section>
+</article>
+  </main>
+</body>
+</html>

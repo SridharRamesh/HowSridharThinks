@@ -1,0 +1,40 @@
+html {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+article {
+  margin-bottom: 3rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+.p-pagination__ctrl {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Just for removing the separation between post titles and timestmap on the index */
+.pretimestamp {
+  margin-bottom: 0rem;
+}
+
+.timestamp {
+  margin-top: 0;
+}
