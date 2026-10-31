@@ -47,3 +47,15 @@ Comma category subobject classifier
 Comma category general representation theorem?
 Representability for subcategories of presheaf categories
 The above full faithfulness theorem for CFP -> lambda calculus
+
+****
+
+Suppose C is the free category with some structure, and has a terminal object. Let C' be the comma category (id_Set, Hom_C(1, -)) and suppose C' has this same structure. We get a unique structure-preserving map ! from C to C', which also has projections A to Set and B to C. Supposing B preserves the structure, then B is identity (by freeness of C). By the comma object property, we also have an induced natural transformation from A to B; Hom_C(1, -) = Hom_C(1, -).
+
+Hom_C(1, -) is initial among terminal object preserving functors, as can be seen by Yoneda. Suppose A is itself a terminal object preserving functor. Thus, among the terminal object preserving functors, A maps into the initial object Hom_C(1, -), thus making this initial object a retract of A.
+
+For certain structure (e.g., (co)limits), we know that if a functor preserves it, so does any retract of that functor. Thus, we see that Hom_C(1, -) preserves colimits, NNOs, regular epis, etc, in appropriate contexts.
+
+The fact that a retract of a (co)limit-preserving functor itself preserves (co)limits can be seen as a special case of the fact that a retract of an isomorphism (considered as an object in an arrow category) is an isomorphism, by considering how when F is a retract of G, we also get that the canonical comparison map F(lim...) -> lim(F...) is a retract of the comparison map G(lim...) -> lim(G...), with the latter as an isomorphism when G preserves the limit.
+
+The fact that a retract of an isomorphism is itself an isomorphism is observed at https://ncatlab.org/nlab/show/retract#RetractOfIso, both shown directly and noted as a special case of that "Classes of morphisms in a category C that are given by a left or right lifting property are preserved under retracts in the arrow category".

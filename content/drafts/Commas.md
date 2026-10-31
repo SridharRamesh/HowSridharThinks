@@ -6,9 +6,21 @@ Various random facts about comma categories I wished to record somewhere:
 
 ***
 
-The Comma-Kan lemma from my thesis: TODO
+The Comma-Kan lemma from my thesis:
 
 The Comma-Kan lemma decomposes as the result of some fact about products and some fact about inserters (from which comma objects can be constructed), at least in a context where we have products and inserters (perhaps this then extends to arbitrary contexts by embedding C into Cat^{C^{op}} or some such thing). We also have the corresponding fact about equifiers. See for example much of the discussion about inserters and equifiers at https://mathoverflow.net/questions/352902/conceptual-reason-that-monadic-functors-create-limits. Note that functor categories, i.e. powers, i.e. cotensors, can themselves be built up out of products, inserters, and equifiers (see 4.1.6 at http://www.math.uchicago.edu/~may/IMA/Incoming/Lack/lack.pdf).
+
+Perhaps the right way to think about it is this: Start with the following observations:
+
+P1) If P is a product of categories each of which has a terminal object, then P has a terminal object preserved by each of its projections to these categories.
+I1) If I is an inserter from functor F to G : A -> B, and A has a terminal object preserved by G, then I has a terminal object preserved by the projection to A.
+E1) If E is an equifier for two parallel natural transformations between functors F, G : A -> B and A has a terminal object preserved by G, then E has a terminal object preserved by the projection to A.
+
+Now, keep in mind that Ran_p(S) means a terminal object in the comma category from map (compose with p : C \to C') : \[C', D\] \to \[C, D\] to (constantly S) : 1 \to \[C, D\]. Call this comma category RanCat_p(S).
+
+Note also that, if D is a product of various categories, then RanCat_p(S) is the product of RanCat_p(S; π_i) over the various projections π_i out of D. Similarly, if D is an inserter between some F, G : A -> B, then Ran_p(S) is the inserter of corresponding maps from RanCat_p(S; π_A) to RanCat_p(S; π_A; G). ??? (TODO: Why?)
+
+Of course we have the duals of all of these for initial objects or left Kan extensions as well.
 
 ***
 
