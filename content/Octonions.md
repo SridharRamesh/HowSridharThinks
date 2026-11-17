@@ -40,10 +40,14 @@ Observe how our anticommutativity condition on a magma-with-negation is precisel
 
 ****
 
-In the linear context, our conditions at the top amount to having an inner product space V (the space of imaginaries) and an antisymmetric bilinear operator on V (call this the cross product), such that the cross product with one argument fixed to a unit vector v acts in the other argument on vectors perpendicular to v as an orthonormal skew-symmetric square root of -1 (any two of these last three conditions together imply the third).
+In the linear context, our conditions at the top amount to having an inner product space V (the space of imaginaries) and an alternating bilinear operator on V (call this the cross product), such that the cross product with one argument fixed to a unit vector v acts in the other argument on vectors perpendicular to v as an orthonormal skew-symmetric square root of -1 (any two of these last three conditions together imply the third, as they amount to equality between adjoint, inverse, and negation).
 
 This then gives us a multiplication map from V tensor V to R + V (with R as the ring of scalars, aka "reals"; i.e., the tensor unit), whose odd component is the cross product as before and whose even component is the R-valued dot product. This then extends to a bilinear unital magma structure on R + V, with pairs from V multiplying as just described, while each value in R acts on each side as scalar multiplication.
 
-The observation from before is that, if we have such a structure W = R + V, sitting inside a properly larger ambient structure with some vector x orthogonal to all of W, then the orbits Wx and xW are the same, this orbit is orthogonal to W, and our multiplication map extends from W to the coproduct of W with this orbit in the manner described above.
+(Note that orthogonal imaginaries have left (or right) actions that anticommute, because their sum must square to the sum of their individual squares, because imaginaries are closed under addition and square to their negated magnitude.)
 
-There is some general monoidal category or multicategory context on all this which subsumes both the linear view and the mere magma-with-negation view, but I haven't bothered to formalize this fully yet.
+The observation from before is that, if we have such a structure W = R + V, sitting inside a properly larger ambient structure with some vector x orthogonal to all of W, then W is associative, the orbits Wx and xW are the same, this orbit is orthogonal to W (we can see this by reasoning that each element's left or right action has as an adjoint the respective action of its conjugate, so w_1 dot w_2 x = conj(w_2) w_1 dot x = 0), and our multiplication map extends from W to the coproduct of W with this orbit in the manner described above.
+
+There is some general monoidal category or multicategory context on all this which subsumes both the linear view and the mere magma-with-negation view, but I haven't bothered to formalize this fully yet. 
+
+Of course, we can also think of magmas-with-negation as just standing in as bases for the inner product spaces they give rise to. But it's interesting to think about them directly as well, and notions of orthogonal, adjoint, etc, in that context.
