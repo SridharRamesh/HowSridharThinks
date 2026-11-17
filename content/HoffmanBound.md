@@ -2,7 +2,7 @@
 title: "The Hoffman bound"
 date: 2026-11-17
 ---
-Consider strings of length n over an alphabet of size S. What is the maximum number of such strings we can put in a set, such that no two strings in the set differ at every position? Well, it's relatively easy to see it is $$S^(n - 1)$$ (presuming $$n > 0$$), and that one way of doing so is to take all strings with a particular character at a particular position. Is this the only way of achieving this? 
+Consider strings of length n over an alphabet of size S. What is the maximum number of such strings we can put in a set, such that no two strings in the set differ at every position? Well, it's relatively easy to see it is $$S^{n - 1}$$ (presuming $$n > 0$$), and that one way of doing so is to take all strings with a particular character at a particular position. Is this the only way of achieving this? 
 
 More generally, how can we determine the largest cliques or anti-cliques in a graph? (In this case, the relevant graph is the product in a suitable sense of $$n$$ many copies of the complete graph on $$S$$ many vertices). A powerful technique for doing so is the Hoffman bound, from spectral graph theory.
 <!--more-->
@@ -27,7 +27,7 @@ So the above tells us how to maximize the size of an anti-clique in a regular gr
 
 Now let's specialize to the graph whose anti-cliques we are interested in in particular. It's the tensor product of n many copies of the complete graph on S nodes. The complete graph on S nodes is regular of degree S - 1, while every vector orthogonal to the all 1s vector is an eigenvector of eigenvalue -1. Thus, in the n-fold tensor power, the entire vector space is spanned by tensor products of vectors whose coordinates are either constant or sum to zero, with the corresponding eigenvalue being (S - 1)^x (-1)^y, for x many factors with constant coordinates and y many factors with coordinates summing to zero.
 
-So long as S > 2, the smallest of these eigenvalues is -(S - 1)^(n - 1). The corresponding eigenvectors are functions from S^n to reals which sum to zero overall, and which satisfy the "linearity" property that changing any particular coordinate from any particular starting value to any particular ending value increments the function by the same amount no matter what the other coordinates are taken to be. Adding a constant to these removes the "sum to zero overall" constraint, but retains the "linearity" property.
+So long as S > 2, the smallest of these eigenvalues is $$-(S - 1)^{n - 1}$$. The corresponding eigenvectors are functions from S^n to reals which sum to zero overall, and which satisfy the "linearity" property that changing any particular coordinate from any particular starting value to any particular ending value increments the function by the same amount no matter what the other coordinates are taken to be. Adding a constant to these removes the "sum to zero overall" constraint, but retains the "linearity" property.
 
 Because of "linearity", the {0, 1}-valued functions we can obtain in this way cannot depend on more than one coordinate (for if they were able to achieve a +1 change via values on one coordinate, and also a +1 change via values on another coordinate, then by combining these linearly, a +2 change could be achieved overall, contra being {0, 1}-valued).
 
@@ -49,11 +49,11 @@ Of course, there's always the question of how to choose particular weights so as
 
 For our particular problem with strings, there is also an elementary solution which does not explicitly reason about eigenvalues: 
 
-If we impose a cyclic ordering on each of the $$n$$ factors of $$S^n$$, then within any orbit of the operation of simultaneously incrementing each coordinate, at most one point can lie in our chosen subset. So the maximum achievable size is $$S^(n - 1)$$, achieved when we choose precisely one point from each orbit.
+If we impose a cyclic ordering on each of the $$n$$ factors of $$S^n$$, then within any orbit of the operation of simultaneously incrementing each coordinate, at most one point can lie in our chosen subset. So the maximum achievable size is $$S^{n - 1}$$, achieved when we choose precisely one point from each orbit.
 
 We don't have to identify each coordinate with the same cyclic ordering, though. Given any $$S$$ many points which pairwise differ at every position, we can impose some cyclic ordering on these points, and from this we get a system of cyclic orderings at each coordinate such that these points become an orbit. So our result is really that given any $$S$$ many points which differ everywhere, precisely one of them must be chosen.
 
-From now on, let us presume we have chosen a clique of size $$S^(n - 1)$$; we will establish that it must be of the form defined by a particular coordinate value at a particular position.
+From now on, let us presume we have chosen a clique of size $$S^{n - 1}$$; we will establish that it must be of the form defined by a particular coordinate value at a particular position.
 
 To be clear about terminology, we are using the convention that a collection of points where every pair differs at every position is a "clique", while a collection where no two points differ at every position is an "anticlique". If a clique has size $$S$$ (thus containing precisely one chosen point) it's a "maximal clique". Let's say two cliques are "complementary" if their union is a maximal clique; thus, of complementary cliques, the one contains a chosen point iff the other does not. Let's say two cliques are "cognate" if they have the same image under projection to each coordinate. Observe that cognate-ness is an equivalence relation respected by complementary-ness. Thus, cliques are cognate iff they have a common complement. Thus, of cognate cliques, the one contains a chosen point iff the other does.
 
