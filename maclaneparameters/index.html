@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>How Sridhar Thinks</title>
+  
+
+  <link rel="stylesheet" href="https://sridharramesh.github.io/HowSridharThinks/site.css">
+
+  
+
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['$$', '$$'], ['open', 'close'], ['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      packages: {'[+]': ['physics']}
+    },
+    loader: {load: ['[tex]/physics']},
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1><a href="https://sridharramesh.github.io/HowSridharThinks/">How Sridhar Thinks</a></h1>
+  </header>
+
+  <main>
+    
+  
+  
+<article class="p-article">
+  <header>
+    <h1 class="pretimestamp">Mac Lane &quot;Parameters&quot; Theorem
+</h1>
+    <div>
+      <div class="timestamp">
+        
+          <time datetime=" 2020-02-03">
+            2020-02-03
+          </time>
+        
+        
+      </div>
+    </div>
+  </header>
+  <section id="js-article" class="p-article__body">
+    <p>Suppose given an isomorphism square in Cat; that is, categories A, B, C, and D, functors e : A -&gt; B, f: A -&gt; C, g : B -&gt; D, and h : C -&gt; D, and a natural isomorphism between the two paths from A to D.</p>
+<p>Suppose furthermore that e is essentially surjective on objects (i.e., essentially surjective on 0-cells) and h is fully faithful (i.e., essentially surjective on positive-cells).</p>
+<p>Then this isomorphism square decomposes as two isomorphism triangles along some diagonal functor : B -&gt; C. [TODO: Proof] [TODO: Speak of to what extent this decomposition is canonical or unique up to higher isomorphism]</p>
+<p>I call this the “Parameters” Theorem because it has as a corollary the result that adjoints which exist pointwise for all objects are automatically further equipped as full-on functors (by taking e to be the inclusion of the set of objects of B, taking D to be a presheaf category so that g amounts to a profunctor, and taking h to be the Yoneda embedding showing that possessing an adjoint at a particular object is property-like), which in turn has as a corollary the result Mac Lane describes in Categories for the Working Mathematician as being about “limits with parameters” (section V.3). Perhaps I should instead call it something like the Pointwise Functor Theorem.</p>
+<p>[TODO: Derive, as Mac Lane does, the result that limits in functor categories may be calculated pointwise, presuming the pointwise limits exist]</p>
+
+  </section>
+</article>
+  </main>
+</body>
+</html>
