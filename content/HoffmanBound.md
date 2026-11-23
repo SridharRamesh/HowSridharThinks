@@ -2,7 +2,7 @@
 title: "The Hoffman bound"
 date: 2026-11-17
 ---
-Consider strings of length n over an alphabet of size S. What is the maximum number of such strings we can put in a set, such that no two strings in the set differ at every position? Well, it's relatively easy to see it is $$S^{n - 1}$$ (presuming $$n > 0$$), and that one way of doing so is to take all strings with a particular character at a particular position. Is this the only way of achieving this? 
+Consider strings of length n over an alphabet of size S. What is the maximum number of such strings we can put in a set, such that no two strings in the set differ at every position? Well, it's relatively easy to see it is $$S^{n - 1}$$ (presuming $$n > 0$$), and that one way of doing so is to take the strings with a particular character at a particular position. Is this the only way of achieving this? 
 
 More generally, how can we determine the largest cliques or anti-cliques in a graph? (In this case, the relevant graph is the product in a suitable sense of $$n$$ many copies of the complete graph on $$S$$ many vertices). A powerful technique for doing so is the Hoffman bound, from spectral graph theory.
 <!--more-->

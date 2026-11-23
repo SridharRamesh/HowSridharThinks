@@ -1,6 +1,6 @@
 ---
 title: "Octonions"
-date: 2025-11-25
+date: 2025-11-30
 ---
 Suppose we are intereted in constructing a magma with the following properties:
 

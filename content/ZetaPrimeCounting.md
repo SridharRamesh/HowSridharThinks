@@ -20,7 +20,7 @@ Let's say $$L(s)$$ for our $$\frac{Z'(s)}{Z(s)} = \sum_{n \in \mathbb{N}^+} \Lam
 
 Well, both functions (the former of $$s$$ and the latter of $$x$$) are $$\sum_{n \in \mathbb{N}^+} \Lambda(n) \times something(n)$$. In the former, the $$something(n)$$ is $$n^s$$, and in the latter, the $$something(n)$$ is the indicator function for $$n \leq x$$.
 
-Note that, as a function of $$x$$, this indicator function is just the Heaviside step function (the indicator function for $$x \geq 0$$) translated by $$n$$. Similarly, each $$n^s$$ is just the original $$1^s$$ (the constant $$1$$) multiplied by an exponential function of $$s$$.
+Note that, as a function of $$x$$, this indicator function is just the Heaviside step function (the indicator function for $$0 \leq x$$) translated by $$n$$. Similarly, each $$n^s$$ is just the original $$1^s$$ (the constant $$1$$) multiplied by an exponential function of $$s$$.
 
 When we want a linear correspondence where translation on one side corresponds to multiplication on the other side, we are looking at some kind of Laplace-Fourier(-Mellin-Z-etc) transform. We want the transform which sends the constant $$1$$ to the Heaviside step function and which turns multiplication by $$n^s$$ into translation by $$n$$ (in the direction of $$(x \mapsto f(x)) \mapsto (x \mapsto f(x - n))$$).
 
@@ -46,9 +46,9 @@ Our Laplace-Fourier transform of $$\frac{1}{s}$$ is $$u(t)$$. And the Laplace-Fo
 
 What about the remaining exponential-polynomial factors in $$Z(s)$$, of the form $$e^{k s^n}$$? The natural logarithmic derivative of such a factor is $$k n s^{n - 1}$$. Dividing this by $$s$$, we get $$k n s^{n - 2}$$. At $$n = 0$$, this vanishes. At $$n = 1$$, this is $$k s^{-1}$$, whose Laplace-Fourier transform is $$k u(t)$$; that is, an additive constant (for $$t > 0$$). At higher $$n$$, this Laplace-Fourier transform becomes $$k n$$ times some iterated derivative of $$u(t)$$; that is, the Dirac delta or its derivatives. All of these higher $$n$$ terms can thus be ignored for $$t > 0$$, i.e., for $$x > 1$$.
 
-For our $$Z(s)$$, it turns out that we can study the order of growth in the complex plane and confirm that these factors in $$Z(s)$$ die off at $$n > 1$$. But even if we didn't know that, we could ignore these terms at $$x > 1$$ anyway.
+For our $$Z(s)$$, it turns out that we can study the order of growth in the complex plane and confirm that these factors in $$Z(s)$$ die off at $$n > 1$$. But even if we didn't know that, we could ignore these terms at $$x > 1$$ anyway.[^IgnoreDiracs]
 
-So that's it. At $$x > 1$$, we have that $$\psi(x)$$ is the sum of terms $$z \frac{x^{-k}}{k}$$ for each zero of $$Z$$ [^zeronegate] at $$k$$ of integer multiplicity $$z$$ (including poles as negative multiplicity), plus an additive constant [^TheConstant].
+So that's it. At $$x > 1$$, we have that $$\psi(x)$$ is the sum of terms $$z \frac{x^{-k}}{k}$$ for each zero of $$Z$$ [^zeronegate] at $$k$$ of integer multiplicity $$z$$ (including poles as negative multiplicity), plus an additive constant.[^TheConstant]
 
 Also, this series is conditionally convergent and needs to have it terms bundled just so, and also this series doesn't converge exactly to $$\psi(x)$$ at its jump discontinuities, but to the halfway point, as is typical for Fourier series decomposition, but nevermind such formalities for now. Similarly, we've been commuting limits all over the place (e.g., commuting infinite sums and the integrals defining Laplace-Fourier transforms) and whatnot. All sorts of things which a rigorous treatment would pay more care to. But here, we only care about the moralities and not the formalities.
 
@@ -93,3 +93,5 @@ Footnotes:
 [^ordertechnicality]: If you care about such technicalities, the remainder term would not be $$O(\sqrt{x})$$, but would be $$O(x^{\frac{1}{2} + \epsilon})$$ for every $$\epsilon > 0$$.
 
  [^TheConstant]: Specifically, the constant is $$L(0) = Z'(0)/Z(0)$$, which we can with some work relate to the [factorial constant](@/Stirling.md) and thus show is $$-\ln(2\pi)$$.
+
+ [^IgnoreDiracs]: Well, we could ignore finitely many of them. It's not quite correct to suppose we can reduce ANY function exp(g(s)) for entire g to just exp(g(0) + g'(0)s), even when g is non-polynomial, except via our cheating and commuting limits without justification. But again, in the case of interest, we can bound the growth rate of Z(s) to justify everything, via [the functional equation](@/HurwitzFunctional.md).
